@@ -1,0 +1,3 @@
+User-agent: *
+Allow: /
+Sitemap: https://back2nest.in/sitemap.xml
