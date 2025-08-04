@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import { useNavigate } from 'react-router-dom';
+import { Link, useNavigate } from 'react-router-dom';
 import Testimonials from './Testimonials';
 import SEO from './SEO';
 import { 
@@ -9,7 +9,15 @@ import {
   VideoCameraIcon,
   UserGroupIcon,
   StarIcon,
-  ChevronRightIcon
+  ChevronRightIcon,
+  PhoneIcon,
+  ClockIcon,
+  TruckIcon,
+  DocumentCheckIcon,
+  BellIcon,
+  HeartIcon,
+  CheckCircleIcon,
+  ArrowRightIcon
 } from '@heroicons/react/24/outline';
 
 const MainPage = () => {
@@ -20,7 +28,7 @@ const MainPage = () => {
     setIsVisible(true);
   }, []);
 
-  // Enhanced structured data for local business with correct URLs and comprehensive info
+  // Enhanced structured data for local business with comprehensive SEO
   const structuredData = {
     "@context": "https://schema.org",
     "@graph": [
@@ -29,7 +37,7 @@ const MainPage = () => {
         "@id": "https://back2nest.in/#business",
         "name": "Back2Nest",
         "alternateName": ["Back2Nest School Van Service", "Back2Nest Transport Patna"],
-        "description": "Leading school van service in Patna, Bihar providing safe, reliable student transportation with live GPS tracking, professional drivers, and guaranteed safety for daily school commutes.",
+        "description": "Leading school van service in Patna, Bihar providing safe, reliable student transportation with live GPS tracking, professional drivers, and guaranteed safety for daily school commutes across Bihar.",
         "url": "https://back2nest.in",
         "telephone": "+91-8935904820",
         "email": "help@back2nest.in",
@@ -71,28 +79,6 @@ const MainPage = () => {
           "worstRating": "1",
           "reviewCount": "1250"
         },
-        "hasOfferCatalog": {
-          "@type": "OfferCatalog",
-          "name": "School Transportation Services Patna",
-          "itemListElement": [
-            {
-              "@type": "Offer",
-              "itemOffered": {
-                "@type": "Service",
-                "name": "Daily School Van Service Patna",
-                "description": "Regular school pickup and drop service with live GPS tracking in Patna, Bihar"
-              }
-            },
-            {
-              "@type": "Offer",
-              "itemOffered": {
-                "@type": "Service", 
-                "name": "Live Camera Monitoring",
-                "description": "Real-time in-vehicle camera access for parent peace of mind"
-              }
-            }
-          ]
-        },
         "sameAs": [
           "https://www.facebook.com/back2nest",
           "https://www.instagram.com/back2nest_official",
@@ -100,15 +86,13 @@ const MainPage = () => {
         ]
       },
       {
-        "@type": "WebSite",
-        "@id": "https://back2nest.in/#website",
+        "@type": "WebPage",
+        "@id": "https://back2nest.in/#webpage",
         "url": "https://back2nest.in",
-        "name": "Back2Nest - School Van Service Patna Bihar",
-        "description": "Book safe school van services in Patna, Bihar with live tracking and professional drivers",
-        "potentialAction": {
-          "@type": "SearchAction",
-          "target": "https://back2nest.in/search?q={search_term_string}",
-          "query-input": "required name=search_term_string"
+        "name": "Back2Nest - Safe School Van Service in Patna Bihar | Live Tracking & Professional Drivers",
+        "description": "Book trusted school van services in Patna, Bihar with Back2Nest. Features live GPS tracking, verified professional drivers, in-van cameras, and lowest pricing for safe daily school commutes.",
+        "mainEntity": {
+          "@id": "https://back2nest.in/#business"
         }
       }
     ]
@@ -116,40 +100,28 @@ const MainPage = () => {
 
   const benefits = [
     {
-      icon: CurrencyDollarIcon,
-      title: "Lowest Pricing in Patna",
-      description: "Most competitive rates for school van services in Bihar without compromising on safety and quality",
-      color: "text-green-500"
-    },
-    {
       icon: MapPinIcon,
-      title: "Live GPS Location Tracking",
-      description: "Real-time vehicle tracking across Patna so parents always know their child's exact location",
-      color: "text-blue-500"
-    },
-    {
-      icon: UserGroupIcon,
-      title: "Verified Professional Drivers",
-      description: "Background-checked, trained drivers committed to student safety in Patna's traffic conditions",
-      color: "text-purple-500"
-    },
-    {
-      icon: ShieldCheckIcon,
-      title: "100% Reliable Daily Service",
-      description: "Punctual, dependable school transportation you can trust every day across Patna, Bihar",
-      color: "text-orange-500"
+      title: "Live GPS Tracking",
+      description: "Real-time location monitoring with instant notifications for complete transparency during your child's journey.",
+      color: "from-blue-500 to-blue-600"
     },
     {
       icon: VideoCameraIcon,
-      title: "Live In-Van Camera Access",
-      description: "Monitor your child's school journey with our advanced in-vehicle camera monitoring system",
-      color: "text-red-500"
+      title: "In-Van Camera Access",
+      description: "Live camera monitoring inside vehicles for parents to watch their child's safe journey in real-time.",
+      color: "from-purple-500 to-purple-600"
     },
     {
-      icon: StarIcon,
-      title: "Complete Safety Guarantee",
-      description: "Your child's safety is our priority with comprehensive insurance and emergency protocols",
-      color: "text-yellow-500"
+      icon: ShieldCheckIcon,
+      title: "Verified Professional Drivers",
+      description: "Background-verified, trained drivers committed to your child's safety with regular performance evaluations.",
+      color: "from-green-500 to-green-600"
+    },
+    {
+      icon: CurrencyDollarIcon,
+      title: "Best Pricing in Patna",
+      description: "Competitive rates without compromising on safety, quality, or reliability for families across Bihar.",
+      color: "from-orange-500 to-orange-600"
     }
   ];
 
@@ -169,249 +141,296 @@ const MainPage = () => {
   return (
     <>
       <SEO 
-        title="Back2Nest - Safe School Van Service in Patna Bihar | Live Tracking & Professional Drivers"
-        description="Book trusted school van services in Patna, Bihar with Back2Nest. Features live GPS tracking, verified professional drivers, in-van cameras, and lowest pricing. Serving 1,250+ families across Patna with 100% safety guarantee for daily school commutes."
-        keywords="school van service Patna, school transport Bihar, safe school rides Patna, live tracking school van, professional drivers Bihar, school bus Patna, student transport Patna Bihar, Back2Nest, school van booking Patna, child safety transport Bihar, best school van Patna, reliable school transport Bihar"
+        title="Back2Nest - Safe School Van Service in Patna Bihar | Live GPS Tracking, Professional Drivers & Lowest Pricing"
+        description="Book trusted school van services in Patna, Bihar with Back2Nest. Features live GPS tracking, verified professional drivers, in-van cameras, comprehensive safety protocols, and lowest pricing. Serving 1,250+ families across Patna with 100% safety guarantee for daily school commutes. Call +91-8935904820 now!"
+        keywords="school van service Patna, school transport Bihar, safe school rides Patna, live tracking school van, professional drivers Bihar, school bus Patna, student transport Patna Bihar, Back2Nest, school van booking Patna, child safety transport Bihar, best school van Patna, reliable school transport Bihar, GPS tracking school transport, verified drivers Patna, school transportation safety Bihar"
         canonicalUrl="https://back2nest.in"
         ogTitle="Back2Nest - Patna's Most Trusted School Van Service | Live Tracking & Safety Guaranteed"
-        ogDescription="Experience the safest school transportation in Patna, Bihar with live GPS tracking, professional drivers & unbeatable safety standards. Join 1,250+ happy families. Book your child's ride today!"
-        ogImage="https://back2nest.in/images/og-main.jpg"
+        ogDescription="Experience the safest school transportation in Patna, Bihar with live GPS tracking, professional verified drivers & unbeatable safety standards. Join 1,250+ happy families. Book your child's safe ride today!"
+        ogImage="https://back2nest.in/images/og-main-homepage.jpg"
         structuredData={structuredData}
         additionalMeta={additionalMeta}
       />
 
       <div className="min-h-screen bg-gradient-to-br from-blue-50 via-white to-purple-50 relative overflow-hidden">
-        {/* Animated Background Elements */}
+        {/* Subtle Background Elements */}
         <div className="absolute inset-0 overflow-hidden pointer-events-none" aria-hidden="true">
-          {/* Floating Circles */}
-          <div className="absolute -top-40 -right-40 w-80 h-80 bg-gradient-to-br from-blue-400/20 to-purple-400/20 rounded-full animate-float-slow"></div>
-          <div className="absolute top-1/2 -left-20 w-60 h-60 bg-gradient-to-br from-purple-400/15 to-pink-400/15 rounded-full animate-float-medium"></div>
-          <div className="absolute bottom-20 right-1/4 w-40 h-40 bg-gradient-to-br from-blue-400/25 to-cyan-400/25 rounded-full animate-float-fast"></div>
-          
-          {/* Moving Gradient Overlay */}
-          <div className="absolute inset-0 bg-gradient-to-r from-transparent via-white/5 to-transparent animate-gradient-x"></div>
-          
-          {/* Subtle Grid Pattern */}
-          <div className="absolute inset-0 opacity-20">
-            <div className="absolute inset-0 bg-grid-pattern animate-grid-move"></div>
-          </div>
+          <div className="absolute -top-40 -right-40 w-80 h-80 bg-gradient-to-br from-blue-400/10 to-purple-400/10 rounded-full animate-float-slow"></div>
+          <div className="absolute bottom-20 -left-20 w-60 h-60 bg-gradient-to-br from-purple-400/8 to-pink-400/8 rounded-full animate-float-medium"></div>
         </div>
 
-        {/* Header with Schema */}
-        <header className="container mx-auto px-6 py-4 relative z-10" itemScope itemType="https://schema.org/Organization">
-          <nav className="flex justify-between items-center" role="navigation" aria-label="Main navigation">
+        {/* Clean Header */}
+        <header className="container mx-auto px-6 py-6 relative z-10">
+          <nav className="flex justify-between items-center">
             <div className={`transform transition-all duration-1000 ${isVisible ? 'translate-x-0 opacity-100' : '-translate-x-10 opacity-0'}`}>
-              <h1 className="text-3xl font-bold bg-gradient-to-r from-blue-600 to-purple-600 bg-clip-text text-transparent" itemProp="name">
+              <div className="text-3xl font-bold bg-gradient-to-r from-blue-600 to-purple-600 bg-clip-text text-transparent">
                 Back2Nest
-              </h1>
-              <p className="text-sm text-gray-600 mt-1" itemProp="slogan">Safe Journey Home</p>
-              <meta itemProp="url" content="https://back2nest.in" />
-              <meta itemProp="logo" content="https://back2nest.in/assets/logo.png" />
+              </div>
+              <p className="text-sm text-gray-500 mt-1">Safe Journey Home</p>
+            </div>
+            
+            {/* Clean Navigation */}
+            <div className="hidden md:flex items-center space-x-8">
+              <Link to="/about" className="text-gray-600 hover:text-blue-600 transition-colors font-medium">
+                About
+              </Link>
+              <Link to="/safety" className="text-gray-600 hover:text-blue-600 transition-colors font-medium">
+                Safety
+              </Link>
+              <Link to="/blogs" className="text-gray-600 hover:text-blue-600 transition-colors font-medium">
+                Blog
+              </Link>
+              <a 
+                href="tel:+918935904820" 
+                className="bg-blue-600 text-white px-6 py-2 rounded-full hover:bg-blue-700 transition-colors font-medium"
+              >
+                Call Now
+              </a>
             </div>
           </nav>
         </header>
 
-        {/* SEO-Enhanced Hero Section */}
-        <section className="container mx-auto px-6 py-16 relative z-10" aria-labelledby="hero-heading">
-          <div className="text-center max-w-4xl mx-auto">
-            <div className={`transform transition-all duration-1000 delay-300 ${isVisible ? 'translate-y-0 opacity-100' : 'translate-y-10 opacity-0'}`}>
-              <h2 id="hero-heading" className="text-5xl md:text-6xl font-bold text-gray-900 mb-6 leading-tight">
+        {/* Hero Section with Better Spacing */}
+        <section className="container mx-auto px-6 py-20 relative z-10">
+          <div className="max-w-6xl mx-auto">
+            <div className={`text-center mb-16 transform transition-all duration-1000 delay-300 ${isVisible ? 'translate-y-0 opacity-100' : 'translate-y-10 opacity-0'}`}>
+              <h1 className="text-5xl md:text-6xl font-bold text-gray-900 mb-6 leading-tight">
                 Safe, Reliable 
-                <span className="bg-gradient-to-r from-blue-600 to-purple-600 bg-clip-text text-transparent animate-gradient-text">
-                  {" "}School Van Services in Patna Bihar
+                <span className="bg-gradient-to-r from-blue-600 to-purple-600 bg-clip-text text-transparent block">
+                  School Van Services in Patna Bihar
                 </span>
-              </h2>
+              </h1>
               
-              <p className="text-xl text-gray-600 mb-12 leading-relaxed">
-                Experience the best <strong>school transportation in Patna, Bihar</strong> with live GPS tracking, professional drivers, 
-                and unbeatable safety standards. Your child's daily school journey matters to us across <em>Patna</em>.
+              <p className="text-xl text-gray-600 mb-12 leading-relaxed max-w-3xl mx-auto">
+                Experience the best <strong>school transportation in Patna, Bihar</strong> with live GPS tracking, 
+                professional verified drivers, and comprehensive safety protocols. Your child's daily school journey matters to us.
               </p>
             </div>
 
-            {/* Action Buttons */}
-            <div className={`flex flex-col sm:flex-row gap-6 justify-center items-center mb-16 transform transition-all duration-1000 delay-500 ${isVisible ? 'translate-y-0 opacity-100' : 'translate-y-10 opacity-0'}`}>
+            {/* Clean Stats Cards */}
+            <div className="grid grid-cols-2 md:grid-cols-4 gap-6 mb-16">
+              <div className="bg-white rounded-2xl p-6 shadow-sm text-center">
+                <div className="text-3xl font-bold text-blue-600 mb-2">1,250+</div>
+                <div className="text-gray-600 text-sm">Happy Families</div>
+              </div>
+              <div className="bg-white rounded-2xl p-6 shadow-sm text-center">
+                <div className="text-3xl font-bold text-purple-600 mb-2">500+</div>
+                <div className="text-gray-600 text-sm">Professional Drivers</div>
+              </div>
+              <div className="bg-white rounded-2xl p-6 shadow-sm text-center">
+                <div className="text-3xl font-bold text-green-600 mb-2">4.8★</div>
+                <div className="text-gray-600 text-sm">Average Rating</div>
+              </div>
+              <div className="bg-white rounded-2xl p-6 shadow-sm text-center">
+                <div className="text-3xl font-bold text-orange-600 mb-2">Zero</div>
+                <div className="text-gray-600 text-sm">Major Incidents</div>
+              </div>
+            </div>
+
+            {/* Clean Action Buttons */}
+            <div className="flex flex-col sm:flex-row gap-6 justify-center items-center mb-16">
               <button
                 onClick={() => navigate('/Students')}
-                className="group bg-gradient-to-r from-blue-600 to-blue-700 hover:from-blue-700 hover:to-blue-800 text-white px-8 py-4 rounded-xl font-semibold text-lg shadow-lg hover:shadow-xl transform hover:scale-105 transition-all duration-300 flex items-center gap-3 min-w-[200px] animate-pulse-subtle cursor-pointer"
-                aria-label="Book school van service in Patna as a student"
+                className="group bg-gradient-to-r from-blue-600 to-blue-700 hover:from-blue-700 hover:to-blue-800 text-white px-10 py-4 rounded-2xl font-semibold text-lg shadow-lg hover:shadow-xl transform hover:scale-105 transition-all duration-300 flex items-center gap-3"
               >
                 <UserGroupIcon className="w-6 h-6" />
-                I am a Student
-                <ChevronRightIcon className="w-5 h-5 group-hover:translate-x-1 transition-transform duration-300" />
+                Book Safe Ride Now
+                <ArrowRightIcon className="w-5 h-5 group-hover:translate-x-1 transition-transform" />
               </button>
               
               <button
                 onClick={() => navigate('/Driver')}
-                className="group bg-gradient-to-r from-purple-600 to-purple-700 hover:from-purple-700 hover:to-purple-800 text-white px-8 py-4 rounded-xl font-semibold text-lg shadow-lg hover:shadow-xl transform hover:scale-105 transition-all duration-300 flex items-center gap-3 min-w-[200px] animate-pulse-subtle cursor-pointer"
-                style={{ animationDelay: '0.5s' }}
-                aria-label="Join as a professional driver partner in Patna"
+                className="group border-2 border-purple-600 text-purple-600 hover:bg-purple-600 hover:text-white px-10 py-4 rounded-2xl font-semibold text-lg transition-all duration-300 flex items-center gap-3"
               >
                 <ShieldCheckIcon className="w-6 h-6" />
                 Join as Partner
-                <ChevronRightIcon className="w-5 h-5 group-hover:translate-x-1 transition-transform duration-300" />
+                <ArrowRightIcon className="w-5 h-5 group-hover:translate-x-1 transition-transform" />
               </button>
             </div>
-          </div>
-        </section>
 
-        {/* SEO-Enhanced Benefits Section */}
-        <section className="container mx-auto px-6 py-16 relative z-10" aria-labelledby="benefits-heading">
-          <div className={`text-center mb-12 transform transition-all duration-1000 delay-700 ${isVisible ? 'translate-y-0 opacity-100' : 'translate-y-10 opacity-0'}`}>
-            <h3 id="benefits-heading" className="text-4xl font-bold text-gray-900 mb-4">
-              Why Choose Back2Nest for School Transport in Patna Bihar?
-            </h3>
-            <p className="text-lg text-gray-600 max-w-2xl mx-auto">
-              We provide the best features and benefits that make us the top choice for <strong>school transportation in Patna</strong>
-            </p>
-          </div>
-
-          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8 max-w-6xl mx-auto">
-            {benefits.map((benefit, index) => (
-              <article
-                key={index}
-                className={`group bg-white/80 backdrop-blur-sm p-8 rounded-2xl shadow-lg hover:shadow-2xl transform transition-all duration-500 hover:scale-105 border border-gray-100 hover:border-gray-200 ${isVisible ? 'translate-y-0 opacity-100' : 'translate-y-10 opacity-0'}`}
-                style={{ transitionDelay: `${900 + index * 100}ms` }}
-              >
-                <div className={`${benefit.color} mb-4 group-hover:scale-110 transition-transform duration-300`} aria-hidden="true">
-                  <benefit.icon className="w-12 h-12" />
+            {/* Key Features - Clean List */}
+            <div className="bg-white/70 backdrop-blur-sm rounded-3xl p-8 text-center max-w-4xl mx-auto">
+              <h2 className="text-2xl font-bold text-gray-900 mb-6">Why Families Choose Back2Nest</h2>
+              <div className="grid grid-cols-2 md:grid-cols-4 gap-6 text-sm">
+                <div className="flex items-center justify-center gap-2">
+                  <CheckCircleIcon className="w-5 h-5 text-green-500" />
+                  <span className="text-gray-700">Live GPS Tracking</span>
                 </div>
-                <h4 className="text-xl font-bold text-gray-900 mb-3">
-                  {benefit.title}
-                </h4>
-                <p className="text-gray-600 leading-relaxed">
-                  {benefit.description}
-                </p>
-              </article>
-            ))}
-          </div>
-        </section>
-
-        {/* Enhanced Trust Indicators Section with Schema */}
-        <section className="container mx-auto px-6 py-16 relative z-10" aria-labelledby="stats-heading">
-          <div className="text-center bg-white/80 backdrop-blur-sm rounded-3xl p-12 shadow-xl border border-gray-100">
-            <header className="mb-8">
-              <h3 id="stats-heading" className="text-3xl font-bold text-gray-900 mb-2">
-                Trusted by Families Across Patna, Bihar
-              </h3>
-              <p className="text-lg text-gray-600">
-                Real numbers that showcase our commitment to safe <strong>school transportation in Patna</strong>
-              </p>
-            </header>
-            
-            <div className="grid grid-cols-2 md:grid-cols-4 gap-8">
-              <div className="animate-count-up" itemScope itemType="https://schema.org/Statistic">
-                <div className="text-3xl font-bold text-blue-600 mb-2" itemProp="value">1,250+</div>
-                <div className="text-gray-600" itemProp="name">Happy Families in Patna</div>
-              </div>
-              <div className="animate-count-up" style={{ animationDelay: '0.2s' }} itemScope itemType="https://schema.org/Statistic">
-                <div className="text-3xl font-bold text-purple-600 mb-2" itemProp="value">500+</div>
-                <div className="text-gray-600" itemProp="name">Professional Drivers</div>
-              </div>
-              <div className="animate-count-up" style={{ animationDelay: '0.4s' }} itemScope itemType="https://schema.org/Statistic">
-                <div className="text-3xl font-bold text-green-600 mb-2" itemProp="value">50+</div>
-                <div className="text-gray-600" itemProp="name">Partner Schools in Bihar</div>
-              </div>
-              <div className="animate-count-up" style={{ animationDelay: '0.6s' }} itemScope itemType="https://schema.org/Statistic">
-                <div className="text-3xl font-bold text-orange-600 mb-2" itemProp="value">4.8★</div>
-                <div className="text-gray-600" itemProp="name">Average Rating</div>
+                <div className="flex items-center justify-center gap-2">
+                  <CheckCircleIcon className="w-5 h-5 text-green-500" />
+                  <span className="text-gray-700">In-Van Cameras</span>
+                </div>
+                <div className="flex items-center justify-center gap-2">
+                  <CheckCircleIcon className="w-5 h-5 text-green-500" />
+                  <span className="text-gray-700">24/7 Support</span>
+                </div>
+                <div className="flex items-center justify-center gap-2">
+                  <CheckCircleIcon className="w-5 h-5 text-green-500" />
+                  <span className="text-gray-700">Verified Drivers</span>
+                </div>
               </div>
             </div>
           </div>
         </section>
 
-        {/* Location-Specific Service Area Section */}
-        <section className="container mx-auto px-6 py-16 relative z-10" aria-labelledby="service-area-heading">
-          <div className="text-center max-w-4xl mx-auto">
-            <h3 id="service-area-heading" className="text-3xl font-bold text-gray-900 mb-6">
+        {/* Benefits Section - Better Spacing */}
+        <section className="container mx-auto px-6 py-20 relative z-10">
+          <div className="max-w-6xl mx-auto">
+            <div className="text-center mb-16">
+              <h2 className="text-4xl font-bold text-gray-900 mb-4">
+                Advanced Features for Complete Safety
+              </h2>
+              <p className="text-lg text-gray-600 max-w-2xl mx-auto">
+                We provide cutting-edge technology and comprehensive safety measures that make us the top choice for school transportation in Patna.
+              </p>
+            </div>
+
+            <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
+              {benefits.map((benefit, index) => (
+                <div
+                  key={index}
+                  className="bg-white rounded-3xl p-8 shadow-sm hover:shadow-lg transform hover:scale-105 transition-all duration-300 text-center"
+                >
+                  <div className={`w-16 h-16 bg-gradient-to-r ${benefit.color} rounded-2xl flex items-center justify-center mx-auto mb-6`}>
+                    <benefit.icon className="w-8 h-8 text-white" />
+                  </div>
+                  <h3 className="text-xl font-bold text-gray-900 mb-3">
+                    {benefit.title}
+                  </h3>
+                  <p className="text-gray-600 leading-relaxed">
+                    {benefit.description}
+                  </p>
+                </div>
+              ))}
+            </div>
+          </div>
+        </section>
+
+        {/* Service Areas - Clean Layout */}
+        <section className="container mx-auto px-6 py-20 relative z-10 bg-gradient-to-r from-blue-600 to-purple-600 mx-6 rounded-3xl text-white">
+          <div className="max-w-6xl mx-auto text-center">
+            <h2 className="text-4xl font-bold mb-6">
               Serving Schools Across Patna, Bihar
-            </h3>
-            <p className="text-lg text-gray-600 mb-8">
-              Our <strong>school van services</strong> cover all major areas of <em>Patna</em> including Boring Road, Bailey Road, 
-              Fraser Road, Kankarbagh, Rajendra Nagar, and surrounding areas in Bihar.
+            </h2>
+            <p className="text-xl text-blue-100 mb-12 max-w-3xl mx-auto">
+              Our comprehensive school van services cover all major areas of Patna including residential zones, 
+              educational districts, and commercial areas for convenient daily commutes.
             </p>
-            <div className="grid grid-cols-2 md:grid-cols-4 gap-4 text-sm text-gray-700">
-              <div className="bg-blue-50 p-3 rounded-lg">Boring Road</div>
-              <div className="bg-purple-50 p-3 rounded-lg">Bailey Road</div>
-              <div className="bg-green-50 p-3 rounded-lg">Kankarbagh</div>
-              <div className="bg-orange-50 p-3 rounded-lg">Rajendra Nagar</div>
+            
+            <div className="grid grid-cols-2 md:grid-cols-4 gap-6 mb-12">
+              {['Boring Road', 'Bailey Road', 'Kankarbagh', 'Rajendra Nagar'].map((area, index) => (
+                <div key={index} className="bg-white/10 backdrop-blur-sm rounded-2xl p-6">
+                  <MapPinIcon className="w-8 h-8 text-blue-200 mx-auto mb-3" />
+                  <h3 className="font-semibold text-lg">{area}</h3>
+                  <p className="text-blue-100 text-sm mt-2">Complete Coverage</p>
+                </div>
+              ))}
+            </div>
+
+            <Link 
+              to="/contact" 
+              className="bg-white text-blue-600 px-8 py-4 rounded-2xl font-semibold text-lg shadow-lg hover:shadow-xl transform hover:scale-105 transition-all duration-300 inline-flex items-center gap-2"
+            >
+              Get Service in Your Area
+              <ArrowRightIcon className="w-5 h-5" />
+            </Link>
+          </div>
+        </section>
+
+        {/* Clean Internal Links */}
+        <section className="container mx-auto px-6 py-20 relative z-10">
+          <div className="max-w-6xl mx-auto">
+            <div className="text-center mb-16">
+              <h2 className="text-4xl font-bold text-gray-900 mb-4">
+                Learn More About Back2Nest
+              </h2>
+              <p className="text-lg text-gray-600">
+                Discover comprehensive information about our services, safety measures, and company story.
+              </p>
+            </div>
+
+            <div className="grid md:grid-cols-3 gap-8">
+              <Link to="/about" className="group">
+                <div className="bg-white rounded-3xl p-8 shadow-sm hover:shadow-lg transition-all duration-300 text-center group-hover:scale-105">
+                  <div className="w-16 h-16 bg-gradient-to-r from-blue-500 to-indigo-600 rounded-2xl flex items-center justify-center mx-auto mb-6">
+                    <UserGroupIcon className="w-8 h-8 text-white" />
+                  </div>
+                  <h3 className="text-xl font-bold text-gray-800 mb-3">Our Story</h3>
+                  <p className="text-gray-600 leading-relaxed">
+                    Learn about founder Sachin Kumar's vision and how we're revolutionizing school transportation.
+                  </p>
+                </div>
+              </Link>
+
+              <Link to="/safety-features" className="group">
+                <div className="bg-white rounded-3xl p-8 shadow-sm hover:shadow-lg transition-all duration-300 text-center group-hover:scale-105">
+                  <div className="w-16 h-16 bg-gradient-to-r from-green-500 to-emerald-600 rounded-2xl flex items-center justify-center mx-auto mb-6">
+                    <ShieldCheckIcon className="w-8 h-8 text-white" />
+                  </div>
+                  <h3 className="text-xl font-bold text-gray-800 mb-3">Safety Features</h3>
+                  <p className="text-gray-600 leading-relaxed">
+                    Comprehensive safety measures including GPS tracking and emergency protocols.
+                  </p>
+                </div>
+              </Link>
+
+              <Link to="/blogs" className="group">
+                <div className="bg-white rounded-3xl p-8 shadow-sm hover:shadow-lg transition-all duration-300 text-center group-hover:scale-105">
+                  <div className="w-16 h-16 bg-gradient-to-r from-purple-500 to-pink-600 rounded-2xl flex items-center justify-center mx-auto mb-6">
+                    <DocumentCheckIcon className="w-8 h-8 text-white" />
+                  </div>
+                  <h3 className="text-xl font-bold text-gray-800 mb-3">Expert Insights</h3>
+                  <p className="text-gray-600 leading-relaxed">
+                    Latest tips and updates on school transportation safety and innovations.
+                  </p>
+                </div>
+              </Link>
             </div>
           </div>
         </section>
 
         <Testimonials/>
+
+        {/* Clean CTA */}
+        <section className="container mx-auto px-6 py-20 relative z-10">
+          <div className="bg-gradient-to-r from-blue-600 to-purple-600 rounded-3xl p-12 text-center text-white max-w-4xl mx-auto">
+            <h2 className="text-4xl font-bold mb-6">
+              Ready to Experience Safe School Transportation?
+            </h2>
+            <p className="text-xl text-blue-100 mb-8 max-w-2xl mx-auto">
+              Join thousands of families across Patna who trust Back2Nest for their children's daily school commute.
+            </p>
+            <div className="flex flex-col sm:flex-row gap-6 justify-center">
+              <Link
+                to="/Students"
+                className="bg-white text-blue-600 px-8 py-4 rounded-2xl font-semibold text-lg shadow-lg hover:shadow-xl transform hover:scale-105 transition-all duration-300"
+              >
+                Book Your Child's Ride
+              </Link>
+              <a
+                href="tel:+918935904820"
+                className="border-2 border-white text-white px-8 py-4 rounded-2xl font-semibold text-lg hover:bg-white hover:text-blue-600 transition-all duration-300"
+              >
+                Call: +91-8935904820
+              </a>
+            </div>
+          </div>
+        </section>
       </div>
 
       <style jsx>{`
         @keyframes float-slow {
           0%, 100% { transform: translateY(0px) rotate(0deg); }
-          50% { transform: translateY(-20px) rotate(2deg); }
+          50% { transform: translateY(-20px) rotate(1deg); }
         }
         
         @keyframes float-medium {
           0%, 100% { transform: translateY(0px) rotate(0deg); }
-          50% { transform: translateY(-15px) rotate(-1deg); }
+          50% { transform: translateY(-15px) rotate(-0.5deg); }
         }
         
-        @keyframes float-fast {
-          0%, 100% { transform: translateY(0px) rotate(0deg); }
-          50% { transform: translateY(-10px) rotate(1deg); }
-        }
-        
-        @keyframes gradient-x {
-          0%, 100% { transform: translateX(-100%); }
-          50% { transform: translateX(100%); }
-        }
-        
-        @keyframes gradient-text {
-          0%, 100% { background-position: 0% 50%; }
-          50% { background-position: 100% 50%; }
-        }
-        
-        @keyframes pulse-subtle {
-          0%, 100% { opacity: 1; }
-          50% { opacity: 0.9; }
-        }
-        
-        @keyframes count-up {
-          from { opacity: 0; transform: translateY(20px); }
-          to { opacity: 1; transform: translateY(0); }
-        }
-        
-        @keyframes grid-move {
-          0% { transform: translate(0, 0); }
-          100% { transform: translate(20px, 20px); }
-        }
-        
-        .animate-float-slow { animation: float-slow 6s ease-in-out infinite; }
-        .animate-float-medium { animation: float-medium 4s ease-in-out infinite; }
-        .animate-float-fast { animation: float-fast 3s ease-in-out infinite; }
-        .animate-gradient-x { animation: gradient-x 15s ease infinite; }
-        .animate-gradient-text { 
-          background-size: 200% 200%;
-          animation: gradient-text 3s ease infinite;
-        }
-        .animate-pulse-subtle { animation: pulse-subtle 3s ease-in-out infinite; }
-        .animate-count-up { animation: count-up 1s ease-out forwards; }
-        .animate-grid-move { animation: grid-move 20s linear infinite; }
-        
-        .bg-grid-pattern {
-          background-image: 
-            linear-gradient(rgba(59, 130, 246, 0.1) 1px, transparent 1px),
-            linear-gradient(90deg, rgba(59, 130, 246, 0.1) 1px, transparent 1px);
-          background-size: 50px 50px;
-        }
-
-        @media (max-width: 768px) {
-          .animate-float-slow,
-          .animate-float-medium,
-          .animate-float-fast {
-            animation-duration: 8s;
-          }
-          
-          .animate-gradient-x {
-            animation-duration: 20s;
-          }
-        }
+        .animate-float-slow { animation: float-slow 8s ease-in-out infinite; }
+        .animate-float-medium { animation: float-medium 6s ease-in-out infinite; }
 
         @media (prefers-reduced-motion: reduce) {
           * {

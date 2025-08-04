@@ -2,41 +2,117 @@ import React, { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
 import { 
   ArrowLeftIcon,
-  BriefcaseIcon,
-  EnvelopeIcon,
-  PhoneIcon,
-  UserGroupIcon,
-  HeartIcon,
-  BellIcon,
-  PaperAirplaneIcon,
-  ExclamationCircleIcon
+  MagnifyingGlassIcon,
+  CalendarDaysIcon,
+  UserIcon,
+  TagIcon,
+  FolderIcon,
+  ChevronLeftIcon,
+  ChevronRightIcon,
+  ExclamationTriangleIcon,
+  BookOpenIcon,
+  ArrowTrendingUpIcon,
+  ShieldCheckIcon,
+  LightBulbIcon,
+  EnvelopeIcon
 } from '@heroicons/react/24/outline';
 import SEO from '../Components/SEO';
 
-const Careers = () => {
+const Blog = () => {
   const [isVisible, setIsVisible] = useState(false);
+  const [posts, setPosts] = useState([]);
+  const [categories, setCategories] = useState([]);
+  const [recentPosts, setRecentPosts] = useState([]);
+  const [loading, setLoading] = useState(true);
+  const [error, setError] = useState('');
+  const [searchTerm, setSearchTerm] = useState('');
+  const [selectedCategory, setSelectedCategory] = useState('all');
+  const [currentPage, setCurrentPage] = useState(1);
+  const [totalPages, setTotalPages] = useState(1);
+  const postsPerPage = 6;
 
   useEffect(() => {
     setIsVisible(true);
-  }, []);
+    fetchBlogData();
+  }, [currentPage, selectedCategory, searchTerm]);
 
-  // Enhanced structured data for careers page
+  // Enhanced structured data for blog with comprehensive SEO
   const structuredData = {
     "@context": "https://schema.org",
     "@graph": [
       {
+        "@type": "Blog",
+        "@id": "https://back2nest.in/blog#blog",
+        "name": "Back2Nest Blog - School Transportation Insights Patna Bihar",
+        "description": "Expert insights, safety tips, and latest updates on school transportation, driver training, GPS tracking, and student commute solutions in Patna, Bihar. Professional advice from Back2Nest transportation specialists.",
+        "url": "https://back2nest.in/blog",
+        "publisher": {
+          "@type": "Organization",
+          "@id": "https://back2nest.in/#organization",
+          "name": "Back2Nest",
+          "logo": {
+            "@type": "ImageObject",
+            "url": "https://back2nest.in/assets/logo.png",
+            "width": "200",
+            "height": "60"
+          },
+          "url": "https://back2nest.in",
+          "sameAs": [
+            "https://www.facebook.com/back2nest",
+            "https://www.instagram.com/back2nest_official",
+            "https://www.linkedin.com/company/back2nest"
+          ]
+        },
+        "inLanguage": "en-IN",
+        "about": {
+          "@type": "Thing",
+          "name": "School Transportation Safety"
+        },
+        "keywords": "school transportation blog, school van safety, GPS tracking, driver training, student transport Patna, school bus safety Bihar",
+        "blogPost": posts.map(post => ({
+          "@type": "BlogPosting",
+          "@id": `https://back2nest.in/blog/${post.slug}#article`,
+          "headline": post.title,
+          "description": post.excerpt,
+          "image": {
+            "@type": "ImageObject",
+            "url": post.image,
+            "width": "800",
+            "height": "450"
+          },
+          "datePublished": post.publishDate,
+          "dateModified": post.modifiedDate || post.publishDate,
+          "author": {
+            "@type": "Person",
+            "name": post.author
+          },
+          "publisher": {
+            "@id": "https://back2nest.in/#organization"
+          },
+          "mainEntityOfPage": `https://back2nest.in/blog/${post.slug}`,
+          "articleSection": post.category,
+          "keywords": post.tags.join(', ')
+        }))
+      },
+      {
         "@type": "WebPage",
-        "@id": "https://back2nest.in/careers#webpage",
-        "url": "https://back2nest.in/careers",
-        "name": "Careers at Back2Nest - Join Our Team | School Transportation Jobs Patna Bihar",
-        "description": "Explore career opportunities at Back2Nest. Currently no openings available. Contact us for future opportunities in school transportation industry in Patna, Bihar.",
+        "@id": "https://back2nest.in/blog#webpage",
+        "url": "https://back2nest.in/blog",
+        "name": "Back2Nest Blog - Expert Insights on School Transportation Safety in Patna Bihar",
+        "description": "Explore comprehensive insights, tips, and updates on school transportation safety, GPS tracking innovations, driver training, and student commute solutions in Patna, Bihar from Back2Nest experts.",
         "mainEntity": {
-          "@id": "https://back2nest.in/careers#organization"
+          "@id": "https://back2nest.in/blog#blog"
+        },
+        "breadcrumb": {
+          "@id": "https://back2nest.in/blog#breadcrumb"
+        },
+        "publisher": {
+          "@id": "https://back2nest.in/#organization"
         }
       },
       {
         "@type": "Organization",
-        "@id": "https://back2nest.in/careers#organization",
+        "@id": "https://back2nest.in/#organization",
         "name": "Back2Nest",
         "url": "https://back2nest.in",
         "logo": {
@@ -44,42 +120,7 @@ const Careers = () => {
           "url": "https://back2nest.in/assets/logo.png",
           "width": "200",
           "height": "60"
-        },
-        "address": {
-          "@type": "PostalAddress",
-          "streetAddress": "Jagat Narayan Road",
-          "addressLocality": "Patna",
-          "addressRegion": "Bihar",
-          "postalCode": "800003",
-          "addressCountry": "IN"
-        },
-        "telephone": "+91-8935904820",
-        "email": "careers@back2nest.in",
-        "description": "Leading school transportation service provider in Patna, Bihar, committed to safe and reliable student commute solutions",
-        "numberOfEmployees": "500+",
-        "foundingDate": "2022",
-        "slogan": "Safe Journey Home"
-      },
-      {
-        "@type": "JobPosting",
-        "@id": "https://back2nest.in/careers#no-current-openings",
-        "title": "No Current Job Openings",
-        "description": "Back2Nest currently has no open positions. We encourage interested candidates to check back regularly or contact us directly for future opportunities.",
-        "hiringOrganization": {
-          "@id": "https://back2nest.in/careers#organization"
-        },
-        "jobLocation": {
-          "@type": "Place",
-          "address": {
-            "@type": "PostalAddress",
-            "addressLocality": "Patna",
-            "addressRegion": "Bihar",
-            "addressCountry": "IN"
-          }
-        },
-        "datePosted": "2025-01-04",
-        "validThrough": "2025-12-31",
-        "employmentType": "FULL_TIME"
+        }
       }
     ]
   };
@@ -88,6 +129,7 @@ const Careers = () => {
   const breadcrumbData = {
     "@context": "https://schema.org",
     "@type": "BreadcrumbList",
+    "@id": "https://back2nest.in/blog#breadcrumb",
     "itemListElement": [
       {
         "@type": "ListItem",
@@ -98,53 +140,239 @@ const Careers = () => {
       {
         "@type": "ListItem",
         "position": 2,
-        "name": "Careers",
-        "item": "https://back2nest.in/careers"
+        "name": "Blog",
+        "item": "https://back2nest.in/blog"
       }
     ]
   };
 
-  const companyValues = [
+  // Enhanced sample blog data with more comprehensive content
+  const samplePosts = [
     {
-      icon: HeartIcon,
-      title: "Safety First",
-      description: "We prioritize student safety above everything else",
-      color: "text-red-500"
+      id: 1,
+      title: "10 Essential Safety Tips for School Van Transportation in Patna Bihar - Complete Parent Guide",
+      slug: "essential-safety-tips-school-van-transportation-patna-bihar",
+      excerpt: "Discover the most important safety measures that ensure your child's secure journey to and from school every day. Our comprehensive guide covers GPS tracking, driver verification, emergency protocols, and vehicle safety standards specifically for families in Patna, Bihar.",
+      content: "Full article content here...",
+      image: "https://back2nest.in/images/blog/safety-tips-school-van-patna.jpg",
+      author: "Back2Nest Safety Team",
+      publishDate: "2024-12-15",
+      modifiedDate: "2024-12-15",
+      category: "Safety",
+      tags: ["Safety Tips", "School Transport", "Parent Guide", "Patna", "Bihar"],
+      readTime: "8 min read"
     },
     {
-      icon: UserGroupIcon,
-      title: "Team Spirit",
-      description: "We believe in collaboration and mutual support",
-      color: "text-blue-500"
+      id: 2,
+      title: "How Live GPS Tracking Technology Revolutionizes School Transport Safety in Patna Bihar",
+      slug: "live-gps-tracking-revolutionizes-school-transport-patna-bihar",
+      excerpt: "Learn how real-time GPS tracking technology is making school transportation safer and more transparent for families in Patna, Bihar. Discover how parents can monitor their child's journey with live updates, emergency alerts, and comprehensive safety features.",
+      content: "Full article content here...",
+      image: "https://back2nest.in/images/blog/gps-tracking-school-transport-patna.jpg",
+      author: "Sachin Kumar",
+      publishDate: "2024-12-10",
+      modifiedDate: "2024-12-10",
+      category: "Technology",
+      tags: ["GPS Tracking", "Technology", "Innovation", "Live Monitoring", "Patna"],
+      readTime: "10 min read"
     },
     {
-      icon: BriefcaseIcon,
-      title: "Professional Growth",
-      description: "We invest in our team's continuous development",
-      color: "text-green-500"
+      id: 3,
+      title: "Professional Driver Training Benefits for Safe School Transportation in Bihar",
+      slug: "professional-driver-training-benefits-school-transport-bihar",
+      excerpt: "Why trained and certified drivers make all the difference in ensuring safe and reliable school transportation services. Explore our comprehensive driver training programs, background verification processes, and safety protocols that protect students across Bihar.",
+      content: "Full article content here...",
+      image: "https://back2nest.in/images/blog/driver-training-school-transport-bihar.jpg",
+      author: "Back2Nest Training Team",
+      publishDate: "2024-12-05",
+      modifiedDate: "2024-12-05",
+      category: "Driver Training",
+      tags: ["Driver Training", "Safety Protocols", "Professional Drivers", "Bihar", "Certification"],
+      readTime: "7 min read"
+    },
+    {
+      id: 4,
+      title: "Complete Parent's Guide to Choosing the Right School Transport Service in Patna Bihar",
+      slug: "complete-parents-guide-choosing-school-transport-patna-bihar",
+      excerpt: "A comprehensive guide for parents on what to look for when selecting a reliable school transportation service in Bihar. Learn about safety features, driver qualifications, vehicle standards, insurance coverage, and technology integration for peace of mind.",
+      content: "Full article content here...",
+      image: "https://back2nest.in/images/blog/parents-guide-school-transport-patna.jpg",
+      author: "Back2Nest Advisory Team",
+      publishDate: "2024-11-28",
+      modifiedDate: "2024-11-28",
+      category: "Guides",
+      tags: ["Parent Guide", "School Transport", "Selection Criteria", "Patna", "Safety Standards"],
+      readTime: "12 min read"
+    },
+    {
+      id: 5,
+      title: "Future of School Transportation in Bihar - Sustainable and Smart Solutions",
+      slug: "future-school-transportation-bihar-sustainable-smart-solutions",
+      excerpt: "Exploring eco-friendly initiatives and sustainable practices in school transportation for a greener future. Discover how Back2Nest is leading innovation in Bihar with electric vehicles, route optimization, and smart technology integration.",
+      content: "Full article content here...",
+      image: "https://back2nest.in/images/blog/future-school-transport-bihar.jpg",
+      author: "Sachin Kumar",
+      publishDate: "2024-11-20",
+      modifiedDate: "2024-11-20",
+      category: "Innovation",
+      tags: ["Sustainability", "Future Technology", "Innovation", "Electric Vehicles", "Bihar"],
+      readTime: "9 min read"
+    },
+    {
+      id: 6,
+      title: "How Back2Nest Ensures 100% Safety During School Commutes in Patna Bihar",
+      slug: "back2nest-ensures-100-percent-safety-school-commutes-patna",
+      excerpt: "An inside look at the comprehensive safety measures and protocols that make Back2Nest the most trusted choice in Patna. Learn about our multi-layered security approach, emergency response systems, and safety innovations.",
+      content: "Full article content here...",
+      image: "https://back2nest.in/images/blog/back2nest-safety-measures-patna.jpg",
+      author: "Back2Nest Operations Team",
+      publishDate: "2024-11-15",
+      modifiedDate: "2024-11-15",
+      category: "Company Updates",
+      tags: ["Back2Nest", "Safety Protocols", "Security Measures", "Patna", "Zero Incidents"],
+      readTime: "6 min read"
+    },
+    {
+      id: 7,
+      title: "School Van Maintenance Standards and Safety Inspections in Bihar",
+      slug: "school-van-maintenance-safety-inspections-bihar",
+      excerpt: "Understanding the importance of regular vehicle maintenance and safety inspections for school transportation. Learn about our comprehensive maintenance schedules, safety checks, and quality assurance processes.",
+      content: "Full article content here...",
+      image: "https://back2nest.in/images/blog/van-maintenance-safety-bihar.jpg",
+      author: "Back2Nest Technical Team",
+      publishDate: "2024-11-08",
+      modifiedDate: "2024-11-08",
+      category: "Maintenance",
+      tags: ["Vehicle Maintenance", "Safety Inspections", "Quality Standards", "Bihar", "Preventive Care"],
+      readTime: "5 min read"
+    },
+    {
+      id: 8,
+      title: "Emergency Response Protocols for School Transportation in Patna",
+      slug: "emergency-response-protocols-school-transportation-patna",
+      excerpt: "Comprehensive emergency response procedures and protocols that ensure student safety during unexpected situations. Learn about our 24/7 response team, communication systems, and crisis management strategies.",
+      content: "Full article content here...",
+      image: "https://back2nest.in/images/blog/emergency-response-school-transport-patna.jpg",
+      author: "Back2Nest Emergency Team",
+      publishDate: "2024-11-01",
+      modifiedDate: "2024-11-01",
+      category: "Emergency Preparedness",
+      tags: ["Emergency Response", "Crisis Management", "Student Safety", "Patna", "24/7 Support"],
+      readTime: "8 min read"
     }
   ];
 
-  const futureRoles = [
-    "School Van Drivers",
-    "Fleet Supervisors",
-    "Customer Support Representatives",
-    "Safety Coordinators",
-    "Route Planners",
-    "Technology Specialists",
-    "Operations Managers"
+  const sampleCategories = [
+    { id: 'all', name: 'All Posts', count: 8 },
+    { id: 'safety', name: 'Safety', count: 2 },
+    { id: 'technology', name: 'Technology', count: 1 },
+    { id: 'driver training', name: 'Driver Training', count: 1 },
+    { id: 'guides', name: 'Guides', count: 1 },
+    { id: 'innovation', name: 'Innovation', count: 1 },
+    { id: 'company updates', name: 'Company Updates', count: 1 },
+    { id: 'maintenance', name: 'Maintenance', count: 1 }
+  ];
+
+  // Fetch blog data (replace with actual API calls)
+  const fetchBlogData = async () => {
+    try {
+      setLoading(true);
+      setError('');
+
+      // Simulate API delay
+      await new Promise(resolve => setTimeout(resolve, 1000));
+
+      // Filter posts based on search and category
+      let filteredPosts = samplePosts;
+      
+      if (searchTerm) {
+        filteredPosts = filteredPosts.filter(post => 
+          post.title.toLowerCase().includes(searchTerm.toLowerCase()) ||
+          post.excerpt.toLowerCase().includes(searchTerm.toLowerCase()) ||
+          post.tags.some(tag => tag.toLowerCase().includes(searchTerm.toLowerCase()))
+        );
+      }
+
+      if (selectedCategory !== 'all') {
+        filteredPosts = filteredPosts.filter(post => 
+          post.category.toLowerCase() === selectedCategory.toLowerCase()
+        );
+      }
+
+      // Pagination
+      const startIndex = (currentPage - 1) * postsPerPage;
+      const endIndex = startIndex + postsPerPage;
+      const paginatedPosts = filteredPosts.slice(startIndex, endIndex);
+      
+      setPosts(paginatedPosts);
+      setTotalPages(Math.ceil(filteredPosts.length / postsPerPage));
+      setCategories(sampleCategories);
+      setRecentPosts(samplePosts.slice(0, 5));
+      
+    } catch (err) {
+      setError('Failed to load blog posts. Please try again.');
+      console.error('Blog fetch error:', err);
+    } finally {
+      setLoading(false);
+    }
+  };
+
+  // Handle search
+  const handleSearch = (e) => {
+    e.preventDefault();
+    setCurrentPage(1);
+    fetchBlogData();
+  };
+
+  // Handle category change
+  const handleCategoryChange = (categoryId) => {
+    setSelectedCategory(categoryId);
+    setCurrentPage(1);
+  };
+
+  // Handle pagination
+  const handlePageChange = (page) => {
+    setCurrentPage(page);
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+  };
+
+  const featuredTopics = [
+    {
+      icon: ShieldCheckIcon,
+      title: "Safety Protocols",
+      description: "Comprehensive safety measures and protocols for secure school transportation",
+      count: "12 Articles"
+    },
+    {
+      icon: ArrowTrendingUpIcon,
+      title: "Industry Insights",
+      description: "Latest trends and developments in school transportation industry",
+      count: "8 Articles"
+    },
+    {
+      icon: LightBulbIcon,
+      title: "Innovation & Technology",
+      description: "Cutting-edge technology solutions revolutionizing student transport",
+      count: "6 Articles"
+    },
+    {
+      icon: BookOpenIcon,
+      title: "Educational Resources",
+      description: "Guides and resources for parents and educational institutions",
+      count: "15 Articles"
+    }
   ];
 
   return (
     <>
       <SEO 
-        title="Careers at Back2Nest - Join Our Team | School Transportation Jobs Patna Bihar"
-        description="Explore career opportunities at Back2Nest, Patna's leading school transportation service. Currently no openings available. Contact us at careers@back2nest.in or +91-8935904820 for future opportunities in safe school transport industry in Bihar."
-        keywords="Back2Nest careers, school transport jobs Patna, school van driver jobs Bihar, school bus jobs Patna, transportation careers Bihar, join Back2Nest team, school transport employment, driver jobs Patna Bihar, careers@back2nest.in"
-        canonicalUrl="https://back2nest.in/careers"
-        ogTitle="Careers - Join Back2Nest Team | School Transportation Jobs Patna Bihar"
-        ogDescription="Currently no job openings at Back2Nest. Contact careers@back2nest.in for future opportunities in school transportation. Join India's leading school transport service in Patna, Bihar."
-        ogImage="https://back2nest.in/images/careers-og.jpg"
+        title="Back2Nest Blog - Expert Insights on School Transportation Safety in Patna Bihar | Latest Updates, Tips & Innovations"
+        description="Explore comprehensive insights, safety tips, driver training guides, GPS tracking innovations, and student transportation solutions in Patna, Bihar. Stay updated with Back2Nest's expert advice on school transport safety, vehicle maintenance, emergency protocols, and technology advancements for secure daily commutes."
+        keywords="school transportation blog Patna, safe school rides Bihar, school transport tips, Back2Nest news updates, school bus safety blog Bihar, student transportation insights Patna, school van safety tips Bihar, driver training blog, GPS tracking insights, school transport innovations, emergency protocols school transport, vehicle maintenance tips, parent guides school transport Bihar"
+        canonicalUrl="https://back2nest.in/blog"
+        ogTitle="Back2Nest Blog - Expert School Transportation Insights & Safety Tips in Patna Bihar"
+        ogDescription="Stay updated with Back2Nest's comprehensive blog covering school transport safety, GPS tracking innovations, driver training, emergency protocols, and expert tips for parents in Patna, Bihar."
+        ogImage="https://back2nest.in/images/blog-featured-og.jpg"
         structuredData={structuredData}
         breadcrumbData={breadcrumbData}
         additionalMeta={{
@@ -155,222 +383,444 @@ const Careers = () => {
         }}
       />
 
-      <div className="min-h-screen bg-gradient-to-br from-purple-50 via-white to-blue-50">
+      <div className="min-h-screen bg-gradient-to-br from-blue-50 via-white to-purple-50">
         {/* Breadcrumb Navigation */}
         <nav className="container mx-auto px-6 py-4" aria-label="Breadcrumb">
           <ol className="flex items-center space-x-2 text-sm text-gray-600">
             <li>
-              <Link to="/" className="hover:text-purple-600 transition-colors">Home</Link>
+              <Link to="/" className="hover:text-blue-600 transition-colors" title="Back2Nest Home - School Transportation Patna">
+                Home
+              </Link>
             </li>
             <li className="text-gray-400">/</li>
-            <li className="text-gray-800 font-medium">Careers</li>
+            <li className="text-gray-800 font-medium">Blog</li>
           </ol>
         </nav>
 
         <div className="container mx-auto px-6 py-8">
-          <main className="max-w-5xl mx-auto">
-            {/* Hero Section */}
+          <main className="max-w-7xl mx-auto">
+            {/* Header Section */}
             <header className={`text-center mb-16 transform transition-all duration-1000 ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'}`}>
-              <div className="inline-block px-4 py-2 bg-purple-100 text-purple-700 rounded-full text-sm font-semibold mb-4">
-                Careers at Back2Nest
+              <div className="inline-block px-4 py-2 bg-blue-100 text-blue-700 rounded-full text-sm font-semibold mb-4">
+                Back2Nest Expert Insights & Updates
               </div>
               <h1 className="text-5xl md:text-6xl font-bold text-gray-900 mb-6">
-                Join Our Mission of 
-                <span className="block bg-gradient-to-r from-purple-600 to-blue-600 bg-clip-text text-transparent">
-                  Safe School Transportation
+                Latest Insights on 
+                <span className="block bg-gradient-to-r from-blue-600 to-purple-600 bg-clip-text text-transparent">
+                  School Transportation Safety
                 </span>
               </h1>
-              <p className="text-xl text-gray-600 mb-8 max-w-3xl mx-auto">
-                Be part of India's most trusted school transportation service in <strong>Patna, Bihar</strong>. 
-                Help us make every child's journey to school safe and reliable.
+              <p className="text-xl text-gray-600 mb-8 max-w-4xl mx-auto leading-relaxed">
+                Stay updated with comprehensive insights, expert tips, and latest innovations in school transportation safety from <strong>Patna, Bihar's most trusted school van service</strong>. 
+                Our blog features in-depth guides, safety protocols, technology updates, and professional advice to help parents make informed decisions about their child's daily commute. 
+                Discover how <em>Back2Nest</em> is revolutionizing student transportation with cutting-edge solutions and unwavering commitment to safety.
               </p>
+              
+              {/* Blog Statistics */}
+              <div className="grid grid-cols-2 md:grid-cols-4 gap-4 max-w-2xl mx-auto mb-8">
+                <div className="bg-white/80 backdrop-blur-sm rounded-lg p-4 shadow-sm">
+                  <div className="text-2xl font-bold text-blue-600">50+</div>
+                  <div className="text-sm text-gray-600">Expert Articles</div>
+                </div>
+                <div className="bg-white/80 backdrop-blur-sm rounded-lg p-4 shadow-sm">
+                  <div className="text-2xl font-bold text-green-600">15k+</div>
+                  <div className="text-sm text-gray-600">Monthly Readers</div>
+                </div>
+                <div className="bg-white/80 backdrop-blur-sm rounded-lg p-4 shadow-sm">
+                  <div className="text-2xl font-bold text-purple-600">8</div>
+                  <div className="text-sm text-gray-600">Categories</div>
+                </div>
+                <div className="bg-white/80 backdrop-blur-sm rounded-lg p-4 shadow-sm">
+                  <div className="text-2xl font-bold text-orange-600">24/7</div>
+                  <div className="text-sm text-gray-600">Updates</div>
+                </div>
+              </div>
             </header>
 
-            {/* Current Status Section */}
-            <section className={`mb-16 transform transition-all duration-1000 delay-300 ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'}`}>
-              <div className="bg-white rounded-2xl shadow-xl p-8 text-center border-l-4 border-blue-500">
-                <div className="w-16 h-16 bg-blue-100 rounded-full flex items-center justify-center mx-auto mb-6">
-                  <ExclamationCircleIcon className="w-8 h-8 text-blue-600" />
-                </div>
-                <h2 className="text-3xl font-bold text-gray-900 mb-4">
-                  No Current Openings
-                </h2>
-                <p className="text-lg text-gray-600 mb-6 max-w-2xl mx-auto">
-                  We're excited about your interest in joining Back2Nest! Currently, we don't have any open positions available. 
-                  However, we're always growing and looking for talented individuals who share our passion for student safety.
-                </p>
-                <div className="flex items-center justify-center gap-2 text-blue-600 font-medium">
-                  <BellIcon className="w-5 h-5" />
-                  <span>We'll update this page when new positions become available</span>
-                </div>
-              </div>
-            </section>
-
-            {/* Contact Information */}
-            <section className={`mb-16 transform transition-all duration-1000 delay-500 ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'}`}>
-              <div className="grid md:grid-cols-2 gap-8">
-                {/* Contact Details */}
-                <div className="bg-white rounded-2xl shadow-lg p-8">
-                  <h3 className="text-2xl font-bold text-gray-900 mb-6">
-                    Interested in Future Opportunities?
-                  </h3>
-                  <p className="text-gray-600 mb-6">
-                    We'd love to hear from you! Reach out to us and we'll keep your information on file for future openings.
-                  </p>
-                  
-                  <div className="space-y-4">
-                    <div className="flex items-center gap-3">
-                      <div className="w-10 h-10 bg-purple-100 rounded-lg flex items-center justify-center">
-                        <EnvelopeIcon className="w-5 h-5 text-purple-600" />
-                      </div>
-                      <div>
-                        <p className="font-semibold text-gray-900">Email Us</p>
-                        <a 
-                          href="mailto:careers@back2nest.in" 
-                          className="text-purple-600 hover:text-purple-800 transition-colors"
-                        >
-                          careers@back2nest.in
-                        </a>
-                      </div>
-                    </div>
-                    
-                    <div className="flex items-center gap-3">
-                      <div className="w-10 h-10 bg-blue-100 rounded-lg flex items-center justify-center">
-                        <PhoneIcon className="w-5 h-5 text-blue-600" />
-                      </div>
-                      <div>
-                        <p className="font-semibold text-gray-900">Call Us</p>
-                        <a 
-                          href="tel:+918935904820" 
-                          className="text-blue-600 hover:text-blue-800 transition-colors"
-                        >
-                          +91-8935904820
-                        </a>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-
-                {/* Send Resume */}
-                <div className="bg-gradient-to-br from-purple-600 to-blue-600 rounded-2xl shadow-lg p-8 text-white">
-                  <h3 className="text-2xl font-bold mb-6">
-                    Send Us Your Resume
-                  </h3>
-                  <p className="text-purple-100 mb-6">
-                    Even though we don't have current openings, we're always building our talent pool. 
-                    Send us your resume and we'll reach out when a suitable position opens up.
-                  </p>
-                  
-                  <a
-                    href="mailto:careers@back2nest.in?subject=Resume Submission - Future Opportunities&body=Hello Back2Nest Team,%0D%0A%0D%0AI am interested in future career opportunities with Back2Nest. Please find my resume attached.%0D%0A%0D%0AThank you!"
-                    className="inline-flex items-center gap-2 bg-white text-purple-600 px-6 py-3 rounded-xl font-semibold hover:bg-gray-100 transition-colors"
-                  >
-                    <PaperAirplaneIcon className="w-5 h-5" />
-                    Send Resume via Email
-                  </a>
-                  
-                  <p className="text-sm text-purple-200 mt-4">
-                    We'll review your application and contact you when relevant positions become available.
-                  </p>
-                </div>
-              </div>
-            </section>
-
-            {/* Company Values */}
-            <section className={`mb-16 transform transition-all duration-1000 delay-700 ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'}`}>
-              <h2 className="text-3xl font-bold text-gray-900 text-center mb-12">
-                Why Work at Back2Nest?
+            {/* Featured Topics Section */}
+            <section className={`mb-16 transform transition-all duration-1000 delay-300 ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'}`} aria-labelledby="featured-topics">
+              <h2 id="featured-topics" className="text-3xl font-bold text-gray-900 text-center mb-12">
+                Featured Topics - School Transportation Expertise
               </h2>
-              <div className="grid md:grid-cols-3 gap-8">
-                {companyValues.map((value, index) => (
-                  <div 
-                    key={index}
-                    className="bg-white p-6 rounded-2xl shadow-lg hover:shadow-xl transition-all duration-300 text-center"
-                  >
-                    <div className={`w-16 h-16 ${value.color === 'text-red-500' ? 'bg-red-100' : value.color === 'text-blue-500' ? 'bg-blue-100' : 'bg-green-100'} rounded-full flex items-center justify-center mx-auto mb-4`}>
-                      <value.icon className={`w-8 h-8 ${value.color}`} />
+              <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6 mb-12">
+                {featuredTopics.map((topic, index) => (
+                  <div key={index} className="bg-white rounded-xl p-6 shadow-lg hover:shadow-xl transition-all duration-300 group">
+                    <div className="flex items-center justify-center w-12 h-12 bg-blue-100 rounded-lg mb-4 group-hover:scale-110 transition-transform">
+                      <topic.icon className="w-6 h-6 text-blue-600" />
                     </div>
-                    <h3 className="text-xl font-bold text-gray-900 mb-3">{value.title}</h3>
-                    <p className="text-gray-600">{value.description}</p>
+                    <h3 className="text-lg font-bold text-gray-900 mb-2">{topic.title}</h3>
+                    <p className="text-gray-600 text-sm mb-3">{topic.description}</p>
+                    <div className="text-blue-600 text-sm font-medium">{topic.count}</div>
                   </div>
                 ))}
               </div>
             </section>
 
-            {/* Future Roles */}
-            <section className={`mb-16 transform transition-all duration-1000 delay-900 ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'}`}>
-              <div className="bg-white rounded-2xl shadow-xl p-8">
-                <h2 className="text-3xl font-bold text-gray-900 text-center mb-8">
-                  Roles We Typically Hire For
-                </h2>
-                <p className="text-lg text-gray-600 text-center mb-8 max-w-2xl mx-auto">
-                  While we don't have current openings, these are the types of positions we often recruit for as we grow:
-                </p>
-                
-                <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-4">
-                  {futureRoles.map((role, index) => (
-                    <div 
-                      key={index}
-                      className="flex items-center gap-3 p-4 bg-gray-50 rounded-lg hover:bg-gray-100 transition-colors"
-                    >
-                      <div className="w-2 h-2 bg-purple-600 rounded-full"></div>
-                      <span className="text-gray-700 font-medium">{role}</span>
+            <div className="grid lg:grid-cols-4 gap-8">
+              {/* Main Content */}
+              <div className="lg:col-span-3">
+                {/* Enhanced Search Bar */}
+                <div className={`mb-8 transform transition-all duration-1000 delay-300 ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'}`}>
+                  <form onSubmit={handleSearch} className="relative max-w-2xl">
+                    <div className="relative">
+                      <input
+                        type="text"
+                        value={searchTerm}
+                        onChange={(e) => setSearchTerm(e.target.value)}
+                        placeholder="Search articles about safety, GPS tracking, drivers, or any school transport topic..."
+                        className="w-full px-4 py-3 pl-12 pr-24 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent transition-all shadow-sm"
+                        aria-label="Search blog posts"
+                      />
+                      <MagnifyingGlassIcon className="w-5 h-5 text-gray-400 absolute left-4 top-1/2 transform -translate-y-1/2" />
+                      <button
+                        type="submit"
+                        className="absolute right-2 top-1/2 transform -translate-y-1/2 bg-blue-600 text-white px-4 py-2 rounded-md hover:bg-blue-700 transition-colors"
+                        aria-label="Search articles"
+                      >
+                        Search
+                      </button>
                     </div>
-                  ))}
+                  </form>
                 </div>
-                
-                <div className="text-center mt-8">
-                  <p className="text-gray-600 mb-4">
-                    Don't see your specialty listed? We're always open to exceptional talent!
-                  </p>
-                  <a
-                    href="mailto:careers@back2nest.in"
-                    className="text-purple-600 hover:text-purple-800 underline font-medium"
-                  >
-                    Tell us about your unique skills →
-                  </a>
+
+                {/* Loading State */}
+                {loading && (
+                  <div className="flex items-center justify-center py-20">
+                    <div className="text-center">
+                      <div className="w-12 h-12 border-4 border-blue-600 border-t-transparent rounded-full animate-spin mx-auto mb-4"></div>
+                      <p className="text-gray-600">Loading expert articles on school transportation...</p>
+                    </div>
+                  </div>
+                )}
+
+                {/* Error State */}
+                {error && (
+                  <div className="flex items-center gap-2 text-red-600 bg-red-50 p-4 rounded-lg mb-8">
+                    <ExclamationTriangleIcon className="w-5 h-5 flex-shrink-0" />
+                    <span>{error}</span>
+                    <button 
+                      onClick={fetchBlogData}
+                      className="ml-auto text-red-700 underline hover:no-underline"
+                      aria-label="Retry loading blog posts"
+                    >
+                      Retry
+                    </button>
+                  </div>
+                )}
+
+                {/* Enhanced Blog Posts Grid */}
+                {!loading && !error && (
+                  <div className={`transform transition-all duration-1000 delay-500 ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'}`}>
+                    {posts.length > 0 ? (
+                      <>
+                        <div className="grid md:grid-cols-2 gap-8 mb-12">
+                          {posts.map((post, index) => (
+                            <article
+                              key={post.id}
+                              className="bg-white rounded-2xl shadow-lg hover:shadow-xl transition-all duration-300 overflow-hidden group"
+                              itemScope
+                              itemType="https://schema.org/BlogPosting"
+                            >
+                              <div className="aspect-video bg-gradient-to-br from-blue-100 to-purple-100 relative overflow-hidden">
+                                <img
+                                  src={post.image}
+                                  alt={`${post.title} - School transportation insights from Back2Nest Patna Bihar`}
+                                  className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300"
+                                  itemProp="image"
+                                  loading="lazy"
+                                  width="800"
+                                  height="450"
+                                />
+                                <div className="absolute top-4 left-4">
+                                  <span className="px-3 py-1 bg-blue-600 text-white text-xs font-semibold rounded-full">
+                                    {post.category}
+                                  </span>
+                                </div>
+                                <div className="absolute top-4 right-4">
+                                  <span className="px-2 py-1 bg-black/20 backdrop-blur-sm text-white text-xs rounded-full">
+                                    {post.readTime}
+                                  </span>
+                                </div>
+                              </div>
+                              
+                              <div className="p-6">
+                                <div className="flex items-center gap-4 text-sm text-gray-500 mb-3">
+                                  <div className="flex items-center gap-1">
+                                    <UserIcon className="w-4 h-4" />
+                                    <span itemProp="author">{post.author}</span>
+                                  </div>
+                                  <div className="flex items-center gap-1">
+                                    <CalendarDaysIcon className="w-4 h-4" />
+                                    <time itemProp="datePublished" dateTime={post.publishDate}>
+                                      {new Date(post.publishDate).toLocaleDateString('en-IN', {
+                                        year: 'numeric',
+                                        month: 'long',
+                                        day: 'numeric'
+                                      })}
+                                    </time>
+                                  </div>
+                                </div>
+                                
+                                <h2 className="text-xl font-bold text-gray-900 mb-3 group-hover:text-blue-600 transition-colors leading-tight" itemProp="headline">
+                                  <Link 
+                                    to={`/blog/${post.slug}`} 
+                                    className="hover:underline"
+                                    title={`Read full article: ${post.title}`}
+                                  >
+                                    {post.title}
+                                  </Link>
+                                </h2>
+                                
+                                <p className="text-gray-600 mb-4 leading-relaxed text-sm" itemProp="description">
+                                  {post.excerpt}
+                                </p>
+                                
+                                <div className="flex items-center justify-between">
+                                  <div className="flex flex-wrap gap-2">
+                                    {post.tags.slice(0, 3).map((tag, tagIndex) => (
+                                      <span
+                                        key={tagIndex}
+                                        className="px-2 py-1 bg-gray-100 text-gray-600 text-xs rounded-full flex items-center gap-1"
+                                      >
+                                        <TagIcon className="w-3 h-3" />
+                                        {tag}
+                                      </span>
+                                    ))}
+                                  </div>
+                                  <Link
+                                    to={`/blog/${post.slug}`}
+                                    className="text-blue-600 hover:text-blue-800 font-semibold text-sm hover:underline flex items-center gap-1"
+                                    title={`Read more about: ${post.title}`}
+                                  >
+                                    Read More →
+                                  </Link>
+                                </div>
+                              </div>
+                              
+                              <meta itemProp="url" content={`https://back2nest.in/blog/${post.slug}`} />
+                            </article>
+                          ))}
+                        </div>
+
+                        {/* Enhanced Pagination */}
+                        {totalPages > 1 && (
+                          <div className="flex items-center justify-center gap-2">
+                            <button
+                              onClick={() => handlePageChange(currentPage - 1)}
+                              disabled={currentPage === 1}
+                              className="p-2 border border-gray-300 rounded-lg hover:bg-gray-50 disabled:opacity-50 disabled:cursor-not-allowed"
+                              aria-label="Previous page"
+                            >
+                              <ChevronLeftIcon className="w-5 h-5" />
+                            </button>
+                            
+                            {Array.from({ length: totalPages }, (_, i) => i + 1).map(page => (
+                              <button
+                                key={page}
+                                onClick={() => handlePageChange(page)}
+                                className={`px-4 py-2 border rounded-lg transition-colors ${
+                                  currentPage === page
+                                    ? 'bg-blue-600 text-white border-blue-600'
+                                    : 'border-gray-300 hover:bg-gray-50'
+                                }`}
+                                aria-label={`Go to page ${page}`}
+                              >
+                                {page}
+                              </button>
+                            ))}
+                            
+                            <button
+                              onClick={() => handlePageChange(currentPage + 1)}
+                              disabled={currentPage === totalPages}
+                              className="p-2 border border-gray-300 rounded-lg hover:bg-gray-50 disabled:opacity-50 disabled:cursor-not-allowed"
+                              aria-label="Next page"
+                            >
+                              <ChevronRightIcon className="w-5 h-5" />
+                            </button>
+                          </div>
+                        )}
+                      </>
+                    ) : (
+                      <div className="text-center py-20">
+                        <div className="max-w-md mx-auto">
+                          <BookOpenIcon className="w-16 h-16 text-gray-300 mx-auto mb-4" />
+                          <p className="text-gray-600 text-lg mb-4">No blog posts found matching your criteria.</p>
+                          <p className="text-gray-500 text-sm mb-6">
+                            Try adjusting your search terms or browse all articles about school transportation safety, 
+                            GPS tracking, driver training, and more.
+                          </p>
+                          <button 
+                            onClick={() => {
+                              setSearchTerm('');
+                              setSelectedCategory('all');
+                              setCurrentPage(1);
+                            }}
+                            className="bg-blue-600 text-white px-6 py-3 rounded-lg hover:bg-blue-700 transition-colors"
+                          >
+                            View All Articles
+                          </button>
+                        </div>
+                      </div>
+                    )}
+                  </div>
+                )}
+              </div>
+
+              {/* Enhanced Sidebar */}
+              <aside className={`lg:col-span-1 transform transition-all duration-1000 delay-700 ${isVisible ? 'opacity-100 translate-x-0' : 'opacity-0 translate-x-10'}`}>
+                {/* Categories */}
+                <div className="bg-white rounded-2xl shadow-lg p-6 mb-8">
+                  <h3 className="text-xl font-bold text-gray-900 mb-4 flex items-center gap-2">
+                    <FolderIcon className="w-5 h-5 text-blue-600" />
+                    Article Categories
+                  </h3>
+                  <div className="space-y-2">
+                    {categories.map(category => (
+                      <button
+                        key={category.id}
+                        onClick={() => handleCategoryChange(category.id)}
+                        className={`w-full text-left px-3 py-2 rounded-lg transition-colors ${
+                          selectedCategory === category.id
+                            ? 'bg-blue-100 text-blue-700 font-semibold'
+                            : 'hover:bg-gray-100 text-gray-700'
+                        }`}
+                        title={`Browse ${category.name.toLowerCase()} articles`}
+                      >
+                        <div className="flex items-center justify-between">
+                          <span>{category.name}</span>
+                          <span className="text-sm text-gray-500">({category.count})</span>
+                        </div>
+                      </button>
+                    ))}
+                  </div>
                 </div>
+
+                {/* Recent Posts */}
+                <div className="bg-white rounded-2xl shadow-lg p-6 mb-8">
+                  <h3 className="text-xl font-bold text-gray-900 mb-4">Latest Articles</h3>
+                  <div className="space-y-4">
+                    {recentPosts.map(post => (
+                      <article key={post.id} className="group">
+                        <h4 className="font-semibold text-gray-900 group-hover:text-blue-600 transition-colors leading-tight mb-2 text-sm">
+                          <Link 
+                            to={`/blogs/${post.slug}`} 
+                            className="hover:underline"
+                            title={`Read: ${post.title}`}
+                          >
+                            {post.title.length > 60 ? post.title.substring(0, 60) + '...' : post.title}
+                          </Link>
+                        </h4>
+                        <div className="flex items-center gap-2 text-xs text-gray-500 mb-2">
+                          <CalendarDaysIcon className="w-3 h-3" />
+                          <time dateTime={post.publishDate}>
+                            {new Date(post.publishDate).toLocaleDateString('en-IN', {
+                              month: 'short',
+                              day: 'numeric',
+                              year: 'numeric'
+                            })}
+                          </time>
+                          <span className="text-blue-600 ml-auto">{post.readTime}</span>
+                        </div>
+                      </article>
+                    ))}
+                  </div>
+                </div>
+
+                {/* Popular Tags */}
+                <div className="bg-white rounded-2xl shadow-lg p-6">
+                  <h3 className="text-xl font-bold text-gray-900 mb-4">Popular Topics</h3>
+                  <div className="flex flex-wrap gap-2">
+                    {['Safety Tips', 'GPS Tracking', 'Driver Training', 'Patna', 'Bihar', 'School Transport', 'Emergency Response', 'Technology', 'Parent Guide'].map((tag, index) => (
+                      <span 
+                        key={index} 
+                        className="px-3 py-1 bg-gray-100 hover:bg-blue-100 text-gray-700 hover:text-blue-700 text-sm rounded-full transition-colors cursor-pointer"
+                        onClick={() => setSearchTerm(tag)}
+                        title={`Search articles about ${tag}`}
+                      >
+                        {tag}
+                      </span>
+                    ))}
+                  </div>
+                </div>
+              </aside>
+            </div>
+
+            {/* Internal Links Section */}
+            <section className="mt-16 mb-12" aria-labelledby="related-pages">
+              <h2 id="related-pages" className="text-3xl font-bold text-gray-900 text-center mb-8">
+                Explore More About Back2Nest Services
+              </h2>
+              <div className="grid md:grid-cols-3 gap-6">
+                <Link to="/safety" className="block group">
+                  <div className="bg-white rounded-2xl p-6 shadow-lg hover:shadow-xl transition-all duration-300 group-hover:scale-105">
+                    <div className="flex items-center gap-4 mb-4">
+                      <div className="w-12 h-12 bg-gradient-to-br from-green-500 to-emerald-600 rounded-full flex items-center justify-center">
+                        <ShieldCheckIcon className="w-6 h-6 text-white" />
+                      </div>
+                      <h3 className="text-xl font-bold text-gray-800">Safety Features</h3>
+                    </div>
+                    <p className="text-gray-600 leading-relaxed">
+                      Discover our comprehensive safety measures including live GPS tracking, certified drivers, vehicle inspections, and emergency support protocols.
+                    </p>
+                  </div>
+                </Link>
+
+                <Link to="/about" className="block group">
+                  <div className="bg-white rounded-2xl p-6 shadow-lg hover:shadow-xl transition-all duration-300 group-hover:scale-105">
+                    <div className="flex items-center gap-4 mb-4">
+                      <div className="w-12 h-12 bg-gradient-to-br from-blue-500 to-indigo-600 rounded-full flex items-center justify-center">
+                        <BookOpenIcon className="w-6 h-6 text-white" />
+                      </div>
+                      <h3 className="text-xl font-bold text-gray-800">About Back2Nest</h3>
+                    </div>
+                    <p className="text-gray-600 leading-relaxed">
+                      Learn about our mission, founder Sachin Kumar's vision, and how we're revolutionizing school transportation in Patna, Bihar.
+                    </p>
+                  </div>
+                </Link>
+
+                <Link to="/contact" className="block group">
+                  <div className="bg-white rounded-2xl p-6 shadow-lg hover:shadow-xl transition-all duration-300 group-hover:scale-105">
+                    <div className="flex items-center gap-4 mb-4">
+                      <div className="w-12 h-12 bg-gradient-to-br from-purple-500 to-pink-600 rounded-full flex items-center justify-center">
+                        <EnvelopeIcon className="w-6 h-6 text-white" />
+                      </div>
+                      <h3 className="text-xl font-bold text-gray-800">Contact Us</h3>
+                    </div>
+                    <p className="text-gray-600 leading-relaxed">
+                      Get in touch with our team for enrollment, safety consultations, and detailed information about our school transportation services.
+                    </p>
+                  </div>
+                </Link>
               </div>
             </section>
 
-            {/* Social Media & Updates */}
-            <section className="text-center">
+            {/* Enhanced Call to Action */}
+            <section className="text-center" aria-labelledby="newsletter-signup">
               <div className="bg-gradient-to-r from-blue-600 to-purple-600 rounded-2xl p-8 text-white">
-                <h2 className="text-3xl font-bold mb-4">
-                  Stay Connected for Updates
+                <h2 id="newsletter-signup" className="text-3xl font-bold mb-4">
+                  Stay Updated with Back2Nest Expert Insights
                 </h2>
-                <p className="text-xl text-blue-100 mb-8">
-                  Follow us on social media to be the first to know about new job openings and company updates.
+                <p className="text-xl text-blue-100 mb-8 max-w-2xl mx-auto leading-relaxed">
+                  Get the latest insights on school transportation safety, technology innovations, and expert tips delivered directly to your inbox. 
+                  Join thousands of parents and educators who trust Back2Nest for reliable transportation information.
                 </p>
-                
-                <div className="flex flex-col sm:flex-row gap-4 justify-center mb-6">
-                  <a
-                    href="https://www.linkedin.com/company/back2nest"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="bg-white text-blue-600 px-6 py-3 rounded-xl font-semibold hover:bg-gray-100 transition-colors flex items-center gap-2 justify-center"
+                <div className="flex flex-col sm:flex-row gap-4 justify-center">
+                  <Link
+                    to="/students"
+                    className="bg-white text-blue-600 px-8 py-4 rounded-xl font-semibold text-lg shadow-lg hover:shadow-xl transform hover:scale-105 transition-all duration-300"
+                    title="Book safe school transportation with Back2Nest"
                   >
-                    <svg className="w-5 h-5" fill="currentColor" viewBox="0 0 24 24">
-                      <path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/>
-                    </svg>
-                    Follow on LinkedIn
-                  </a>
+                    Book Safe Ride Now
+                  </Link>
                   <a
-                    href="https://www.facebook.com/back2nest"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="border-2 border-white text-white px-6 py-3 rounded-xl font-semibold hover:bg-white hover:text-blue-600 transition-colors flex items-center gap-2 justify-center"
+                    href="tel:+918935904820"
+                    className="border-2 border-white text-white px-8 py-4 rounded-xl font-semibold text-lg hover:bg-white hover:text-blue-600 transition-all duration-300"
+                    title="Call Back2Nest for consultation"
                   >
-                    <svg className="w-5 h-5" fill="currentColor" viewBox="0 0 24 24">
-                      <path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/>
-                    </svg>
-                    Follow on Facebook
+                    Call for Expert Consultation
                   </a>
                 </div>
-                
-                <p className="text-sm text-blue-200">
-                  Or bookmark this page and check back regularly for new opportunities
-                </p>
               </div>
             </section>
           </main>
@@ -380,4 +830,4 @@ const Careers = () => {
   );
 };
 
-export default Careers;
+export default Blog;
