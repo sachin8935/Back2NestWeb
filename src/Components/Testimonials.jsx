@@ -5,7 +5,6 @@ import { useNavigate } from 'react-router-dom';
 const Testimonials = () => {
   const navigate = useNavigate();
   
-  // Testimonials data with real-looking content for Back2Nest
   const testimonials = [
     {
       id: 1,
@@ -13,7 +12,7 @@ const Testimonials = () => {
       role: "Parent, Class 5 student",
       content: "Back2Nest gives me complete peace of mind. Live tracking is amazing!",
       rating: 5,
-      image: "https://images.unsplash.com/photo-1494790108755-2616b612b647?w=100&h=100&fit=crop&crop=face",
+      image: "https://images.unsplash.com/photo-1529626455594-4ff0802cfb7e?w=100&h=100&fit=crop&crop=face",
       location: "Boring Road, Patna"
     },
     {
@@ -92,8 +91,6 @@ const Testimonials = () => {
           <p className="text-lg text-gray-600 max-w-2xl mx-auto">
             Real feedback from families who trust Back2Nest for their children's daily school commute in Patna
           </p>
-          
-          {/* Trust Indicators */}
           <div className="flex justify-center items-center space-x-6 mt-6">
             <div className="flex items-center space-x-2">
               <div className="flex">
@@ -110,19 +107,17 @@ const Testimonials = () => {
           </div>
         </div>
 
-        {/* Moving Cards Container - REMOVED WHITE GRADIENTS */}
-        <div className="relative">          
-          {/* Moving Testimonials */}
+        {/* Testimonials Loop */}
+        <div className="relative">
           <div className="flex animate-scroll space-x-6">
-            {/* Duplicate testimonials for seamless infinite loop */}
             {[...testimonials, ...testimonials].map((testimonial, index) => (
               <article
                 key={`testimonial-${testimonial.id}-${index}`}
                 className="flex-shrink-0 w-80 bg-gradient-to-br from-blue-50 to-purple-50 p-6 rounded-2xl shadow-lg border border-gray-100 hover:shadow-xl transform hover:scale-105 transition-all duration-300 cursor-pointer"
-                itemScope 
+                itemScope
                 itemType="https://schema.org/Review"
               >
-                {/* Rating Stars */}
+                {/* Rating */}
                 <div className="flex items-center mb-4" itemProp="reviewRating" itemScope itemType="https://schema.org/Rating">
                   <div className="flex mr-2">
                     {[...Array(testimonial.rating)].map((_, starIndex) => (
@@ -133,12 +128,12 @@ const Testimonials = () => {
                   <meta itemProp="bestRating" content="5" />
                 </div>
 
-                {/* Testimonial Content */}
+                {/* Content */}
                 <blockquote className="text-gray-700 italic mb-6 leading-relaxed" itemProp="reviewBody">
                   "{testimonial.content}"
                 </blockquote>
 
-                {/* User Info */}
+                {/* Author */}
                 <div className="flex items-center" itemProp="author" itemScope itemType="https://schema.org/Person">
                   <img
                     src={testimonial.image}
@@ -147,12 +142,8 @@ const Testimonials = () => {
                     itemProp="image"
                   />
                   <div className="flex-1">
-                    <h4 className="font-semibold text-gray-900" itemProp="name">
-                      {testimonial.name}
-                    </h4>
-                    <p className="text-sm text-gray-600" itemProp="jobTitle">
-                      {testimonial.role}
-                    </p>
+                    <h4 className="font-semibold text-gray-900" itemProp="name">{testimonial.name}</h4>
+                    <p className="text-sm text-gray-600" itemProp="jobTitle">{testimonial.role}</p>
                     <p className="text-xs text-gray-500 flex items-center mt-1">
                       <svg className="w-3 h-3 mr-1" fill="currentColor" viewBox="0 0 20 20">
                         <path fillRule="evenodd" d="M5.05 4.05a7 7 0 119.9 9.9L10 18.9l-4.95-4.95a7 7 0 010-9.9zM10 11a2 2 0 100-4 2 2 0 000 4z" clipRule="evenodd" />
@@ -162,15 +153,16 @@ const Testimonials = () => {
                   </div>
                 </div>
 
-                {/* Service Reviewed */}
-                <meta itemProp="itemReviewed" itemScope itemType="https://schema.org/Service" />
-                <meta itemProp="name" content="Back2Nest School Van Service" />
+                {/* ✅ Fixed: itemReviewed properly nested */}
+                <div itemProp="itemReviewed" itemScope itemType="https://schema.org/Service" hidden>
+                  <meta itemProp="name" content="Back2Nest School Van Service" />
+                </div>
               </article>
             ))}
           </div>
         </div>
 
-        {/* Call-to-Action - UPDATED BUTTONS */}
+        {/* CTA */}
         <div className="text-center mt-12">
           <p className="text-gray-600 mb-6">
             Join these happy families and experience safe school transportation
