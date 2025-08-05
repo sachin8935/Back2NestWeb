@@ -4,7 +4,7 @@ import { useNavigate } from 'react-router-dom';
 
 const Testimonials = () => {
   const navigate = useNavigate();
-  
+
   const testimonials = [
     {
       id: 1,
@@ -107,7 +107,7 @@ const Testimonials = () => {
           </div>
         </div>
 
-        {/* Testimonials Loop */}
+        {/* Testimonials */}
         <div className="relative">
           <div className="flex animate-scroll space-x-6">
             {[...testimonials, ...testimonials].map((testimonial, index) => (
@@ -124,7 +124,7 @@ const Testimonials = () => {
                       <StarIcon key={starIndex} className="w-5 h-5 text-yellow-400" />
                     ))}
                   </div>
-                  <meta itemProp="ratingValue" content={testimonial.rating} />
+                  <meta itemProp="ratingValue" content={testimonial.rating.toString()} />
                   <meta itemProp="bestRating" content="5" />
                 </div>
 
@@ -153,8 +153,8 @@ const Testimonials = () => {
                   </div>
                 </div>
 
-                {/* ✅ Fixed: itemReviewed properly nested */}
-                <div itemProp="itemReviewed" itemScope itemType="https://schema.org/Service" hidden>
+                {/* ✅ Fixed: Use supported type "LocalBusiness" instead of "Service" */}
+                <div itemProp="itemReviewed" itemScope itemType="https://schema.org/LocalBusiness" hidden>
                   <meta itemProp="name" content="Back2Nest School Van Service" />
                 </div>
               </article>
