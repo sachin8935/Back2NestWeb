@@ -204,7 +204,7 @@ const MainPage = () => {
               <Link to="/about" className="text-gray-600 hover:text-blue-600 transition-colors font-medium">
                 About
               </Link>
-              <Link to="/safety-features" className="text-gray-600 hover:text-blue-600 transition-colors font-medium">
+              <Link to="/safety" className="text-gray-600 hover:text-blue-600 transition-colors font-medium">
                 Safety
               </Link>
               <Link to="/blogs" className="text-gray-600 hover:text-blue-600 transition-colors font-medium">
@@ -396,7 +396,7 @@ const MainPage = () => {
                 </div>
               </Link>
 
-              <Link to="/safety-features" className="group">
+              <Link to="/safety" className="group">
                 <div className="bg-white rounded-3xl p-8 shadow-sm hover:shadow-lg transition-all duration-300 text-center group-hover:scale-105">
                   <div className="w-16 h-16 bg-gradient-to-r from-green-500 to-emerald-600 rounded-2xl flex items-center justify-center mx-auto mb-6">
                     <ShieldCheckIcon className="w-8 h-8 text-white" />
