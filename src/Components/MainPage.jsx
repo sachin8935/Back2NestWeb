@@ -2,6 +2,7 @@ import React, { useState, useEffect } from 'react';
 import { Link, useNavigate } from 'react-router-dom';
 import Testimonials from './Testimonials';
 import SEO from './SEO';
+import logo from '../assets/logo.jpeg'; // Import your logo
 import { 
   MapPinIcon, 
   ShieldCheckIcon, 
@@ -178,14 +179,24 @@ const MainPage = () => {
           <div className="absolute bottom-20 -left-20 w-60 h-60 bg-gradient-to-br from-purple-400/8 to-pink-400/8 rounded-full animate-float-medium"></div>
         </div>
 
-        {/* Clean Header */}
+        {/* Header with Logo */}
         <header className="container mx-auto px-6 py-6 relative z-10">
           <nav className="flex justify-between items-center" role="navigation" aria-label="Main navigation">
             <div className={`transform transition-all duration-1000 ${isVisible ? 'translate-x-0 opacity-100' : '-translate-x-10 opacity-0'}`}>
-              <div className="text-3xl font-bold bg-gradient-to-r from-blue-600 to-purple-600 bg-clip-text text-transparent">
-                Back2Nest
+              {/* Logo and Brand Section */}
+              <div className="flex items-center gap-3">
+                <img 
+                  src={logo} 
+                  alt="Back2Nest Logo" 
+                  className="w-12 h-12 rounded-full object-contain shadow-md"
+                />
+                <div>
+                  <div className="text-3xl font-bold bg-gradient-to-r from-blue-600 to-purple-600 bg-clip-text text-transparent">
+                    Back2Nest
+                  </div>
+                  <p className="text-sm text-gray-500 mt-1">Safe Journey Home</p>
+                </div>
               </div>
-              <p className="text-sm text-gray-500 mt-1">Safe Journey Home</p>
             </div>
             
             {/* Clean Navigation */}
@@ -250,7 +261,7 @@ const MainPage = () => {
             {/* Clean Action Buttons */}
             <div className="flex flex-col sm:flex-row gap-6 justify-center items-center mb-16">
               <button
-                onClick={() => navigate('/Students')}
+                onClick={() => navigate('/students')}
                 className="group bg-gradient-to-r from-blue-600 to-blue-700 hover:from-blue-700 hover:to-blue-800 text-white px-10 py-4 rounded-2xl font-semibold text-lg shadow-lg hover:shadow-xl transform hover:scale-105 transition-all duration-300 flex items-center gap-3"
                 aria-label="Book safe school van ride for your child"
               >
@@ -260,7 +271,7 @@ const MainPage = () => {
               </button>
               
               <button
-                onClick={() => navigate('/Driver')}
+                onClick={() => navigate('/driver')}
                 className="group border-2 border-purple-600 text-purple-600 hover:bg-purple-600 hover:text-white px-10 py-4 rounded-2xl font-semibold text-lg transition-all duration-300 flex items-center gap-3"
                 aria-label="Join Back2Nest as a driver partner"
               >
@@ -425,7 +436,7 @@ const MainPage = () => {
             </p>
             <div className="flex flex-col sm:flex-row gap-6 justify-center">
               <Link
-                to="/Students"
+                to="/students"
                 className="bg-white text-blue-600 px-8 py-4 rounded-2xl font-semibold text-lg shadow-lg hover:shadow-xl transform hover:scale-105 transition-all duration-300"
                 aria-label="Book your child's safe school van ride"
               >

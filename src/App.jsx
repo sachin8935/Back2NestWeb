@@ -16,7 +16,7 @@ import PrivacyPolicy from './Components/privacypolicy';
 import TermsConditions from './Components/terms&conditions';
 import RefundPolicy from './Components/RefundPolicy';
 import Sitemap from './Components/Sitemap';
-
+import NotFound from './Components/404Page';
 function App() {
   return (
     <Router>
@@ -38,6 +38,7 @@ function App() {
             <Route path='/terms-conditions' element={<TermsConditions/>}/>
             <Route path='/refund-policy' element={<RefundPolicy/>}/>
             <Route path='/sitemap' element={<Sitemap/>}/>
+            <Route path="*" element={<NotFound />} />
           </Routes>
         </main>
         <Footer />
