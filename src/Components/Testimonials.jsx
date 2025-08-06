@@ -107,11 +107,11 @@ const Testimonials = () => {
                     <meta itemProp="streetAddress" content="Fraser Road" />
                     <meta itemProp="addressLocality" content="Patna" />
                     <meta itemProp="addressRegion" content="Bihar" />
-                    <meta itemProp="postalCode" content="800001" />
+                    <meta itemProp="postalCode" content="800003" />
                     <meta itemProp="addressCountry" content="IN" />
                   </div>
-                  <meta itemProp="telephone" content="+91-99999-99999" />
-                  <meta itemProp="url" content="https://back2nest.com" />
+                  <meta itemProp="telephone" content="+91-8935904820" />
+                  <meta itemProp="url" content="https://back2nest.in" />
                 </div>
               </article>
             ))}

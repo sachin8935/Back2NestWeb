@@ -33,7 +33,7 @@ const Footer = () => {
     },
     "image": {
       "@type": "ImageObject",
-      "url": "https://back2nest.in/images/back2nest-office.jpg",
+      "url": "https://back2nest.in/assets/logo.jpeg",
       "width": "800",
       "height": "600"
     },
@@ -119,7 +119,7 @@ const Footer = () => {
     "sameAs": [
       "https://www.facebook.com/back2nest",
       "https://www.twitter.com/back2_nest", 
-      "https://www.instagram.com/back2nest_official",
+      "https://www.instagram.com/back2nest",
       "https://www.linkedin.com/company/back2nest",
       "https://www.youtube.com/c/back2nest"
     ]

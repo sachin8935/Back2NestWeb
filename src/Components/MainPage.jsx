@@ -82,7 +82,7 @@ const MainPage = () => {
         },
         "sameAs": [
           "https://www.facebook.com/back2nest",
-          "https://www.instagram.com/back2nest_official",
+          "https://www.instagram.com/back2nest",
           "https://www.linkedin.com/company/back2nest"
         ]
       },
