@@ -16,6 +16,7 @@ import PrivacyPolicy from './Components/privacypolicy';
 import TermsConditions from './Components/terms&conditions';
 import RefundPolicy from './Components/RefundPolicy';
 import Sitemap from './Components/Sitemap';
+
 function App() {
   return (
     <Router>
@@ -23,8 +24,8 @@ function App() {
         <main className="flex-grow">
           <Routes>
             <Route path="/" element={<MainPage />} />
-            <Route path="/Driver" element={<Driver />} />
-            <Route path="/Students" element={<Students />} />
+            <Route path="/driver" element={<Driver />} />
+            <Route path="/students" element={<Students />} />
             <Route path='/about' element={<AboutPage/>}/>
             <Route path='/safety' element={<SafetyFeatures/>}/>
             <Route path='/live-tracking' element={<LiveTracking/>}/>

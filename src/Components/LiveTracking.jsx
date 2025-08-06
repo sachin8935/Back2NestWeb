@@ -209,23 +209,29 @@ const LiveTracking = () => {
 
   return (
     <>
-      <SEO 
-        title="Live Tracking | Back2Nest - Secure School Transport Monitoring in Patna Bihar"
-        description="Access real-time tracking of your child's school transport with secure mobile and PIN authentication. Monitor location, route, and driver details with Back2Nest's advanced GPS system in Patna, Bihar."
-        keywords="secure live tracking school transport Patna, authenticated GPS tracking Bihar, school bus monitoring login, child safety tracking access, Back2Nest secure tracking, school transport PIN access Patna"
-        canonicalUrl="https://back2nest.in/live-tracking"
-        ogTitle="Secure Live Tracking - Real-Time School Transport Monitoring | Back2Nest Patna"
-        ogDescription="Access secure live tracking of your child's school transport with mobile and PIN authentication. Real-time location and driver details in Patna, Bihar."
-        ogImage="https://back2nest.in/images/live-tracking-og.jpg"
-        structuredData={structuredData}
-        breadcrumbData={breadcrumbData}
-        additionalMeta={{
-          'geo.region': 'IN-BR',
-          'geo.placename': 'Patna, Bihar, India',
-          'geo.position': '25.617001;85.157219',
-          'ICBM': '25.617001, 85.157219'
-        }}
-      />
+      // Replace the existing SEO component call with this optimized version
+<SEO 
+  title="Live Tracking - Secure School Transport Monitoring | Back2Nest Patna Bihar"
+  description="Access real-time GPS tracking of your child's school transport with secure mobile and PIN authentication. Monitor location, route, and driver details with Back2Nest's advanced tracking system in Patna, Bihar for complete peace of mind."
+  keywords="secure live tracking school transport Patna, authenticated GPS tracking Bihar, school bus monitoring login, child safety tracking access, Back2Nest secure tracking, school transport PIN access Patna, real-time vehicle tracking"
+  canonicalUrl="https://back2nest.in/live-tracking"
+  ogTitle="Secure Live Tracking - Real-Time School Transport Monitoring | Back2Nest Patna"
+  ogDescription="Access secure live tracking of your child's school transport with mobile and PIN authentication. Real-time location and driver details in Patna, Bihar with advanced GPS technology."
+  ogImage="https://back2nest.in/images/live-tracking-social-share.jpg"
+  ogUrl="https://back2nest.in/live-tracking"
+  structuredData={structuredData}
+  breadcrumbData={breadcrumbData}
+  additionalMeta={{
+    'geo.region': 'IN-BR',
+    'geo.placename': 'Patna, Bihar, India',
+    'geo.position': '25.617001;85.157219',
+    'ICBM': '25.617001, 85.157219',
+    'application-name': 'Back2Nest Live Tracking',
+    'msapplication-TileColor': '#059669',
+    'msapplication-config': '/browserconfig.xml'
+  }}
+/>
+
 
       <div className="min-h-screen bg-gradient-to-br from-blue-50 via-white to-green-50">
         {/* Breadcrumb Navigation */}

@@ -1,5 +1,83 @@
 {
+  "version": 2,
+  "redirects": [
+    {
+      "source": "/safety/",
+      "destination": "/safety",
+      "permanent": true
+    },
+    {
+      "source": "/about/",
+      "destination": "/about", 
+      "permanent": true
+    },
+    {
+      "source": "/live-tracking/",
+      "destination": "/live-tracking",
+      "permanent": true
+    },
+    {
+      "source": "/blogs/",
+      "destination": "/blogs",
+      "permanent": true
+    },
+    {
+      "source": "/careers/",
+      "destination": "/careers",
+      "permanent": true
+    },
+    {
+      "source": "/help/",
+      "destination": "/help",
+      "permanent": true
+    },
+    {
+      "source": "/contact/",
+      "destination": "/contact",
+      "permanent": true
+    },
+    {
+      "source": "/pricing/",
+      "destination": "/pricing",
+      "permanent": true
+    },
+    {
+      "source": "/privacy-policy/",
+      "destination": "/privacy-policy",
+      "permanent": true
+    },
+    {
+      "source": "/terms-conditions/",
+      "destination": "/terms-conditions", 
+      "permanent": true
+    },
+    {
+      "source": "/refund-policy/",
+      "destination": "/refund-policy",
+      "permanent": true
+    },
+    {
+      "source": "/sitemap/",
+      "destination": "/sitemap",
+      "permanent": true
+    },
+    {
+      "source": "/students/",
+      "destination": "/students",
+      "permanent": true
+    },
+    {
+      "source": "/driver/",
+      "destination": "/driver",
+      "permanent": true
+    }
+  ],
   "rewrites": [
-    { "source": "/(.*)", "destination": "/" }
-  ]
+    {
+      "source": "/(.*)",
+      "destination": "/"
+    }
+  ],
+  "cleanUrls": true,
+  "trailingSlash": false
 }

@@ -98,6 +98,20 @@ const MainPage = () => {
     ]
   };
 
+  // Breadcrumb structured data for homepage
+  const breadcrumbData = {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    "itemListElement": [
+      {
+        "@type": "ListItem",
+        "position": 1,
+        "name": "Home",
+        "item": "https://back2nest.in"
+      }
+    ]
+  };
+
   const benefits = [
     {
       icon: MapPinIcon,
@@ -125,7 +139,7 @@ const MainPage = () => {
     }
   ];
 
-  // Additional meta tags for enhanced local SEO
+  // Enhanced additional meta tags for better local SEO
   const additionalMeta = {
     'geo.region': 'IN-BR',
     'geo.placename': 'Patna, Bihar, India',
@@ -135,20 +149,25 @@ const MainPage = () => {
     'rating': 'general',
     'HandheldFriendly': 'True',
     'MobileOptimized': '320',
-    'theme-color': '#4F46E5'
+    'application-name': 'Back2Nest',
+    'msapplication-TileColor': '#4F46E5',
+    'msapplication-config': '/browserconfig.xml',
+    'apple-mobile-web-app-title': 'Back2Nest'
   };
 
   return (
     <>
       <SEO 
-        title="Back2Nest - Safe School Van Service in Patna Bihar | Live GPS Tracking, Professional Drivers & Lowest Pricing"
-        description="Book trusted school van services in Patna, Bihar with Back2Nest. Features live GPS tracking, verified professional drivers, in-van cameras, comprehensive safety protocols, and lowest pricing. Serving 1,250+ families across Patna with 100% safety guarantee for daily school commutes. Call +91-8935904820 now!"
+        title="Back2Nest - Safe School Van Service in Patna Bihar | Live GPS Tracking, Professional Drivers & Best Pricing"
+        description="Book trusted school van services in Patna, Bihar with Back2Nest. Features live GPS tracking, verified professional drivers, in-van cameras, comprehensive safety protocols, and competitive pricing. Serving 1,250+ families across Patna with 100% safety guarantee for daily school commutes. Call +91-8935904820 now!"
         keywords="school van service Patna, school transport Bihar, safe school rides Patna, live tracking school van, professional drivers Bihar, school bus Patna, student transport Patna Bihar, Back2Nest, school van booking Patna, child safety transport Bihar, best school van Patna, reliable school transport Bihar, GPS tracking school transport, verified drivers Patna, school transportation safety Bihar"
         canonicalUrl="https://back2nest.in"
         ogTitle="Back2Nest - Patna's Most Trusted School Van Service | Live Tracking & Safety Guaranteed"
         ogDescription="Experience the safest school transportation in Patna, Bihar with live GPS tracking, professional verified drivers & unbeatable safety standards. Join 1,250+ happy families. Book your child's safe ride today!"
         ogImage="https://back2nest.in/images/og-main-homepage.jpg"
+        ogUrl="https://back2nest.in"
         structuredData={structuredData}
+        breadcrumbData={breadcrumbData}
         additionalMeta={additionalMeta}
       />
 
@@ -161,7 +180,7 @@ const MainPage = () => {
 
         {/* Clean Header */}
         <header className="container mx-auto px-6 py-6 relative z-10">
-          <nav className="flex justify-between items-center">
+          <nav className="flex justify-between items-center" role="navigation" aria-label="Main navigation">
             <div className={`transform transition-all duration-1000 ${isVisible ? 'translate-x-0 opacity-100' : '-translate-x-10 opacity-0'}`}>
               <div className="text-3xl font-bold bg-gradient-to-r from-blue-600 to-purple-600 bg-clip-text text-transparent">
                 Back2Nest
@@ -174,7 +193,7 @@ const MainPage = () => {
               <Link to="/about" className="text-gray-600 hover:text-blue-600 transition-colors font-medium">
                 About
               </Link>
-              <Link to="/safety" className="text-gray-600 hover:text-blue-600 transition-colors font-medium">
+              <Link to="/safety-features" className="text-gray-600 hover:text-blue-600 transition-colors font-medium">
                 Safety
               </Link>
               <Link to="/blogs" className="text-gray-600 hover:text-blue-600 transition-colors font-medium">
@@ -183,6 +202,7 @@ const MainPage = () => {
               <a 
                 href="tel:+918935904820" 
                 className="bg-blue-600 text-white px-6 py-2 rounded-full hover:bg-blue-700 transition-colors font-medium"
+                aria-label="Call Back2Nest at +91-8935904820"
               >
                 Call Now
               </a>
@@ -191,12 +211,12 @@ const MainPage = () => {
         </header>
 
         {/* Hero Section with Better Spacing */}
-        <section className="container mx-auto px-6 py-20 relative z-10">
+        <main className="container mx-auto px-6 py-20 relative z-10">
           <div className="max-w-6xl mx-auto">
             <div className={`text-center mb-16 transform transition-all duration-1000 delay-300 ${isVisible ? 'translate-y-0 opacity-100' : 'translate-y-10 opacity-0'}`}>
               <h1 className="text-5xl md:text-6xl font-bold text-gray-900 mb-6 leading-tight">
                 Safe, Reliable 
-                <span className="bg-gradient-to-r from-blue-600 to-purple-600 bg-clip-text text-transparent block">
+                <span className="block bg-gradient-to-r from-blue-600 to-purple-600 bg-clip-text text-transparent">
                   School Van Services in Patna Bihar
                 </span>
               </h1>
@@ -232,6 +252,7 @@ const MainPage = () => {
               <button
                 onClick={() => navigate('/Students')}
                 className="group bg-gradient-to-r from-blue-600 to-blue-700 hover:from-blue-700 hover:to-blue-800 text-white px-10 py-4 rounded-2xl font-semibold text-lg shadow-lg hover:shadow-xl transform hover:scale-105 transition-all duration-300 flex items-center gap-3"
+                aria-label="Book safe school van ride for your child"
               >
                 <UserGroupIcon className="w-6 h-6" />
                 Book Safe Ride Now
@@ -241,6 +262,7 @@ const MainPage = () => {
               <button
                 onClick={() => navigate('/Driver')}
                 className="group border-2 border-purple-600 text-purple-600 hover:bg-purple-600 hover:text-white px-10 py-4 rounded-2xl font-semibold text-lg transition-all duration-300 flex items-center gap-3"
+                aria-label="Join Back2Nest as a driver partner"
               >
                 <ShieldCheckIcon className="w-6 h-6" />
                 Join as Partner
@@ -271,7 +293,7 @@ const MainPage = () => {
               </div>
             </div>
           </div>
-        </section>
+        </main>
 
         {/* Benefits Section - Better Spacing */}
         <section className="container mx-auto px-6 py-20 relative z-10">
@@ -330,6 +352,7 @@ const MainPage = () => {
             <Link 
               to="/contact" 
               className="bg-white text-blue-600 px-8 py-4 rounded-2xl font-semibold text-lg shadow-lg hover:shadow-xl transform hover:scale-105 transition-all duration-300 inline-flex items-center gap-2"
+              aria-label="Contact us to get service in your area"
             >
               Get Service in Your Area
               <ArrowRightIcon className="w-5 h-5" />
@@ -404,12 +427,14 @@ const MainPage = () => {
               <Link
                 to="/Students"
                 className="bg-white text-blue-600 px-8 py-4 rounded-2xl font-semibold text-lg shadow-lg hover:shadow-xl transform hover:scale-105 transition-all duration-300"
+                aria-label="Book your child's safe school van ride"
               >
                 Book Your Child's Ride
               </Link>
               <a
                 href="tel:+918935904820"
                 className="border-2 border-white text-white px-8 py-4 rounded-2xl font-semibold text-lg hover:bg-white hover:text-blue-600 transition-all duration-300"
+                aria-label="Call Back2Nest at +91-8935904820"
               >
                 Call: +91-8935904820
               </a>

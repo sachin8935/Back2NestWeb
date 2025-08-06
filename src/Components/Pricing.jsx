@@ -62,7 +62,7 @@ const Pricing = () => {
         "@type": "Service",
         "@id": "https://back2nest.in/pricing#service",
         "name": "School Transportation Pricing - Back2Nest Patna Bihar",
-        "description": "Transparent pricing for school transportation services in Patna, Bihar based on distance and service packages. Basic, Standard, and Premium options available.",
+        "description": "Transparent pricing for school transportation services in Patna, Bihar based on distance and service packages. Basic, Standard, and Premium options available with GPS tracking and safety features.",
         "provider": {
           "@type": "LocalBusiness",
           "name": "Back2Nest",
@@ -75,7 +75,18 @@ const Pricing = () => {
             "addressCountry": "IN"
           },
           "telephone": "+91-8935904820",
-          "email": "help@back2nest.in"
+          "email": "help@back2nest.in",
+          "url": "https://back2nest.in"
+        },
+        "serviceType": "School Transportation",
+        "areaServed": {
+          "@type": "Place",
+          "address": {
+            "@type": "PostalAddress",
+            "addressLocality": "Patna",
+            "addressRegion": "Bihar",
+            "addressCountry": "IN"
+          }
         }
       },
       {
@@ -83,12 +94,15 @@ const Pricing = () => {
         "@id": "https://back2nest.in/pricing#webpage",
         "url": "https://back2nest.in/pricing",
         "name": "Pricing Plans - Back2Nest School Transportation Patna Bihar",
-        "description": "Transparent pricing for school transportation services based on distance and packages"
+        "description": "Transparent pricing for school transportation services based on distance and packages with no hidden fees",
+        "mainEntity": {
+          "@id": "https://back2nest.in/pricing#service"
+        }
       }
     ]
   };
 
-  // Breadcrumb structured data
+  // Enhanced breadcrumb structured data
   const breadcrumbData = {
     "@context": "https://schema.org",
     "@type": "BreadcrumbList",
@@ -185,24 +199,35 @@ const Pricing = () => {
   // ✅ FIX: Extract the icon component before using it in JSX
   const SelectedPackageIcon = packages[selectedPackage].icon;
 
+  // Enhanced additional meta tags for better local SEO
+  const additionalMeta = {
+    'geo.region': 'IN-BR',
+    'geo.placename': 'Patna, Bihar, India',
+    'geo.position': '25.617001;85.157219',
+    'ICBM': '25.617001, 85.157219',
+    'distribution': 'global',
+    'rating': 'general',
+    'HandheldFriendly': 'True',
+    'MobileOptimized': '320',
+    'application-name': 'Back2Nest Pricing',
+    'msapplication-TileColor': '#4F46E5',
+    'theme-color': '#4F46E5'
+  };
+
   return (
     <>
       <SEO 
         title="Pricing Plans - Transparent School Transportation Costs | Back2Nest Patna Bihar"
-        description="View transparent pricing for Back2Nest school transportation services in Patna, Bihar. Distance-based pricing with Basic, Standard, and Premium packages. Starting from ₹1,500/month with GPS tracking, safety features, and professional drivers."
-        keywords="Back2Nest pricing, school transport cost Patna, school van prices Bihar, transparent pricing, distance-based pricing, school transport packages, affordable school transport Patna, monthly pricing plans"
+        description="View transparent pricing for Back2Nest school transportation services in Patna, Bihar. Distance-based pricing with Basic, Standard, and Premium packages starting from ₹1,500/month. Includes GPS tracking, safety features, and professional drivers with no hidden fees."
+        keywords="Back2Nest pricing, school transport cost Patna, school van prices Bihar, transparent pricing, distance-based pricing, school transport packages, affordable school transport Patna, monthly pricing plans, GPS tracking pricing, school van cost Bihar"
         canonicalUrl="https://back2nest.in/pricing"
         ogTitle="School Transportation Pricing Plans - Back2Nest Patna Bihar | Transparent Costs"
-        ogDescription="Transparent pricing for school transportation in Patna starting from ₹1,500/month. Choose your distance and package for customized pricing with GPS tracking and safety features."
-        ogImage="https://back2nest.in/images/pricing-og.jpg"
+        ogDescription="Transparent pricing for school transportation in Patna starting from ₹1,500/month. Choose your distance and package for customized pricing with GPS tracking and comprehensive safety features."
+        ogImage="https://back2nest.in/images/pricing-social-share.jpg"
+        ogUrl="https://back2nest.in/pricing"
         structuredData={structuredData}
         breadcrumbData={breadcrumbData}
-        additionalMeta={{
-          'geo.region': 'IN-BR',
-          'geo.placename': 'Patna, Bihar, India',
-          'geo.position': '25.617001;85.157219',
-          'ICBM': '25.617001, 85.157219'
-        }}
+        additionalMeta={additionalMeta}
       />
 
       <div className="min-h-screen bg-gradient-to-br from-blue-50 via-white to-purple-50">
@@ -212,8 +237,8 @@ const Pricing = () => {
             <li>
               <Link to="/" className="hover:text-blue-600 transition-colors">Home</Link>
             </li>
-            <li className="text-gray-400">/</li>
-            <li className="text-gray-800 font-medium">Pricing</li>
+            <li className="text-gray-400" aria-hidden="true">/</li>
+            <li className="text-gray-800 font-medium" aria-current="page">Pricing</li>
           </ol>
         </nav>
 
@@ -252,11 +277,13 @@ const Pricing = () => {
                   <button
                     key={index}
                     onClick={() => setSelectedDistance(slab.range)}
-                    className={`p-6 rounded-2xl border-2 transition-all duration-300 text-center hover:shadow-lg ${
+                    className={`p-6 rounded-2xl border-2 transition-all duration-300 text-center hover:shadow-lg focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-offset-2 ${
                       selectedDistance === slab.range
                         ? 'border-blue-500 bg-blue-50 shadow-lg transform scale-105'
                         : 'border-gray-200 bg-white hover:border-gray-300'
                     }`}
+                    aria-pressed={selectedDistance === slab.range}
+                    aria-label={`Select ${slab.range} distance range for ₹${slab.price.toLocaleString()} per month`}
                   >
                     <MapPinIcon className={`w-8 h-8 mx-auto mb-3 ${selectedDistance === slab.range ? 'text-blue-600' : 'text-gray-400'}`} />
                     <h3 className="font-bold text-lg text-gray-900 mb-2">{slab.range}</h3>
@@ -286,7 +313,7 @@ const Pricing = () => {
                   return (
                     <div
                       key={key}
-                      className={`relative rounded-2xl border-2 transition-all duration-300 cursor-pointer hover:shadow-xl ${
+                      className={`relative rounded-2xl border-2 transition-all duration-300 cursor-pointer hover:shadow-xl focus-within:ring-2 focus-within:ring-blue-500 focus-within:ring-offset-2 ${
                         selectedPackage === key
                           ? `border-${pkg.color}-500 shadow-xl transform scale-105`
                           : 'border-gray-200 hover:border-gray-300'
@@ -368,13 +395,15 @@ const Pricing = () => {
                 <div className="flex flex-col sm:flex-row gap-4 justify-center">
                   <Link
                     to="/students"
-                    className="bg-white text-blue-600 px-8 py-4 rounded-xl font-semibold text-lg shadow-lg hover:shadow-xl transform hover:scale-105 transition-all duration-300"
+                    className="bg-white text-blue-600 px-8 py-4 rounded-xl font-semibold text-lg shadow-lg hover:shadow-xl transform hover:scale-105 transition-all duration-300 focus:outline-none focus:ring-2 focus:ring-white focus:ring-offset-2 focus:ring-offset-blue-600"
+                    aria-label={`Book ${packages[selectedPackage].name} plan for ₹${finalPrice.toLocaleString()} per month`}
                   >
                     Book This Plan
                   </Link>
                   <a
                     href="tel:+918935904820"
-                    className="border-2 border-white text-white px-8 py-4 rounded-xl font-semibold text-lg hover:bg-white hover:text-blue-600 transition-all duration-300"
+                    className="border-2 border-white text-white px-8 py-4 rounded-xl font-semibold text-lg hover:bg-white hover:text-blue-600 transition-all duration-300 focus:outline-none focus:ring-2 focus:ring-white focus:ring-offset-2 focus:ring-offset-blue-600"
+                    aria-label="Call +91-8935904820 for custom pricing quote"
                   >
                     Call for Custom Quote
                   </a>
@@ -411,7 +440,7 @@ const Pricing = () => {
                     description: "Monthly, quarterly, or annual payment options"
                   }
                 ].map((benefit, index) => (
-                  <div key={index} className="bg-white p-6 rounded-2xl shadow-lg text-center">
+                  <div key={index} className="bg-white p-6 rounded-2xl shadow-lg text-center hover:shadow-xl transition-shadow duration-300">
                     <div className="w-12 h-12 bg-blue-100 rounded-lg flex items-center justify-center mx-auto mb-4">
                       <benefit.icon className="w-6 h-6 text-blue-600" />
                     </div>

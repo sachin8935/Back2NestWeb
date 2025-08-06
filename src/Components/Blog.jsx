@@ -31,19 +31,20 @@ const Blog = () => {
     fetchBlogData();
   }, [currentPage, selectedCategory, searchTerm]);
 
-  // Enhanced structured data for blog
+  // Enhanced structured data for blog with canonical URL
   const structuredData = {
     "@context": "https://schema.org",
     "@graph": [
       {
         "@type": "Blog",
-        "@id": "https://back2nest.in/blog#blog",
+        "@id": "https://back2nest.in/blogs#blog",
         "name": "Back2Nest Blog - School Transportation Insights",
         "description": "Latest updates, tips, and insights on safe school transportation, driver safety, and student commute solutions in Patna, Bihar.",
-        "url": "https://back2nest.in/blog",
+        "url": "https://back2nest.in/blogs", // FIXED: Matches canonical URL
         "publisher": {
           "@type": "Organization",
           "name": "Back2Nest",
+          "@id": "https://back2nest.in#organization",
           "logo": {
             "@type": "ImageObject",
             "url": "https://back2nest.in/assets/logo.png",
@@ -54,7 +55,7 @@ const Blog = () => {
         "inLanguage": "en-IN",
         "blogPost": posts.map(post => ({
           "@type": "BlogPosting",
-          "@id": `https://back2nest.in/blog/${post.slug}#article`,
+          "@id": `https://back2nest.in/blogs/${post.slug}#article`,
           "headline": post.title,
           "description": post.excerpt,
           "image": post.image,
@@ -65,27 +66,37 @@ const Blog = () => {
             "name": post.author
           },
           "publisher": {
-            "@id": "https://back2nest.in/blog#blog"
+            "@id": "https://back2nest.in/blogs#blog"
           }
         }))
       },
       {
         "@type": "WebPage",
-        "@id": "https://back2nest.in/blog#webpage",
-        "url": "https://back2nest.in/blog",
+        "@id": "https://back2nest.in/blogs#webpage",
+        "url": "https://back2nest.in/blogs", // FIXED: Matches canonical URL
         "name": "Blog - Latest Updates on School Transportation | Back2Nest Patna Bihar",
         "description": "Explore insights, tips, and updates on school transportation safety and innovations",
+        "isPartOf": {
+          "@type": "WebSite",
+          "@id": "https://back2nest.in#website",
+          "url": "https://back2nest.in",
+          "name": "Back2Nest - Safe School Transportation"
+        },
         "mainEntity": {
-          "@id": "https://back2nest.in/blog#blog"
+          "@id": "https://back2nest.in/blogs#blog"
+        },
+        "breadcrumb": {
+          "@id": "https://back2nest.in/blogs#breadcrumb"
         }
       }
     ]
   };
 
-  // Breadcrumb structured data
+  // Breadcrumb structured data with canonical URL
   const breadcrumbData = {
     "@context": "https://schema.org",
     "@type": "BreadcrumbList",
+    "@id": "https://back2nest.in/blogs#breadcrumb",
     "itemListElement": [
       {
         "@type": "ListItem",
@@ -97,7 +108,7 @@ const Blog = () => {
         "@type": "ListItem",
         "position": 2,
         "name": "Blog",
-        "item": "https://back2nest.in/blog"
+        "item": "https://back2nest.in/blogs" // FIXED: Matches canonical URL
       }
     ]
   };
@@ -268,10 +279,11 @@ const Blog = () => {
         title="Blog - Latest Updates and Tips on School Transportation | Back2Nest Patna Bihar"
         description="Explore the latest news, tips, and insights on school transportation safety, driver training, GPS tracking, and student commute solutions from Back2Nest. Stay informed about safe school transport innovations in Patna, Bihar."
         keywords="school transportation blog Patna, safe school rides Bihar, school transport tips, Back2Nest news, school bus safety blog, student transportation updates, school van safety tips, driver training blog, GPS tracking insights"
-        canonicalUrl="https://back2nest.in/blog"
+        canonicalUrl="https://back2nest.in/blogs" // FIXED: Matches actual route
         ogTitle="Back2Nest Blog - Latest Insights on School Transportation in Patna Bihar"
         ogDescription="Stay updated with Back2Nest's blog covering school transport safety, tips, driver training, and innovations in Patna, Bihar. Expert insights for parents and schools."
         ogImage="https://back2nest.in/images/blog-og.jpg"
+        ogUrl="https://back2nest.in/blogs" // FIXED: Matches canonical URL
         structuredData={structuredData}
         breadcrumbData={breadcrumbData}
         additionalMeta={{
@@ -285,23 +297,29 @@ const Blog = () => {
       <div className="min-h-screen bg-gradient-to-br from-blue-50 via-white to-purple-50">
         {/* Breadcrumb Navigation */}
         <nav className="container mx-auto px-6 py-4" aria-label="Breadcrumb">
-          <ol className="flex items-center space-x-2 text-sm text-gray-600">
-            <li>
-              <Link to="/" className="hover:text-blue-600 transition-colors">Home</Link>
+          <ol className="flex items-center space-x-2 text-sm text-gray-600" itemScope itemType="https://schema.org/BreadcrumbList">
+            <li itemProp="itemListElement" itemScope itemType="https://schema.org/ListItem">
+              <Link to="/" className="hover:text-blue-600 transition-colors" itemProp="item" title="Back2Nest Home - School Transportation Patna">
+                <span itemProp="name">Home</span>
+              </Link>
+              <meta itemProp="position" content="1" />
             </li>
-            <li className="text-gray-400">/</li>
-            <li className="text-gray-800 font-medium">Blog</li>
+            <li aria-hidden="true" className="text-gray-400">/</li>
+            <li itemProp="itemListElement" itemScope itemType="https://schema.org/ListItem">
+              <span className="text-gray-800 font-medium" itemProp="name">Blog</span>
+              <meta itemProp="position" content="2" />
+            </li>
           </ol>
         </nav>
 
         <div className="container mx-auto px-6 py-8">
           <main className="max-w-7xl mx-auto">
             {/* Header Section */}
-            <header className={`text-center mb-12 transform transition-all duration-1000 ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'}`}>
+            <header className={`text-center mb-12 transform transition-all duration-1000 ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'}`} aria-labelledby="blog-heading">
               <div className="inline-block px-4 py-2 bg-blue-100 text-blue-700 rounded-full text-sm font-semibold mb-4">
                 Back2Nest Blog
               </div>
-              <h1 className="text-5xl md:text-6xl font-bold text-gray-900 mb-6">
+              <h1 id="blog-heading" className="text-5xl md:text-6xl font-bold text-gray-900 mb-6">
                 Latest Insights on 
                 <span className="block bg-gradient-to-r from-blue-600 to-purple-600 bg-clip-text text-transparent">
                   School Transportation
@@ -319,17 +337,20 @@ const Blog = () => {
                 {/* Search Bar */}
                 <div className={`mb-8 transform transition-all duration-1000 delay-300 ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'}`}>
                   <form onSubmit={handleSearch} className="relative max-w-md">
+                    <label htmlFor="blog-search" className="sr-only">Search blog posts</label>
                     <input
+                      id="blog-search"
                       type="text"
                       value={searchTerm}
                       onChange={(e) => setSearchTerm(e.target.value)}
                       placeholder="Search blog posts..."
                       className="w-full px-4 py-3 pl-12 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent transition-all"
                     />
-                    <MagnifyingGlassIcon className="w-5 h-5 text-gray-400 absolute left-4 top-1/2 transform -translate-y-1/2" />
+                    <MagnifyingGlassIcon className="w-5 h-5 text-gray-400 absolute left-4 top-1/2 transform -translate-y-1/2" aria-hidden="true" />
                     <button
                       type="submit"
                       className="absolute right-2 top-1/2 transform -translate-y-1/2 bg-blue-600 text-white px-4 py-2 rounded-md hover:bg-blue-700 transition-colors"
+                      aria-label="Search blog posts"
                     >
                       Search
                     </button>
@@ -338,9 +359,9 @@ const Blog = () => {
 
                 {/* Loading State */}
                 {loading && (
-                  <div className="flex items-center justify-center py-20">
+                  <div className="flex items-center justify-center py-20" aria-live="polite">
                     <div className="text-center">
-                      <div className="w-12 h-12 border-4 border-blue-600 border-t-transparent rounded-full animate-spin mx-auto mb-4"></div>
+                      <div className="w-12 h-12 border-4 border-blue-600 border-t-transparent rounded-full animate-spin mx-auto mb-4" aria-hidden="true"></div>
                       <p className="text-gray-600">Loading blog posts...</p>
                     </div>
                   </div>
@@ -348,12 +369,13 @@ const Blog = () => {
 
                 {/* Error State */}
                 {error && (
-                  <div className="flex items-center gap-2 text-red-600 bg-red-50 p-4 rounded-lg mb-8">
-                    <ExclamationTriangleIcon className="w-5 h-5 flex-shrink-0" />
+                  <div className="flex items-center gap-2 text-red-600 bg-red-50 p-4 rounded-lg mb-8" role="alert">
+                    <ExclamationTriangleIcon className="w-5 h-5 flex-shrink-0" aria-hidden="true" />
                     <span>{error}</span>
                     <button 
                       onClick={fetchBlogData}
                       className="ml-auto text-red-700 underline hover:no-underline"
+                      aria-label="Retry loading blog posts"
                     >
                       Retry
                     </button>
@@ -376,10 +398,12 @@ const Blog = () => {
                               <div className="aspect-video bg-gradient-to-br from-blue-100 to-purple-100 relative overflow-hidden">
                                 <img
                                   src={post.image}
-                                  alt={post.title}
+                                  alt={`${post.title} - Back2Nest blog post about ${post.category.toLowerCase()}`}
                                   className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300"
                                   itemProp="image"
                                   loading="lazy"
+                                  width="400"
+                                  height="225"
                                 />
                                 <div className="absolute top-4 left-4">
                                   <span className="px-3 py-1 bg-blue-600 text-white text-xs font-semibold rounded-full">
@@ -391,11 +415,11 @@ const Blog = () => {
                               <div className="p-6">
                                 <div className="flex items-center gap-4 text-sm text-gray-500 mb-3">
                                   <div className="flex items-center gap-1">
-                                    <UserIcon className="w-4 h-4" />
+                                    <UserIcon className="w-4 h-4" aria-hidden="true" />
                                     <span itemProp="author">{post.author}</span>
                                   </div>
                                   <div className="flex items-center gap-1">
-                                    <CalendarDaysIcon className="w-4 h-4" />
+                                    <CalendarDaysIcon className="w-4 h-4" aria-hidden="true" />
                                     <time itemProp="datePublished" dateTime={post.publishDate}>
                                       {new Date(post.publishDate).toLocaleDateString('en-IN', {
                                         year: 'numeric',
@@ -408,7 +432,7 @@ const Blog = () => {
                                 </div>
                                 
                                 <h2 className="text-xl font-bold text-gray-900 mb-3 group-hover:text-blue-600 transition-colors" itemProp="headline">
-                                  <Link to={`/blog/${post.slug}`} className="hover:underline">
+                                  <Link to={`/blogs/${post.slug}`} className="hover:underline">
                                     {post.title}
                                   </Link>
                                 </h2>
@@ -424,34 +448,36 @@ const Blog = () => {
                                         key={tagIndex}
                                         className="px-2 py-1 bg-gray-100 text-gray-600 text-xs rounded-full flex items-center gap-1"
                                       >
-                                        <TagIcon className="w-3 h-3" />
+                                        <TagIcon className="w-3 h-3" aria-hidden="true" />
                                         {tag}
                                       </span>
                                     ))}
                                   </div>
                                   <Link
-                                    to={`/blog/${post.slug}`}
+                                    to={`/blogs/${post.slug}`}
                                     className="text-blue-600 hover:text-blue-800 font-semibold text-sm hover:underline"
+                                    aria-label={`Read more about ${post.title}`}
                                   >
                                     Read More →
                                   </Link>
                                 </div>
                               </div>
                               
-                              <meta itemProp="url" content={`https://back2nest.in/blog/${post.slug}`} />
+                              <meta itemProp="url" content={`https://back2nest.in/blogs/${post.slug}`} />
                             </article>
                           ))}
                         </div>
 
                         {/* Pagination */}
                         {totalPages > 1 && (
-                          <div className="flex items-center justify-center gap-2">
+                          <nav className="flex items-center justify-center gap-2" aria-label="Blog pagination">
                             <button
                               onClick={() => handlePageChange(currentPage - 1)}
                               disabled={currentPage === 1}
                               className="p-2 border border-gray-300 rounded-lg hover:bg-gray-50 disabled:opacity-50 disabled:cursor-not-allowed"
+                              aria-label="Go to previous page"
                             >
-                              <ChevronLeftIcon className="w-5 h-5" />
+                              <ChevronLeftIcon className="w-5 h-5" aria-hidden="true" />
                             </button>
                             
                             {Array.from({ length: totalPages }, (_, i) => i + 1).map(page => (
@@ -463,6 +489,8 @@ const Blog = () => {
                                     ? 'bg-blue-600 text-white border-blue-600'
                                     : 'border-gray-300 hover:bg-gray-50'
                                 }`}
+                                aria-label={`Go to page ${page}`}
+                                aria-current={currentPage === page ? 'page' : undefined}
                               >
                                 {page}
                               </button>
@@ -472,10 +500,11 @@ const Blog = () => {
                               onClick={() => handlePageChange(currentPage + 1)}
                               disabled={currentPage === totalPages}
                               className="p-2 border border-gray-300 rounded-lg hover:bg-gray-50 disabled:opacity-50 disabled:cursor-not-allowed"
+                              aria-label="Go to next page"
                             >
-                              <ChevronRightIcon className="w-5 h-5" />
+                              <ChevronRightIcon className="w-5 h-5" aria-hidden="true" />
                             </button>
-                          </div>
+                          </nav>
                         )}
                       </>
                     ) : (
@@ -498,14 +527,16 @@ const Blog = () => {
               </div>
 
               {/* Sidebar */}
-              <aside className={`lg:col-span-1 transform transition-all duration-1000 delay-700 ${isVisible ? 'opacity-100 translate-x-0' : 'opacity-0 translate-x-10'}`}>
+              <aside className={`lg:col-span-1 transform transition-all duration-1000 delay-700 ${isVisible ? 'opacity-100 translate-x-0' : 'opacity-0 translate-x-10'}`} aria-labelledby="sidebar-heading">
+                <h2 id="sidebar-heading" className="sr-only">Blog sidebar</h2>
+                
                 {/* Categories */}
                 <div className="bg-white rounded-2xl shadow-lg p-6 mb-8">
                   <h3 className="text-xl font-bold text-gray-900 mb-4 flex items-center gap-2">
-                    <FolderIcon className="w-5 h-5 text-blue-600" />
+                    <FolderIcon className="w-5 h-5 text-blue-600" aria-hidden="true" />
                     Categories
                   </h3>
-                  <div className="space-y-2">
+                  <div className="space-y-2" role="list">
                     {categories.map(category => (
                       <button
                         key={category.id}
@@ -515,6 +546,8 @@ const Blog = () => {
                             ? 'bg-blue-100 text-blue-700 font-semibold'
                             : 'hover:bg-gray-100 text-gray-700'
                         }`}
+                        aria-pressed={selectedCategory === category.id}
+                        role="listitem"
                       >
                         <div className="flex items-center justify-between">
                           <span>{category.name}</span>
@@ -532,12 +565,12 @@ const Blog = () => {
                     {recentPosts.map(post => (
                       <article key={post.id} className="group">
                         <h4 className="font-semibold text-gray-900 group-hover:text-blue-600 transition-colors leading-tight mb-2">
-                          <Link to={`/blog/${post.slug}`} className="hover:underline">
+                          <Link to={`/blogs/${post.slug}`} className="hover:underline">
                             {post.title}
                           </Link>
                         </h4>
                         <div className="flex items-center gap-2 text-xs text-gray-500">
-                          <CalendarDaysIcon className="w-3 h-3" />
+                          <CalendarDaysIcon className="w-3 h-3" aria-hidden="true" />
                           <time dateTime={post.publishDate}>
                             {new Date(post.publishDate).toLocaleDateString('en-IN', {
                               month: 'short',
@@ -554,9 +587,9 @@ const Blog = () => {
             </div>
 
             {/* Call to Action */}
-            <section className="mt-16 text-center">
+            <section className="mt-16 text-center" aria-labelledby="cta-heading">
               <div className="bg-gradient-to-r from-blue-600 to-purple-600 rounded-2xl p-8 text-white">
-                <h2 className="text-3xl font-bold mb-4">
+                <h2 id="cta-heading" className="text-3xl font-bold mb-4">
                   Stay Updated with Back2Nest
                 </h2>
                 <p className="text-xl text-blue-100 mb-8">
@@ -566,12 +599,14 @@ const Blog = () => {
                   <Link
                     to="/students"
                     className="bg-white text-blue-600 px-8 py-4 rounded-xl font-semibold text-lg shadow-lg hover:shadow-xl transform hover:scale-105 transition-all duration-300"
+                    aria-label="Book safe ride with Back2Nest"
                   >
                     Book Safe Ride
                   </Link>
                   <a
                     href="tel:+918935904820"
                     className="border-2 border-white text-white px-8 py-4 rounded-xl font-semibold text-lg hover:bg-white hover:text-blue-600 transition-all duration-300"
+                    aria-label="Call Back2Nest for more information"
                   >
                     Contact Us
                   </a>

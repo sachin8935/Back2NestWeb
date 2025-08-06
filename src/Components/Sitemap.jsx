@@ -27,10 +27,26 @@ const Sitemap = () => {
         "@id": "https://back2nest.in/sitemap#webpage",
         "url": "https://back2nest.in/sitemap",
         "name": "Sitemap - Back2Nest School Transportation Patna Bihar",
-        "description": "Complete sitemap of Back2Nest website with all pages for school transportation services in Patna, Bihar",
+        "description": "Complete sitemap of Back2Nest website with all pages for school transportation services in Patna, Bihar including booking, safety features, live tracking, and support",
+        "publisher": {
+          "@type": "LocalBusiness",
+          "name": "Back2Nest",
+          "url": "https://back2nest.in",
+          "address": {
+            "@type": "PostalAddress",
+            "streetAddress": "Jagat Narayan Road",
+            "addressLocality": "Patna",
+            "addressRegion": "Bihar",
+            "postalCode": "800003",
+            "addressCountry": "IN"
+          },
+          "telephone": "+91-8935904820",
+          "email": "help@back2nest.in"
+        },
         "mainEntity": {
           "@id": "https://back2nest.in/sitemap#itemlist"
-        }
+        },
+        "dateModified": new Date().toISOString().split('T')[0]
       },
       {
         "@type": "ItemList",
@@ -77,7 +93,7 @@ const Sitemap = () => {
           {
             "@type": "ListItem",
             "position": 7,
-            "url": "https://back2nest.in/blog",
+            "url": "https://back2nest.in/blogs",
             "name": "Blog"
           },
           {
@@ -95,7 +111,7 @@ const Sitemap = () => {
           {
             "@type": "ListItem",
             "position": 10,
-            "url": "https://back2nest.in/contact-us",
+            "url": "https://back2nest.in/contact",
             "name": "Contact Us"
           },
           {
@@ -127,7 +143,7 @@ const Sitemap = () => {
     ]
   };
 
-  // Breadcrumb structured data
+  // Enhanced breadcrumb structured data
   const breadcrumbData = {
     "@context": "https://schema.org",
     "@type": "BreadcrumbList",
@@ -145,6 +161,21 @@ const Sitemap = () => {
         "item": "https://back2nest.in/sitemap"
       }
     ]
+  };
+
+  // Enhanced additional meta tags
+  const additionalMeta = {
+    'geo.region': 'IN-BR',
+    'geo.placename': 'Patna, Bihar, India',
+    'geo.position': '25.617001;85.157219',
+    'ICBM': '25.617001, 85.157219',
+    'distribution': 'global',
+    'rating': 'general',
+    'HandheldFriendly': 'True',
+    'MobileOptimized': '320',
+    'application-name': 'Back2Nest Sitemap',
+    'msapplication-TileColor': '#4F46E5',
+    'theme-color': '#4F46E5'
   };
 
   // Page sections with icons
@@ -183,7 +214,7 @@ const Sitemap = () => {
         },
         {
           name: "Safety Features",
-          path: "/safety",
+          path: "/safety-features",
           icon: ShieldCheckIcon,
           description: "Comprehensive safety features and protocols for student transportation"
         },
@@ -270,21 +301,17 @@ const Sitemap = () => {
   return (
     <>
       <SEO 
-        title="Sitemap | Back2Nest - All Pages | School Transportation Website Patna Bihar"
-        description="Complete sitemap of Back2Nest website featuring all pages for school transportation services in Patna, Bihar. Easy navigation to booking, safety features, live tracking, pricing, and support pages."
-        keywords="Back2Nest sitemap, website navigation, all pages, school transport website, site map Patna Bihar, Back2Nest pages, website structure, school van booking pages"
+        title="Sitemap - All Pages Directory | Back2Nest School Transportation Website Patna Bihar"
+        description="Complete sitemap of Back2Nest website featuring all pages for school transportation services in Patna, Bihar. Easy navigation to booking, safety features, live tracking, pricing, support pages, and more with comprehensive site structure for better user experience."
+        keywords="Back2Nest sitemap, website navigation, all pages directory, school transport website Bihar, site map Patna, Back2Nest pages, website structure, school van booking pages, navigation directory, website index"
         canonicalUrl="https://back2nest.in/sitemap"
-        ogTitle="Website Sitemap - Back2Nest School Transportation | All Pages Directory"
-        ogDescription="Browse all Back2Nest website pages including booking, safety features, live tracking, pricing, and support for school transportation services in Patna, Bihar."
-        ogImage="https://back2nest.in/images/sitemap-og.jpg"
+        ogTitle="Website Sitemap - Back2Nest School Transportation | Complete Pages Directory"
+        ogDescription="Browse all Back2Nest website pages including booking, safety features, live tracking, pricing, and support for school transportation services in Patna, Bihar with easy navigation."
+        ogImage="https://back2nest.in/images/sitemap-social-share.jpg"
+        ogUrl="https://back2nest.in/sitemap"
         structuredData={structuredData}
         breadcrumbData={breadcrumbData}
-        additionalMeta={{
-          'geo.region': 'IN-BR',
-          'geo.placename': 'Patna, Bihar, India',
-          'geo.position': '25.617001;85.157219',
-          'ICBM': '25.617001, 85.157219'
-        }}
+        additionalMeta={additionalMeta}
       />
 
       <div className="min-h-screen bg-gradient-to-br from-blue-50 via-white to-purple-50">
@@ -294,8 +321,8 @@ const Sitemap = () => {
             <li>
               <Link to="/" onClick={scrollToTop} className="hover:text-blue-600 transition-colors">Home</Link>
             </li>
-            <li className="text-gray-400">/</li>
-            <li className="text-gray-800 font-medium">Sitemap</li>
+            <li className="text-gray-400" aria-hidden="true">/</li>
+            <li className="text-gray-800 font-medium" aria-current="page">Sitemap</li>
           </ol>
         </nav>
 
@@ -332,8 +359,9 @@ const Sitemap = () => {
                         key={pageIndex}
                         to={page.path}
                         onClick={scrollToTop}
-                        className="group block p-6 bg-gray-50 rounded-xl hover:bg-blue-50 hover:shadow-md transition-all duration-300"
+                        className="group block p-6 bg-gray-50 rounded-xl hover:bg-blue-50 hover:shadow-md transition-all duration-300 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-offset-2"
                         title={page.description}
+                        aria-label={`Navigate to ${page.name} - ${page.description}`}
                       >
                         <div className="flex items-start gap-4">
                           <div className="w-12 h-12 bg-blue-100 group-hover:bg-blue-200 rounded-lg flex items-center justify-center transition-colors duration-300">
@@ -372,13 +400,14 @@ const Sitemap = () => {
                   { name: "Book School Van", path: "/students" },
                   { name: "Live Tracking", path: "/live-tracking" },
                   { name: "Pricing Plans", path: "/pricing" },
-                  { name: "Contact Support", path: "/contact-us" }
+                  { name: "Contact Support", path: "/contact" }
                 ].map((quickLink, index) => (
                   <Link
                     key={index}
                     to={quickLink.path}
                     onClick={scrollToTop}
-                    className="bg-white bg-opacity-20 hover:bg-opacity-30 px-6 py-4 rounded-xl font-semibold transition-all duration-300 hover:scale-105"
+                    className="bg-white bg-opacity-20 hover:bg-opacity-30 px-6 py-4 rounded-xl font-semibold transition-all duration-300 hover:scale-105 focus:outline-none focus:ring-2 focus:ring-white focus:ring-offset-2 focus:ring-offset-blue-600"
+                    aria-label={`Quick access to ${quickLink.name}`}
                   >
                     {quickLink.name}
                   </Link>
@@ -423,15 +452,17 @@ const Sitemap = () => {
                 </p>
                 <div className="flex flex-col sm:flex-row gap-4 justify-center">
                   <Link
-                    to="/contact-us"
+                    to="/contact"
                     onClick={scrollToTop}
-                    className="bg-blue-600 hover:bg-blue-700 text-white px-8 py-4 rounded-xl font-semibold text-lg transition-colors duration-300"
+                    className="bg-blue-600 hover:bg-blue-700 text-white px-8 py-4 rounded-xl font-semibold text-lg transition-colors duration-300 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-offset-2 focus:ring-offset-gray-900"
+                    aria-label="Contact our support team for assistance"
                   >
                     Contact Support
                   </Link>
                   <a
                     href="tel:+918935904820"
-                    className="border-2 border-white text-white hover:bg-white hover:text-gray-900 px-8 py-4 rounded-xl font-semibold text-lg transition-all duration-300"
+                    className="border-2 border-white text-white hover:bg-white hover:text-gray-900 px-8 py-4 rounded-xl font-semibold text-lg transition-all duration-300 focus:outline-none focus:ring-2 focus:ring-white focus:ring-offset-2 focus:ring-offset-gray-900"
+                    aria-label="Call Back2Nest support at +91-8935904820"
                   >
                     Call: +91-8935904820
                   </a>
@@ -440,10 +471,10 @@ const Sitemap = () => {
             </section>
 
             {/* Footer Info */}
-            <div className="text-center text-gray-500 text-sm mt-12 pt-8 border-t border-gray-200">
+            <footer className="text-center text-gray-500 text-sm mt-12 pt-8 border-t border-gray-200">
               <p>Last Updated: {new Date().toLocaleDateString()}</p>
               <p className="mt-2">© {currentYear} Back2Nest. All rights reserved. | Safe Journey Home</p>
-            </div>
+            </footer>
           </main>
         </div>
       </div>

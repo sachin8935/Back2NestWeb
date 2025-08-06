@@ -29,7 +29,7 @@ const AboutPage = () => {
     return () => window.removeEventListener('scroll', handleScroll);
   }, []);
 
-  // Enhanced structured data with comprehensive business information
+  // Enhanced structured data with consistent canonical URL references
   const structuredData = {
     "@context": "https://schema.org",
     "@graph": [
@@ -50,7 +50,7 @@ const AboutPage = () => {
           ]
         },
         "url": "https://back2nest.in",
-        "mainEntityOfPage": "https://back2nest.in/about",
+        "mainEntityOfPage": "https://back2nest.in/about", // Matches canonical URL
         "telephone": "+91-8935904820",
         "email": "help@back2nest.in",
         "address": {
@@ -93,8 +93,8 @@ const AboutPage = () => {
         },
         "sameAs": [
           "https://www.facebook.com/back2nest",
-          "https://www.instagram.com/back2nest_official",
-          "https://www.linkedin.com/company/back2nest"
+          "https://www.instagram.com/back2nest",
+          "https://x.com/back2_nest"
         ],
         "hasOfferCatalog": {
           "@type": "OfferCatalog",
@@ -150,9 +150,15 @@ const AboutPage = () => {
       {
         "@type": "WebPage",
         "@id": "https://back2nest.in/about#webpage",
-        "url": "https://back2nest.in/about",
+        "url": "https://back2nest.in/about", // Matches canonical URL
         "name": "About Back2Nest - Leading School Van Service in Patna Bihar | Meet Founder Sachin Kumar",
         "description": "Meet Sachin Kumar, founder of Back2Nest - Patna's most trusted school van service. Learn how we're revolutionizing student transportation in Bihar with live tracking, professional drivers, and 100% safety guarantee since 2022.",
+        "isPartOf": {
+          "@type": "WebSite",
+          "@id": "https://back2nest.in#website",
+          "url": "https://back2nest.in",
+          "name": "Back2Nest - Safe School Transportation"
+        },
         "mainEntity": {
           "@id": "https://back2nest.in/#business"
         },
@@ -160,15 +166,19 @@ const AboutPage = () => {
           "@type": "Organization",
           "name": "Back2Nest",
           "url": "https://back2nest.in"
+        },
+        "breadcrumb": {
+          "@id": "https://back2nest.in/about#breadcrumb"
         }
       }
     ]
   };
 
-  // Breadcrumb structured data
+  // Breadcrumb structured data with canonical URL
   const breadcrumbData = {
     "@context": "https://schema.org",
     "@type": "BreadcrumbList",
+    "@id": "https://back2nest.in/about#breadcrumb",
     "itemListElement": [
       {
         "@type": "ListItem",
@@ -180,7 +190,7 @@ const AboutPage = () => {
         "@type": "ListItem",
         "position": 2,
         "name": "About Us",
-        "item": "https://back2nest.in/about"
+        "item": "https://back2nest.in/about" // Matches canonical URL
       }
     ]
   };
@@ -289,11 +299,11 @@ const AboutPage = () => {
         title="About Back2Nest | Meet Founder Sachin Kumar - Leading School Van Service in Patna Bihar | Safe Student Transportation Since 2022"
         description="Meet Sachin Kumar, founder of Back2Nest - Patna's most trusted school van service since 2022. Discover how we're revolutionizing student transportation in Bihar with live GPS tracking, professional drivers, comprehensive safety protocols, and 100% safety guarantee. Serving 1,250+ happy families across Patna."
         keywords="About Back2Nest, Sachin Kumar founder, school van service Patna, safe school transport Bihar, live tracking Patna, professional drivers Bihar, school bus Patna, student transportation Bihar, Back2Nest history, school van company Patna, reliable school transport Bihar, best school transport Patna, school van booking Bihar, Back2Nest story, founder CEO Patna"
-        canonicalUrl="https://back2nest.in/about"
+        canonicalUrl="https://back2nest.in/about" // Simple canonical URL matching route
         ogTitle="About Back2Nest - Meet Founder Sachin Kumar | Premier School Transport Service in Patna Bihar"
         ogDescription="Discover Back2Nest's inspiring journey from vision to reality. Founded by Sachin Kumar in 2022, now serving 1,250+ families in Patna with Bihar's safest school van services."
         ogImage="https://back2nest.in/assets/sachin-about-og.jpg"
-        ogUrl="https://back2nest.in/about"
+        ogUrl="https://back2nest.in/about" // FIXED: Matches canonical URL
         structuredData={structuredData}
         breadcrumbData={breadcrumbData}
         additionalMeta={additionalMeta}
@@ -356,21 +366,21 @@ const AboutPage = () => {
               
               {/* Quick Stats */}
               <div className="grid grid-cols-2 md:grid-cols-4 gap-4 max-w-2xl mx-auto">
-                <div className="bg-white/80 backdrop-blur-sm rounded-lg p-4">
-                  <div className="text-2xl font-bold text-indigo-600">1,250+</div>
-                  <div className="text-sm text-slate-600">Families</div>
+                <div className="bg-white/80 backdrop-blur-sm rounded-lg p-4" itemScope itemType="https://schema.org/Statistic">
+                  <div className="text-2xl font-bold text-indigo-600" itemProp="value">1,250+</div>
+                  <div className="text-sm text-slate-600" itemProp="name">Families</div>
                 </div>
-                <div className="bg-white/80 backdrop-blur-sm rounded-lg p-4">
-                  <div className="text-2xl font-bold text-green-600">500+</div>
-                  <div className="text-sm text-slate-600">Drivers</div>
+                <div className="bg-white/80 backdrop-blur-sm rounded-lg p-4" itemScope itemType="https://schema.org/Statistic">
+                  <div className="text-2xl font-bold text-green-600" itemProp="value">500+</div>
+                  <div className="text-sm text-slate-600" itemProp="name">Drivers</div>
                 </div>
-                <div className="bg-white/80 backdrop-blur-sm rounded-lg p-4">
-                  <div className="text-2xl font-bold text-purple-600">4.8★</div>
-                  <div className="text-sm text-slate-600">Rating</div>
+                <div className="bg-white/80 backdrop-blur-sm rounded-lg p-4" itemScope itemType="https://schema.org/Statistic">
+                  <div className="text-2xl font-bold text-purple-600" itemProp="value">4.8★</div>
+                  <div className="text-sm text-slate-600" itemProp="name">Rating</div>
                 </div>
-                <div className="bg-white/80 backdrop-blur-sm rounded-lg p-4">
-                  <div className="text-2xl font-bold text-orange-600">3+</div>
-                  <div className="text-sm text-slate-600">Years</div>
+                <div className="bg-white/80 backdrop-blur-sm rounded-lg p-4" itemScope itemType="https://schema.org/Statistic">
+                  <div className="text-2xl font-bold text-orange-600" itemProp="value">3+</div>
+                  <div className="text-sm text-slate-600" itemProp="name">Years</div>
                 </div>
               </div>
             </div>
@@ -384,7 +394,7 @@ const AboutPage = () => {
               {/* SEO Optimized Founder Image */}
               <div className="lg:w-1/2 flex justify-center">
                 <div className="relative group">
-                  <div className="absolute -inset-4 bg-gradient-to-r from-indigo-500 to-purple-600 rounded-full opacity-20 group-hover:opacity-30 transition-opacity duration-500 animate-pulse-glow"></div>
+                  <div className="absolute -inset-4 bg-gradient-to-r from-indigo-500 to-purple-600 rounded-full opacity-20 group-hover:opacity-30 transition-opacity duration-500 animate-pulse-glow" aria-hidden="true"></div>
                   <div className="relative w-80 h-80 rounded-full overflow-hidden border-4 border-white shadow-2xl transform group-hover:scale-105 transition-transform duration-500">
                     <img
                       src={sachinImage}
@@ -558,7 +568,7 @@ const AboutPage = () => {
               {achievements.map((achievement, index) => (
                 <div key={index} className="bg-white rounded-2xl p-6 shadow-lg hover:shadow-xl transition-shadow duration-300">
                   <div className="flex items-center justify-between mb-4">
-                    <achievement.icon className="w-8 h-8 text-indigo-600" />
+                    <achievement.icon className="w-8 h-8 text-indigo-600" aria-hidden="true" />
                     <span className="text-sm text-slate-500 font-medium">{achievement.year}</span>
                   </div>
                   <h3 className="text-lg font-bold text-slate-800 mb-2">{achievement.title}</h3>
@@ -602,7 +612,7 @@ const AboutPage = () => {
           </div>
         </section>
 
-        {/* Internal Links Section */}
+        {/* Internal Links Section - FIXED */}
         <section className="relative z-10 py-20 bg-slate-50" aria-labelledby="explore-heading">
           <div className="container mx-auto px-6">
             <header className="text-center mb-12">
@@ -615,10 +625,11 @@ const AboutPage = () => {
             </header>
 
             <div className="grid md:grid-cols-3 gap-8 max-w-5xl mx-auto">
-              <Link to="/safety-features" className="block group">
+              {/* FIXED: Updated link to match actual route */}
+              <Link to="/safety" className="block group">
                 <div className="bg-white rounded-2xl p-6 shadow-lg hover:shadow-xl transition-all duration-300 group-hover:scale-105">
                   <div className="flex items-center gap-4 mb-4">
-                    <div className="w-12 h-12 bg-gradient-to-br from-green-500 to-emerald-600 rounded-full flex items-center justify-center">
+                    <div className="w-12 h-12 bg-gradient-to-br from-green-500 to-emerald-600 rounded-full flex items-center justify-center" aria-hidden="true">
                       <ShieldCheckIcon className="w-6 h-6 text-white" />
                     </div>
                     <h3 className="text-xl font-bold text-slate-800">Safety Features</h3>
@@ -632,7 +643,7 @@ const AboutPage = () => {
               <Link to="/services" className="block group">
                 <div className="bg-white rounded-2xl p-6 shadow-lg hover:shadow-xl transition-all duration-300 group-hover:scale-105">
                   <div className="flex items-center gap-4 mb-4">
-                    <div className="w-12 h-12 bg-gradient-to-br from-blue-500 to-indigo-600 rounded-full flex items-center justify-center">
+                    <div className="w-12 h-12 bg-gradient-to-br from-blue-500 to-indigo-600 rounded-full flex items-center justify-center" aria-hidden="true">
                       <BuildingOfficeIcon className="w-6 h-6 text-white" />
                     </div>
                     <h3 className="text-xl font-bold text-slate-800">Our Services</h3>
@@ -646,7 +657,7 @@ const AboutPage = () => {
               <Link to="/contact" className="block group">
                 <div className="bg-white rounded-2xl p-6 shadow-lg hover:shadow-xl transition-all duration-300 group-hover:scale-105">
                   <div className="flex items-center gap-4 mb-4">
-                    <div className="w-12 h-12 bg-gradient-to-br from-purple-500 to-pink-600 rounded-full flex items-center justify-center">
+                    <div className="w-12 h-12 bg-gradient-to-br from-purple-500 to-pink-600 rounded-full flex items-center justify-center" aria-hidden="true">
                       <PhoneIcon className="w-6 h-6 text-white" />
                     </div>
                     <h3 className="text-xl font-bold text-slate-800">Contact Us</h3>
@@ -676,14 +687,14 @@ const AboutPage = () => {
                    className="bg-white text-indigo-600 px-8 py-4 rounded-xl font-semibold text-lg shadow-lg hover:shadow-xl transform hover:scale-105 transition-all duration-300"
                    aria-label="Contact Back2Nest school van service via email for enrollment"
                    title="Email Back2Nest for school transportation services in Patna">
-                  <EnvelopeIcon className="w-5 h-5 inline mr-2" />
+                  <EnvelopeIcon className="w-5 h-5 inline mr-2" aria-hidden="true" />
                   Contact Us Today
                 </a>
                 <a href="tel:+918935904820"
                    className="border-2 border-white text-white px-8 py-4 rounded-xl font-semibold text-lg hover:bg-white hover:text-indigo-600 transition-all duration-300"
                    aria-label="Call Back2Nest school van service directly"
                    title="Call Back2Nest for immediate assistance and booking">
-                  <PhoneIcon className="w-5 h-5 inline mr-2" />
+                  <PhoneIcon className="w-5 h-5 inline mr-2" aria-hidden="true" />
                   Call Now: +91-8935904820
                 </a>
               </div>
