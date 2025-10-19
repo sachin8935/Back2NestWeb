@@ -367,7 +367,7 @@ export default function ReviewsPage() {
                     <span>"Kids love it, easy to digest A2 protein"</span>
                   </li>
                 </ul>
-                <a href="/our-process" className="mt-6 inline-block text-blue-600 font-semibold hover:text-blue-700">
+                <a href="/products/milk" className="mt-6 inline-block text-blue-600 font-semibold hover:text-blue-700">
                   Learn about our milk process →
                 </a>
               </div>
@@ -407,7 +407,7 @@ export default function ReviewsPage() {
                     <span>"Great for lassi, raita, and kadhi"</span>
                   </li>
                 </ul>
-                <a href="/dahi-process" className="mt-6 inline-block text-green-600 font-semibold hover:text-green-700">
+                <a href="/products/dahi" className="mt-6 inline-block text-green-600 font-semibold hover:text-green-700">
                   Learn about our dahi process →
                 </a>
               </div>
@@ -447,7 +447,7 @@ export default function ReviewsPage() {
                     <span>"Perfect for curries, tikka, and salads"</span>
                   </li>
                 </ul>
-                <a href="/paneer-process" className="mt-6 inline-block text-purple-600 font-semibold hover:text-purple-700">
+                <a href="/products/paneer" className="mt-6 inline-block text-purple-600 font-semibold hover:text-purple-700">
                   Learn about our paneer process →
                 </a>
               </div>
@@ -487,7 +487,7 @@ export default function ReviewsPage() {
                     <span>"Perfect for tadka and daily consumption"</span>
                   </li>
                 </ul>
-                <a href="/ghee-process" className="mt-6 inline-block text-yellow-600 font-semibold hover:text-yellow-700">
+                <a href="/products/ghee" className="mt-6 inline-block text-yellow-600 font-semibold hover:text-yellow-700">
                   Learn about our ghee process →
                 </a>
               </div>
