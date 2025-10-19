@@ -174,12 +174,6 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <meta name="theme-color" content="#2563eb" />
 
-        {/* Canonical is handled by metadata.alternates.canonical but a link is useful here too */}
-        <link rel="canonical" href={SITE_URL} />
-
-        {/* Optional: add alternate hreflang tags if you support other locales */}
-        <link rel="alternate" hrefLang="en-IN" href={SITE_URL} />
-
         {/* JSON-LD structured data (lazyOnload so it doesn't block render) */}
         <Script
           id="ld-localbusiness"
