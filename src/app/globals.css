@@ -1,42 +1,39 @@
-:root {
-  --background: #ffffff;
-  --foreground: #171717;
-}
+@import "tailwindcss";
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
-}
-
-html,
-body {
-  max-width: 100vw;
-  overflow-x: hidden;
-}
-
-body {
-  color: var(--foreground);
-  background: var(--background);
-  font-family: Arial, Helvetica, sans-serif;
+/* Performance optimizations */
+* {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
 
-* {
-  box-sizing: border-box;
-  padding: 0;
-  margin: 0;
+/* Smooth scrolling for anchor navigation (SEO-friendly, enhances UX) */
+html {
+  scroll-behavior: smooth;
 }
 
-a {
-  color: inherit;
-  text-decoration: none;
-}
-
-@media (prefers-color-scheme: dark) {
+/* Optional: Reduce motion for accessibility (respects user preferences) */
+@media (prefers-reduced-motion: reduce) {
   html {
-    color-scheme: dark;
+    scroll-behavior: auto;
   }
+  
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
+}
+
+/* Optimize text rendering */
+body {
+  text-rendering: optimizeLegibility;
+  font-feature-settings: "kern" 1;
+  font-kerning: normal;
+}
+
+/* Optimize image rendering for performance */
+img {
+  content-visibility: auto;
 }
