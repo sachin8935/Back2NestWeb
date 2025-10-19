@@ -4,11 +4,11 @@ import Script from 'next/script';
 
 const SITE_URL = 'https://www.back2nest.in';
 const SITE_NAME = 'Back2Nest';
-const DEFAULT_DESCRIPTION = 'Farm fresh milk delivered to your doorstep by 5 AM daily — pure, unadulterated milk from farm to home in Patna. Download the Back2Nest app or call 8935904820 to order.';
+const DEFAULT_DESCRIPTION = 'Fresh, pure cow milk delivered early morning in Patna. Farm-to-home, unadulterated and natural. Download our app to order today!';
 
 export const metadata: Metadata = {
   title: {
-    default: `${SITE_NAME} – Fresh Farm Milk Delivery Patna`,
+    default: `${SITE_NAME} – Fresh Milk Delivery Patna`,
     template: `%s | ${SITE_NAME}`,
   },
   description: DEFAULT_DESCRIPTION,

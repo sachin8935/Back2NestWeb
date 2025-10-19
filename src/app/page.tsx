@@ -116,12 +116,11 @@ const HeroSection = () => (
           </div>
           
           <h1 className="text-5xl md:text-6xl font-bold text-gray-900 leading-tight mb-6">
-            Pure Milk from
-            <span className="text-blue-600"> Farm to Your Home</span>
+            Fresh Farm Milk Delivery in Patna – Back2Nest
           </h1>
           
           <p className="text-xl text-gray-600 mb-8 leading-relaxed">
-            Experience the richness of authentic farm-fresh milk delivered at your doorstep by 5 AM daily in Patna. No adulteration, no preservatives—just pure, creamy goodness from happy, healthy cows.
+            Pure milk from farm to your home by 5 AM daily. No adulteration, no preservatives—just pure, creamy goodness from healthy cows.
           </p>
           
           <div className="flex flex-col sm:flex-row gap-4 mb-10">
