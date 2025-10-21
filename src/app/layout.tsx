@@ -146,32 +146,60 @@ const localBusinessJsonLd = {
         '@type': 'Offer',
         'itemOffered': {
           '@type': 'Product',
-          'name': 'Fresh A2 Cow Milk',
-          'description': '100% pure A2 cow milk delivered daily'
+          'name': 'Fresh A2 Cow Milk - Farm to Doorstep',
+          'description': '100% pure, farm-fresh A2 milk delivered daily in Patna. Collected early morning, lab-tested, and delivered chilled to your doorstep by 5 AM. No preservatives, no adulteration.',
+          'sku': 'B2N-MILK-001',
+          'offers': {
+            '@type': 'AggregateOffer',
+            'priceCurrency': 'INR',
+            'lowPrice': '60',
+            'highPrice': '85'
+          }
         }
       },
       {
         '@type': 'Offer',
         'itemOffered': {
           '@type': 'Product',
-          'name': 'Fresh Dahi',
-          'description': 'Naturally fermented thick dahi'
+          'name': 'Fresh Homemade Dahi (Curd) - Traditional Process',
+          'description': 'Thick, creamy dahi made daily using traditional methods from pure milk. Same-day delivery in Patna. Natural fermentation with probiotic benefits.',
+          'sku': 'B2N-DAHI-001',
+          'offers': {
+            '@type': 'AggregateOffer',
+            'priceCurrency': 'INR',
+            'lowPrice': '40',
+            'highPrice': '80'
+          }
         }
       },
       {
         '@type': 'Offer',
         'itemOffered': {
           '@type': 'Product',
-          'name': 'Fresh Paneer',
-          'description': 'Soft paneer made with lemon curdling'
+          'name': 'Fresh Taaza Paneer - Natural Lemon Curdling',
+          'description': 'Soft, natural lemon-curdled paneer made from pure A2 cow milk. Delivered fresh daily in Patna. No chemicals, authentic homemade taste.',
+          'sku': 'B2N-PANEER-001',
+          'offers': {
+            '@type': 'AggregateOffer',
+            'priceCurrency': 'INR',
+            'lowPrice': '80',
+            'highPrice': '180'
+          }
         }
       },
       {
         '@type': 'Offer',
         'itemOffered': {
           '@type': 'Product',
-          'name': 'Danedar Ghee',
-          'description': 'Traditional bilona method ghee'
+          'name': 'Pure Danedar Ghee - Traditional Bilona Method',
+          'description': 'Authentic bilona method danedar ghee made from A2 cow milk. Granular texture and rich aroma. Hand-churned using traditional methods for pure, natural taste.',
+          'sku': 'B2N-GHEE-001',
+          'offers': {
+            '@type': 'AggregateOffer',
+            'priceCurrency': 'INR',
+            'lowPrice': '450',
+            'highPrice': '1800'
+          }
         }
       }
     ]
