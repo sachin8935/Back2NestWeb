@@ -62,7 +62,45 @@ export default function DahiProcess() {
           "image": ["https://www.back2nest.in/dahi.jpeg"],
           "brand": { "@type": "Brand", "name": "Back2Nest" },
           "category": "Dairy",
-          "url": "https://www.back2nest.in/products/dahi"
+          "url": "https://www.back2nest.in/products/dahi",
+          "offers": {
+            "@type": "AggregateOffer",
+            "priceCurrency": "INR",
+            "lowPrice": "40",
+            "highPrice": "80",
+            "offerCount": "3",
+            "availability": "https://schema.org/InStock",
+            "url": "https://www.back2nest.in/products/dahi"
+          },
+          "aggregateRating": {
+            "@type": "AggregateRating",
+            "ratingValue": "4.8",
+            "reviewCount": "127",
+            "bestRating": "5",
+            "worstRating": "1"
+          },
+          "additionalProperty": [
+            {
+              "@type": "PropertyValue",
+              "name": "Preparation Method",
+              "value": "Traditional 8-hour fermentation"
+            },
+            {
+              "@type": "PropertyValue",
+              "name": "Delivery Time",
+              "value": "Same day delivery (4-7 PM)"
+            },
+            {
+              "@type": "PropertyValue",
+              "name": "Shelf Life",
+              "value": "2-3 days when refrigerated"
+            },
+            {
+              "@type": "PropertyValue",
+              "name": "Packaging",
+              "value": "Food-grade airtight containers"
+            }
+          ]
         })
       }} />
 

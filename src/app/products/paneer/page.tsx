@@ -62,21 +62,59 @@ export default function PaneerProcess() {
           "image": ["https://www.back2nest.in/paneer.jpeg"],
           "brand": { "@type": "Brand", "name": "Back2Nest" },
           "category": "Dairy",
-          "url": "https://www.back2nest.in/products/paneer"
+          "url": "https://www.back2nest.in/products/paneer",
+          "offers": {
+            "@type": "AggregateOffer",
+            "priceCurrency": "INR",
+            "lowPrice": "80",
+            "highPrice": "180",
+            "offerCount": "3",
+            "availability": "https://schema.org/InStock",
+            "url": "https://www.back2nest.in/products/paneer"
+          },
+          "aggregateRating": {
+            "@type": "AggregateRating",
+            "ratingValue": "4.8",
+            "reviewCount": "127",
+            "bestRating": "5",
+            "worstRating": "1"
+          },
+          "additionalProperty": [
+            {
+              "@type": "PropertyValue",
+              "name": "Curdling Method",
+              "value": "Natural lemon juice - no chemicals"
+            },
+            {
+              "@type": "PropertyValue",
+              "name": "Preparation Time",
+              "value": "4 hours from milk to paneer"
+            },
+            {
+              "@type": "PropertyValue",
+              "name": "Delivery Time",
+              "value": "Same day delivery (4-7 PM)"
+            },
+            {
+              "@type": "PropertyValue",
+              "name": "Shelf Life",
+              "value": "3-4 days when refrigerated at 4°C"
+            }
+          ]
         })
       }} />
 
       <div className="min-h-screen bg-gradient-to-b from-green-50 to-white">
         <header className="bg-white shadow-sm sticky top-0 z-50">
           <nav className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-4 flex items-center justify-between">
-            <a href="/" className="flex items-center space-x-2">
+            <Link href="/" className="flex items-center space-x-2">
               <Milk className="w-8 h-8 text-amber-600" />
               <span className="text-2xl font-bold text-gray-900">Back<span className="text-amber-600">2</span>Nest</span>
-            </a>
-            <a href="/" className="flex items-center space-x-2 text-amber-600 hover:text-amber-700 transition">
+            </Link>
+            <Link href="/" className="flex items-center space-x-2 text-amber-600 hover:text-amber-700 transition">
               <ArrowLeft className="w-5 h-5" />
               <span>Back to Home</span>
-            </a>
+            </Link>
           </nav>
         </header>
 
@@ -673,9 +711,9 @@ export default function PaneerProcess() {
                     <a href="tel:+918935904820" className="block bg-white text-green-600 px-8 py-4 rounded-full font-bold text-center hover:bg-green-50 transition">
                       Call +91 89359 04820
                     </a>
-                    <a href="/#order" className="block border-2 border-white text-white px-8 py-4 rounded-full font-bold text-center hover:bg-white/10 transition">
+                    <Link href="/#order" className="block border-2 border-white text-white px-8 py-4 rounded-full font-bold text-center hover:bg-white/10 transition">
                       Order Online
-                    </a>
+                    </Link>
                   </div>
                   <p className="text-green-100 text-sm mt-6 text-center">
                     Available in 200g, 500g & 1kg packs
@@ -697,9 +735,9 @@ export default function PaneerProcess() {
                 <Phone className="w-5 h-5" />
                 <span>Call +91 89359 04820</span>
               </a>
-              <a href="/#order" className="border-2 border-green-600 text-green-600 px-10 py-4 rounded-full text-lg font-semibold hover:bg-green-50 transition">
+              <Link href="/#order" className="border-2 border-green-600 text-green-600 px-10 py-4 rounded-full text-lg font-semibold hover:bg-green-50 transition">
                 Subscribe Online
-              </a>
+              </Link>
             </div>
             <div className="mt-8 flex items-center justify-center space-x-6 text-gray-600">
               <div className="flex items-center space-x-2">

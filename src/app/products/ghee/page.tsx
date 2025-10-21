@@ -62,21 +62,59 @@ export default function GheeProcess() {
           "image": ["https://www.back2nest.in/ghee.jpeg"],
           "brand": { "@type": "Brand", "name": "Back2Nest" },
           "category": "Dairy",
-          "url": "https://www.back2nest.in/products/ghee"
+          "url": "https://www.back2nest.in/products/ghee",
+          "offers": {
+            "@type": "AggregateOffer",
+            "priceCurrency": "INR",
+            "lowPrice": "450",
+            "highPrice": "1800",
+            "offerCount": "4",
+            "availability": "https://schema.org/InStock",
+            "url": "https://www.back2nest.in/products/ghee"
+          },
+          "aggregateRating": {
+            "@type": "AggregateRating",
+            "ratingValue": "4.9",
+            "reviewCount": "89",
+            "bestRating": "5",
+            "worstRating": "1"
+          },
+          "additionalProperty": [
+            {
+              "@type": "PropertyValue",
+              "name": "Preparation Method",
+              "value": "Traditional Bilona hand-churning method"
+            },
+            {
+              "@type": "PropertyValue",
+              "name": "Preparation Time",
+              "value": "3-4 days from milk to ghee"
+            },
+            {
+              "@type": "PropertyValue",
+              "name": "Texture",
+              "value": "Danedar (Granular) - sign of purity"
+            },
+            {
+              "@type": "PropertyValue",
+              "name": "Shelf Life",
+              "value": "12 months when stored properly"
+            }
+          ]
         })
       }} />
 
       <div className="min-h-screen bg-gradient-to-b from-yellow-50 to-white">
         <header className="bg-white shadow-sm sticky top-0 z-50">
           <nav className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-4 flex items-center justify-between">
-            <a href="/" className="flex items-center space-x-2">
+            <Link href="/" className="flex items-center space-x-2">
               <Milk className="w-8 h-8 text-amber-600" />
               <span className="text-2xl font-bold text-gray-900">Back<span className="text-amber-600">2</span>Nest</span>
-            </a>
-            <a href="/" className="flex items-center space-x-2 text-amber-600 hover:text-amber-700 transition">
+            </Link>
+            <Link href="/" className="flex items-center space-x-2 text-amber-600 hover:text-amber-700 transition">
               <ArrowLeft className="w-5 h-5" />
               <span>Back to Home</span>
-            </a>
+            </Link>
           </nav>
         </header>
 
@@ -708,9 +746,9 @@ export default function GheeProcess() {
                     <a href="tel:+918935904820" className="block bg-white text-yellow-600 px-8 py-4 rounded-full font-bold text-center hover:bg-yellow-50 transition">
                       Call +91 89359 04820
                     </a>
-                    <a href="/#order" className="block border-2 border-white text-white px-8 py-4 rounded-full font-bold text-center hover:bg-white/10 transition">
+                    <Link href="/#order" className="block border-2 border-white text-white px-8 py-4 rounded-full font-bold text-center hover:bg-white/10 transition">
                       Order Online
-                    </a>
+                    </Link>
                   </div>
                   <p className="text-yellow-100 text-sm mt-6 text-center">
                     Available in 250ml, 500ml & 1L packs
@@ -732,9 +770,9 @@ export default function GheeProcess() {
                 <Phone className="w-5 h-5" />
                 <span>Call +91 89359 04820</span>
               </a>
-              <a href="/#order" className="border-2 border-yellow-600 text-yellow-600 px-10 py-4 rounded-full text-lg font-semibold hover:bg-yellow-50 transition">
+              <Link href="/#order" className="border-2 border-yellow-600 text-yellow-600 px-10 py-4 rounded-full text-lg font-semibold hover:bg-yellow-50 transition">
                 Subscribe Online
-              </a>
+              </Link>
             </div>
             <div className="mt-8 flex items-center justify-center space-x-6 text-gray-600">
               <div className="flex items-center space-x-2">

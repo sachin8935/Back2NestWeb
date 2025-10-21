@@ -4,8 +4,29 @@ import { ArrowLeft, Phone, Mail, MapPin, Clock, MessageSquare } from 'lucide-rea
 import Footer from '@/components/Footer';
 
 export const metadata: Metadata = {
-  title: 'Contact Us | Back2Nest',
-  description: 'Get in touch with Back2Nest for fresh dairy product delivery in Patna. Call us, email us, or visit our office.',
+  title: 'Contact Back2Nest Patna | Call 8935904820 for Milk Delivery',
+  description: 'Contact Back2Nest for pure milk delivery in Patna. Call 8935904820, email help@back2nest.in or visit us at Jagat Narayan Road, Kadam Kuan, Patna 800003.',
+  keywords: 'contact back2nest, milk delivery patna contact, back2nest phone number, milk delivery customer care patna, back2nest address patna',
+  openGraph: {
+    title: 'Contact Back2Nest Patna | Milk Delivery Service',
+    description: 'Get in touch with Back2Nest for fresh milk delivery in Patna. Call us at 8935904820.',
+    url: 'https://www.back2nest.in/contact',
+    type: 'website',
+    images: [
+      {
+        url: 'https://www.back2nest.in/milk.jpeg',
+        width: 1200,
+        height: 630,
+        alt: 'Contact Back2Nest - Fresh Milk Delivery in Patna',
+      },
+    ],
+  },
+  twitter: {
+    card: 'summary_large_image',
+    title: 'Contact Back2Nest Patna',
+    description: 'Get in touch for fresh milk delivery in Patna.',
+    images: ['https://www.back2nest.in/milk.jpeg'],
+  },
   alternates: {
     canonical: 'https://www.back2nest.in/contact',
   },

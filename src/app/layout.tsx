@@ -7,6 +7,7 @@ const SITE_NAME = 'Back2Nest';
 const DEFAULT_DESCRIPTION = 'Fresh, pure cow milk delivered early morning in Patna. Farm-to-home, unadulterated and natural. Download our app to order today!';
 
 export const metadata: Metadata = {
+  metadataBase: new URL(SITE_URL),
   title: {
     default: `${SITE_NAME} – Fresh Milk Delivery Patna`,
     template: `%s | ${SITE_NAME}`,
@@ -18,17 +19,24 @@ export const metadata: Metadata = {
   publisher: SITE_NAME,
   keywords: [
     'milk delivery patna',
-    'fresh milk delivery',
+    'pure milk patna',
+    'fresh milk delivery patna',
+    'A2 milk patna',
+    'cow milk delivery patna',
     'farm fresh milk patna',
-    'pure milk delivery',
-    'farm fresh milk delivered',
-    'Back2Nest',
-    'download app milk delivery',
-    'morning milk delivery',
-    'farm to home milk',
-    'organic milk patna',
+    'milk home delivery patna',
     'daily milk subscription patna',
-    'milk delivery online patna'
+    'milk delivery online patna',
+    'morning milk delivery patna',
+    'desi cow milk patna',
+    'organic milk patna',
+    'farm to home milk patna',
+    'Back2Nest patna',
+    'best milk delivery patna',
+    'gir cow milk patna',
+    'pure desi milk patna',
+    'milk supplier patna',
+    'milk delivery app patna'
   ],
   robots: {
     index: true,
@@ -60,7 +68,7 @@ export const metadata: Metadata = {
     description: DEFAULT_DESCRIPTION,
     images: [
       {
-        url: `${SITE_URL}/og-image.jpg`,
+        url: `${SITE_URL}/milk.jpeg`,
         width: 1200,
         height: 630,
         alt: `${SITE_NAME} - Fresh Farm Milk Delivery in Patna`,
@@ -71,12 +79,9 @@ export const metadata: Metadata = {
     card: 'summary_large_image',
     title: `${SITE_NAME} – Fresh Farm Milk Delivery Patna`,
     description: DEFAULT_DESCRIPTION,
-    images: [`${SITE_URL}/twitter-image.jpg`],
+    images: [`${SITE_URL}/milk.jpeg`],
     creator: '@B2N_Back2Nest',
     site: '@B2N_Back2Nest',
-  },
-  alternates: {
-    canonical: SITE_URL,
   },
 };
 const localBusinessJsonLd = {
@@ -89,7 +94,7 @@ const localBusinessJsonLd = {
   'url': SITE_URL,
   'telephone': '+918935904820',
   'email': 'help@back2nest.in',
-  'priceRange': '₹',
+  'priceRange': '₹₹',
   'address': {
     '@type': 'PostalAddress',
     'streetAddress': 'Jagat Narayan Road, Kadam Kuan',
@@ -122,13 +127,55 @@ const localBusinessJsonLd = {
   'sameAs': [
     'https://www.facebook.com/B2Nback2nest',
     'https://x.com/B2N_Back2Nest',
+    'https://jsdl.in/DT-47YPH6XJ5EY',
+    'https://www.instagram.com/back2nest'
   ],
-  'areaServed': {
-    '@type': 'City',
-    'name': 'Patna',
-  },
-  'serviceType': 'Fresh Milk Home Delivery',
+  'areaServed': [
+    {
+      '@type': 'City',
+      'name': 'Patna',
+    }
+  ],
+  'serviceType': ['Fresh Milk Home Delivery', 'A2 Milk Delivery', 'Dairy Products Delivery'],
   'description': DEFAULT_DESCRIPTION,
+  'hasOfferCatalog': {
+    '@type': 'OfferCatalog',
+    'name': 'Dairy Products',
+    'itemListElement': [
+      {
+        '@type': 'Offer',
+        'itemOffered': {
+          '@type': 'Product',
+          'name': 'Fresh A2 Cow Milk',
+          'description': '100% pure A2 cow milk delivered daily'
+        }
+      },
+      {
+        '@type': 'Offer',
+        'itemOffered': {
+          '@type': 'Product',
+          'name': 'Fresh Dahi',
+          'description': 'Naturally fermented thick dahi'
+        }
+      },
+      {
+        '@type': 'Offer',
+        'itemOffered': {
+          '@type': 'Product',
+          'name': 'Fresh Paneer',
+          'description': 'Soft paneer made with lemon curdling'
+        }
+      },
+      {
+        '@type': 'Offer',
+        'itemOffered': {
+          '@type': 'Product',
+          'name': 'Danedar Ghee',
+          'description': 'Traditional bilona method ghee'
+        }
+      }
+    ]
+  }
 };
 
 const organizationJsonLd = {
@@ -150,7 +197,9 @@ const organizationJsonLd = {
   ],
   'sameAs': [
     'https://www.facebook.com/B2Nback2nest',
+    'https://www.instagram.com/back2nest',
     'https://x.com/B2N_Back2Nest',
+    'https://jsdl.in/DT-47YPH6XJ5EY',
   ],
 };
 
@@ -168,7 +217,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
         <link rel="dns-prefetch" href="https://images.unsplash.com" />
 
         {/* Preload critical social image (helps link previews render quickly) */}
-        <link rel="preload" as="image" href={`${SITE_URL}/og-image.jpg`} />
+  <link rel="preload" as="image" href={`${SITE_URL}/milk.jpeg`} />
 
         {/* Mobile viewport & theme */}
         <meta name="viewport" content="width=device-width, initial-scale=1" />

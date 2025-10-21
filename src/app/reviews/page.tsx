@@ -198,14 +198,14 @@ export default function ReviewsPage() {
       <div className="min-h-screen bg-gradient-to-b from-amber-50 to-white">
         <header className="bg-white shadow-sm sticky top-0 z-50">
           <nav className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-4 flex items-center justify-between">
-            <a href="/" className="flex items-center space-x-2">
+            <Link href="/" className="flex items-center space-x-2">
               <Milk className="w-8 h-8 text-amber-600" />
               <span className="text-2xl font-bold text-gray-900">Back<span className="text-amber-600">2</span>Nest</span>
-            </a>
-            <a href="/" className="flex items-center space-x-2 text-amber-600 hover:text-amber-700 transition">
+            </Link>
+            <Link href="/" className="flex items-center space-x-2 text-amber-600 hover:text-amber-700 transition">
               <ArrowLeft className="w-5 h-5" />
               <span>Back to Home</span>
-            </a>
+            </Link>
           </nav>
         </header>
 
@@ -316,9 +316,9 @@ export default function ReviewsPage() {
               <a href="tel:+918935904820" className="bg-white text-amber-600 px-10 py-4 rounded-full text-lg font-bold hover:bg-amber-50 transition">
                 Call +91 89359 04820
               </a>
-              <a href="/#order" className="border-2 border-white text-white px-10 py-4 rounded-full text-lg font-bold hover:bg-white/10 transition">
+              <Link href="/#order" className="border-2 border-white text-white px-10 py-4 rounded-full text-lg font-bold hover:bg-white/10 transition">
                 Subscribe Online
-              </a>
+              </Link>
             </div>
             <p className="text-amber-100 mt-6">
               Free delivery across Patna | Daily fresh production | 100% satisfaction guaranteed
@@ -367,9 +367,9 @@ export default function ReviewsPage() {
                     <span>"Kids love it, easy to digest A2 protein"</span>
                   </li>
                 </ul>
-                <a href="/products/milk" className="mt-6 inline-block text-blue-600 font-semibold hover:text-blue-700">
+                <Link href="/products/milk" className="mt-6 inline-block text-blue-600 font-semibold hover:text-blue-700">
                   Learn about our milk process →
-                </a>
+                </Link>
               </div>
 
               <div className="bg-gradient-to-br from-green-50 to-green-100 p-8 rounded-2xl shadow-lg">
@@ -407,9 +407,9 @@ export default function ReviewsPage() {
                     <span>"Great for lassi, raita, and kadhi"</span>
                   </li>
                 </ul>
-                <a href="/products/dahi" className="mt-6 inline-block text-green-600 font-semibold hover:text-green-700">
+                <Link href="/products/dahi" className="mt-6 inline-block text-green-600 font-semibold hover:text-green-700">
                   Learn about our dahi process →
-                </a>
+                </Link>
               </div>
 
               <div className="bg-gradient-to-br from-purple-50 to-purple-100 p-8 rounded-2xl shadow-lg">
@@ -447,9 +447,9 @@ export default function ReviewsPage() {
                     <span>"Perfect for curries, tikka, and salads"</span>
                   </li>
                 </ul>
-                <a href="/products/paneer" className="mt-6 inline-block text-purple-600 font-semibold hover:text-purple-700">
+                <Link href="/products/paneer" className="mt-6 inline-block text-purple-600 font-semibold hover:text-purple-700">
                   Learn about our paneer process →
-                </a>
+                </Link>
               </div>
 
               <div className="bg-gradient-to-br from-yellow-50 to-yellow-100 p-8 rounded-2xl shadow-lg">
@@ -487,9 +487,9 @@ export default function ReviewsPage() {
                     <span>"Perfect for tadka and daily consumption"</span>
                   </li>
                 </ul>
-                <a href="/products/ghee" className="mt-6 inline-block text-yellow-600 font-semibold hover:text-yellow-700">
+                <Link href="/products/ghee" className="mt-6 inline-block text-yellow-600 font-semibold hover:text-yellow-700">
                   Learn about our ghee process →
-                </a>
+                </Link>
               </div>
             </div>
           </div>
@@ -547,9 +547,9 @@ export default function ReviewsPage() {
                 <a href="tel:+918935904820" className="bg-white text-amber-600 px-10 py-4 rounded-full text-lg font-bold hover:bg-amber-50 transition inline-flex items-center justify-center space-x-2">
                   <span>📞 Call +91 89359 04820</span>
                 </a>
-                <a href="/#order" className="border-2 border-white text-white px-10 py-4 rounded-full text-lg font-bold hover:bg-white/10 transition">
+                <Link href="/#order" className="border-2 border-white text-white px-10 py-4 rounded-full text-lg font-bold hover:bg-white/10 transition">
                   Subscribe Now
-                </a>
+                </Link>
               </div>
               <div className="flex items-center justify-center space-x-8 text-amber-50">
                 <div className="flex items-center space-x-2">

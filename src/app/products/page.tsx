@@ -4,14 +4,43 @@ import { Milk, ArrowLeft, Shield, CheckCircle, Award, Thermometer, Droplet, Spar
 import Footer from '@/components/Footer';
 
 export const metadata: Metadata = {
-  title: 'Our Products - Fresh Milk, Dahi, Paneer & Ghee | Back2Nest Patna',
-  description: 'Explore Back2Nest\'s range of pure dairy products - Fresh A2 milk, creamy dahi, soft paneer, and traditional danedar ghee. Made with highest safety standards and delivered daily in Patna.',
-  keywords: 'Back2Nest products, fresh milk Patna, dahi Patna, paneer Patna, ghee Patna, A2 milk, dairy products Patna, pure milk delivery',
+  metadataBase: new URL('https://www.back2nest.in'),
+  title: 'Fresh Dairy Products Patna | A2 Milk, Dahi, Paneer & Ghee - Back2Nest',
+  description: 'Buy pure dairy products in Patna - Farm-fresh A2 milk, thick dahi, soft paneer, and traditional danedar ghee. Delivered daily to your doorstep. Order now!',
+  keywords: ['dairy products patna', 'A2 milk patna', 'fresh dahi patna', 'paneer delivery patna', 'danedar ghee patna', 'buy milk online patna', 'dairy store patna', 'farm fresh products patna'],
   openGraph: {
-    title: 'Premium Dairy Products | Back2Nest Patna',
-    description: 'Pure, fresh dairy products delivered to your doorstep. A2 milk, dahi, paneer, and bilona ghee made with traditional methods.',
-    images: ['/logo.png'],
+    title: 'Premium Dairy Products Patna | Fresh A2 Milk, Dahi, Paneer & Ghee',
+    description: 'Order pure, fresh dairy products delivered daily in Patna. A2 milk, dahi, paneer, and bilona ghee made with traditional methods.',
+    url: 'https://www.back2nest.in/products',
+    siteName: 'Back2Nest',
+    locale: 'en_IN',
     type: 'website',
+    images: [
+      {
+        url: 'https://www.back2nest.in/milk.jpeg',
+        width: 1200,
+        height: 630,
+        alt: 'Back2Nest Premium Dairy Products - Fresh Milk, Dahi, Paneer & Ghee in Patna',
+      },
+    ],
+  },
+  twitter: {
+    card: 'summary_large_image',
+    title: 'Premium Dairy Products Patna',
+    description: 'Order pure, fresh dairy products delivered daily in Patna.',
+    images: ['https://www.back2nest.in/milk.jpeg'],
+    creator: '@B2N_Back2Nest',
+  },
+  robots: {
+    index: true,
+    follow: true,
+    googleBot: {
+      index: true,
+      follow: true,
+      'max-video-preview': -1,
+      'max-image-preview': 'large',
+      'max-snippet': -1,
+    },
   },
   alternates: {
     canonical: 'https://www.back2nest.in/products',
@@ -19,8 +48,30 @@ export const metadata: Metadata = {
 };
 
 export default function ProductsHub() {
+  const breadcrumbSchema = {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    "itemListElement": [
+      {
+        "@type": "ListItem",
+        "position": 1,
+        "name": "Home",
+        "item": "https://www.back2nest.in"
+      },
+      {
+        "@type": "ListItem",
+        "position": 2,
+        "name": "Products",
+        "item": "https://www.back2nest.in/products"
+      }
+    ]
+  };
+
   return (
     <>
+      <script type="application/ld+json" dangerouslySetInnerHTML={{
+        __html: JSON.stringify(breadcrumbSchema)
+      }} />
       <script type="application/ld+json" dangerouslySetInnerHTML={{
         __html: JSON.stringify({
           "@context": "https://schema.org",
@@ -34,14 +85,14 @@ export default function ProductsHub() {
       <div className="min-h-screen bg-gradient-to-b from-amber-50 to-white">
         <header className="bg-white shadow-sm sticky top-0 z-50">
           <nav className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-4 flex items-center justify-between">
-            <a href="/" className="flex items-center space-x-2">
+            <Link href="/" className="flex items-center space-x-2">
               <Milk className="w-8 h-8 text-amber-600" />
               <span className="text-2xl font-bold text-gray-900">Back<span className="text-amber-600">2</span>Nest</span>
-            </a>
-            <a href="/" className="flex items-center space-x-2 text-amber-600 hover:text-amber-700 transition">
+            </Link>
+            <Link href="/" className="flex items-center space-x-2 text-amber-600 hover:text-amber-700 transition">
               <ArrowLeft className="w-5 h-5" />
               <span>Back to Home</span>
-            </a>
+            </Link>
           </nav>
         </header>
 
@@ -66,7 +117,7 @@ export default function ProductsHub() {
           </div>
 
           <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8 mb-16">
-            <a href="/products/milk" className="group bg-white rounded-2xl shadow-lg overflow-hidden hover:shadow-2xl transition-all duration-300 transform hover:-translate-y-2">
+            <Link href="/products/milk" className="group bg-white rounded-2xl shadow-lg overflow-hidden hover:shadow-2xl transition-all duration-300 transform hover:-translate-y-2">
               <div className="h-48 bg-gradient-to-br from-blue-400 to-blue-600 flex items-center justify-center">
                 <Milk className="w-24 h-24 text-white" />
               </div>
@@ -92,9 +143,9 @@ export default function ProductsHub() {
                   <ArrowLeft className="w-4 h-4 rotate-180 group-hover:translate-x-1 transition" />
                 </div>
               </div>
-            </a>
+            </Link>
 
-            <a href="/products/dahi" className="group bg-white rounded-2xl shadow-lg overflow-hidden hover:shadow-2xl transition-all duration-300 transform hover:-translate-y-2">
+            <Link href="/products/dahi" className="group bg-white rounded-2xl shadow-lg overflow-hidden hover:shadow-2xl transition-all duration-300 transform hover:-translate-y-2">
               <div className="h-48 bg-gradient-to-br from-green-400 to-green-600 flex items-center justify-center">
                 <Droplet className="w-24 h-24 text-white" />
               </div>
@@ -120,8 +171,8 @@ export default function ProductsHub() {
                   <ArrowLeft className="w-4 h-4 rotate-180 group-hover:translate-x-1 transition" />
                 </div>
               </div>
-            </a>
-            <a href="/products/paneer" className="group bg-white rounded-2xl shadow-lg overflow-hidden hover:shadow-2xl transition-all duration-300 transform hover:-translate-y-2">
+            </Link>
+            <Link href="/products/paneer" className="group bg-white rounded-2xl shadow-lg overflow-hidden hover:shadow-2xl transition-all duration-300 transform hover:-translate-y-2">
               <div className="h-48 bg-gradient-to-br from-purple-400 to-purple-600 flex items-center justify-center">
                 <Heart className="w-24 h-24 text-white" />
               </div>
@@ -147,9 +198,9 @@ export default function ProductsHub() {
                   <ArrowLeft className="w-4 h-4 rotate-180 group-hover:translate-x-1 transition" />
                 </div>
               </div>
-            </a>
+            </Link>
 
-            <a href="/products/ghee" className="group bg-white rounded-2xl shadow-lg overflow-hidden hover:shadow-2xl transition-all duration-300 transform hover:-translate-y-2">
+            <Link href="/products/ghee" className="group bg-white rounded-2xl shadow-lg overflow-hidden hover:shadow-2xl transition-all duration-300 transform hover:-translate-y-2">
               <div className="h-48 bg-gradient-to-br from-yellow-400 to-yellow-600 flex items-center justify-center">
                 <Sparkles className="w-24 h-24 text-white" />
               </div>
@@ -175,7 +226,7 @@ export default function ProductsHub() {
                   <ArrowLeft className="w-4 h-4 rotate-180 group-hover:translate-x-1 transition" />
                 </div>
               </div>
-            </a>
+            </Link>
           </div>
         </section>
 
@@ -461,7 +512,7 @@ export default function ProductsHub() {
             </div>
 
             <div className="grid md:grid-cols-2 gap-8">
-              <a href="/products/milk" className="group bg-gradient-to-br from-blue-50 to-blue-100 p-8 rounded-2xl shadow-lg hover:shadow-2xl transition-all duration-300">
+              <Link href="/products/milk" className="group bg-gradient-to-br from-blue-50 to-blue-100 p-8 rounded-2xl shadow-lg hover:shadow-2xl transition-all duration-300">
                 <div className="flex items-center space-x-4 mb-4">
                   <div className="bg-blue-600 p-4 rounded-full">
                     <Milk className="w-8 h-8 text-white" />
@@ -475,9 +526,9 @@ export default function ProductsHub() {
                   <span>View Detailed Process</span>
                   <ArrowLeft className="w-5 h-5 rotate-180 group-hover:translate-x-2 transition" />
                 </div>
-              </a>
+              </Link>
 
-              <a href="/products/dahi" className="group bg-gradient-to-br from-green-50 to-green-100 p-8 rounded-2xl shadow-lg hover:shadow-2xl transition-all duration-300">
+              <Link href="/products/dahi" className="group bg-gradient-to-br from-green-50 to-green-100 p-8 rounded-2xl shadow-lg hover:shadow-2xl transition-all duration-300">
                 <div className="flex items-center space-x-4 mb-4">
                   <div className="bg-green-600 p-4 rounded-full">
                     <Droplet className="w-8 h-8 text-white" />
@@ -491,9 +542,9 @@ export default function ProductsHub() {
                   <span>View Detailed Process</span>
                   <ArrowLeft className="w-5 h-5 rotate-180 group-hover:translate-x-2 transition" />
                 </div>
-              </a>
+              </Link>
 
-              <a href="/products/paneer" className="group bg-gradient-to-br from-purple-50 to-purple-100 p-8 rounded-2xl shadow-lg hover:shadow-2xl transition-all duration-300">
+              <Link href="/products/paneer" className="group bg-gradient-to-br from-purple-50 to-purple-100 p-8 rounded-2xl shadow-lg hover:shadow-2xl transition-all duration-300">
                 <div className="flex items-center space-x-4 mb-4">
                   <div className="bg-purple-600 p-4 rounded-full">
                     <Heart className="w-8 h-8 text-white" />
@@ -507,9 +558,9 @@ export default function ProductsHub() {
                   <span>View Detailed Process</span>
                   <ArrowLeft className="w-5 h-5 rotate-180 group-hover:translate-x-2 transition" />
                 </div>
-              </a>
+              </Link>
 
-              <a href="/products/ghee" className="group bg-gradient-to-br from-yellow-50 to-yellow-100 p-8 rounded-2xl shadow-lg hover:shadow-2xl transition-all duration-300">
+              <Link href="/products/ghee" className="group bg-gradient-to-br from-yellow-50 to-yellow-100 p-8 rounded-2xl shadow-lg hover:shadow-2xl transition-all duration-300">
                 <div className="flex items-center space-x-4 mb-4">
                   <div className="bg-yellow-600 p-4 rounded-full">
                     <Sparkles className="w-8 h-8 text-white" />
@@ -523,7 +574,7 @@ export default function ProductsHub() {
                   <span>View Detailed Process</span>
                   <ArrowLeft className="w-5 h-5 rotate-180 group-hover:translate-x-2 transition" />
                 </div>
-              </a>
+              </Link>
             </div>
           </div>
         </section>
@@ -609,9 +660,9 @@ export default function ProductsHub() {
                     <a href="tel:+918935904820" className="block bg-amber-600 text-white px-8 py-4 rounded-full font-bold text-center hover:bg-amber-700 transition text-lg">
                       Call +91 89359 04820
                     </a>
-                    <a href="/#order" className="block border-2 border-amber-600 text-amber-600 px-8 py-4 rounded-full font-bold text-center hover:bg-amber-50 transition text-lg">
+                    <Link href="/#order" className="block border-2 border-amber-600 text-amber-600 px-8 py-4 rounded-full font-bold text-center hover:bg-amber-50 transition text-lg">
                       Subscribe Online
-                    </a>
+                    </Link>
                   </div>
                   <p className="text-gray-500 text-sm mt-6 text-center">
                     Free delivery across Patna | Daily delivery options available
@@ -633,27 +684,27 @@ export default function ProductsHub() {
                 <Phone className="w-5 h-5" />
                 <span>Call Us: +91 89359 04820</span>
               </a>
-              <a href="/#order" className="border-2 border-amber-600 text-amber-600 px-10 py-4 rounded-full text-lg font-semibold hover:bg-amber-50 transition">
+              <Link href="/#order" className="border-2 border-amber-600 text-amber-600 px-10 py-4 rounded-full text-lg font-semibold hover:bg-amber-50 transition">
                 View All Products
-              </a>
+              </Link>
             </div>
             <div className="mt-12 grid grid-cols-2 md:grid-cols-4 gap-4">
-              <a href="/products/milk" className="bg-white p-6 rounded-xl shadow-md hover:shadow-lg transition text-center group">
+              <Link href="/products/milk" className="bg-white p-6 rounded-xl shadow-md hover:shadow-lg transition text-center group">
                 <Milk className="w-10 h-10 text-blue-600 mx-auto mb-3" />
                 <p className="font-semibold text-gray-900 group-hover:text-blue-600 transition">Milk Process</p>
-              </a>
-              <a href="/products/dahi" className="bg-white p-6 rounded-xl shadow-md hover:shadow-lg transition text-center group">
+              </Link>
+              <Link href="/products/dahi" className="bg-white p-6 rounded-xl shadow-md hover:shadow-lg transition text-center group">
                 <Droplet className="w-10 h-10 text-green-600 mx-auto mb-3" />
                 <p className="font-semibold text-gray-900 group-hover:text-green-600 transition">Dahi Process</p>
-              </a>
-              <a href="/products/paneer" className="bg-white p-6 rounded-xl shadow-md hover:shadow-lg transition text-center group">
+              </Link>
+              <Link href="/products/paneer" className="bg-white p-6 rounded-xl shadow-md hover:shadow-lg transition text-center group">
                 <Heart className="w-10 h-10 text-purple-600 mx-auto mb-3" />
                 <p className="font-semibold text-gray-900 group-hover:text-purple-600 transition">Paneer Process</p>
-              </a>
-              <a href="/products/ghee" className="bg-white p-6 rounded-xl shadow-md hover:shadow-lg transition text-center group">
+              </Link>
+              <Link href="/products/ghee" className="bg-white p-6 rounded-xl shadow-md hover:shadow-lg transition text-center group">
                 <Sparkles className="w-10 h-10 text-yellow-600 mx-auto mb-3" />
                 <p className="font-semibold text-gray-900 group-hover:text-yellow-600 transition">Ghee Process</p>
-              </a>
+              </Link>
             </div>
           </div>
         </section>

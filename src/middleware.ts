@@ -2,6 +2,14 @@ import { NextResponse } from 'next/server';
 import type { NextRequest } from 'next/server';
 
 export function middleware(request: NextRequest) {
+  const { pathname } = request.nextUrl;
+
+  // Normalize FAQ route casing: redirect any case variant to lowercase /faq
+  if (pathname.toLowerCase() === '/faq' && pathname !== '/faq') {
+    const url = new URL('/faq', request.url);
+    return NextResponse.redirect(url, 308);
+  }
+
   const response = NextResponse.next();
 
   // Add performance and security headers
@@ -18,8 +26,10 @@ export function middleware(request: NextRequest) {
   headers.set('X-Content-Type-Options', 'nosniff');
   headers.set('Referrer-Policy', 'strict-origin-when-cross-origin');
   
-  // Performance headers for bfcache support
-  headers.set('Cache-Control', 'no-cache, must-revalidate');
+  // Performance headers optimized for SEO
+  if (!request.nextUrl.pathname.startsWith('/_next/static')) {
+    headers.set('Cache-Control', 'public, max-age=3600, stale-while-revalidate=86400');
+  }
   
   return response;
 }

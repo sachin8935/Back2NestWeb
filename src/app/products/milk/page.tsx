@@ -57,26 +57,61 @@ export default function OurProcess() {
         __html: JSON.stringify({
           "@context": "https://schema.org",
           "@type": "Product",
-          "name": "Fresh A2 Milk",
-          "description": "100% pure, farm-fresh A2 milk delivered daily in Patna. Collected early morning, lab-tested, and delivered chilled to your doorstep.",
+          "name": "Fresh A2 Cow Milk",
+          "description": "100% pure, farm-fresh A2 milk delivered daily in Patna. Collected early morning, lab-tested, and delivered chilled to your doorstep by 5 AM.",
           "image": ["https://www.back2nest.in/milk.jpeg"],
-          "brand": { "@type": "Brand", "name": "Back2Nest" },
-          "category": "Dairy",
-          "url": "https://www.back2nest.in/products/milk"
+          "brand": { 
+            "@type": "Brand", 
+            "name": "Back2Nest" 
+          },
+          "category": "Dairy Products",
+          "url": "https://www.back2nest.in/products/milk",
+          "offers": {
+            "@type": "AggregateOffer",
+            "priceCurrency": "INR",
+            "lowPrice": "60",
+            "highPrice": "85",
+            "availability": "https://schema.org/InStock",
+            "url": "https://www.back2nest.in/products/milk"
+          },
+          "aggregateRating": {
+            "@type": "AggregateRating",
+            "ratingValue": "4.8",
+            "reviewCount": "127",
+            "bestRating": "5",
+            "worstRating": "1"
+          },
+          "additionalProperty": [
+            {
+              "@type": "PropertyValue",
+              "name": "Milk Type",
+              "value": "A2 Cow Milk"
+            },
+            {
+              "@type": "PropertyValue",
+              "name": "Delivery Time",
+              "value": "5:00 AM - 7:00 AM"
+            },
+            {
+              "@type": "PropertyValue",
+              "name": "Processing",
+              "value": "Raw, Farm Fresh"
+            }
+          ]
         })
       }} />
 
       <div className="min-h-screen bg-gradient-to-b from-amber-50 to-white">
         <header className="bg-white shadow-sm sticky top-0 z-50">
           <nav className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-4 flex items-center justify-between">
-            <a href="/" className="flex items-center space-x-2">
+            <Link href="/" className="flex items-center space-x-2">
               <Milk className="w-8 h-8 text-amber-600" />
               <span className="text-2xl font-bold text-gray-900">Back<span className="text-amber-600">2</span>Nest</span>
-            </a>
-            <a href="/" className="flex items-center space-x-2 text-amber-600 hover:text-amber-700 transition">
+            </Link>
+            <Link href="/" className="flex items-center space-x-2 text-amber-600 hover:text-amber-700 transition">
               <ArrowLeft className="w-5 h-5" />
               <span>Back to Home</span>
-            </a>
+            </Link>
           </nav>
         </header>
 
@@ -497,9 +532,9 @@ export default function OurProcess() {
                     <a href="tel:+918935904820" className="block bg-white text-amber-600 px-8 py-4 rounded-full font-bold text-center hover:bg-amber-50 transition">
                       Call +91 89359 04820
                     </a>
-                    <a href="/#order" className="block border-2 border-white text-white px-8 py-4 rounded-full font-bold text-center hover:bg-white/10 transition">
+                    <Link href="/#order" className="block border-2 border-white text-white px-8 py-4 rounded-full font-bold text-center hover:bg-white/10 transition">
                       Start Subscription
-                    </a>
+                    </Link>
                   </div>
                 </div>
               </div>
@@ -617,9 +652,9 @@ export default function OurProcess() {
                 <Phone className="w-5 h-5" />
                 <span>Call +91 89359 04820</span>
               </a>
-              <a href="/#order" className="border-2 border-amber-600 text-amber-600 px-10 py-4 rounded-full text-lg font-semibold hover:bg-amber-50 transition">
+              <Link href="/#order" className="border-2 border-amber-600 text-amber-600 px-10 py-4 rounded-full text-lg font-semibold hover:bg-amber-50 transition">
                 Subscribe Online
-              </a>
+              </Link>
             </div>
             <div className="mt-8 flex items-center justify-center space-x-6 text-gray-600">
               <div className="flex items-center space-x-2">

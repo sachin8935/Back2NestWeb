@@ -6,17 +6,11 @@
   -moz-osx-font-smoothing: grayscale;
 }
 
-/* Smooth scrolling for anchor navigation (SEO-friendly, enhances UX) */
-html {
-  scroll-behavior: smooth;
-}
+/* Smooth scrolling removed - can cause janky performance on heavy pages */
+/* Using browser's native scroll instead for better performance */
 
 /* Optional: Reduce motion for accessibility (respects user preferences) */
 @media (prefers-reduced-motion: reduce) {
-  html {
-    scroll-behavior: auto;
-  }
-  
   *,
   *::before,
   *::after {
@@ -33,7 +27,19 @@ body {
   font-kerning: normal;
 }
 
-/* Optimize image rendering for performance */
-img {
-  content-visibility: auto;
+/* GPU acceleration for smoother scrolling */
+body {
+  -webkit-overflow-scrolling: touch;
+  transform: translateZ(0);
+  backface-visibility: hidden;
+  perspective: 1000px;
+}
+
+/* Optimize transforms for better performance */
+[class*="hover:scale"],
+[class*="hover:translate"],
+[class*="group-hover:scale"],
+[class*="group-hover:translate"] {
+  will-change: transform;
+  transform: translateZ(0);
 }
