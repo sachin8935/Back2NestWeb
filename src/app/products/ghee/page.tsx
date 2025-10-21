@@ -5,8 +5,8 @@ import Footer from '@/components/Footer';
 import Image from 'next/image';
 
 export const metadata: Metadata = {
-  title: 'Pure Danedar Ghee Making Process - Traditional Bilona Method | Back2Nest Patna',
-  description: 'Discover how Back2Nest makes pure danedar ghee using traditional Bilona method in Patna. Learn about our authentic process using A2 milk, hand-churning, and slow cooking for granular texture and rich aroma.',
+  title: 'Danedar Ghee - Traditional Bilona Method | Back2Nest',
+  description: 'Pure danedar ghee using traditional Bilona method in Patna. Made with A2 milk, hand-churned for authentic granular texture and rich aroma. Order now!',
   keywords: 'danedar ghee Patna, bilona ghee Bihar, pure ghee delivery, A2 cow ghee, traditional ghee making, organic ghee Patna, Back2Nest ghee, hand-churned ghee, granular ghee delivery',
   openGraph: {
     title: 'Pure Danedar Ghee Making Process - Traditional Bilona Method | Back2Nest Patna',

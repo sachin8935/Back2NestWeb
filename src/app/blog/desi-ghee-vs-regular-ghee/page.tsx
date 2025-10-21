@@ -40,15 +40,11 @@ export default function BilonaGheeVsRegularGhee() {
       />
       <BlogPost slug="desi-ghee-vs-regular-ghee">
       <div className="prose lg:prose-lg">
-          <h1>
-            Bilona Ghee vs Regular Ghee: Which One Is Better for Your Health?
-          </h1>
-
-          <p>
+          <p className="lead text-xl text-gray-600">
             Ghee has been a part of Indian kitchens and traditions for centuries
-            — from religious rituals to everyday cooking. It’s more than just a
-            cooking ingredient; it’s a symbol of health, purity, and
-            nourishment. But in today’s fast-paced world, not all ghee is made
+            — from religious rituals to everyday cooking. It's more than just a
+            cooking ingredient; it's a symbol of health, purity, and
+            nourishment. But in today's fast-paced world, not all ghee is made
             the same way. The market is flooded with{" "}
             <strong>commercial ghee</strong>, often mass-produced using
             industrial processes. On the other hand, there’s{" "}

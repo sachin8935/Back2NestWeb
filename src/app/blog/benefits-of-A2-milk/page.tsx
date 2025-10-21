@@ -42,10 +42,8 @@ export default function BenefitsOfA2Milk() {
       />
       <BlogPost slug="benefits-of-A2-milk">
       <div className="prose lg:prose-lg">
-          <h1>Top Benefits of A2 Milk: Why It’s Better for Your Health</h1>
-
-          <p>
-            In recent years, <strong>A2 milk</strong> has become a buzzword among health-conscious families across India — especially here in Patna. But what makes A2 milk so special? At <strong>Back2Nest</strong>, we believe that true wellness begins with what you drink every morning, and that’s why we bring you pure, farm-fresh A2 milk delivered straight to your doorstep.
+          <p className="lead text-xl text-gray-600">
+            In recent years, <strong>A2 milk</strong> has become a buzzword among health-conscious families across India — especially here in Patna. But what makes A2 milk so special? At <strong>Back2Nest</strong>, we believe that true wellness begins with what you drink every morning, and that's why we bring you pure, farm-fresh A2 milk delivered straight to your doorstep.
           </p>
 
           <p>

@@ -4,8 +4,8 @@ import Link from 'next/link';
 import Footer from '@/components/Footer';
 
 export const metadata: Metadata = {
-  title: 'Milk Price in Patna | Fresh A2 Milk Rate & Subscription Plans - Back2Nest',
-  description: 'Check current milk prices in Patna. Get affordable A2 cow milk, dahi, paneer & ghee with flexible subscription plans. Call 8935904820 for best rates on farm-fresh dairy.',
+  title: 'Milk Price Patna | A2 Milk Rate & Plans - Back2Nest',
+  description: 'Check current milk prices in Patna. Get A2 cow milk, dahi, paneer & ghee with flexible plans. Call 8935904820 for best rates on farm-fresh dairy.',
   keywords: [
     'milk price patna',
     'milk rate patna',

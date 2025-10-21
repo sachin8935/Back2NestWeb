@@ -15,7 +15,7 @@ export type BlogMeta = {
 export const blogs: BlogMeta[] = [
   {
     slug: 'benefits-of-A2-milk',
-    title: "Top Benefits of A2 Milk: Why It's Better for Your Health",
+    title: "Benefits of A2 Milk: Better for Your Health",
     description:
       "Discover the amazing health benefits of A2 milk from desi cows. Learn how A2 milk improves digestion, immunity, and overall well-being for your family.",
     image:
@@ -50,7 +50,7 @@ export const blogs: BlogMeta[] = [
   },
   {
     slug: 'desi-cow-milk-benefits',
-    title: "Desi Cow Milk Benefits: Why Indian Breeds Are Superior",
+    title: "Desi Cow Milk Benefits: Why Indian Breeds Excel",
     description:
       'Learn why milk from indigenous Indian cow breeds like Gir and Sahiwal is healthier, more nutritious, and better for digestion than hybrid varieties.',
     image:
@@ -85,7 +85,7 @@ export const blogs: BlogMeta[] = [
   },
   {
     slug: 'desi-ghee-vs-regular-ghee',
-    title: 'Bilona Ghee vs Regular Ghee: Which One Is Better?',
+    title: 'Bilona Ghee vs Regular Ghee: Which Is Better?',
     description:
       "Understand the difference between traditional Bilona ghee and regular ghee. Discover why Back2Nest's A2 Bilona ghee is healthier and more authentic.",
     image:
@@ -150,7 +150,7 @@ export const blogs: BlogMeta[] = [
   },
   {
     slug: 'milk-storage-tips-patna',
-    title: "How to Store Fresh Milk in Patna's Climate: Expert Tips",
+    title: "Milk Storage Tips for Patna's Climate | Back2Nest",
     description:
       "Practical tips for storing fresh milk in Patna's hot weather. Keep your milk fresh longer with proper storage techniques and temperature control.",
     image:

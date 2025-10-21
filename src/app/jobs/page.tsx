@@ -6,8 +6,8 @@ const SITE_URL = 'https://www.back2nest.in';
 const SITE_NAME = 'Back2Nest';
 
 export const metadata: Metadata = {
-  title: 'Careers at Back2Nest - Jobs in Patna | Delivery Partner, Corporate & Business Opportunities',
-  description: 'Join Back2Nest - Patna\'s fastest-growing milk delivery startup! Hiring delivery partners (₹8-10K/month), corporate roles (₹6L/year), and business partnerships. Flexible hours, competitive pay, and growth opportunities in Bihar\'s dairy industry.',
+  title: 'Careers at Back2Nest - Jobs in Patna | Join Our Team',
+  description: 'Join Patna\'s fastest-growing milk delivery startup! Delivery partners (₹8-10K/month), corporate roles (₹6L/year). Flexible hours & growth opportunities.',
   keywords: [
     'back2nest careers',
     'delivery jobs patna',

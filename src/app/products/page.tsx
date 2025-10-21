@@ -5,7 +5,7 @@ import Footer from '@/components/Footer';
 
 export const metadata: Metadata = {
   metadataBase: new URL('https://www.back2nest.in'),
-  title: 'Fresh Dairy Products Patna | A2 Milk, Dahi, Paneer & Ghee - Back2Nest',
+  title: 'Dairy Products Patna | A2 Milk, Dahi, Paneer & Ghee',
   description: 'Buy pure dairy products in Patna - Farm-fresh A2 milk, thick dahi, soft paneer, and traditional danedar ghee. Delivered daily to your doorstep. Order now!',
   keywords: ['dairy products patna', 'A2 milk patna', 'fresh dahi patna', 'paneer delivery patna', 'danedar ghee patna', 'buy milk online patna', 'dairy store patna', 'farm fresh products patna'],
   openGraph: {

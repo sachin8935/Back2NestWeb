@@ -6,7 +6,7 @@ import Footer from '@/components/Footer';
 
 export const metadata: Metadata = {
   title: 'Milk Delivery in Kankarbagh Patna | Pure A2 Milk Home Delivery by 5 AM',
-  description: 'Get 100% pure A2 cow milk delivered to your home in Kankarbagh, Patna by 5 AM daily. Farm-fresh quality with no adulteration. Call 8935904820 to subscribe today.',
+  description: 'Get 100% pure A2 cow milk delivered in Kankarbagh, Patna by 5 AM daily. Farm-fresh quality with no adulteration. Call 8935904820 to subscribe.',
   keywords: [
     'milk delivery kankarbagh patna',
     'fresh milk kankarbagh',

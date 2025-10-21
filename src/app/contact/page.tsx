@@ -4,7 +4,7 @@ import { ArrowLeft, Phone, Mail, MapPin, Clock, MessageSquare } from 'lucide-rea
 import Footer from '@/components/Footer';
 
 export const metadata: Metadata = {
-  title: 'Contact Back2Nest Patna | Call 8935904820 for Milk Delivery',
+  title: 'Contact Back2Nest Patna | Call 8935904820',
   description: 'Contact Back2Nest for pure milk delivery in Patna. Call 8935904820, email help@back2nest.in or visit us at Jagat Narayan Road, Kadam Kuan, Patna 800003.',
   keywords: 'contact back2nest, milk delivery patna contact, back2nest phone number, milk delivery customer care patna, back2nest address patna',
   openGraph: {

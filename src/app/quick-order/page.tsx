@@ -6,7 +6,7 @@ export const metadata: Metadata = {
   description:
     'Order fresh farm milk and dairy products for next-day delivery across Patna. Fast checkout and reliable morning delivery.',
   alternates: {
-    canonical: 'https://www.back2nest.in/quick-order',
+    canonical: 'https://www.back2nest.in',
   },
   openGraph: {
     title: 'Quick Order | Back2Nest',

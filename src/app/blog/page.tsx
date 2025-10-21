@@ -5,7 +5,7 @@ import { Calendar, Clock, ArrowRight, BookOpen, Milk } from 'lucide-react';
 import Footer from '@/components/Footer';
 
 export const metadata: Metadata = {
-  title: 'Dairy & Nutrition Blog | Fresh Milk Tips & Health Benefits - Back2Nest Patna',
+  title: 'Dairy Blog | Milk Tips & Health Benefits - Back2Nest',
   description: 'Expert articles on A2 milk benefits, dairy nutrition, storage tips, and traditional dairy products. Learn from Back2Nest - Patna\'s trusted milk delivery service.',
   keywords: [
     'dairy blog patna',

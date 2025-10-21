@@ -5,8 +5,8 @@ import Footer from '@/components/Footer';
 import Image from 'next/image';
 
 export const metadata: Metadata = {
-  title: 'Fresh Homemade Dahi (Curd) - Traditional Process | Back2Nest Patna',
-  description: 'Discover how Back2Nest makes fresh, creamy dahi (curd) using traditional methods and 100% pure milk. Same-day delivery in Patna. Order authentic homemade-style dahi today!',
+  title: 'Fresh Dahi (Curd) - Traditional Process | Back2Nest',
+  description: 'Fresh, creamy dahi made using traditional methods and 100% pure milk. Same-day delivery in Patna. Order authentic homemade-style dahi today!',
   keywords: 'fresh dahi Patna, homemade curd, traditional dahi, Back2Nest dahi, dahi delivery Patna, fresh curd Patna, probiotic curd, natural dahi',
   openGraph: {
     title: 'Fresh Homemade Dahi - Traditional Process | Back2Nest',

@@ -5,8 +5,8 @@ import { Milk, Heart, Shield, Users, Award, Leaf, TrendingUp, Phone, ArrowRight,
 import Footer from '@/components/Footer';
 
 export const metadata: Metadata = {
-  title: 'About Back2Nest - Pure Milk Delivery Service in Patna | Our Mission & Story',
-  description: 'Learn about Back2Nest - Patna\'s trusted milk delivery service. Founded by a CSE graduate passionate about providing pure, unadulterated A2 milk to families. Our mission, values, and commitment to quality.',
+  title: 'About Back2Nest - Pure Milk Delivery in Patna',
+  description: 'Learn about Back2Nest - Patna\'s trusted milk delivery service providing pure, unadulterated A2 milk. Our mission, values, and commitment to quality.',
   keywords: [
     'about back2nest',
     'back2nest story',

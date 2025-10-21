@@ -1,6 +1,6 @@
 import { Metadata } from 'next';
 import Script from 'next/script';
-import FAQPageClient from './FAQPageClient';
+import FaqPageClient from './FaqPageClient';
 
 const SITE_URL = 'https://www.back2nest.in';
 
@@ -157,7 +157,7 @@ export default function FAQPage() {
 					__html: JSON.stringify(faqSchema)
 				}}
 			/>
-			<FAQPageClient />
+			<FaqPageClient />
 		</>
 	);
 }

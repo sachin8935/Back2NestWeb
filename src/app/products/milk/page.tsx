@@ -5,8 +5,8 @@ import Footer from '@/components/Footer';
 import Image from 'next/image';
 
 export const metadata: Metadata = {
-  title: 'Fresh A2 Milk Process - Farm to Doorstep | Back2Nest Patna',
-  description: 'Discover how Back2Nest delivers 100% pure, farm-fresh A2 milk directly to your doorstep in Patna. Learn about our rigorous quality testing, early morning collection, and hygienic packaging process.',
+  title: 'Fresh A2 Milk Process | Farm to Home - Back2Nest',
+  description: 'Discover how Back2Nest delivers 100% pure A2 milk to your doorstep in Patna. Quality tested, fresh daily with hygienic packaging.',
   keywords: 'A2 milk Patna, fresh milk delivery Patna, farm fresh milk Bihar, pure milk home delivery, organic milk Patna, Back2Nest milk process, quality milk testing, dairy farm Patna, cow milk delivery',
   openGraph: {
     title: 'Fresh A2 Milk Process - Farm to Doorstep | Back2Nest Patna',

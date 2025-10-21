@@ -10,8 +10,8 @@ import Footer from '@/components/Footer';
 
 // SEO Metadata for Patna Milk Delivery
 export const metadata: Metadata = {
-  title: 'Fresh Milk Delivery Patna | Farm to Home by 5 AM - Back2Nest',
-  description: 'Get 100% pure farm-fresh milk delivered to your doorstep in Patna by 5 AM daily. No adulteration, no preservatives. Order from Back2Nest for the best milk delivery service in Patna, Bihar.',
+  title: 'Milk Delivery Patna | Farm Fresh by 5 AM - Back2Nest',
+  description: 'Get 100% pure farm-fresh milk delivered to your doorstep in Patna by 5 AM daily. No adulteration, no preservatives. Order from Back2Nest today!',
   keywords: [
     'milk delivery patna',
     'fresh milk delivery patna',

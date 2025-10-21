@@ -5,8 +5,8 @@ import Footer from '@/components/Footer';
 import Image from 'next/image';
 
 export const metadata: Metadata = {
-  title: 'Fresh Paneer Making Process - Homemade Quality | Back2Nest Patna',
-  description: 'Discover how Back2Nest makes fresh, soft paneer daily in Patna. Learn about our traditional process using pure A2 milk, natural coagulation, and hygienic packaging for authentic homemade taste.',
+  title: 'Fresh Paneer Process - Homemade Quality | Back2Nest',
+  description: 'Fresh, soft paneer made daily in Patna using pure A2 milk and natural coagulation. Authentic homemade taste with hygienic packaging. Order today!',
   keywords: 'fresh paneer Patna, homemade paneer delivery, pure paneer Bihar, paneer making process, A2 milk paneer, organic paneer Patna, Back2Nest paneer, soft paneer delivery, cottage cheese Patna',
   openGraph: {
     title: 'Fresh Paneer Making Process - Homemade Quality | Back2Nest Patna',

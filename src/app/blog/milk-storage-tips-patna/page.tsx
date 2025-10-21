@@ -40,14 +40,9 @@ export default function MilkStorageTipsPatna() {
       />
       <BlogPost slug="milk-storage-tips-patna">
       <div className="prose lg:prose-lg">
-          <h1>
-            Smart Milk Storage Tips for Patna Homes – Keep It Fresh, Pure &
-            Healthy
-          </h1>
-
-          <p>
+          <p className="lead text-xl text-gray-600">
             Every morning, thousands of families in <strong>Patna</strong> start
-            their day with a fresh glass of milk. But with the region’s warm
+            their day with a fresh glass of milk. But with the region's warm
             temperatures and frequent power cuts,{" "}
             <strong>storing milk the right way</strong> becomes just as
             important as getting it fresh. Whether you receive farm-fresh A2

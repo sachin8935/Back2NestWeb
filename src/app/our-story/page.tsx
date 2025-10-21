@@ -5,8 +5,8 @@ import { Milk, AlertTriangle, Lightbulb, Rocket, Heart, Users, TrendingUp, Targe
 import Footer from '@/components/Footer';
 
 export const metadata: Metadata = {
-  title: 'Our Story - How Back2Nest Started | Fighting Milk Adulteration in Patna',
-  description: 'The inspiring story of how a CSE graduate discovered the problem of milk adulteration in Patna and founded Back2Nest to bring pure, farm-fresh A2 milk to every home. Learn about our journey from idea to impact.',
+  title: 'Our Story - Fighting Milk Adulteration in Patna',
+  description: 'How a CSE graduate discovered milk adulteration in Patna and founded Back2Nest to bring pure, farm-fresh A2 milk to every home. Our journey from idea to impact.',
   keywords: [
     'back2nest story',
     'milk adulteration patna',

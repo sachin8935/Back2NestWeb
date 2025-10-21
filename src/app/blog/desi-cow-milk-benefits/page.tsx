@@ -40,11 +40,9 @@ export default function DesiCowMilkBenefits() {
       />
       <BlogPost slug="desi-cow-milk-benefits">
       <div className="prose lg:prose-lg">
-          <h1>Top Health Benefits of Desi Cow Milk: Why It’s India’s Original Superfood</h1>
-
-          <p>
-            In India, milk isn’t just a drink — it’s a tradition, a part of every home’s daily ritual. Among all varieties, <strong>Desi Cow Milk</strong> holds a special place. The milk from native Indian cow breeds such as Gir, Sahiwal, Tharparkar, and Red Sindhi is considered the purest and healthiest form of milk available.  
-            At <strong>Back2Nest</strong>, we proudly deliver this <strong>Desi A2 cow milk</strong> across Patna, ensuring every drop you consume is packed with nature’s finest nutrients.
+          <p className="lead text-xl text-gray-600">
+            In India, milk isn't just a drink — it's a tradition, a part of every home's daily ritual. Among all varieties, <strong>Desi Cow Milk</strong> holds a special place. The milk from native Indian cow breeds such as Gir, Sahiwal, Tharparkar, and Red Sindhi is considered the purest and healthiest form of milk available.  
+            At <strong>Back2Nest</strong>, we proudly deliver this <strong>Desi A2 cow milk</strong> across Patna, ensuring every drop you consume is packed with nature's finest nutrients.
           </p>
 
           <p>

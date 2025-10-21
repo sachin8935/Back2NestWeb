@@ -40,15 +40,10 @@ export default function BestTimeToDrinkMilk() {
       />
       <BlogPost slug="best-time-to-drink-milk">
       <div className="prose lg:prose-lg">
-          <h1>
-            The Best Time to Drink Milk: Morning or Night? Here’s What Science
-            Says
-          </h1>
-
-          <p>
+          <p className="lead text-xl text-gray-600">
             Milk has always been a part of our daily routine — from childhood
             breakfasts to bedtime drinks. But have you ever wondered,{" "}
-            <strong>what’s actually the best time to drink milk?</strong> Should
+            <strong>what's actually the best time to drink milk?</strong> Should
             it be taken early in the morning for energy, or before bedtime for
             better sleep? And does it make a difference if you’re drinking{" "}
             <strong>pure A2 milk</strong> from Indian cows, like the one
