@@ -57,12 +57,13 @@ export default function GheeProcess() {
         __html: JSON.stringify({
           "@context": "https://schema.org",
           "@type": "Product",
-          "name": "Pure Danedar Ghee",
-          "description": "Authentic bilona method danedar ghee made from A2 cow milk. Granular texture and rich aroma.",
+          "name": "Pure Danedar Ghee - Traditional Bilona Method",
+          "description": "Authentic bilona method danedar ghee made from A2 cow milk. Granular texture and rich aroma. Hand-churned using traditional methods for pure, natural taste.",
           "image": ["https://www.back2nest.in/ghee.jpeg"],
           "brand": { "@type": "Brand", "name": "Back2Nest" },
-          "category": "Dairy",
+          "category": "Dairy Products",
           "url": "https://www.back2nest.in/products/ghee",
+          "sku": "B2N-GHEE-001",
           "offers": {
             "@type": "AggregateOffer",
             "priceCurrency": "INR",
@@ -70,6 +71,10 @@ export default function GheeProcess() {
             "highPrice": "1800",
             "offerCount": "4",
             "availability": "https://schema.org/InStock",
+            "seller": {
+              "@type": "Organization",
+              "name": "Back2Nest"
+            },
             "url": "https://www.back2nest.in/products/ghee"
           },
           "aggregateRating": {

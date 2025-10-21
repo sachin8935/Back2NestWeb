@@ -57,12 +57,13 @@ export default function DahiProcess() {
         __html: JSON.stringify({
           "@context": "https://schema.org",
           "@type": "Product",
-          "name": "Fresh Homemade Dahi",
-          "description": "Thick, creamy dahi made daily using traditional methods from pure milk. Same-day delivery in Patna.",
+          "name": "Fresh Homemade Dahi (Curd) - Traditional Process",
+          "description": "Thick, creamy dahi made daily using traditional methods from pure milk. Same-day delivery in Patna. Natural fermentation with probiotic benefits.",
           "image": ["https://www.back2nest.in/dahi.jpeg"],
           "brand": { "@type": "Brand", "name": "Back2Nest" },
-          "category": "Dairy",
+          "category": "Dairy Products",
           "url": "https://www.back2nest.in/products/dahi",
+          "sku": "B2N-DAHI-001",
           "offers": {
             "@type": "AggregateOffer",
             "priceCurrency": "INR",
@@ -70,6 +71,10 @@ export default function DahiProcess() {
             "highPrice": "80",
             "offerCount": "3",
             "availability": "https://schema.org/InStock",
+            "seller": {
+              "@type": "Organization",
+              "name": "Back2Nest"
+            },
             "url": "https://www.back2nest.in/products/dahi"
           },
           "aggregateRating": {

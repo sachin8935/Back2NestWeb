@@ -57,12 +57,13 @@ export default function PaneerProcess() {
         __html: JSON.stringify({
           "@context": "https://schema.org",
           "@type": "Product",
-          "name": "Fresh Taaza Paneer",
-          "description": "Soft, natural lemon-curdled paneer made from pure A2 cow milk. Delivered fresh daily in Patna.",
+          "name": "Fresh Taaza Paneer - Natural Lemon Curdling",
+          "description": "Soft, natural lemon-curdled paneer made from pure A2 cow milk. Delivered fresh daily in Patna. No chemicals, authentic homemade taste.",
           "image": ["https://www.back2nest.in/paneer.jpeg"],
           "brand": { "@type": "Brand", "name": "Back2Nest" },
-          "category": "Dairy",
+          "category": "Dairy Products",
           "url": "https://www.back2nest.in/products/paneer",
+          "sku": "B2N-PANEER-001",
           "offers": {
             "@type": "AggregateOffer",
             "priceCurrency": "INR",
@@ -70,6 +71,10 @@ export default function PaneerProcess() {
             "highPrice": "180",
             "offerCount": "3",
             "availability": "https://schema.org/InStock",
+            "seller": {
+              "@type": "Organization",
+              "name": "Back2Nest"
+            },
             "url": "https://www.back2nest.in/products/paneer"
           },
           "aggregateRating": {

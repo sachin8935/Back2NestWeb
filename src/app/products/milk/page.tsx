@@ -57,8 +57,8 @@ export default function OurProcess() {
         __html: JSON.stringify({
           "@context": "https://schema.org",
           "@type": "Product",
-          "name": "Fresh A2 Cow Milk",
-          "description": "100% pure, farm-fresh A2 milk delivered daily in Patna. Collected early morning, lab-tested, and delivered chilled to your doorstep by 5 AM.",
+          "name": "Fresh A2 Cow Milk - Farm to Doorstep",
+          "description": "100% pure, farm-fresh A2 milk delivered daily in Patna. Collected early morning, lab-tested, and delivered chilled to your doorstep by 5 AM. No preservatives, no adulteration.",
           "image": ["https://www.back2nest.in/milk.jpeg"],
           "brand": { 
             "@type": "Brand", 
@@ -66,12 +66,17 @@ export default function OurProcess() {
           },
           "category": "Dairy Products",
           "url": "https://www.back2nest.in/products/milk",
+          "sku": "B2N-MILK-001",
           "offers": {
             "@type": "AggregateOffer",
             "priceCurrency": "INR",
             "lowPrice": "60",
             "highPrice": "85",
             "availability": "https://schema.org/InStock",
+            "seller": {
+              "@type": "Organization",
+              "name": "Back2Nest"
+            },
             "url": "https://www.back2nest.in/products/milk"
           },
           "aggregateRating": {
