@@ -110,6 +110,12 @@ const localBusinessJsonLd = {
   'telephone': '+918935904820',
   'email': 'help@back2nest.in',
   'priceRange': '₹₹',
+  'logo': {
+    '@type': 'ImageObject',
+    'url': `${SITE_URL}/logo.png`,
+    'width': 512,
+    'height': 512
+  },
   'address': {
     '@type': 'PostalAddress',
     'streetAddress': 'Jagat Narayan Road, Kadam Kuan',
@@ -227,7 +233,12 @@ const organizationJsonLd = {
   '@type': 'Organization',
   'name': SITE_NAME,
   'url': SITE_URL,
-  'logo': `${SITE_URL}/logo.png`,
+  'logo': {
+    '@type': 'ImageObject',
+    'url': `${SITE_URL}/logo.png`,
+    'width': 512,
+    'height': 512
+  },
   '@id': `${SITE_URL}/#organization`,
   'contactPoint': [
     {
