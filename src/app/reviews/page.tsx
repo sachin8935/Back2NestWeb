@@ -191,10 +191,6 @@ export default function ReviewsPage() {
         })
       }} />
 
-      <title>Customer Reviews & Testimonials | Back2Nest Fresh Dairy Products Patna</title>
-      <meta name="description" content="Read authentic customer reviews and testimonials for Back2Nest fresh A2 milk, dahi, paneer, and danedar ghee in Patna. Real experiences from satisfied families across Patna, Bihar." />
-      <meta name="keywords" content="Back2Nest reviews, dairy products Patna reviews, A2 milk Patna customer feedback, fresh paneer reviews Patna, danedar ghee testimonials, dahi reviews Bihar, customer testimonials dairy Patna, best milk delivery Patna reviews" />
-
       <div className="min-h-screen bg-gradient-to-b from-amber-50 to-white">
         <header className="bg-white shadow-sm sticky top-0 z-50">
           <nav className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-4 flex items-center justify-between">
