@@ -2,7 +2,7 @@ import type { MetadataRoute } from 'next';
 
 export default function sitemap(): MetadataRoute.Sitemap {
   const base = 'https://www.back2nest.in';
-  const today = new Date('2025-10-22');
+  const today = new Date();
   const map: MetadataRoute.Sitemap = [
     {
       url: `${base}/`,
@@ -146,31 +146,31 @@ export default function sitemap(): MetadataRoute.Sitemap {
     // Blog posts
     {
       url: `${base}/blog/benefits-of-A2-milk`,
-      lastModified: new Date('2025-01-15'),
+      lastModified: new Date('2025-10-26'),
       changeFrequency: 'monthly',
       priority: 0.75,
     },
     {
       url: `${base}/blog/desi-cow-milk-benefits`,
-      lastModified: new Date('2025-01-12'),
+      lastModified: new Date('2025-10-26'),
       changeFrequency: 'monthly',
       priority: 0.75,
     },
     {
       url: `${base}/blog/desi-ghee-vs-regular-ghee`,
-      lastModified: new Date('2025-01-10'),
+      lastModified: new Date('2025-10-26'),
       changeFrequency: 'monthly',
       priority: 0.7,
     },
     {
       url: `${base}/blog/best-time-to-drink-milk`,
-      lastModified: new Date('2025-01-08'),
+      lastModified: new Date('2025-10-26'),
       changeFrequency: 'monthly',
       priority: 0.7,
     },
     {
       url: `${base}/blog/milk-storage-tips-patna`,
-      lastModified: new Date('2025-01-05'),
+      lastModified: new Date('2025-10-26'),
       changeFrequency: 'monthly',
       priority: 0.68,
     },

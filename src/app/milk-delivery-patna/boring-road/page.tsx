@@ -132,10 +132,7 @@ export default function BoringRoadMilkDeliveryPage() {
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(reviewSchema) }}
       />
-      <script
-        type="application/ld+json"
-        dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
-      />
+
 
       <div className="min-h-screen bg-white">
         <header className="bg-white shadow-md sticky top-0 z-50">

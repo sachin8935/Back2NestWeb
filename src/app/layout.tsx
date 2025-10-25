@@ -1,6 +1,14 @@
 import type { Metadata } from 'next';
 import './globals.css';
 import Script from 'next/script';
+import { Inter } from 'next/font/google';
+
+const inter = Inter({ 
+  subsets: ['latin'],
+  display: 'swap',
+  variable: '--font-inter',
+  preload: true,
+});
 
 const SITE_URL = 'https://www.back2nest.in';
 const SITE_NAME = 'Back2Nest';
@@ -112,8 +120,8 @@ const localBusinessJsonLd = {
   },
   'geo': {
     '@type': 'GeoCoordinates',
-    'latitude': 25.5941,
-    'longitude': 85.1376,
+    'latitude': 25.607376,
+    'longitude': 85.1540066,
   },
   'openingHoursSpecification': [
     {
@@ -135,7 +143,8 @@ const localBusinessJsonLd = {
     'https://www.facebook.com/B2Nback2nest',
     'https://x.com/B2N_Back2Nest',
     'https://jsdl.in/DT-47YPH6XJ5EY',
-    'https://www.instagram.com/back2nest'
+    'https://www.instagram.com/back2nest',
+    'https://share.google/hHARPkGS7tlQiAXF1'
   ],
   'areaServed': [
     {
@@ -242,7 +251,8 @@ const organizationJsonLd = {
     'https://www.instagram.com/back2nest',
     'https://x.com/B2N_Back2Nest',
     'https://jsdl.in/DT-47YPH6XJ5EY',
-    'https://play.google.com/store/apps/details?id=com.app.back2nest'
+    'https://play.google.com/store/apps/details?id=com.app.back2nest',
+    'https://share.google/hHARPkGS7tlQiAXF1'
   ],
 };
 
@@ -273,7 +283,7 @@ const mobileAppJsonLd = {
 
 export default function RootLayout({ children }: { children: React.ReactNode }) {
   return (
-    <html lang="en">
+    <html lang="en" className={inter.variable}>
       <head>
         {/* Favicons (kept for backward compatibility) */}
         <link rel="icon" href="/favicon.ico" sizes="any" />
@@ -313,7 +323,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
           dangerouslySetInnerHTML={{ __html: JSON.stringify(mobileAppJsonLd) }}
         />
       </head>
-      <body className="antialiased">
+      <body className={`${inter.className} antialiased`}>
         {children}
       </body>
     </html>

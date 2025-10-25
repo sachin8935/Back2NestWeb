@@ -109,6 +109,18 @@ export default function GheeProcess() {
         })
       }} />
 
+      <script type="application/ld+json" dangerouslySetInnerHTML={{
+        __html: JSON.stringify({
+          "@context": "https://schema.org",
+          "@type": "BreadcrumbList",
+          "itemListElement": [
+            { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://www.back2nest.in/" },
+            { "@type": "ListItem", "position": 2, "name": "Products", "item": "https://www.back2nest.in/products" },
+            { "@type": "ListItem", "position": 3, "name": "Ghee", "item": "https://www.back2nest.in/products/ghee" }
+          ]
+        })
+      }} />
+
       <div className="min-h-screen bg-gradient-to-b from-yellow-50 to-white">
         <header className="bg-white shadow-sm sticky top-0 z-50">
           <nav className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-4 flex items-center justify-between">

@@ -161,12 +161,14 @@ const HeroSection = () => (
         <div className="relative">
           <div className="relative bg-gradient-to-br from-blue-400 via-blue-500 to-blue-600 rounded-3xl p-3 shadow-2xl transform hover:rotate-1 transition duration-500">
             <Image
-              src="https://res.cloudinary.com/back2nest/image/upload/v1760552656/offer_banners/gjb3sg9cvpzu2yuzxvvd.jpg"
+              src="https://res.cloudinary.com/back2nest/image/upload/v1760552874/offer_banners/em79ofmcsxf5upawy9b7.png"
               alt="Pure A2 cow milk delivery in Patna - Back2Nest farm fresh milk home delivery by 5 AM daily"
               width={700}
               height={700}
               className="rounded-2xl shadow-lg w-full object-cover h-96"
               priority
+              sizes="(max-width: 768px) 100vw, 50vw"
+              quality={90}
             />
           </div>
           

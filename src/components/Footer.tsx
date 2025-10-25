@@ -1,4 +1,4 @@
-import { Milk, Smartphone, Mail, MapPin, Facebook, Twitter, Shield, Instagram, Download } from 'lucide-react';
+import { Milk, Smartphone, Mail, MapPin, Facebook, Twitter, Shield, Instagram, Download, Star } from 'lucide-react';
 import Link from 'next/link';
 import Image from 'next/image';
 
@@ -66,6 +66,16 @@ export default function Footer() {
                 aria-label="JustDial"
               >
                 <Shield className="w-4 h-4" />
+              </a>
+              <a
+                href="https://share.google/hHARPkGS7tlQiAXF1"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="bg-red-500 p-2 rounded-full hover:bg-red-600 transition"
+                aria-label="Google Business Profile"
+                title="View our Google Business Profile"
+              >
+                <MapPin className="w-4 h-4" />
               </a>
             </div>
           </div>
@@ -150,6 +160,21 @@ export default function Footer() {
                    Patna
                 </Link>
               </li>
+              <li>
+                <Link href="/milk-delivery-patna/boring-road" className="text-gray-300 hover:text-blue-400 transition text-sm">
+                  Boring Road
+                </Link>
+              </li>
+              <li>
+                <Link href="/milk-delivery-patna/kankarbagh" className="text-gray-300 hover:text-blue-400 transition text-sm">
+                  Kankarbagh
+                </Link>
+              </li>
+              <li>
+                <Link href="/milk-delivery-patna/patliputra" className="text-gray-300 hover:text-blue-400 transition text-sm">
+                  Patliputra
+                </Link>
+              </li>
               
               <li>
                 <Link href="/contact" className="text-gray-300 hover:text-blue-400 transition text-sm">
@@ -201,6 +226,21 @@ export default function Footer() {
               </li>
               <li>
                 <a
+                  href="https://search.google.com/local/writereview?placeid=ChIJ3cz7BzVZ7TkRbNBpDqFq3qw"
+                  target="_blank"
+                  rel="noopener noreferrer nofollow"
+                  className="flex items-start space-x-3 text-gray-300 hover:text-yellow-400 transition group"
+                  aria-label="Write a Google review for Back2Nest"
+                >
+                  <Star className="w-5 h-5 flex-shrink-0 mt-0.5 group-hover:fill-yellow-400 group-hover:text-yellow-400" />
+                  <div>
+                    <p className="text-sm font-semibold text-white">Leave a Review</p>
+                    <p className="text-sm">Share your experience on Google</p>
+                  </div>
+                </a>
+              </li>
+              <li>
+                <a
                   href="mailto:help@back2nest.in"
                   className="flex items-start space-x-3 text-gray-300 hover:text-blue-400 transition"
                 >
@@ -233,14 +273,14 @@ export default function Footer() {
           </div>
           <div className="w-full h-64 rounded-2xl overflow-hidden shadow-2xl border-2 border-gray-700">
             <iframe
-              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3597.7864156789!2d85.13494!3d25.60958!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x39ed58dce6731c75%3A0x4c1c6f8e1c1c6f8e!2sJagat%20Narayan%20Road%2C%20Kadam%20Kuan%2C%20Patna%2C%20Bihar%20800003!5e0!3m2!1sen!2sin!4v1234567890"
+              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3597.925961157471!2d85.1540066!3d25.607376399999996!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x39ed593507fbccdd%3A0xacde6aa10e69d06c!2sBack2Nest!5e0!3m2!1sen!2sin!4v1761430567662!5m2!1sen!2sin"
               width="100%"
               height="100%"
               style={{ border: 0 }}
               allowFullScreen
               loading="lazy"
               referrerPolicy="no-referrer-when-downgrade"
-              title="Back2Nest Location - Jagat Narayan Road, Kadam Kuan, Patna"
+              title="Back2Nest (B2N) - Farm Fresh Dairy Products, Jagat Narayan Road, Kadam Kuan, Patna"
             ></iframe>
           </div>
         </div>
