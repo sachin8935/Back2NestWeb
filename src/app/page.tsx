@@ -3,7 +3,7 @@ import HomePageClient from './HomePageClient';
 
 export const metadata: Metadata = {
   title: 'Fresh Milk Delivery Patna | Pure A2 Milk Home Delivery - Back2Nest',
-  description: 'Order 100% pure A2 cow milk in Patna. Farm-fresh milk delivered by 5 AM daily. No adulteration, no preservatives. Call 8935904820 for subscription.',
+  description: 'Order 100% pure A2 cow milk in Patna. Farm-fresh milk delivered by 5 AM daily. No adulteration, no preservatives. Download our app from Google Play Store for easy ordering.',
   alternates: {
     canonical: 'https://www.back2nest.in',
   },

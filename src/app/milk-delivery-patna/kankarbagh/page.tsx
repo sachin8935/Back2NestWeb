@@ -1,12 +1,12 @@
 import { Metadata } from 'next';
-import { Milk, Clock, MapPin, Phone, CheckCircle, Star, Truck, Shield, Heart } from 'lucide-react';
+import { Milk, Clock, MapPin, Download, CheckCircle, Star, Truck, Shield, Heart } from 'lucide-react';
 import Image from 'next/image';
 import Link from 'next/link';
 import Footer from '@/components/Footer';
 
 export const metadata: Metadata = {
   title: 'Milk Delivery in Kankarbagh Patna | Pure A2 Milk Home Delivery by 5 AM',
-  description: 'Get 100% pure A2 cow milk delivered in Kankarbagh, Patna by 5 AM daily. Farm-fresh quality with no adulteration. Call 8935904820 to subscribe.',
+  description: 'Get 100% pure A2 cow milk delivered in Kankarbagh, Patna by 5 AM daily. Farm-fresh quality with no adulteration. Download our app to subscribe.',
   keywords: [
     'milk delivery kankarbagh patna',
     'fresh milk kankarbagh',
@@ -147,11 +147,11 @@ export default function KankarbaghMilkDeliveryPage() {
 
                   <div className="flex flex-col sm:flex-row gap-4 mb-8">
                     <a 
-                      href="tel:+918935904820"
+                      href="https://play.google.com/store/apps/details?id=com.app.back2nest" target="_blank" rel="noopener noreferrer"
                       className="bg-blue-600 text-white px-8 py-4 rounded-full font-semibold hover:bg-blue-700 transition text-center flex items-center justify-center gap-2"
                     >
-                      <Phone className="w-5 h-5" />
-                      Call: 89359 04820
+                      <Download className="w-5 h-5" />
+                      Download App
                     </a>
                     <Link 
                       href="/quick-order"
@@ -272,14 +272,14 @@ export default function KankarbaghMilkDeliveryPage() {
                     🏠 Not sure if we deliver to your exact location in Kankarbagh?
                   </p>
                   <p className="text-blue-700 mb-4">
-                    We're expanding daily! Call us to check availability at your address.
+                    We're expanding daily! Download our app to check availability at your address.
                   </p>
                   <a 
-                    href="tel:+918935904820"
+                    href="https://play.google.com/store/apps/details?id=com.app.back2nest" target="_blank" rel="noopener noreferrer"
                     className="inline-flex items-center gap-2 bg-blue-600 text-white px-8 py-3 rounded-full font-semibold hover:bg-blue-700 transition shadow-lg"
                   >
-                    <Phone className="w-5 h-5" />
-                    Call Now: 89359 04820
+                    <Download className="w-5 h-5" />
+                    Download App
                   </a>
                 </div>
               </div>
@@ -405,11 +405,11 @@ export default function KankarbaghMilkDeliveryPage() {
               
               <div className="flex flex-col sm:flex-row gap-4 justify-center mb-8">
                 <a
-                  href="tel:+918935904820"
+                  href="https://play.google.com/store/apps/details?id=com.app.back2nest" target="_blank" rel="noopener noreferrer"
                   className="bg-white text-blue-600 px-10 py-4 rounded-full font-bold hover:bg-blue-50 transition inline-flex items-center justify-center gap-2 shadow-xl"
                 >
-                  <Phone className="w-6 h-6" />
-                  Call: 89359 04820
+                  <Download className="w-6 h-6" />
+                  Download App
                 </a>
                 <Link
                   href="/quick-order"

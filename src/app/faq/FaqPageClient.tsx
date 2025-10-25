@@ -1,6 +1,6 @@
 'use client';
 
-import { ChevronDown, Search, MapPin, Clock, Phone, Mail, Milk, Menu, X, CheckCircle } from 'lucide-react';
+import { ChevronDown, Search, MapPin, Clock, Download, Mail, Milk, Menu, X, CheckCircle } from 'lucide-react';
 import Link from 'next/link';
 import { useState } from 'react';
 import Footer from '@/components/Footer';
@@ -142,12 +142,12 @@ const FAQSection = () => {
     },
     {
       question: "How do I place an order?",
-      answer: "Download the Back2Nest app from Google Play Store, create an account, select your products and delivery preferences, and place your order. You can also call us at +91 89359 04820 for assistance.",
+      answer: "Download the Back2Nest app from Google Play Store, create an account, select your products and delivery preferences, and place your order. You can also download our app for assistance.",
       category: "Orders"
     },
     {
       question: "What payment methods do you accept?",
-      answer: "We accept all major payment methods including UPI (Google Pay, PhonePe, Paytm), debit/credit cards, net banking, and cash on delivery. You can also recharge your Back2Nest wallet for faster checkout and avail exclusive wallet offers.",
+      answer: "We accept all major payment methods including UPI (Google Pay, DownloadPe, Paytm), debit/credit cards, net banking, and cash on delivery. You can also recharge your Back2Nest wallet for faster checkout and avail exclusive wallet offers.",
       category: "Payment"
     },
     {
@@ -157,7 +157,7 @@ const FAQSection = () => {
     },
     {
       question: "What is your refund policy?",
-      answer: "If you receive a damaged or unsatisfactory product, contact us immediately at +91 89359 04820 or help@back2nest.in. We will replace the product or issue a full refund as per our refund policy.",
+      answer: "If you receive a damaged or unsatisfactory product, contact us immediately through our app or at help@back2nest.in. We will replace the product or issue a full refund as per our refund policy.",
       category: "Policies"
     },
     {
@@ -296,15 +296,15 @@ const ContactSection = () => (
 
         <div className="grid md:grid-cols-2 gap-6">
           <a
-            href="tel:+918935904820"
+            href="https://play.google.com/store/apps/details?id=com.app.back2nest" target="_blank" rel="noopener noreferrer"
             className="flex items-center space-x-4 bg-white bg-opacity-20 backdrop-blur-sm p-6 rounded-2xl hover:bg-opacity-30 transition border border-white border-opacity-30"
           >
             <div className="bg-white p-3 rounded-full">
-              <Phone className="w-6 h-6 text-blue-600" />
+              <Download className="w-6 h-6 text-blue-600" />
             </div>
             <div>
-              <p className="text-sm text-blue-100">Call Us</p>
-              <p className="text-lg font-bold">+91 89359 04820</p>
+              <p className="text-sm text-blue-100">Get the App</p>
+              <p className="text-lg font-bold">Download Now</p>
             </div>
           </a>
 

@@ -36,7 +36,14 @@ export const metadata: Metadata = {
     'gir cow milk patna',
     'pure desi milk patna',
     'milk supplier patna',
-    'milk delivery app patna'
+    'milk delivery app patna',
+    'Back2Nest app',
+    'milk delivery app android',
+    'online milk order patna',
+    'fresh dairy app patna',
+    'milk subscription app',
+    'Back2Nest Google Play',
+    'dairy delivery app patna'
   ],
   robots: {
     index: true,
@@ -217,10 +224,17 @@ const organizationJsonLd = {
     {
       '@type': 'ContactPoint',
       'telephone': '+918935904820',
-      'contactType': 'Customer Service',
+      'contactType': 'Customer Support',
       'email': 'help@back2nest.in',
       'areaServed': 'IN',
       'availableLanguage': ['English', 'Hindi'],
+      'contactOption': 'TollFree',
+      'hoursAvailable': {
+        '@type': 'OpeningHoursSpecification',
+        'dayOfWeek': ['Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday', 'Sunday'],
+        'opens': '05:00',
+        'closes': '16:00'
+      }
     },
   ],
   'sameAs': [
@@ -228,7 +242,33 @@ const organizationJsonLd = {
     'https://www.instagram.com/back2nest',
     'https://x.com/B2N_Back2Nest',
     'https://jsdl.in/DT-47YPH6XJ5EY',
+    'https://play.google.com/store/apps/details?id=com.app.back2nest'
   ],
+};
+
+const mobileAppJsonLd = {
+  '@context': 'https://schema.org',
+  '@type': 'MobileApplication',
+  'name': 'Back2Nest - Fresh Milk Delivery',
+  'applicationCategory': 'LifestyleApplication',
+  'operatingSystem': 'ANDROID',
+  'aggregateRating': {
+    '@type': 'AggregateRating',
+    'ratingValue': '4.8',
+    'ratingCount': '127'
+  },
+  'description': 'Order fresh, pure A2 cow milk and dairy products delivered to your doorstep in Patna. Easy ordering, subscription management, and exclusive app-only offers.',
+  'url': 'https://play.google.com/store/apps/details?id=com.app.back2nest',
+  'screenshot': `${SITE_URL}/milk.jpeg`,
+  'downloadUrl': 'https://play.google.com/store/apps/details?id=com.app.back2nest',
+  'installUrl': 'https://play.google.com/store/apps/details?id=com.app.back2nest',
+  'applicationSubCategory': 'FoodDelivery',
+  'offers': {
+    '@type': 'Offer',
+    'price': '0',
+    'priceCurrency': 'INR',
+    'category': 'free'
+  }
 };
 
 export default function RootLayout({ children }: { children: React.ReactNode }) {
@@ -241,8 +281,8 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
         <link rel="apple-touch-icon" href="/logo.png" sizes="180x180" />
 
         {/* Performance: preconnect and dns-prefetch for external resources used often */}
-        <link rel="preconnect" href="https://images.unsplash.com" crossOrigin="anonymous" />
-        <link rel="dns-prefetch" href="https://images.unsplash.com" />
+        <link rel="preconnect" href="https://res.cloudinary.com" crossOrigin="anonymous" />
+        <link rel="dns-prefetch" href="https://res.cloudinary.com" />
 
         {/* Preload critical social image (helps link previews render quickly) */}
   <link rel="preload" as="image" href={`${SITE_URL}/milk.jpeg`} />
@@ -264,6 +304,13 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
           type="application/ld+json"
           strategy="lazyOnload"
           dangerouslySetInnerHTML={{ __html: JSON.stringify(organizationJsonLd) }}
+        />
+
+        <Script
+          id="ld-mobileapp"
+          type="application/ld+json"
+          strategy="lazyOnload"
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(mobileAppJsonLd) }}
         />
       </head>
       <body className="antialiased">

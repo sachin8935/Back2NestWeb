@@ -1,11 +1,11 @@
 import { Metadata } from 'next';
-import { Milk, Phone, CheckCircle, Star, Award, DollarSign, TrendingDown, Package } from 'lucide-react';
+import { Milk, Download, CheckCircle, Star, Award, DollarSign, TrendingDown, Package } from 'lucide-react';
 import Link from 'next/link';
 import Footer from '@/components/Footer';
 
 export const metadata: Metadata = {
   title: 'Milk Price Patna | A2 Milk Rate & Plans - Back2Nest',
-  description: 'Check current milk prices in Patna. Get A2 cow milk, dahi, paneer & ghee with flexible plans. Call 8935904820 for best rates on farm-fresh dairy.',
+  description: 'Check current milk prices in Patna. Get A2 cow milk, dahi, paneer & ghee with flexible plans. Download our app for best rates on farm-fresh dairy.',
   keywords: [
     'milk price patna',
     'milk rate patna',
@@ -146,16 +146,16 @@ export default function MilkPricePage() {
             </h1>
             
             <p className="text-xl text-gray-600 max-w-3xl mx-auto mb-8">
-              Get pure A2 cow milk and dairy products at competitive prices in Patna. Flexible subscription plans with no hidden charges. Call for current rates and special offers.
+              Get pure A2 cow milk and dairy products at competitive prices in Patna. Flexible subscription plans with no hidden charges. Download our app for current rates and special offers.
             </p>
 
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <a 
-                href="tel:+918935904820"
+                href="https://play.google.com/store/apps/details?id=com.app.back2nest" target="_blank" rel="noopener noreferrer"
                 className="bg-blue-600 text-white px-10 py-4 rounded-full font-bold hover:bg-blue-700 transition inline-flex items-center justify-center gap-2"
               >
-                <Phone className="w-6 h-6" />
-                Call for Best Prices: 89359 04820
+                <Download className="w-6 h-6" />
+                Download App for Prices
               </a>
               <Link 
                 href="/quick-order"
@@ -174,7 +174,7 @@ export default function MilkPricePage() {
               Our Dairy Products & Pricing
             </h2>
             <p className="text-xl text-gray-600 text-center mb-12">
-              Premium quality at affordable rates - Call us for current pricing
+              Premium quality at affordable rates - Download our app for current pricing
             </p>
 
             <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
@@ -196,10 +196,10 @@ export default function MilkPricePage() {
                     <p className="text-gray-600 text-sm mb-2">Starting from</p>
                     <p className="text-3xl font-bold text-blue-600 mb-2">₹ Competitive</p>
                     <a 
-                      href="tel:+918935904820"
+                      href="https://play.google.com/store/apps/details?id=com.app.back2nest" target="_blank" rel="noopener noreferrer"
                       className="text-blue-600 font-semibold text-sm hover:underline"
                     >
-                      Call for exact pricing →
+                      Download app for pricing →
                     </a>
                   </div>
                 </div>
@@ -240,7 +240,7 @@ export default function MilkPricePage() {
                   What is the price of A2 milk in Patna?
                 </h3>
                 <p className="text-gray-700">
-                  Our A2 cow milk prices are competitive and vary based on quantity and subscription plan. We offer flexible daily, weekly, and monthly subscriptions with discounted rates for long-term plans. Call us at 89359 04820 for current pricing and special offers.
+                  Our A2 cow milk prices are competitive and vary based on quantity and subscription plan. We offer flexible daily, weekly, and monthly subscriptions with discounted rates for long-term plans. Download our app for current pricing and special offers.
                 </p>
               </div>
 
@@ -291,16 +291,16 @@ export default function MilkPricePage() {
               Get the Best Milk Prices in Patna Today!
             </h2>
             <p className="text-xl text-blue-100 mb-8">
-              Call now to know current rates and subscribe to pure, farm-fresh A2 milk delivery at your doorstep.
+              Download our app to know current rates and subscribe to pure, farm-fresh A2 milk delivery at your doorstep.
             </p>
             
             <div className="flex flex-col sm:flex-row gap-4 justify-center mb-8">
               <a
-                href="tel:+918935904820"
+                href="https://play.google.com/store/apps/details?id=com.app.back2nest" target="_blank" rel="noopener noreferrer"
                 className="bg-white text-blue-600 px-10 py-4 rounded-full font-bold hover:bg-blue-50 transition inline-flex items-center justify-center gap-2"
               >
-                <Phone className="w-6 h-6" />
-                Call: 89359 04820
+                <Download className="w-6 h-6" />
+                Download App
               </a>
               <Link
                 href="/quick-order"

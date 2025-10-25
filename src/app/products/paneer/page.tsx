@@ -1,4 +1,4 @@
-import { Milk, ArrowLeft, Sun, Thermometer, Shield, Truck, CheckCircle, Clock, Droplet, Award, Users, MapPin, Flame, Snowflake, Sparkles, Phone, Heart } from 'lucide-react';
+import { Milk, ArrowLeft, Sun, Thermometer, Shield, Truck, CheckCircle, Clock, Droplet, Award, Users, MapPin, Flame, Snowflake, Sparkles, Download, Heart } from 'lucide-react';
 import Link from 'next/link';
 import type { Metadata } from 'next';
 import Footer from '@/components/Footer';
@@ -713,8 +713,8 @@ export default function PaneerProcess() {
                     Experience the softest, most delicious paneer made naturally with lemon and delivered fresh to your home in Patna.
                   </p>
                   <div className="space-y-4">
-                    <a href="tel:+918935904820" className="block bg-white text-green-600 px-8 py-4 rounded-full font-bold text-center hover:bg-green-50 transition">
-                      Call +91 89359 04820
+                    <a href="https://play.google.com/store/apps/details?id=com.app.back2nest" target="_blank" rel="noopener noreferrer" className="block bg-white text-green-600 px-8 py-4 rounded-full font-bold text-center hover:bg-green-50 transition">
+                      Download App
                     </a>
                     <Link href="/#order" className="block border-2 border-white text-white px-8 py-4 rounded-full font-bold text-center hover:bg-white/10 transition">
                       Order Online
@@ -736,9 +736,9 @@ export default function PaneerProcess() {
               Join families across Patna who trust Back2Nest for fresh, natural, lemon-curdled paneer delivered daily.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <a href="tel:+918935904820" className="bg-green-600 text-white px-10 py-4 rounded-full text-lg font-semibold hover:bg-green-700 transition inline-flex items-center justify-center space-x-2">
-                <Phone className="w-5 h-5" />
-                <span>Call +91 89359 04820</span>
+              <a href="https://play.google.com/store/apps/details?id=com.app.back2nest" target="_blank" rel="noopener noreferrer" className="bg-green-600 text-white px-10 py-4 rounded-full text-lg font-semibold hover:bg-green-700 transition inline-flex items-center justify-center space-x-2">
+                <Download className="w-5 h-5" />
+                <span>Download App</span>
               </a>
               <Link href="/#order" className="border-2 border-green-600 text-green-600 px-10 py-4 rounded-full text-lg font-semibold hover:bg-green-50 transition">
                 Subscribe Online

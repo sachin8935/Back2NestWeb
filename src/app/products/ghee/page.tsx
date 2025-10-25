@@ -1,4 +1,4 @@
-import { Milk, ArrowLeft, Sun, Thermometer, Shield, Truck, CheckCircle, Clock, Droplet, Award, Users, MapPin, Flame, Snowflake, Sparkles, Phone } from 'lucide-react';
+import { Milk, ArrowLeft, Sun, Thermometer, Shield, Truck, CheckCircle, Clock, Droplet, Award, Users, MapPin, Flame, Snowflake, Sparkles, Download } from 'lucide-react';
 import Link from 'next/link';
 import type { Metadata } from 'next';
 import Footer from '@/components/Footer';
@@ -748,11 +748,12 @@ export default function GheeProcess() {
                     Experience the authentic taste and health benefits of traditional bilona ghee delivered to your home in Patna.
                   </p>
                   <div className="space-y-4">
-                    <a href="tel:+918935904820" className="block bg-white text-yellow-600 px-8 py-4 rounded-full font-bold text-center hover:bg-yellow-50 transition">
-                      Call +91 89359 04820
+                    <a href="https://play.google.com/store/apps/details?id=com.app.back2nest" target="_blank" rel="noopener noreferrer" className="bg-white text-yellow-600 px-8 py-4 rounded-full font-bold text-center hover:bg-yellow-50 transition flex items-center justify-center gap-2">
+                      <Download className="w-5 h-5" />
+                      Download App to Order
                     </a>
-                    <Link href="/#order" className="block border-2 border-white text-white px-8 py-4 rounded-full font-bold text-center hover:bg-white/10 transition">
-                      Order Online
+                    <Link href="/quick-order" className="block border-2 border-white text-white px-8 py-4 rounded-full font-bold text-center hover:bg-white/10 transition">
+                      Quick Order
                     </Link>
                   </div>
                   <p className="text-yellow-100 text-sm mt-6 text-center">
@@ -771,9 +772,9 @@ export default function GheeProcess() {
               Join families across Patna who trust Back2Nest for authentic desi danedar ghee made the traditional way.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <a href="tel:+918935904820" className="bg-yellow-600 text-white px-10 py-4 rounded-full text-lg font-semibold hover:bg-yellow-700 transition inline-flex items-center justify-center space-x-2">
-                <Phone className="w-5 h-5" />
-                <span>Call +91 89359 04820</span>
+              <a href="https://play.google.com/store/apps/details?id=com.app.back2nest" target="_blank" rel="noopener noreferrer" className="bg-yellow-600 text-white px-10 py-4 rounded-full text-lg font-semibold hover:bg-yellow-700 transition inline-flex items-center justify-center space-x-2">
+                <Download className="w-5 h-5" />
+                <span>Download App</span>
               </a>
               <Link href="/#order" className="border-2 border-yellow-600 text-yellow-600 px-10 py-4 rounded-full text-lg font-semibold hover:bg-yellow-50 transition">
                 Subscribe Online

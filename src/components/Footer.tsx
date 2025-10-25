@@ -1,4 +1,4 @@
-import { Milk, Phone, Mail, MapPin, Facebook, Twitter, Shield, Instagram } from 'lucide-react';
+import { Milk, Smartphone, Mail, MapPin, Facebook, Twitter, Shield, Instagram, Download } from 'lucide-react';
 import Link from 'next/link';
 import Image from 'next/image';
 
@@ -183,17 +183,19 @@ export default function Footer() {
 
           {/* Contact Info */}
           <div>
-            <h3 className="text-lg font-bold text-white mb-4">Contact Us</h3>
+            <h3 className="text-lg font-bold text-white mb-4">Get The App</h3>
             <ul className="space-y-4">
               <li>
                 <a
-                  href="tel:+918935904820"
+                  href="https://play.google.com/store/apps/details?id=com.app.back2nest"
+                  target="_blank"
+                  rel="noopener noreferrer"
                   className="flex items-start space-x-3 text-gray-300 hover:text-blue-400 transition"
                 >
-                  <Phone className="w-5 h-5 flex-shrink-0 mt-0.5" />
+                  <Download className="w-5 h-5 flex-shrink-0 mt-0.5" />
                   <div>
-                    <p className="text-sm font-semibold text-white">Phone</p>
-                    <p className="text-sm">+91 89359 04820</p>
+                    <p className="text-sm font-semibold text-white">Order on App</p>
+                    <p className="text-sm">Download from Play Store</p>
                   </div>
                 </a>
               </li>
@@ -204,7 +206,7 @@ export default function Footer() {
                 >
                   <Mail className="w-5 h-5 flex-shrink-0 mt-0.5" />
                   <div>
-                    <p className="text-sm font-semibold text-white">Email</p>
+                    <p className="text-sm font-semibold text-white">Email Support</p>
                     <p className="text-sm">help@back2nest.in</p>
                   </div>
                 </a>

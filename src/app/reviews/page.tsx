@@ -313,8 +313,8 @@ export default function ReviewsPage() {
               Experience the same quality and freshness that hundreds of families in Patna enjoy daily. Order now and see why our customers rate us 4.9 out of 5 stars!
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <a href="tel:+918935904820" className="bg-white text-amber-600 px-10 py-4 rounded-full text-lg font-bold hover:bg-amber-50 transition">
-                Call +91 89359 04820
+              <a href="https://play.google.com/store/apps/details?id=com.app.back2nest" target="_blank" rel="noopener noreferrer" className="bg-white text-amber-600 px-10 py-4 rounded-full text-lg font-bold hover:bg-amber-50 transition">
+                Download App
               </a>
               <Link href="/#order" className="border-2 border-white text-white px-10 py-4 rounded-full text-lg font-bold hover:bg-white/10 transition">
                 Subscribe Online
@@ -544,8 +544,8 @@ export default function ReviewsPage() {
                 Join over 500 satisfied families in Patna who have switched to Back2Nest for pure, fresh, and authentic dairy products. Order today and see why we have a 98% customer retention rate!
               </p>
               <div className="flex flex-col sm:flex-row gap-4 justify-center mb-8">
-                <a href="tel:+918935904820" className="bg-white text-amber-600 px-10 py-4 rounded-full text-lg font-bold hover:bg-amber-50 transition inline-flex items-center justify-center space-x-2">
-                  <span>📞 Call +91 89359 04820</span>
+                <a href="https://play.google.com/store/apps/details?id=com.app.back2nest" target="_blank" rel="noopener noreferrer" className="bg-white text-amber-600 px-10 py-4 rounded-full text-lg font-bold hover:bg-amber-50 transition inline-flex items-center justify-center space-x-2">
+                  <span>📞 Download App</span>
                 </a>
                 <Link href="/#order" className="border-2 border-white text-white px-10 py-4 rounded-full text-lg font-bold hover:bg-white/10 transition">
                   Subscribe Now
@@ -615,7 +615,7 @@ export default function ReviewsPage() {
               <div className="bg-gray-50 p-6 rounded-xl">
                 <h3 className="text-xl font-bold text-gray-900 mb-3">What if I'm not satisfied with the product?</h3>
                 <p className="text-gray-600">
-                  We have a 98% customer retention rate because of our quality and service. However, if you're not satisfied, please call us immediately. We value customer feedback and will address any concerns. Our goal is 100% customer satisfaction.
+                  We have a 98% customer retention rate because of our quality and service. However, if you're not satisfied, please contact us through the app immediately. We value customer feedback and will address any concerns. Our goal is 100% customer satisfaction.
                 </p>
               </div>
             </div>
@@ -637,14 +637,14 @@ export default function ReviewsPage() {
                   <Star className="w-10 h-10 text-amber-600" />
                 </div>
                 <h3 className="text-2xl font-bold text-gray-900 mb-2">Leave a Review</h3>
-                <p className="text-gray-600">Call us or message us to share your experience</p>
+                <p className="text-gray-600">Share your experience through our app or email</p>
               </div>
 
               <div className="space-y-6">
                 <div className="grid md:grid-cols-2 gap-4">
-                  <a href="tel:+918935904820" className="flex items-center justify-center space-x-2 bg-amber-600 text-white px-6 py-4 rounded-xl font-semibold hover:bg-amber-700 transition">
+                  <a href="https://play.google.com/store/apps/details?id=com.app.back2nest" target="_blank" rel="noopener noreferrer" className="flex items-center justify-center space-x-2 bg-amber-600 text-white px-6 py-4 rounded-xl font-semibold hover:bg-amber-700 transition">
                     <span>📞</span>
-                    <span>Call: +91 89359 04820</span>
+                    <span>Download App</span>
                   </a>
                   <a href="https://www.facebook.com/B2Nback2nest/" target="_blank" rel="noopener noreferrer" className="flex items-center justify-center space-x-2 bg-blue-600 text-white px-6 py-4 rounded-xl font-semibold hover:bg-blue-700 transition">
                     <span>👍</span>

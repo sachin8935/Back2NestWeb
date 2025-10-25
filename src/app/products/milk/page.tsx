@@ -1,4 +1,4 @@
-import { Milk, ArrowLeft, Sun, Thermometer, Shield, Truck, CheckCircle, Clock, Droplet, Award, Users, MapPin, Phone } from 'lucide-react';
+import { Milk, ArrowLeft, Sun, Thermometer, Shield, Truck, CheckCircle, Clock, Droplet, Award, Users, MapPin, Download } from 'lucide-react';
 import Link from 'next/link';
 import type { Metadata } from 'next';
 import Footer from '@/components/Footer';
@@ -534,8 +534,8 @@ export default function OurProcess() {
                     Join thousands of families in Patna who trust Back2Nest for their daily milk needs.
                   </p>
                   <div className="space-y-4">
-                    <a href="tel:+918935904820" className="block bg-white text-amber-600 px-8 py-4 rounded-full font-bold text-center hover:bg-amber-50 transition">
-                      Call +91 89359 04820
+                    <a href="https://play.google.com/store/apps/details?id=com.app.back2nest" target="_blank" rel="noopener noreferrer" className="block bg-white text-amber-600 px-8 py-4 rounded-full font-bold text-center hover:bg-amber-50 transition">
+                      Download App
                     </a>
                     <Link href="/#order" className="block border-2 border-white text-white px-8 py-4 rounded-full font-bold text-center hover:bg-white/10 transition">
                       Start Subscription
@@ -569,7 +569,7 @@ export default function OurProcess() {
               <div className="bg-white p-6 rounded-xl shadow-md">
                 <h3 className="text-xl font-bold text-gray-900 mb-3">What if I miss a delivery?</h3>
                 <p className="text-gray-600">
-                  You can pause or skip deliveries through our app or by calling us before 8 PM the previous day. We're flexible with your schedule.
+                  You can pause or skip deliveries easily through our app before 8 PM the previous day. We're flexible with your schedule.
                 </p>
               </div>
               <div className="bg-white p-6 rounded-xl shadow-md">
@@ -581,7 +581,7 @@ export default function OurProcess() {
               <div className="bg-white p-6 rounded-xl shadow-md">
                 <h3 className="text-xl font-bold text-gray-900 mb-3">Which areas do you deliver to?</h3>
                 <p className="text-gray-600">
-                  We currently serve all areas within Patna city limits. Call us at +91 89359 04820 to check if we deliver to your location.
+                  We currently serve all areas within Patna city limits. Download our app from Google Play Store to check if we deliver to your location.
                 </p>
               </div>
               <div className="bg-white p-6 rounded-xl shadow-md">
@@ -607,7 +607,7 @@ export default function OurProcess() {
                 <p className="text-amber-100">Jagat Narayan Road, Kadam Kuan</p>
                 <p className="text-amber-100">Patna, Bihar 800003</p>
                 <p className="mt-4 text-amber-100">Visit Hours: 6 AM - 10 AM (Prior appointment required)</p>
-                <a href="tel:+918935904820" className="inline-block mt-6 bg-white text-amber-600 px-6 py-3 rounded-full font-bold hover:bg-amber-50 transition">
+                <a href="https://play.google.com/store/apps/details?id=com.app.back2nest" target="_blank" rel="noopener noreferrer" className="inline-block mt-6 bg-white text-amber-600 px-6 py-3 rounded-full font-bold hover:bg-amber-50 transition">
                   Schedule a Visit
                 </a>
               </div>
@@ -653,9 +653,9 @@ export default function OurProcess() {
               Join the Back2Nest family today and enjoy farm-fresh milk delivered to your doorstep every morning.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <a href="tel:+918935904820" className="bg-amber-600 text-white px-10 py-4 rounded-full text-lg font-semibold hover:bg-amber-700 transition inline-flex items-center justify-center space-x-2">
-                <Phone className="w-5 h-5" />
-                <span>Call +91 89359 04820</span>
+              <a href="https://play.google.com/store/apps/details?id=com.app.back2nest" target="_blank" rel="noopener noreferrer" className="bg-amber-600 text-white px-10 py-4 rounded-full text-lg font-semibold hover:bg-amber-700 transition inline-flex items-center justify-center space-x-2">
+                <Download className="w-5 h-5" />
+                <span>Download App</span>
               </a>
               <Link href="/#order" className="border-2 border-amber-600 text-amber-600 px-10 py-4 rounded-full text-lg font-semibold hover:bg-amber-50 transition">
                 Subscribe Online

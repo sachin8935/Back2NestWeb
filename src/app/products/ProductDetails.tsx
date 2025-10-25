@@ -17,7 +17,7 @@ export const productDetailsData = {
     rating: '4.8',
     reviewCount: '127',
     gradient: 'from-blue-500 to-blue-600',
-    image: 'https://images.unsplash.com/photo-1550583724-b2692b85b150?w=600&h=600&fit=crop',
+    image: 'https://res.cloudinary.com/back2nest/image/upload/v1761124740/products/gi3tgzs9kyq3ubnvinci.jpg',
     features: [
       {
         icon: Shield,
@@ -54,7 +54,7 @@ export const productDetailsData = {
     rating: '4.9',
     reviewCount: '85',
     gradient: 'from-green-500 to-green-600',
-    image: 'https://images.unsplash.com/photo-1628088062854-d1870b4553da?w=600&h=600&fit=crop',
+    image: 'https://res.cloudinary.com/back2nest/image/upload/v1761124895/products/itl5xodvyqcknxsso7cl.jpg',
     features: [
       {
         icon: Shield,
@@ -91,7 +91,7 @@ export const productDetailsData = {
     rating: '4.9',
     reviewCount: '142',
     gradient: 'from-amber-500 to-amber-600',
-    image: 'https://images.unsplash.com/photo-1587135941948-670b381f08ce?w=600&h=600&fit=crop',
+    image: 'https://res.cloudinary.com/back2nest/image/upload/v1761125364/products/v5xzfyr5lpyl14oektnx.jpg',
     features: [
       {
         icon: Shield,
@@ -128,7 +128,7 @@ export const productDetailsData = {
     rating: '4.8',
     reviewCount: '96',
     gradient: 'from-purple-500 to-purple-600',
-    image: 'https://images.unsplash.com/photo-1631452180519-c014fe946bc7?w=600&h=600&fit=crop',
+    image: 'https://res.cloudinary.com/back2nest/image/upload/v1761125201/products/c54kq7pybisnlwvpm8jk.jpg',
     features: [
       {
         icon: Shield,
@@ -276,10 +276,11 @@ export default function ProductDetails({ productId, onClose }: ProductDetailsPro
               Add to Cart & Order Now
             </button>
             <p className="text-gray-600 mt-4">
-              Or call us at{' '}
-              <a href="tel:+918935904820" className="text-blue-600 font-semibold hover:underline">
-                +91 89359 04820
+              Or{' '}
+              <a href="https://play.google.com/store/apps/details?id=com.app.back2nest" target="_blank" rel="noopener noreferrer" className="text-blue-600 font-semibold hover:underline">
+                download our app
               </a>
+              {' '}for easy ordering
             </p>
           </div>
         </div>

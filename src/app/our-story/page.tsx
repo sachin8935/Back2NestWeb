@@ -1,7 +1,7 @@
 import { Metadata } from 'next';
 import Image from 'next/image';
 import Link from 'next/link';
-import { Milk, AlertTriangle, Lightbulb, Rocket, Heart, Users, TrendingUp, Target, CheckCircle, Phone, ArrowRight, Sparkles, Award } from 'lucide-react';
+import { Milk, AlertTriangle, Lightbulb, Rocket, Heart, Users, TrendingUp, Target, CheckCircle, Download, ArrowRight, Sparkles, Award } from 'lucide-react';
 import Footer from '@/components/Footer';
 
 export const metadata: Metadata = {
@@ -445,11 +445,11 @@ export default function OurStoryPage() {
               </p>
               <div className="flex flex-col sm:flex-row gap-4 justify-center">
                 <a
-                  href="tel:+918935904820"
+                  href="https://play.google.com/store/apps/details?id=com.app.back2nest" target="_blank" rel="noopener noreferrer"
                   className="inline-flex items-center justify-center gap-2 bg-blue-600 text-white px-10 py-4 rounded-full font-bold hover:bg-blue-700 transition text-lg"
                 >
-                  <Phone className="w-6 h-6" />
-                  Start Your Journey: 89359 04820
+                  <Download className="w-6 h-6" />
+                  Download App - Start Your Journey
                 </a>
                 <Link
                   href="/quick-order"

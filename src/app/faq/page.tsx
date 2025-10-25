@@ -100,7 +100,7 @@ const faqSchema = {
 			'name': 'How do I place an order?',
 			'acceptedAnswer': {
 				'@type': 'Answer',
-				'text': 'Download the Back2Nest app from Google Play Store, create an account, select your products and delivery preferences, and place your order. You can also call us at +91 89359 04820 for assistance.'
+				'text': 'Download the Back2Nest app from Google Play Store, create an account, select your products and delivery preferences, and place your order. Our customer support team is also available to help you through the app.'
 			}
 		},
 		{

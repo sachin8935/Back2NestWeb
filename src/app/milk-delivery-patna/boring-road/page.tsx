@@ -1,12 +1,12 @@
 import { Metadata } from 'next';
-import { Milk, Clock, MapPin, Phone, CheckCircle, Star, Truck, Shield } from 'lucide-react';
+import { Milk, Clock, MapPin, Download, CheckCircle, Star, Truck, Shield } from 'lucide-react';
 import Image from 'next/image';
 import Link from 'next/link';
 import Footer from '@/components/Footer';
 
 export const metadata: Metadata = {
   title: 'Milk Delivery in Boring Road Patna | Fresh A2 Milk Home Delivery',
-  description: 'Get pure A2 milk delivered to your home in Boring Road, Patna by 5 AM daily. Farm-fresh, 100% pure cow milk with no adulteration. Call 8935904820 to order.',
+  description: 'Get pure A2 milk delivered to your home in Boring Road, Patna by 5 AM daily. Farm-fresh, 100% pure cow milk with no adulteration. Download our app to order.',
   keywords: [
     'milk delivery boring road patna',
     'fresh milk boring road',
@@ -173,11 +173,11 @@ export default function BoringRoadMilkDeliveryPage() {
 
                   <div className="flex flex-col sm:flex-row gap-4 mb-8">
                     <a 
-                      href="tel:+918935904820"
+                      href="https://play.google.com/store/apps/details?id=com.app.back2nest" target="_blank" rel="noopener noreferrer"
                       className="bg-blue-600 text-white px-8 py-4 rounded-full font-semibold hover:bg-blue-700 transition text-center flex items-center justify-center gap-2"
                     >
-                      <Phone className="w-5 h-5" />
-                      Call: 89359 04820
+                      <Download className="w-5 h-5" />
+                      Download App
                     </a>
                     <Link 
                       href="/quick-order"
@@ -286,11 +286,11 @@ export default function BoringRoadMilkDeliveryPage() {
                     Not sure if we deliver to your exact location in Boring Road?
                   </p>
                   <a 
-                    href="tel:+918935904820"
+                    href="https://play.google.com/store/apps/details?id=com.app.back2nest" target="_blank" rel="noopener noreferrer"
                     className="inline-flex items-center gap-2 bg-blue-600 text-white px-6 py-3 rounded-full font-semibold hover:bg-blue-700"
                   >
-                    <Phone className="w-5 h-5" />
-                    Call: 89359 04820
+                    <Download className="w-5 h-5" />
+                    Download App
                   </a>
                 </div>
               </div>
@@ -344,11 +344,11 @@ export default function BoringRoadMilkDeliveryPage() {
               
               <div className="flex flex-col sm:flex-row gap-4 justify-center mb-8">
                 <a
-                  href="tel:+918935904820"
+                  href="https://play.google.com/store/apps/details?id=com.app.back2nest" target="_blank" rel="noopener noreferrer"
                   className="bg-white text-blue-600 px-10 py-4 rounded-full font-bold hover:bg-blue-50 transition inline-flex items-center justify-center gap-2"
                 >
-                  <Phone className="w-6 h-6" />
-                  Call: 89359 04820
+                  <Download className="w-6 h-6" />
+                  Download App
                 </a>
                 <Link
                   href="/quick-order"

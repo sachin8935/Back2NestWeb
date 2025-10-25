@@ -278,9 +278,9 @@ const HowItWorksSection = () => {
   const steps = [
     {
       number: "1",
-      title: "Subscribe to Service",
-      description: "Call us at 89359 04820 or fill our form to start your fresh milk delivery subscription in Patna",
-      icon: Phone
+      title: "Download Our App",
+      description: "Get the Back2Nest app from Google Play Store to start your fresh milk delivery subscription in Patna",
+      icon: Smartphone
     },
     {
       number: "2",
@@ -418,11 +418,11 @@ const AppDownloadSection = () => (
 const ContactSection = () => {
   const contactInfo = [
     {
-      icon: Phone,
-      title: "Call Us Anytime",
-      detail: "+91 89359 04820",
-      link: "tel:+918935904820",
-      subtext: "Available 5 AM - 4 PM Daily",
+      icon: Smartphone,
+      title: "Download Our App",
+      detail: "Order on Google Play",
+      link: "https://play.google.com/store/apps/details?id=com.app.back2nest",
+      subtext: "Easy ordering & tracking",
       gradient: "from-green-500 to-green-600"
     },
     {
@@ -467,7 +467,7 @@ const ContactSection = () => {
                 </div>
                 <h3 className="text-xl font-bold text-gray-900 mb-3">{contact.title}</h3>
                 {contact.link ? (
-                  <a href={contact.link} className="text-blue-600 hover:text-blue-700 text-lg font-semibold block mb-2 hover:underline">
+                  <a href={contact.link} target={contact.link.startsWith('http') ? '_blank' : undefined} rel={contact.link.startsWith('http') ? 'noopener noreferrer' : undefined} className="text-blue-600 hover:text-blue-700 text-lg font-semibold block mb-2 hover:underline">
                     {contact.detail}
                   </a>
                 ) : (
@@ -544,12 +544,12 @@ export default function HomePageClient() {
           "text": "We deliver across all major areas in Patna including Boring Road, Kankarbagh, Patliputra Colony, Rajendra Nagar, Fraser Road, Kadam Kuan, Bailey Road, and many more localities."
         }
       },
-      {
+        {
         "@type": "Question",
         "name": "How do I subscribe to daily milk delivery in Patna?",
         "acceptedAnswer": {
           "@type": "Answer",
-          "text": "You can subscribe by calling us at 89359 04820, downloading our app from Google Play Store, or filling the quick order form on our website. Choose your daily quantity and delivery schedule."
+          "text": "Download the Back2Nest app from Google Play Store, create an account, select your products and delivery preferences, and place your order. You can also use our website's quick order form. Choose your daily quantity and delivery schedule."
         }
       },
       {
@@ -557,7 +557,7 @@ export default function HomePageClient() {
         "name": "What is the price of milk delivery in Patna?",
         "acceptedAnswer": {
           "@type": "Answer",
-          "text": "Our pricing is competitive and transparent. Call us at 89359 04820 for current pricing and subscription plans. We offer flexible daily, weekly, and monthly plans."
+          "text": "Our pricing is competitive and transparent. Download our app from Google Play Store to view current pricing and subscription plans. We offer flexible daily, weekly, and monthly plans with exclusive app discounts."
         }
       }
     ]

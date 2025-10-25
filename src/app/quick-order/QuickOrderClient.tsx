@@ -1,6 +1,6 @@
 'use client';
 
-import { Milk, ArrowLeft, ShoppingCart, Plus, Minus, Trash2, Clock, Shield, Smartphone, Package, Star, Sparkles, CheckCircle, Info } from 'lucide-react';
+import { Milk, ArrowLeft, ShoppingCart, Plus, Minus, Trash2, Clock, Shield, Smartphone, Package, Star, Sparkles, CheckCircle, Info, Download } from 'lucide-react';
 import Link from 'next/link';
 import Image from 'next/image';
 import { useState } from 'react';
@@ -323,11 +323,15 @@ const Cart = ({ cartItems, onUpdateCart, onClearCart }: CartProps) => {
         </div>
 
         <a
-          href="tel:+918935904820"
-          className="block w-full bg-gradient-to-r from-blue-600 to-blue-700 text-white py-4 rounded-xl font-bold text-lg text-center hover:shadow-2xl transition-all transform hover:scale-105"
+          href="https://play.google.com/store/apps/details?id=com.app.back2nest"
+          target="_blank"
+          rel="noopener noreferrer"
+          className="w-full bg-gradient-to-r from-blue-600 to-blue-700 text-white py-4 rounded-xl font-bold text-lg text-center hover:shadow-2xl transition-all transform hover:scale-105 flex items-center justify-center gap-2"
         >
-          Place Order - Call Now
+          <Download className="w-5 h-5" />
+          Download App to Complete Order
         </a>
+        <p className="text-center text-sm text-gray-600 mt-3">Install our app to place orders & manage subscriptions</p>
       </div>
     </div>
   );

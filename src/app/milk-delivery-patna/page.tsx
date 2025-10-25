@@ -1,6 +1,6 @@
 import { Metadata } from 'next';
 import { 
-  Milk, Clock, MapPin, Phone, Mail, CheckCircle, Star, Truck, Shield, 
+  Milk, Clock, MapPin, Mail, CheckCircle, Star, Truck, Shield, 
   Droplets, Heart, Award, Leaf, Users, Download, Package, Menu, X,
   TrendingUp, ThumbsUp, Zap, Globe, Home
 } from 'lucide-react';
@@ -149,11 +149,11 @@ const HeroSection = () => (
           
           <div className="flex flex-col sm:flex-row gap-4 mb-10">
             <a 
-              href="tel:+918935904820"
+              href="https://play.google.com/store/apps/details?id=com.app.back2nest" target="_blank" rel="noopener noreferrer"
               className="bg-gradient-to-r from-blue-600 to-blue-700 text-white px-8 py-4 rounded-full text-lg font-semibold hover:shadow-2xl transition shadow-lg text-center transform hover:scale-105 flex items-center justify-center gap-2"
             >
-              <Phone className="w-5 h-5" />
-              Call: 89359 04820
+              <Download className="w-5 h-5" />
+              Download App
             </a>
             <Link 
               href="/quick-order" 
@@ -183,7 +183,7 @@ const HeroSection = () => (
         <div className="relative">
           <div className="relative bg-gradient-to-br from-blue-400 via-blue-500 to-blue-600 rounded-3xl p-3 shadow-2xl transform hover:rotate-1 transition duration-500">
             <Image
-              src="https://images.unsplash.com/photo-1628088062854-d1870b4553da?w=700&h=700&fit=crop"
+              src="https://res.cloudinary.com/back2nest/image/upload/v1760552874/offer_banners/em79ofmcsxf5upawy9b7.png"
               alt="Fresh pure milk delivery in Patna - Back2Nest farm to home service"
               width={700}
               height={700}
@@ -261,14 +261,14 @@ const CoverageAreasSection = () => {
               Don't see your area listed?
             </p>
             <p className="text-blue-700 text-sm mb-3">
-              We are constantly expanding! Call us to check if we deliver to your location.
+              We are constantly expanding! Download our app to check if we deliver to your location.
             </p>
             <a 
-              href="tel:+918935904820"
+              href="https://play.google.com/store/apps/details?id=com.app.back2nest" target="_blank" rel="noopener noreferrer"
               className="inline-flex items-center gap-2 bg-blue-600 text-white px-6 py-2 rounded-full font-semibold hover:bg-blue-700 transition"
             >
-              <Phone className="w-4 h-4" />
-              Call Now: 89359 04820
+              <Download className="w-4 h-4" />
+              Download App
             </a>
           </div>
         </div>
@@ -521,7 +521,7 @@ const SEOContentSection = () => (
         </p>
 
         <ol className="list-decimal list-inside space-y-3 text-gray-700 mb-6 ml-4">
-          <li><strong>Call us at +91 89359 04820</strong> or visit our website to subscribe</li>
+          <li><strong>Download our app from Google Play Store</strong> and create your account</li>
           <li><strong>Choose your daily milk quantity</strong> (500ml, 1L, or custom amounts)</li>
           <li><strong>Select your preferred delivery time</strong> (we recommend our 5 AM slot)</li>
           <li><strong>Provide your Patna delivery address</strong> (we serve all major areas)</li>
@@ -555,11 +555,11 @@ const SEOContentSection = () => (
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <a 
-              href="tel:+918935904820"
+              href="https://play.google.com/store/apps/details?id=com.app.back2nest" target="_blank" rel="noopener noreferrer"
               className="bg-white text-blue-600 px-8 py-3 rounded-full font-bold hover:shadow-2xl transition inline-flex items-center justify-center gap-2"
             >
-              <Phone className="w-5 h-5" />
-              Call: 89359 04820
+              <Download className="w-5 h-5" />
+              Download App
             </a>
             <Link 
               href="/quick-order"
@@ -588,11 +588,11 @@ const FAQSection = () => {
     },
     {
       question: "Which areas of Patna do you deliver to?",
-      answer: "We deliver to all major areas including Kadam Kuan, Boring Road, Kankarbagh, Patliputra Colony, Rajendra Nagar, Bailey Road, Fraser Road, Danapur, and many more. Call us to check availability in your specific area."
+      answer: "We deliver to all major areas including Kadam Kuan, Boring Road, Kankarbagh, Patliputra Colony, Rajendra Nagar, Bailey Road, Fraser Road, Danapur, and many more. Download our app to check availability in your specific area."
     },
     {
       question: "How do I subscribe to milk delivery in Patna?",
-      answer: "Simply call us at +91 89359 04820 or use our quick order form on the website. You can also download our mobile app to subscribe, manage deliveries, and track orders easily."
+      answer: "Simply download our app or use our quick order form on the website. You can also download our mobile app to subscribe, manage deliveries, and track orders easily."
     },
     {
       question: "Can I pause or modify my subscription?",
@@ -600,7 +600,7 @@ const FAQSection = () => {
     },
     {
       question: "What is the price of milk delivery in Patna?",
-      answer: "Our pricing is competitive and transparent. Prices vary based on daily quantity and subscription duration. Call us at 89359 04820 or visit our products page for current pricing and special offers."
+      answer: "Our pricing is competitive and transparent. Prices vary based on daily quantity and subscription duration. Download our app or visit our products page for current pricing and special offers."
     },
     {
       question: "Is the milk pasteurized?",
@@ -653,11 +653,11 @@ const FAQSection = () => {
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <a 
-              href="tel:+918935904820"
+              href="https://play.google.com/store/apps/details?id=com.app.back2nest" target="_blank" rel="noopener noreferrer"
               className="inline-flex items-center justify-center gap-2 bg-blue-600 text-white px-8 py-3 rounded-full font-bold hover:bg-blue-700 transition"
             >
-              <Phone className="w-5 h-5" />
-              Call: 89359 04820
+              <Download className="w-5 h-5" />
+              Download App
             </a>
             <a 
               href="mailto:help@back2nest.in"
@@ -777,11 +777,11 @@ const CTASection = () => (
 
       <div className="flex flex-col sm:flex-row gap-6 justify-center mb-10">
         <a
-          href="tel:+918935904820"
+          href="https://play.google.com/store/apps/details?id=com.app.back2nest" target="_blank" rel="noopener noreferrer"
           className="bg-white text-blue-600 px-10 py-4 rounded-full font-bold text-lg hover:shadow-2xl transition inline-flex items-center justify-center gap-2 transform hover:scale-105"
         >
-          <Phone className="w-6 h-6" />
-          Call: 89359 04820
+          <Download className="w-6 h-6" />
+          Download App
         </a>
         <Link
           href="/quick-order"

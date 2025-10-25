@@ -1,0 +1,10 @@
+[
+  {
+    "relation": ["delegate_permission/common.handle_all_urls"],
+    "target": {
+      "namespace": "android_app",
+      "package_name": "com.app.back2nest",
+      "sha256_cert_fingerprints": ["DD:48:3C:20:0A:C0:1E:BA:CE:95:21:1F:B6:01:B8:3D:1A:B7:BC:DA:26:54:24:82:11:C7:C9:8C:A3:AB:F3:61"]
+    }
+  }
+]

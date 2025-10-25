@@ -1,15 +1,15 @@
 import { Metadata } from 'next';
 import Link from 'next/link';
-import { ArrowLeft, Phone, Mail, MapPin, Clock, MessageSquare } from 'lucide-react';
+import { ArrowLeft, Download, Mail, MapPin, Clock, MessageSquare, Smartphone } from 'lucide-react';
 import Footer from '@/components/Footer';
 
 export const metadata: Metadata = {
-  title: 'Contact Back2Nest Patna | Call 8935904820',
-  description: 'Contact Back2Nest for pure milk delivery in Patna. Call 8935904820, email help@back2nest.in or visit us at Jagat Narayan Road, Kadam Kuan, Patna 800003.',
-  keywords: 'contact back2nest, milk delivery patna contact, back2nest phone number, milk delivery customer care patna, back2nest address patna',
+  title: 'Contact Back2Nest Patna | Download App or Email Us',
+  description: 'Contact Back2Nest for pure milk delivery in Patna. Download our app from Google Play, email help@back2nest.in or visit us at Jagat Narayan Road, Kadam Kuan, Patna 800003.',
+  keywords: 'contact back2nest, milk delivery patna contact, back2nest app, milk delivery customer care patna, back2nest address patna',
   openGraph: {
     title: 'Contact Back2Nest Patna | Milk Delivery Service',
-    description: 'Get in touch with Back2Nest for fresh milk delivery in Patna. Call us at 8935904820.',
+    description: 'Get in touch with Back2Nest for fresh milk delivery in Patna. Download our app or email us.',
     url: 'https://www.back2nest.in/contact',
     type: 'website',
     images: [
@@ -63,14 +63,14 @@ export default function ContactPage() {
               <div className="space-y-6">
                 <div className="flex items-start gap-4">
                   <div className="bg-blue-100 p-3 rounded-full flex-shrink-0">
-                    <Phone className="w-6 h-6 text-blue-600" />
+                    <Download className="w-6 h-6 text-blue-600" />
                   </div>
                   <div>
-                    <h3 className="font-semibold text-gray-900 mb-1">Phone</h3>
-                    <a href="tel:+918935904820" className="text-blue-600 hover:text-blue-700 text-lg">
-                      +91 89359 04820
+                    <h3 className="font-semibold text-gray-900 mb-1">Download Our App</h3>
+                    <a href="https://play.google.com/store/apps/details?id=com.app.back2nest" target="_blank" rel="noopener noreferrer" className="text-blue-600 hover:text-blue-700 text-lg">
+                      Get on Google Play
                     </a>
-                    <p className="text-sm text-gray-600 mt-1">Available 5:00 AM - 4:00 PM Daily</p>
+                    <p className="text-sm text-gray-600 mt-1">Easy ordering & subscription management</p>
                   </div>
                 </div>
 
@@ -116,16 +116,18 @@ export default function ContactPage() {
             </div>
 
             <div className="bg-gradient-to-br from-blue-600 to-blue-700 rounded-2xl shadow-lg p-8 text-white">
-              <MessageSquare className="w-12 h-12 mb-4" />
-              <h3 className="text-2xl font-bold mb-3">Quick Response</h3>
+              <Smartphone className="w-12 h-12 mb-4" />
+              <h3 className="text-2xl font-bold mb-3">Quick & Easy Ordering</h3>
               <p className="text-blue-100 mb-6">
-                For urgent queries or order issues, call us directly. Our customer support team is always ready to assist you.
+                For instant ordering and subscription management, download our mobile app. Available 24/7 for your convenience.
               </p>
               <a
-                href="tel:+918935904820"
+                href="https://play.google.com/store/apps/details?id=com.app.back2nest"
+                target="_blank"
+                rel="noopener noreferrer"
                 className="inline-block bg-white text-blue-600 px-8 py-3 rounded-full font-bold hover:shadow-xl transition"
               >
-                Call Now: +91 89359 04820
+                Download App
               </a>
             </div>
           </div>
@@ -145,21 +147,21 @@ export default function ContactPage() {
                 <div className="border-l-4 border-blue-600 pl-4">
                   <h4 className="font-semibold text-gray-900 mb-1">New Customer?</h4>
                   <p className="text-gray-600">
-                    Call us to set up your delivery schedule and receive fresh dairy products starting tomorrow morning!
+                    Download our app from Google Play Store to set up your delivery schedule and receive fresh dairy products starting tomorrow morning!
                   </p>
                 </div>
 
                 <div className="border-l-4 border-green-600 pl-4">
                   <h4 className="font-semibold text-gray-900 mb-1">Existing Customer?</h4>
                   <p className="text-gray-600">
-                    Contact us to modify your subscription, update delivery address, or pause/resume your service.
+                    Use the app to modify your subscription, update delivery address, or pause/resume your service instantly.
                   </p>
                 </div>
 
                 <div className="border-l-4 border-amber-600 pl-4">
                   <h4 className="font-semibold text-gray-900 mb-1">Have Feedback?</h4>
                   <p className="text-gray-600">
-                    We value your opinions! Share your experience or suggestions to help us serve you better.
+                    We value your opinions! Email us at help@back2nest.in to share your experience or suggestions.
                   </p>
                 </div>
               </div>
@@ -195,7 +197,7 @@ export default function ContactPage() {
             <div>
               <h3 className="font-bold text-gray-900 mb-2">How do I place an order?</h3>
               <p className="text-gray-600">
-                You can order via our mobile app, website, or by calling +91 89359 04820.
+                Download the Back2Nest app from Google Play Store, create an account, and place your order in minutes. You can also use our website's quick order form.
               </p>
             </div>
             <div>

@@ -1,24 +1,9 @@
 'use client';
 
-import { Phone } from 'lucide-react';
+import { Download, Smartphone, Package, Star, Shield } from 'lucide-react';
 import { useState } from 'react';
 
 export default function OrderForm() {
-  const [formData, setFormData] = useState({
-    name: '',
-    phone: '',
-    address: ''
-  });
-
-  const handleSubmit = () => {
-    if (formData.name && formData.phone && formData.address) {
-      alert('Thank you for your interest! Our team will contact you soon to confirm your milk delivery subscription.');
-      setFormData({ name: '', phone: '', address: '' });
-    } else {
-      alert('Please fill in all fields to start your subscription');
-    }
-  };
-
   return (
     <section id="order" className="relative bg-gradient-to-br from-blue-600 via-blue-700 to-blue-800 py-20 overflow-hidden">
       <div className="absolute inset-0 opacity-10">
@@ -32,7 +17,7 @@ export default function OrderForm() {
             Start Today
           </div>
           <h2 className="text-4xl md:text-5xl font-bold text-white mb-4">
-            Begin Your Fresh Milk Subscription
+            Download Our App to Order
           </h2>
           <p className="text-xl text-blue-100">
             Join 127+ happy families enjoying pure, farm-fresh milk daily in Patna
@@ -40,59 +25,51 @@ export default function OrderForm() {
         </div>
 
         <div className="bg-white rounded-3xl p-8 md:p-10 shadow-2xl">
-          <div className="space-y-6">
-            <div>
-              <label className="block text-gray-700 font-semibold mb-2 text-lg">Full Name *</label>
-              <input
-                type="text"
-                value={formData.name}
-                onChange={(e) => setFormData({ ...formData, name: e.target.value })}
-                className="w-full px-5 py-4 rounded-xl border-2 border-gray-200 focus:outline-none focus:ring-2 focus:ring-blue-600 focus:border-transparent transition text-lg"
-                placeholder="Enter your full name"
-                aria-label="Full Name"
-              />
+          <div className="text-center mb-8">
+            <div className="bg-gradient-to-br from-blue-600 to-blue-700 w-20 h-20 rounded-2xl flex items-center justify-center mx-auto mb-6 shadow-xl">
+              <Smartphone className="w-10 h-10 text-white" />
             </div>
+            <h3 className="text-2xl font-bold text-gray-900 mb-3">Order Fresh Milk on Our App</h3>
+            <p className="text-gray-600 text-lg leading-relaxed">
+              Download the Back2Nest app for hassle-free ordering, subscription management, and exclusive app-only offers!
+            </p>
+          </div>
 
-            <div>
-              <label className="block text-gray-700 font-semibold mb-2 text-lg">Phone Number *</label>
-              <input
-                type="tel"
-                value={formData.phone}
-                onChange={(e) => setFormData({ ...formData, phone: e.target.value })}
-                className="w-full px-5 py-4 rounded-xl border-2 border-gray-200 focus:outline-none focus:ring-2 focus:ring-blue-600 focus:border-transparent transition text-lg"
-                placeholder="Enter your 10-digit mobile number"
-                aria-label="Phone Number"
-              />
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mb-8">
+            <div className="text-center p-6 bg-blue-50 rounded-xl">
+              <Shield className="w-8 h-8 text-blue-600 mx-auto mb-3" />
+              <h4 className="font-semibold text-gray-900 mb-2">Easy Ordering</h4>
+              <p className="text-sm text-gray-600">Order with just a few taps</p>
             </div>
-
-            <div>
-              <label className="block text-gray-700 font-semibold mb-2 text-lg">Delivery Address in Patna *</label>
-              <textarea
-                value={formData.address}
-                onChange={(e) => setFormData({ ...formData, address: e.target.value })}
-                className="w-full px-5 py-4 rounded-xl border-2 border-gray-200 focus:outline-none focus:ring-2 focus:ring-blue-600 focus:border-transparent resize-none transition text-lg"
-                rows={4}
-                placeholder="Enter your complete delivery address (House/Flat no., Area, Landmark)"
-                aria-label="Delivery Address"
-              />
+            <div className="text-center p-6 bg-green-50 rounded-xl">
+              <Package className="w-8 h-8 text-green-600 mx-auto mb-3" />
+              <h4 className="font-semibold text-gray-900 mb-2">Track Deliveries</h4>
+              <p className="text-sm text-gray-600">Real-time delivery updates</p>
             </div>
-
-            <button
-              onClick={handleSubmit}
-              className="w-full bg-gradient-to-r from-blue-600 to-blue-700 text-white py-5 rounded-xl font-bold text-xl hover:shadow-2xl transition transform hover:scale-105"
-              aria-label="Submit subscription request"
-            >
-              Submit Subscription Request
-            </button>
-
-            <div className="text-center pt-4 border-t-2 border-gray-100">
-              <p className="text-gray-600 mb-2">Prefer to call? We're here to help!</p>
-              <a href="tel:+918935904820" className="text-blue-600 font-bold text-xl hover:text-blue-700" aria-label="Call Back2Nest at 8935904820">
-                <Phone className="w-5 h-5 inline mr-2" />
-                +91 89359 04820
-              </a>
-              <p className="text-sm text-gray-500 mt-2">Available: 5:00 AM - 4:00 PM Daily</p>
+            <div className="text-center p-6 bg-amber-50 rounded-xl">
+              <Star className="w-8 h-8 text-amber-600 mx-auto mb-3" />
+              <h4 className="font-semibold text-gray-900 mb-2">Exclusive Offers</h4>
+              <p className="text-sm text-gray-600">App-only discounts & deals</p>
             </div>
+          </div>
+
+          <a
+            href="https://play.google.com/store/apps/details?id=com.app.back2nest"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="w-full bg-gradient-to-r from-blue-600 to-blue-700 text-white py-5 rounded-xl font-bold text-xl hover:shadow-2xl transition transform hover:scale-105 flex items-center justify-center gap-3"
+            aria-label="Download Back2Nest app from Google Play Store"
+          >
+            <Download className="w-6 h-6" />
+            Download from Google Play
+          </a>
+
+          <div className="text-center pt-6 border-t-2 border-gray-100 mt-8">
+            <p className="text-gray-600 mb-2">Need help? We're here for you!</p>
+            <a href="mailto:help@back2nest.in" className="text-blue-600 font-semibold text-lg hover:text-blue-700 hover:underline" aria-label="Email Back2Nest support">
+              help@back2nest.in
+            </a>
+            <p className="text-sm text-gray-500 mt-2">Support available: 5:00 AM - 4:00 PM Daily</p>
           </div>
         </div>
       </div>

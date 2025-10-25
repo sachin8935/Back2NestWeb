@@ -1,6 +1,6 @@
 import { Metadata } from 'next';
 import Link from 'next/link';
-import { Milk, ArrowLeft, Shield, CheckCircle, Award, Thermometer, Droplet, Sparkles, Phone, Heart, Users, Truck, Clock, Sun, Flame, Leaf, Eye, Settings } from 'lucide-react';
+import { Milk, ArrowLeft, Shield, CheckCircle, Award, Thermometer, Droplet, Sparkles, Download, Heart, Users, Truck, Clock, Sun, Flame, Leaf, Eye, Settings, Smartphone } from 'lucide-react';
 import Footer from '@/components/Footer';
 
 export const metadata: Metadata = {
@@ -657,11 +657,12 @@ export default function ProductsHub() {
                     Start your journey to healthier living with our pure dairy products delivered fresh to your doorstep.
                   </p>
                   <div className="space-y-4">
-                    <a href="tel:+918935904820" className="block bg-amber-600 text-white px-8 py-4 rounded-full font-bold text-center hover:bg-amber-700 transition text-lg">
-                      Call +91 89359 04820
+                    <a href="https://play.google.com/store/apps/details?id=com.app.back2nest" target="_blank" rel="noopener noreferrer" className="bg-amber-600 text-white px-8 py-4 rounded-full font-bold text-center hover:bg-amber-700 transition text-lg flex items-center justify-center gap-2">
+                      <Download className="w-5 h-5" />
+                      Download App to Order
                     </a>
-                    <Link href="/#order" className="block border-2 border-amber-600 text-amber-600 px-8 py-4 rounded-full font-bold text-center hover:bg-amber-50 transition text-lg">
-                      Subscribe Online
+                    <Link href="/quick-order" className="block border-2 border-amber-600 text-amber-600 px-8 py-4 rounded-full font-bold text-center hover:bg-amber-50 transition text-lg">
+                      Quick Order
                     </Link>
                   </div>
                   <p className="text-gray-500 text-sm mt-6 text-center">
@@ -677,15 +678,15 @@ export default function ProductsHub() {
           <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
             <h2 className="text-4xl font-bold text-gray-900 mb-6">Have Questions About Our Products?</h2>
             <p className="text-xl text-gray-600 mb-8">
-              We're here to help! Call us or explore our detailed process pages to learn everything about how we make our products.
+              Download our app or explore our detailed process pages to learn everything about how we make our products.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <a href="tel:+918935904820" className="bg-amber-600 text-white px-10 py-4 rounded-full text-lg font-semibold hover:bg-amber-700 transition inline-flex items-center justify-center space-x-2">
-                <Phone className="w-5 h-5" />
-                <span>Call Us: +91 89359 04820</span>
+              <a href="https://play.google.com/store/apps/details?id=com.app.back2nest" target="_blank" rel="noopener noreferrer" className="bg-amber-600 text-white px-10 py-4 rounded-full text-lg font-semibold hover:bg-amber-700 transition inline-flex items-center justify-center space-x-2">
+                <Download className="w-5 h-5" />
+                <span>Download App</span>
               </a>
-              <Link href="/#order" className="border-2 border-amber-600 text-amber-600 px-10 py-4 rounded-full text-lg font-semibold hover:bg-amber-50 transition">
-                View All Products
+              <Link href="/quick-order" className="border-2 border-amber-600 text-amber-600 px-10 py-4 rounded-full text-lg font-semibold hover:bg-amber-50 transition">
+                Quick Order
               </Link>
             </div>
             <div className="mt-12 grid grid-cols-2 md:grid-cols-4 gap-4">
