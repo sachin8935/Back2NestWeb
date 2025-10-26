@@ -63,34 +63,38 @@ export default function KankarbaghMilkDeliveryPage() {
 
   const jsonLd = {
     '@context': 'https://schema.org',
-    '@type': 'Service',
-    'name': 'Milk Delivery in Kankarbagh Patna',
-    'serviceType': 'Fresh Milk Home Delivery',
-    'provider': {
-      '@type': 'LocalBusiness',
-      'name': 'Back2Nest',
-      'telephone': '+918935904820',
-      'email': 'help@back2nest.in',
-      'address': {
-        '@type': 'PostalAddress',
-        'streetAddress': 'Jagat Narayan Road, Kadam Kuan',
-        'addressLocality': 'Patna',
-        'addressRegion': 'Bihar',
-        'postalCode': '800003',
-        'addressCountry': 'IN'
-      },
-      'priceRange': '₹₹',
-      'aggregateRating': {
-        '@type': 'AggregateRating',
-        'ratingValue': '4.8',
-        'reviewCount': '127'
-      }
+    '@type': 'LocalBusiness',
+    'name': 'Back2Nest - Milk Delivery in Kankarbagh Patna',
+    'image': 'https://www.back2nest.in/logo.png',
+    'telephone': '+918935904820',
+    'email': 'help@back2nest.in',
+    'address': {
+      '@type': 'PostalAddress',
+      'streetAddress': 'Jagat Narayan Road, Kadam Kuan',
+      'addressLocality': 'Patna',
+      'addressRegion': 'Bihar',
+      'postalCode': '800003',
+      'addressCountry': 'IN'
     },
+    'geo': {
+      '@type': 'GeoCoordinates',
+      'latitude': 25.607376,
+      'longitude': 85.1540066
+    },
+    'url': 'https://www.back2nest.in/milk-delivery-patna/kankarbagh',
+    'priceRange': '₹₹',
     'areaServed': {
       '@type': 'Place',
       'name': 'Kankarbagh, Patna'
     },
-    'description': 'Fresh A2 cow milk delivered daily by 5 AM to homes in Kankarbagh, Patna. 100% pure with no adulteration.'
+    'description': 'Fresh A2 cow milk delivered daily by 5 AM to homes in Kankarbagh, Patna. 100% pure with no adulteration.',
+    'aggregateRating': {
+      '@type': 'AggregateRating',
+      'ratingValue': '4.8',
+      'reviewCount': '127',
+      'bestRating': '5',
+      'worstRating': '1'
+    }
   };
 
   return (

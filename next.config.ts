@@ -16,22 +16,33 @@ const nextConfig: NextConfig = {
     deviceSizes: [640, 750, 828, 1080, 1200, 1920],
     imageSizes: [16, 32, 48, 64, 96, 128, 256, 384],
   },
+
   reactStrictMode: true,
+
   compiler: {
-    removeConsole: process.env.NODE_ENV === 'production' ? {
-      exclude: ['error', 'warn'],
-    } : false,
+    removeConsole: process.env.NODE_ENV === 'production'
+      ? { exclude: ['error', 'warn'] }
+      : false,
   },
-  // Compress responses
-  compress: true,
-  // Optimize production build
+
+  compress: true, // Enable gzip compression
   productionBrowserSourceMaps: false,
-  // Enable modern module/nomodule pattern
+  poweredByHeader: false, // Hide "X-Powered-By: Next.js"
+
   experimental: {
     optimizePackageImports: ['lucide-react'],
   },
-  // Power optimization for script loading
-  poweredByHeader: false,
+
+  // ✅ Important addition — ensure assetlinks.json is served directly (no redirects)
+  async redirects() {
+    return [
+      {
+        source: '/.well-known/assetlinks.json',
+        destination: '/.well-known/assetlinks.json',
+        permanent: false,
+      },
+    ];
+  },
 };
 
 export default nextConfig;

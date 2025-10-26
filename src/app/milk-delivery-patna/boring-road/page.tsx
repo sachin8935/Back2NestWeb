@@ -69,22 +69,25 @@ export default function BoringRoadMilkDeliveryPage() {
 
   const jsonLd = {
     '@context': 'https://schema.org',
-    '@type': 'Service',
-    'name': 'Milk Delivery in Boring Road Patna',
-    'serviceType': 'Fresh Milk Home Delivery',
-    'provider': {
-      '@type': 'LocalBusiness',
-      'name': 'Back2Nest',
-      'telephone': '+918935904820',
-      'address': {
-        '@type': 'PostalAddress',
-        'streetAddress': 'Jagat Narayan Road, Kadam Kuan',
-        'addressLocality': 'Patna',
-        'addressRegion': 'Bihar',
-        'postalCode': '800003',
-        'addressCountry': 'IN'
-      }
+    '@type': 'LocalBusiness',
+    'name': 'Back2Nest - Milk Delivery in Boring Road Patna',
+    'image': 'https://www.back2nest.in/logo.png',
+    'telephone': '+918935904820',
+    'address': {
+      '@type': 'PostalAddress',
+      'streetAddress': 'Jagat Narayan Road, Kadam Kuan',
+      'addressLocality': 'Patna',
+      'addressRegion': 'Bihar',
+      'postalCode': '800003',
+      'addressCountry': 'IN'
     },
+    'geo': {
+      '@type': 'GeoCoordinates',
+      'latitude': 25.607376,
+      'longitude': 85.1540066
+    },
+    'url': 'https://www.back2nest.in/milk-delivery-patna/boring-road',
+    'priceRange': '₹₹',
     'areaServed': {
       '@type': 'Place',
       'name': 'Boring Road, Patna'
@@ -103,8 +106,18 @@ export default function BoringRoadMilkDeliveryPage() {
     '@context': 'https://schema.org',
     '@type': 'Review',
     'itemReviewed': {
-      '@type': 'Service',
-      'name': 'Back2Nest Milk Delivery in Boring Road'
+      '@type': 'LocalBusiness',
+      'name': 'Back2Nest - Milk Delivery in Boring Road Patna',
+      'image': 'https://www.back2nest.in/logo.png',
+      'telephone': '+918935904820',
+      'address': {
+        '@type': 'PostalAddress',
+        'streetAddress': 'Jagat Narayan Road, Kadam Kuan',
+        'addressLocality': 'Patna',
+        'addressRegion': 'Bihar',
+        'postalCode': '800003',
+        'addressCountry': 'IN'
+      }
     },
     'reviewRating': {
       '@type': 'Rating',
