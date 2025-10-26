@@ -13,7 +13,7 @@ export const metadata: Metadata = {
     description: 'Discover how Back2Nest makes fresh, soft paneer daily in Patna using pure A2 milk and traditional methods.',
     images: [
       {
-        url: 'https://www.back2nest.in/paneer.jpeg',
+        url: 'https://back2nest.in/paneer.jpeg',
         width: 1200,
         height: 630,
         alt: 'Back2Nest Fresh Paneer made with natural lemon curdling'
@@ -22,7 +22,7 @@ export const metadata: Metadata = {
     type: 'article',
   },
   alternates: {
-    canonical: 'https://www.back2nest.in/products/paneer',
+    canonical: 'https://back2nest.in/products/paneer',
   },
 };
 
@@ -45,7 +45,7 @@ export default function PaneerProcess() {
             "name": "Back2Nest",
             "logo": {
               "@type": "ImageObject",
-              "url": "https://www.back2nest.in/logo.png"
+              "url": "https://back2nest.in/logo.png"
             }
           },
           "datePublished": "2025-01-15",
@@ -59,10 +59,10 @@ export default function PaneerProcess() {
           "@type": "Product",
           "name": "Fresh Taaza Paneer - Natural Lemon Curdling",
           "description": "Soft, natural lemon-curdled paneer made from pure A2 cow milk. Delivered fresh daily in Patna. No chemicals, authentic homemade taste.",
-          "image": ["https://www.back2nest.in/paneer.jpeg"],
+          "image": ["https://back2nest.in/paneer.jpeg"],
           "brand": { "@type": "Brand", "name": "Back2Nest" },
           "category": "Dairy Products",
-          "url": "https://www.back2nest.in/products/paneer",
+          "url": "https://back2nest.in/products/paneer",
           "sku": "B2N-PANEER-001",
           "offers": {
             "@type": "AggregateOffer",
@@ -75,7 +75,7 @@ export default function PaneerProcess() {
               "@type": "Organization",
               "name": "Back2Nest"
             },
-            "url": "https://www.back2nest.in/products/paneer"
+            "url": "https://back2nest.in/products/paneer"
           },
           "aggregateRating": {
             "@type": "AggregateRating",

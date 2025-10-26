@@ -14,7 +14,7 @@ export const metadata: Metadata = {
     type: 'website',
   },
   alternates: {
-    canonical: 'https://www.back2nest.in/reviews',
+    canonical: 'https://back2nest.in/reviews',
   },
 };
 
@@ -156,7 +156,7 @@ export default function ReviewsPage() {
           "@context": "https://schema.org",
           "@type": "LocalBusiness",
           "name": "Back2Nest - Fresh Dairy Products Patna",
-          "image": "https://www.back2nest.in/logo.png",
+          "image": "https://back2nest.in/logo.png",
           "address": {
             "@type": "PostalAddress",
             "streetAddress": "Kadam Kuan",

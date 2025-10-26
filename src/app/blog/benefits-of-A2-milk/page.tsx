@@ -11,25 +11,25 @@ export default function BenefitsOfA2Milk() {
     "@type": "Article",
     "headline": "Top Benefits of A2 Milk: Why It's Better for Your Health",
     "description": "Discover the amazing health benefits of A2 milk from desi cows. Learn how A2 milk improves digestion, immunity, and overall well-being for your family.",
-    "image": "https://www.back2nest.in/milk.jpeg",
+    "image": "https://back2nest.in/milk.jpeg",
     "author": {
       "@type": "Organization",
       "name": "Back2Nest",
-      "url": "https://www.back2nest.in"
+      "url": "https://back2nest.in"
     },
     "publisher": {
       "@type": "Organization",
       "name": "Back2Nest",
       "logo": {
         "@type": "ImageObject",
-        "url": "https://www.back2nest.in/logo.png"
+        "url": "https://back2nest.in/logo.png"
       }
     },
     "datePublished": "2025-01-15",
     "dateModified": "2025-10-22",
     "mainEntityOfPage": {
       "@type": "WebPage",
-      "@id": "https://www.back2nest.in/blog/benefits-of-A2-milk"
+      "@id": "https://back2nest.in/blog/benefits-of-A2-milk"
     },
     "keywords": ["A2 milk benefits", "desi cow milk", "health benefits", "milk nutrition", "Patna dairy"]
   };
@@ -132,7 +132,7 @@ export default function BenefitsOfA2Milk() {
             A2 milk isn’t just a trend — it’s a return to purity, tradition, and better health. From improved digestion to enhanced immunity, it’s nature’s way of keeping us strong. By switching to <strong>Back2Nest</strong> A2 milk, you’re choosing freshness, honesty, and wellness — delivered every morning right here in Patna.
           </p>
           <p>
-            Ready to make the switch? Visit <a href="https://www.back2nest.in">back2nest.in</a> today and start your A2 milk journey.
+            Ready to make the switch? Visit <a href="https://back2nest.in">back2nest.in</a> today and start your A2 milk journey.
           </p>
         </div>
     </BlogPost>

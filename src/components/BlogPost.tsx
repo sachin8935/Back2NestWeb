@@ -22,22 +22,22 @@ export default function BlogPost({ slug, children }: { slug: string; children: R
     datePublished: new Date(post.date).toISOString(),
     dateModified: new Date(post.date).toISOString(),
     articleSection: post.category,
-    url: `https://www.back2nest.in/blog/${post.slug}`,
+    url: `https://back2nest.in/blog/${post.slug}`,
     mainEntityOfPage: {
       '@type': 'WebPage',
-      '@id': `https://www.back2nest.in/blog/${post.slug}`,
+      '@id': `https://back2nest.in/blog/${post.slug}`,
     },
     author: {
       '@type': 'Organization',
       name: 'Back2Nest',
-      url: 'https://www.back2nest.in'
+      url: 'https://back2nest.in'
     },
     publisher: {
       '@type': 'Organization',
       name: 'Back2Nest',
       logo: {
         '@type': 'ImageObject',
-        url: 'https://www.back2nest.in/logo.png',
+        url: 'https://back2nest.in/logo.png',
         width: 512,
         height: 512
       },
@@ -53,19 +53,19 @@ export default function BlogPost({ slug, children }: { slug: string; children: R
         '@type': 'ListItem',
         position: 1,
         name: 'Home',
-        item: 'https://www.back2nest.in/'
+        item: 'https://back2nest.in/'
       },
       {
         '@type': 'ListItem',
         position: 2,
         name: 'Blog',
-        item: 'https://www.back2nest.in/blog'
+        item: 'https://back2nest.in/blog'
       },
       {
         '@type': 'ListItem',
         position: 3,
         name: post.title,
-        item: `https://www.back2nest.in/blog/${post.slug}`
+        item: `https://back2nest.in/blog/${post.slug}`
       }
     ]
   };

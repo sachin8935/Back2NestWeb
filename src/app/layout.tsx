@@ -10,7 +10,7 @@ const inter = Inter({
   preload: true,
 });
 
-const SITE_URL = 'https://www.back2nest.in';
+const SITE_URL = 'https://back2nest.in';
 const SITE_NAME = 'Back2Nest';
 const DEFAULT_DESCRIPTION = 'Fresh, pure cow milk delivered early morning in Patna. Farm-to-home, unadulterated and natural. Download our app to order today!';
 

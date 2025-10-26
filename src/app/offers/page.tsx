@@ -2,7 +2,7 @@ import { Metadata } from 'next';
 import Script from 'next/script';
 import OffersPageClient from './OffersPageClient';
 
-const SITE_URL = 'https://www.back2nest.in';
+const SITE_URL = 'https://back2nest.in';
 const SITE_NAME = 'Back2Nest';
 
 // SEO Metadata for Offers page

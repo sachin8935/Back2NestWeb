@@ -13,7 +13,7 @@ export const metadata: Metadata = {
     description: 'Discover how Back2Nest delivers 100% pure, farm-fresh A2 milk directly to your doorstep in Patna.',
     images: [
       {
-        url: 'https://www.back2nest.in/milk.jpeg',
+        url: 'https://back2nest.in/milk.jpeg',
         width: 1200,
         height: 630,
         alt: 'Back2Nest Fresh A2 Milk - Farm fresh milk delivered in Patna'
@@ -22,7 +22,7 @@ export const metadata: Metadata = {
     type: 'article',
   },
   alternates: {
-    canonical: 'https://www.back2nest.in/products/milk',
+    canonical: 'https://back2nest.in/products/milk',
   },
 };
 
@@ -45,7 +45,7 @@ export default function OurProcess() {
             "name": "Back2Nest",
             "logo": {
               "@type": "ImageObject",
-              "url": "https://www.back2nest.in/logo.png"
+              "url": "https://back2nest.in/logo.png"
             }
           },
           "datePublished": "2025-01-15",
@@ -59,13 +59,13 @@ export default function OurProcess() {
           "@type": "Product",
           "name": "Fresh A2 Cow Milk - Farm to Doorstep",
           "description": "100% pure, farm-fresh A2 milk delivered daily in Patna. Collected early morning, lab-tested, and delivered chilled to your doorstep by 5 AM. No preservatives, no adulteration.",
-          "image": ["https://www.back2nest.in/milk.jpeg"],
+          "image": ["https://back2nest.in/milk.jpeg"],
           "brand": { 
             "@type": "Brand", 
             "name": "Back2Nest" 
           },
           "category": "Dairy Products",
-          "url": "https://www.back2nest.in/products/milk",
+          "url": "https://back2nest.in/products/milk",
           "sku": "B2N-MILK-001",
           "offers": {
             "@type": "AggregateOffer",
@@ -77,7 +77,7 @@ export default function OurProcess() {
               "@type": "Organization",
               "name": "Back2Nest"
             },
-            "url": "https://www.back2nest.in/products/milk"
+            "url": "https://back2nest.in/products/milk"
           },
           "aggregateRating": {
             "@type": "AggregateRating",
@@ -111,9 +111,9 @@ export default function OurProcess() {
           "@context": "https://schema.org",
           "@type": "BreadcrumbList",
           "itemListElement": [
-            { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://www.back2nest.in/" },
-            { "@type": "ListItem", "position": 2, "name": "Products", "item": "https://www.back2nest.in/products" },
-            { "@type": "ListItem", "position": 3, "name": "Milk", "item": "https://www.back2nest.in/products/milk" }
+            { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://back2nest.in/" },
+            { "@type": "ListItem", "position": 2, "name": "Products", "item": "https://back2nest.in/products" },
+            { "@type": "ListItem", "position": 3, "name": "Milk", "item": "https://back2nest.in/products/milk" }
           ]
         })
       }} />

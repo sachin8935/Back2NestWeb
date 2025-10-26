@@ -512,7 +512,7 @@ export default function HomePageClient() {
         "@type": "ListItem",
         "position": 1,
         "name": "Home",
-        "item": "https://www.back2nest.in"
+        "item": "https://back2nest.in"
       }
     ]
   };

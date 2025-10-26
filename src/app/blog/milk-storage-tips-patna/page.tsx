@@ -11,7 +11,7 @@ export default function MilkStorageTipsPatna() {
     "@type": "Article",
     "headline": "Smart Milk Storage Tips for Patna Homes – Keep It Fresh, Pure & Healthy",
     "description": "Learn essential milk storage tips for Patna's climate. Discover how to keep fresh A2 milk safe, prevent spoilage, and maintain nutrients in warm weather conditions.",
-    "image": "https://www.back2nest.in/milk.jpeg",
+    "image": "https://back2nest.in/milk.jpeg",
     "datePublished": "2025-01-05",
     "dateModified": "2025-01-05",
     "author": {
@@ -23,12 +23,12 @@ export default function MilkStorageTipsPatna() {
       "name": "Back2Nest",
       "logo": {
         "@type": "ImageObject",
-        "url": "https://www.back2nest.in/logo.png"
+        "url": "https://back2nest.in/logo.png"
       }
     },
     "mainEntityOfPage": {
       "@type": "WebPage",
-      "@id": "https://www.back2nest.in/blog/milk-storage-tips-patna"
+      "@id": "https://back2nest.in/blog/milk-storage-tips-patna"
     }
   };
 
@@ -232,7 +232,7 @@ export default function MilkStorageTipsPatna() {
           </p>
 
           <p>
-            Visit <a href="https://www.back2nest.in">back2nest.in</a> today to
+            Visit <a href="https://back2nest.in">back2nest.in</a> today to
             subscribe and enjoy Patna's purest A2 milk — delivered early every
             morning.
           </p>

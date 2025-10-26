@@ -7,7 +7,7 @@ export const metadata: Metadata = {
   title: 'Refund Policy | Back2Nest',
   description: 'Read our refund and return policy for Back2Nest dairy delivery services in Patna.',
   alternates: {
-    canonical: 'https://www.back2nest.in/refund-policy',
+    canonical: 'https://back2nest.in/refund-policy',
   },
 };
 

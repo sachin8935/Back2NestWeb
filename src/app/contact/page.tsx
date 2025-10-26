@@ -10,11 +10,11 @@ export const metadata: Metadata = {
   openGraph: {
     title: 'Contact Back2Nest Patna | Milk Delivery Service',
     description: 'Get in touch with Back2Nest for fresh milk delivery in Patna. Download our app or email us.',
-    url: 'https://www.back2nest.in/contact',
+    url: 'https://back2nest.in/contact',
     type: 'website',
     images: [
       {
-        url: 'https://www.back2nest.in/milk.jpeg',
+        url: 'https://back2nest.in/milk.jpeg',
         width: 1200,
         height: 630,
         alt: 'Contact Back2Nest - Fresh Milk Delivery in Patna',
@@ -25,10 +25,10 @@ export const metadata: Metadata = {
     card: 'summary_large_image',
     title: 'Contact Back2Nest Patna',
     description: 'Get in touch for fresh milk delivery in Patna.',
-    images: ['https://www.back2nest.in/milk.jpeg'],
+    images: ['https://back2nest.in/milk.jpeg'],
   },
   alternates: {
-    canonical: 'https://www.back2nest.in/contact',
+    canonical: 'https://back2nest.in/contact',
   },
 };
 

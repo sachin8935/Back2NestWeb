@@ -19,11 +19,11 @@ export const metadata: Metadata = {
   openGraph: {
     title: 'Milk Price in Patna | Affordable A2 Milk Subscription Plans',
     description: 'Competitive pricing on pure A2 milk in Patna. Flexible daily, weekly & monthly plans available.',
-    url: 'https://www.back2nest.in/milk-price-patna',
+    url: 'https://back2nest.in/milk-price-patna',
     type: 'website',
     images: [
       {
-        url: 'https://www.back2nest.in/milk.jpeg',
+        url: 'https://back2nest.in/milk.jpeg',
         width: 1200,
         height: 630,
         alt: 'Milk Prices in Patna - Back2Nest Affordable A2 Milk Plans',
@@ -34,10 +34,10 @@ export const metadata: Metadata = {
     card: 'summary_large_image',
     title: 'Milk Price in Patna | Back2Nest',
     description: 'Competitive pricing on pure A2 milk in Patna.',
-    images: ['https://www.back2nest.in/milk.jpeg'],
+    images: ['https://back2nest.in/milk.jpeg'],
   },
   alternates: {
-    canonical: 'https://www.back2nest.in/milk-price-patna',
+    canonical: 'https://back2nest.in/milk-price-patna',
   },
 };
 

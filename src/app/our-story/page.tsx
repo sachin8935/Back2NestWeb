@@ -20,11 +20,11 @@ export const metadata: Metadata = {
   openGraph: {
     title: 'Our Story - Fighting Milk Adulteration with Pure A2 Milk',
     description: 'From CSE graduate to milk delivery entrepreneur - the inspiring journey of Back2Nest and our mission to solve milk adulteration in Patna.',
-    url: 'https://www.back2nest.in/our-story',
+    url: 'https://back2nest.in/our-story',
     type: 'article',
     images: [
       {
-        url: 'https://www.back2nest.in/sachin.png',
+        url: 'https://back2nest.in/sachin.png',
         width: 1200,
         height: 630,
         alt: 'Back2Nest Founder - Fighting milk adulteration in Patna',
@@ -35,10 +35,10 @@ export const metadata: Metadata = {
     card: 'summary_large_image',
     title: 'Our Story - How Back2Nest Is Solving Milk Adulteration',
     description: 'The inspiring journey from problem to solution - bringing pure milk to Patna families.',
-    images: ['https://www.back2nest.in/sachin.png'],
+    images: ['https://back2nest.in/sachin.png'],
   },
   alternates: {
-    canonical: 'https://www.back2nest.in/our-story',
+    canonical: 'https://back2nest.in/our-story',
   },
 };
 
@@ -48,7 +48,7 @@ export default function OurStoryPage() {
     '@type': 'Article',
     'headline': 'Our Story - How Back2Nest Started Fighting Milk Adulteration in Patna',
     'description': 'The inspiring story of how a CSE graduate discovered the problem of milk adulteration in Patna and founded Back2Nest to bring pure, farm-fresh A2 milk to every home.',
-    'image': 'https://www.back2nest.in/sachin.png',
+    'image': 'https://back2nest.in/sachin.png',
     'datePublished': '2024-10-15',
     'dateModified': '2025-10-22',
     'author': {
@@ -62,12 +62,12 @@ export default function OurStoryPage() {
       'name': 'Back2Nest',
       'logo': {
         '@type': 'ImageObject',
-        'url': 'https://www.back2nest.in/logo.png'
+        'url': 'https://back2nest.in/logo.png'
       }
     },
     'mainEntityOfPage': {
       '@type': 'WebPage',
-      '@id': 'https://www.back2nest.in/our-story'
+      '@id': 'https://back2nest.in/our-story'
     }
   };
 

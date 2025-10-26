@@ -7,7 +7,7 @@ export const metadata: Metadata = {
   title: 'Terms and Conditions | Back2Nest',
   description: 'Read our terms and conditions for Back2Nest dairy delivery services in Patna.',
   alternates: {
-    canonical: 'https://www.back2nest.in/terms-conditions',
+    canonical: 'https://back2nest.in/terms-conditions',
   },
 };
 

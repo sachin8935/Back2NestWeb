@@ -21,7 +21,7 @@ export const metadata: Metadata = {
   openGraph: {
     title: 'Fresh Milk Delivery in Patliputra Colony Patna | Back2Nest',
     description: 'Pure A2 cow milk delivered to Patliputra homes by 5 AM. Trusted by families across Patliputra area.',
-    url: 'https://www.back2nest.in/milk-delivery-patna/patliputra',
+    url: 'https://back2nest.in/milk-delivery-patna/patliputra',
     type: 'website',
     images: [{
       url: 'https://res.cloudinary.com/back2nest/image/upload/v1760552656/offer_banners/gjb3sg9cvpzu2yuzxvvd.jpg',
@@ -31,7 +31,7 @@ export const metadata: Metadata = {
     }]
   },
   alternates: {
-    canonical: 'https://www.back2nest.in/milk-delivery-patna/patliputra',
+    canonical: 'https://back2nest.in/milk-delivery-patna/patliputra',
   },
 };
 
@@ -44,19 +44,19 @@ export default function PatliputraMilkDeliveryPage() {
         "@type": "ListItem",
         "position": 1,
         "name": "Home",
-        "item": "https://www.back2nest.in"
+        "item": "https://back2nest.in"
       },
       {
         "@type": "ListItem",
         "position": 2,
         "name": "Milk Delivery Patna",
-        "item": "https://www.back2nest.in/milk-delivery-patna"
+        "item": "https://back2nest.in/milk-delivery-patna"
       },
       {
         "@type": "ListItem",
         "position": 3,
         "name": "Patliputra Colony",
-        "item": "https://www.back2nest.in/milk-delivery-patna/patliputra"
+        "item": "https://back2nest.in/milk-delivery-patna/patliputra"
       }
     ]
   };
@@ -65,7 +65,7 @@ export default function PatliputraMilkDeliveryPage() {
     '@context': 'https://schema.org',
     '@type': 'LocalBusiness',
     'name': 'Back2Nest - Milk Delivery in Patliputra Patna',
-    'image': 'https://www.back2nest.in/logo.png',
+    'image': 'https://back2nest.in/logo.png',
     'telephone': '+918935904820',
     'email': 'help@back2nest.in',
     'address': {
@@ -81,7 +81,7 @@ export default function PatliputraMilkDeliveryPage() {
       'latitude': 25.607376,
       'longitude': 85.1540066
     },
-    'url': 'https://www.back2nest.in/milk-delivery-patna/patliputra',
+    'url': 'https://back2nest.in/milk-delivery-patna/patliputra',
     'priceRange': '₹₹',
     'areaServed': {
       '@type': 'Place',

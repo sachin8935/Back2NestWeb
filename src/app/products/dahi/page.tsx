@@ -13,7 +13,7 @@ export const metadata: Metadata = {
     description: 'Experience authentic homemade dahi made daily using traditional methods. Fresh, creamy, and delivered to your doorstep in Patna.',
     images: [
       {
-        url: 'https://www.back2nest.in/dahi.jpeg',
+        url: 'https://back2nest.in/dahi.jpeg',
         width: 1200,
         height: 630,
         alt: 'Back2Nest Fresh Homemade Dahi in Patna'
@@ -22,7 +22,7 @@ export const metadata: Metadata = {
     type: 'article',
   },
   alternates: {
-    canonical: 'https://www.back2nest.in/products/dahi',
+    canonical: 'https://back2nest.in/products/dahi',
   },
 };
 
@@ -35,7 +35,7 @@ export default function DahiProcess() {
           "@type": "Article",
           "headline": "Traditional Dahi Making Process - Back2Nest's Fresh Homemade Curd in Patna",
           "description": "Discover how Back2Nest makes fresh, creamy dahi (curd) using traditional methods and pure milk. Learn about our authentic process from milk selection to same-day delivery in Patna.",
-          "image": "https://www.back2nest.in/dahi.jpeg",
+          "image": "https://back2nest.in/dahi.jpeg",
           "author": {
             "@type": "Organization",
             "name": "Back2Nest"
@@ -45,7 +45,7 @@ export default function DahiProcess() {
             "name": "Back2Nest",
             "logo": {
               "@type": "ImageObject",
-              "url": "https://www.back2nest.in/logo.png"
+              "url": "https://back2nest.in/logo.png"
             }
           },
           "datePublished": "2025-01-15",
@@ -59,10 +59,10 @@ export default function DahiProcess() {
           "@type": "Product",
           "name": "Fresh Homemade Dahi (Curd) - Traditional Process",
           "description": "Thick, creamy dahi made daily using traditional methods from pure milk. Same-day delivery in Patna. Natural fermentation with probiotic benefits.",
-          "image": ["https://www.back2nest.in/dahi.jpeg"],
+          "image": ["https://back2nest.in/dahi.jpeg"],
           "brand": { "@type": "Brand", "name": "Back2Nest" },
           "category": "Dairy Products",
-          "url": "https://www.back2nest.in/products/dahi",
+          "url": "https://back2nest.in/products/dahi",
           "sku": "B2N-DAHI-001",
           "offers": {
             "@type": "AggregateOffer",
@@ -75,7 +75,7 @@ export default function DahiProcess() {
               "@type": "Organization",
               "name": "Back2Nest"
             },
-            "url": "https://www.back2nest.in/products/dahi"
+            "url": "https://back2nest.in/products/dahi"
           },
           "aggregateRating": {
             "@type": "AggregateRating",

@@ -4,20 +4,20 @@ import { Milk, ArrowLeft, Shield, CheckCircle, Award, Thermometer, Droplet, Spar
 import Footer from '@/components/Footer';
 
 export const metadata: Metadata = {
-  metadataBase: new URL('https://www.back2nest.in'),
+  metadataBase: new URL('https://back2nest.in'),
   title: 'Dairy Products Patna | A2 Milk, Dahi, Paneer & Ghee',
   description: 'Buy pure dairy products in Patna - Farm-fresh A2 milk, thick dahi, soft paneer, and traditional danedar ghee. Delivered daily to your doorstep. Order now!',
   keywords: ['dairy products patna', 'A2 milk patna', 'fresh dahi patna', 'paneer delivery patna', 'danedar ghee patna', 'buy milk online patna', 'dairy store patna', 'farm fresh products patna'],
   openGraph: {
     title: 'Premium Dairy Products Patna | Fresh A2 Milk, Dahi, Paneer & Ghee',
     description: 'Order pure, fresh dairy products delivered daily in Patna. A2 milk, dahi, paneer, and bilona ghee made with traditional methods.',
-    url: 'https://www.back2nest.in/products',
+    url: 'https://back2nest.in/products',
     siteName: 'Back2Nest',
     locale: 'en_IN',
     type: 'website',
     images: [
       {
-        url: 'https://www.back2nest.in/milk.jpeg',
+        url: 'https://back2nest.in/milk.jpeg',
         width: 1200,
         height: 630,
         alt: 'Back2Nest Premium Dairy Products - Fresh Milk, Dahi, Paneer & Ghee in Patna',
@@ -28,7 +28,7 @@ export const metadata: Metadata = {
     card: 'summary_large_image',
     title: 'Premium Dairy Products Patna',
     description: 'Order pure, fresh dairy products delivered daily in Patna.',
-    images: ['https://www.back2nest.in/milk.jpeg'],
+    images: ['https://back2nest.in/milk.jpeg'],
     creator: '@B2N_Back2Nest',
   },
   robots: {
@@ -43,7 +43,7 @@ export const metadata: Metadata = {
     },
   },
   alternates: {
-    canonical: 'https://www.back2nest.in/products',
+    canonical: 'https://back2nest.in/products',
   },
 };
 
@@ -56,13 +56,13 @@ export default function ProductsHub() {
         "@type": "ListItem",
         "position": 1,
         "name": "Home",
-        "item": "https://www.back2nest.in"
+        "item": "https://back2nest.in"
       },
       {
         "@type": "ListItem",
         "position": 2,
         "name": "Products",
-        "item": "https://www.back2nest.in/products"
+        "item": "https://back2nest.in/products"
       }
     ]
   };
@@ -78,7 +78,7 @@ export default function ProductsHub() {
           "@type": "WebPage",
           "name": "Back2Nest Products - Fresh Milk, Dahi, Paneer & Ghee | Patna",
           "description": "Explore Back2Nest's range of pure dairy products made with highest safety standards. Fresh A2 milk, creamy dahi, soft paneer, and traditional danedar ghee delivered daily in Patna.",
-          "url": "https://www.back2nest.in/products"
+          "url": "https://back2nest.in/products"
         })
       }} />
 

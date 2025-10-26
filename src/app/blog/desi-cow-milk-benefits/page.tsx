@@ -11,7 +11,7 @@ export default function DesiCowMilkBenefits() {
     "@type": "Article",
     "headline": "Top Health Benefits of Desi Cow Milk: Why It's India's Original Superfood",
     "description": "Discover the incredible health benefits of Desi cow milk from indigenous Indian breeds. Learn why A2 milk from Gir, Sahiwal cows is easier to digest and packed with nutrients.",
-    "image": "https://www.back2nest.in/milk.jpeg",
+    "image": "https://back2nest.in/milk.jpeg",
     "datePublished": "2025-01-12",
     "dateModified": "2025-01-12",
     "author": {
@@ -23,12 +23,12 @@ export default function DesiCowMilkBenefits() {
       "name": "Back2Nest",
       "logo": {
         "@type": "ImageObject",
-        "url": "https://www.back2nest.in/logo.png"
+        "url": "https://back2nest.in/logo.png"
       }
     },
     "mainEntityOfPage": {
       "@type": "WebPage",
-      "@id": "https://www.back2nest.in/blog/desi-cow-milk-benefits"
+      "@id": "https://back2nest.in/blog/desi-cow-milk-benefits"
     }
   };
 
@@ -152,7 +152,7 @@ export default function DesiCowMilkBenefits() {
           </p>
 
           <p>
-            Order your first bottle of <a href="https://www.back2nest.in">Back2Nest A2 Desi Cow Milk</a> today and taste the purity that's redefining how Patna drinks milk — the natural way.
+            Order your first bottle of <a href="https://back2nest.in">Back2Nest A2 Desi Cow Milk</a> today and taste the purity that's redefining how Patna drinks milk — the natural way.
           </p>
 
         </div>

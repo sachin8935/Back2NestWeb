@@ -2,7 +2,7 @@ import { Metadata } from 'next';
 import Script from 'next/script';
 import CareersPageClient from './CareersPageClient';
 
-const SITE_URL = 'https://www.back2nest.in';
+const SITE_URL = 'https://back2nest.in';
 const SITE_NAME = 'Back2Nest';
 
 export const metadata: Metadata = {

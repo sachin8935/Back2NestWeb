@@ -19,11 +19,11 @@ export const metadata: Metadata = {
   openGraph: {
     title: 'Fresh Milk Delivery in Boring Road Patna | Back2Nest',
     description: 'Pure A2 cow milk delivered to Boring Road homes by 5 AM. Trusted by families across Boring Road area.',
-    url: 'https://www.back2nest.in/milk-delivery-patna/boring-road',
+    url: 'https://back2nest.in/milk-delivery-patna/boring-road',
     type: 'website',
     images: [
       {
-        url: 'https://www.back2nest.in/milk.jpeg',
+        url: 'https://back2nest.in/milk.jpeg',
         width: 1200,
         height: 630,
         alt: 'Fresh A2 Milk Delivery in Boring Road Patna - Back2Nest',
@@ -34,10 +34,10 @@ export const metadata: Metadata = {
     card: 'summary_large_image',
     title: 'Fresh Milk Delivery in Boring Road Patna | Back2Nest',
     description: 'Pure A2 cow milk delivered to Boring Road homes by 5 AM.',
-    images: ['https://www.back2nest.in/milk.jpeg'],
+    images: ['https://back2nest.in/milk.jpeg'],
   },
   alternates: {
-    canonical: 'https://www.back2nest.in/milk-delivery-patna/boring-road',
+    canonical: 'https://back2nest.in/milk-delivery-patna/boring-road',
   },
 };
 
@@ -50,19 +50,19 @@ export default function BoringRoadMilkDeliveryPage() {
         "@type": "ListItem",
         "position": 1,
         "name": "Home",
-        "item": "https://www.back2nest.in"
+        "item": "https://back2nest.in"
       },
       {
         "@type": "ListItem",
         "position": 2,
         "name": "Milk Delivery Patna",
-        "item": "https://www.back2nest.in/milk-delivery-patna"
+        "item": "https://back2nest.in/milk-delivery-patna"
       },
       {
         "@type": "ListItem",
         "position": 3,
         "name": "Boring Road",
-        "item": "https://www.back2nest.in/milk-delivery-patna/boring-road"
+        "item": "https://back2nest.in/milk-delivery-patna/boring-road"
       }
     ]
   };
@@ -71,7 +71,7 @@ export default function BoringRoadMilkDeliveryPage() {
     '@context': 'https://schema.org',
     '@type': 'LocalBusiness',
     'name': 'Back2Nest - Milk Delivery in Boring Road Patna',
-    'image': 'https://www.back2nest.in/logo.png',
+    'image': 'https://back2nest.in/logo.png',
     'telephone': '+918935904820',
     'address': {
       '@type': 'PostalAddress',
@@ -86,7 +86,7 @@ export default function BoringRoadMilkDeliveryPage() {
       'latitude': 25.607376,
       'longitude': 85.1540066
     },
-    'url': 'https://www.back2nest.in/milk-delivery-patna/boring-road',
+    'url': 'https://back2nest.in/milk-delivery-patna/boring-road',
     'priceRange': '₹₹',
     'areaServed': {
       '@type': 'Place',
@@ -108,7 +108,7 @@ export default function BoringRoadMilkDeliveryPage() {
     'itemReviewed': {
       '@type': 'LocalBusiness',
       'name': 'Back2Nest - Milk Delivery in Boring Road Patna',
-      'image': 'https://www.back2nest.in/logo.png',
+      'image': 'https://back2nest.in/logo.png',
       'telephone': '+918935904820',
       'address': {
         '@type': 'PostalAddress',

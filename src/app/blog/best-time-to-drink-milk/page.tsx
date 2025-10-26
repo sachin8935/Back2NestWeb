@@ -11,7 +11,7 @@ export default function BestTimeToDrinkMilk() {
     "@type": "Article",
     "headline": "The Best Time to Drink Milk: Morning or Night? Here's What Science Says",
     "description": "Discover the best time to drink milk for maximum health benefits. Learn what science says about morning vs night milk consumption, A2 milk benefits, and optimal timing for digestion.",
-    "image": "https://www.back2nest.in/milk.jpeg",
+    "image": "https://back2nest.in/milk.jpeg",
     "datePublished": "2025-01-08",
     "dateModified": "2025-01-08",
     "author": {
@@ -23,12 +23,12 @@ export default function BestTimeToDrinkMilk() {
       "name": "Back2Nest",
       "logo": {
         "@type": "ImageObject",
-        "url": "https://www.back2nest.in/logo.png"
+        "url": "https://back2nest.in/logo.png"
       }
     },
     "mainEntityOfPage": {
       "@type": "WebPage",
-      "@id": "https://www.back2nest.in/blog/best-time-to-drink-milk"
+      "@id": "https://back2nest.in/blog/best-time-to-drink-milk"
     }
   };
 
@@ -292,7 +292,7 @@ export default function BestTimeToDrinkMilk() {
             of Indian farms, delivered every morning in Patna.
           </p>
           <p>
-            Visit <a href="https://www.back2nest.in">back2nest.in</a> to start your
+            Visit <a href="https://back2nest.in">back2nest.in</a> to start your
             daily A2 milk subscription and make milk a meaningful part of your
             healthy routine — at any time of the day!
           </p>

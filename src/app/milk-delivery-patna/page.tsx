@@ -42,13 +42,13 @@ export const metadata: Metadata = {
   openGraph: {
     title: 'Fresh Milk Delivery Patna | Farm Fresh by 5 AM - Back2Nest',
     description: 'Pure, farm-fresh milk delivered to your home in Patna by 5 AM. Zero adulteration. Join 127+ families enjoying healthy milk daily.',
-    url: 'https://www.back2nest.in/milk-delivery-patna',
+    url: 'https://back2nest.in/milk-delivery-patna',
     siteName: 'Back2Nest',
     locale: 'en_IN',
     type: 'website',
     images: [
       {
-        url: 'https://www.back2nest.in/milk.jpeg',
+        url: 'https://back2nest.in/milk.jpeg',
         width: 1200,
         height: 630,
         alt: 'Fresh Milk Delivery Patna - Back2Nest',
@@ -59,10 +59,10 @@ export const metadata: Metadata = {
     card: 'summary_large_image',
     title: 'Fresh Milk Delivery Patna | Back2Nest',
     description: 'Get 100% pure farm-fresh milk at your doorstep in Patna by 5 AM daily.',
-    images: ['https://www.back2nest.in/milk.jpeg'],
+    images: ['https://back2nest.in/milk.jpeg'],
   },
   alternates: {
-    canonical: 'https://www.back2nest.in/milk-delivery-patna',
+    canonical: 'https://back2nest.in/milk-delivery-patna',
   },
   robots: {
     index: true,
@@ -833,13 +833,13 @@ export default function MilkDeliveryPatnaPage() {
         "@type": "ListItem",
         "position": 1,
         "name": "Home",
-        "item": "https://www.back2nest.in"
+        "item": "https://back2nest.in"
       },
       {
         "@type": "ListItem",
         "position": 2,
         "name": "Milk Delivery Patna",
-        "item": "https://www.back2nest.in/milk-delivery-patna"
+        "item": "https://back2nest.in/milk-delivery-patna"
       }
     ]
   };
@@ -852,7 +852,7 @@ export default function MilkDeliveryPatnaPage() {
     'provider': {
       '@type': 'LocalBusiness',
       'name': 'Back2Nest',
-      'image': 'https://www.back2nest.in/logo.png',
+      'image': 'https://back2nest.in/logo.png',
       'telephone': '+918935904820',
       'email': 'help@back2nest.in',
       'address': {

@@ -20,11 +20,11 @@ export const metadata: Metadata = {
   openGraph: {
     title: 'About Back2Nest - Pure Milk Delivery Mission in Patna',
     description: 'Discover how Back2Nest is revolutionizing milk delivery in Patna with 100% pure A2 milk delivered fresh daily.',
-    url: 'https://www.back2nest.in/about-us',
+    url: 'https://back2nest.in/about-us',
     type: 'website',
     images: [
       {
-        url: 'https://www.back2nest.in/milk.jpeg',
+        url: 'https://back2nest.in/milk.jpeg',
         width: 1200,
         height: 630,
         alt: 'About Back2Nest - Fresh Milk Delivery in Patna',
@@ -35,10 +35,10 @@ export const metadata: Metadata = {
     card: 'summary_large_image',
     title: 'About Back2Nest - Pure Milk Delivery in Patna',
     description: 'Learn about our mission to bring pure, unadulterated milk to every home in Patna.',
-    images: ['https://www.back2nest.in/milk.jpeg'],
+    images: ['https://back2nest.in/milk.jpeg'],
   },
   alternates: {
-    canonical: 'https://www.back2nest.in/about-us',
+    canonical: 'https://back2nest.in/about-us',
   },
 };
 
@@ -48,8 +48,8 @@ export default function AboutUsPage() {
     '@type': 'Organization',
     'name': 'Back2Nest',
     'alternateName': 'B2N',
-    'url': 'https://www.back2nest.in',
-    'logo': 'https://www.back2nest.in/logo.png',
+    'url': 'https://back2nest.in',
+    'logo': 'https://back2nest.in/logo.png',
     'description': 'Back2Nest provides 100% pure, farm-fresh A2 milk delivered daily to homes across Patna. Founded with a mission to eliminate milk adulteration and bring transparency to dairy delivery.',
     'foundingDate': '2024',
     'foundingLocation': {

@@ -21,11 +21,11 @@ export const metadata: Metadata = {
   openGraph: {
     title: 'Dairy & Nutrition Blog | Back2Nest Patna',
     description: 'Expert tips on milk, dairy nutrition, and healthy living from Back2Nest.',
-    url: 'https://www.back2nest.in/blog',
+    url: 'https://back2nest.in/blog',
     type: 'website',
   },
   alternates: {
-    canonical: 'https://www.back2nest.in/blog',
+    canonical: 'https://back2nest.in/blog',
   },
 };
 
@@ -83,13 +83,13 @@ export default function BlogPage() {
     '@type': 'Blog',
     'name': 'Back2Nest Dairy & Nutrition Blog',
     'description': 'Expert articles on dairy products, nutrition, and healthy living',
-    'url': 'https://www.back2nest.in/blog',
+    'url': 'https://back2nest.in/blog',
     'publisher': {
       '@type': 'Organization',
       'name': 'Back2Nest',
       'logo': {
         '@type': 'ImageObject',
-        'url': 'https://www.back2nest.in/logo.png'
+        'url': 'https://back2nest.in/logo.png'
       }
     }
   };

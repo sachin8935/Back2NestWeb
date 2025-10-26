@@ -7,7 +7,7 @@ export const metadata: Metadata = {
   title: 'Privacy Policy | Back2Nest',
   description: 'Read our privacy policy for Back2Nest dairy delivery services in Patna.',
   alternates: {
-    canonical: 'https://www.back2nest.in/privacy-policy',
+    canonical: 'https://back2nest.in/privacy-policy',
   },
 };
 

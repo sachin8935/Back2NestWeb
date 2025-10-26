@@ -11,7 +11,7 @@ export default function BilonaGheeVsRegularGhee() {
     "@type": "Article",
     "headline": "Bilona Ghee vs Regular Ghee: Which One Is Better for Your Health?",
     "description": "Discover the differences between traditional Bilona Ghee and regular commercial ghee. Learn about the authentic Bilona method, A2 cow ghee benefits, and why traditional ghee is healthier.",
-    "image": "https://www.back2nest.in/ghee.jpeg",
+    "image": "https://back2nest.in/ghee.jpeg",
     "datePublished": "2025-01-10",
     "dateModified": "2025-01-10",
     "author": {
@@ -23,12 +23,12 @@ export default function BilonaGheeVsRegularGhee() {
       "name": "Back2Nest",
       "logo": {
         "@type": "ImageObject",
-        "url": "https://www.back2nest.in/logo.png"
+        "url": "https://back2nest.in/logo.png"
       }
     },
     "mainEntityOfPage": {
       "@type": "WebPage",
-      "@id": "https://www.back2nest.in/blog/desi-ghee-vs-regular-ghee"
+      "@id": "https://back2nest.in/blog/desi-ghee-vs-regular-ghee"
     }
   };
 
@@ -240,7 +240,7 @@ export default function BilonaGheeVsRegularGhee() {
 
           <p>
             Experience the purity of{" "}
-            <a href="https://www.back2nest.in">Back2Nest A2 Bilona Ghee</a> —
+            <a href="https://back2nest.in">Back2Nest A2 Bilona Ghee</a> —
             delivered fresh in Patna, crafted the traditional way, for a
             healthier tomorrow.
           </p>

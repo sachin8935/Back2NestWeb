@@ -2,7 +2,7 @@ import { Metadata } from 'next';
 import Script from 'next/script';
 import FaqPageClient from './FaqPageClient';
 
-const SITE_URL = 'https://www.back2nest.in';
+const SITE_URL = 'https://back2nest.in';
 
 export const metadata: Metadata = {
 	title: 'FAQ - Fresh Milk Delivery in Patna | Back2Nest',

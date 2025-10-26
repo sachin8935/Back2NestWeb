@@ -13,7 +13,7 @@ export const metadata: Metadata = {
     description: 'Discover how Back2Nest makes pure danedar ghee using traditional Bilona method in Patna with A2 milk.',
     images: [
       {
-        url: 'https://www.back2nest.in/ghee.jpeg',
+        url: 'https://back2nest.in/ghee.jpeg',
         width: 1200,
         height: 630,
         alt: 'Back2Nest Pure Danedar Bilona Ghee'
@@ -22,7 +22,7 @@ export const metadata: Metadata = {
     type: 'article',
   },
   alternates: {
-    canonical: 'https://www.back2nest.in/products/ghee',
+    canonical: 'https://back2nest.in/products/ghee',
   },
 };
 
@@ -45,7 +45,7 @@ export default function GheeProcess() {
             "name": "Back2Nest",
             "logo": {
               "@type": "ImageObject",
-              "url": "https://www.back2nest.in/logo.png"
+              "url": "https://back2nest.in/logo.png"
             }
           },
           "datePublished": "2025-01-15",
@@ -59,10 +59,10 @@ export default function GheeProcess() {
           "@type": "Product",
           "name": "Pure Danedar Ghee - Traditional Bilona Method",
           "description": "Authentic bilona method danedar ghee made from A2 cow milk. Granular texture and rich aroma. Hand-churned using traditional methods for pure, natural taste.",
-          "image": ["https://www.back2nest.in/ghee.jpeg"],
+          "image": ["https://back2nest.in/ghee.jpeg"],
           "brand": { "@type": "Brand", "name": "Back2Nest" },
           "category": "Dairy Products",
-          "url": "https://www.back2nest.in/products/ghee",
+          "url": "https://back2nest.in/products/ghee",
           "sku": "B2N-GHEE-001",
           "offers": {
             "@type": "AggregateOffer",
@@ -75,7 +75,7 @@ export default function GheeProcess() {
               "@type": "Organization",
               "name": "Back2Nest"
             },
-            "url": "https://www.back2nest.in/products/ghee"
+            "url": "https://back2nest.in/products/ghee"
           },
           "aggregateRating": {
             "@type": "AggregateRating",
@@ -114,9 +114,9 @@ export default function GheeProcess() {
           "@context": "https://schema.org",
           "@type": "BreadcrumbList",
           "itemListElement": [
-            { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://www.back2nest.in/" },
-            { "@type": "ListItem", "position": 2, "name": "Products", "item": "https://www.back2nest.in/products" },
-            { "@type": "ListItem", "position": 3, "name": "Ghee", "item": "https://www.back2nest.in/products/ghee" }
+            { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://back2nest.in/" },
+            { "@type": "ListItem", "position": 2, "name": "Products", "item": "https://back2nest.in/products" },
+            { "@type": "ListItem", "position": 3, "name": "Ghee", "item": "https://back2nest.in/products/ghee" }
           ]
         })
       }} />
