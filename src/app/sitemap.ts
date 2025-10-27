@@ -143,34 +143,34 @@ export default function sitemap(): MetadataRoute.Sitemap {
       changeFrequency: 'weekly',
       priority: 0.8,
     },
-    // Blog posts
+    // Blog posts (Updated Oct 27, 2025 - Brand consistency fixes)
     {
       url: `${base}/blog/benefits-of-A2-milk`,
-      lastModified: new Date('2025-10-26'),
+      lastModified: new Date('2025-10-27'),
       changeFrequency: 'monthly',
       priority: 0.75,
     },
     {
       url: `${base}/blog/desi-cow-milk-benefits`,
-      lastModified: new Date('2025-10-26'),
+      lastModified: new Date('2025-10-27'),
       changeFrequency: 'monthly',
       priority: 0.75,
     },
     {
       url: `${base}/blog/desi-ghee-vs-regular-ghee`,
-      lastModified: new Date('2025-10-26'),
+      lastModified: new Date('2025-10-27'),
       changeFrequency: 'monthly',
       priority: 0.7,
     },
     {
       url: `${base}/blog/best-time-to-drink-milk`,
-      lastModified: new Date('2025-10-26'),
+      lastModified: new Date('2025-10-27'),
       changeFrequency: 'monthly',
       priority: 0.7,
     },
     {
       url: `${base}/blog/milk-storage-tips-patna`,
-      lastModified: new Date('2025-10-26'),
+      lastModified: new Date('2025-10-27'),
       changeFrequency: 'monthly',
       priority: 0.68,
     },
