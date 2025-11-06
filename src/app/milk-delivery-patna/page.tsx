@@ -301,6 +301,48 @@ const AreaSpecificSection = () => {
       icon: MapPin,
       color: "purple"
     },
+    {
+      title: "Fraser Road",
+      description: "Pure A2 milk delivery to Fraser Road Market, Hanuman Mandir area and all Fraser Road localities by 5 AM daily.",
+      link: "/milk-delivery-patna/fraser-road",
+      icon: MapPin,
+      color: "orange"
+    },
+    {
+      title: "Rajendra Nagar",
+      description: "Fresh milk delivery to IGIMS area, Exhibition Road, Rajendra Nagar Terminal and surrounding residential areas.",
+      link: "/milk-delivery-patna/rajendra-nagar",
+      icon: MapPin,
+      color: "red"
+    },
+    {
+      title: "Bailey Road",
+      description: "Daily fresh milk delivery to Bailey Road, Maurya Lok Complex, Dak Bungalow area and nearby localities.",
+      link: "/milk-delivery-patna/bailey-road",
+      icon: MapPin,
+      color: "teal"
+    },
+    {
+      title: "Budha Colony",
+      description: "Farm-fresh milk delivery to Budha Colony Market, Dak Bungalow Chowk, Mithapur and all Budha Colony areas.",
+      link: "/milk-delivery-patna/budha-colony",
+      icon: MapPin,
+      color: "indigo"
+    },
+    {
+      title: "Kidwaipuri",
+      description: "Daily A2 milk delivery to Kidwaipuri Main Road, Kurji area, Hanuman Nagar and surrounding localities.",
+      link: "/milk-delivery-patna/kidwaipuri",
+      icon: MapPin,
+      color: "pink"
+    },
+    {
+      title: "Anisabad",
+      description: "Fresh A2 milk delivery to Anisabad Bye Pass, Gaighat Road, Bailey Road Extension and all Anisabad localities.",
+      link: "/milk-delivery-patna/anisabad",
+      icon: MapPin,
+      color: "cyan"
+    },
   ];
 
   return (
@@ -320,30 +362,43 @@ const AreaSpecificSection = () => {
         </div>
 
         <div className="grid md:grid-cols-3 gap-8 mb-12">
-          {specificAreas.map((area, index) => (
-            <Link 
-              key={index}
-              href={area.link}
-              className="group bg-white rounded-2xl shadow-lg hover:shadow-2xl transition-all duration-300 overflow-hidden border-2 border-gray-100 hover:border-blue-300 transform hover:-translate-y-2"
-            >
-              <div className={`bg-gradient-to-br from-${area.color}-500 to-${area.color}-600 p-6 text-white`}>
-                <area.icon className="w-12 h-12 mb-3" />
-                <h3 className="text-2xl font-bold mb-2">{area.title}</h3>
-              </div>
-              <div className="p-6">
-                <p className="text-gray-600 mb-4 leading-relaxed">
-                  {area.description}
-                </p>
-                <div className="flex items-center text-blue-600 font-semibold group-hover:gap-3 gap-2 transition-all">
-                  <span>View Details</span>
-                  <span className="group-hover:translate-x-1 transition-transform">→</span>
+          {specificAreas.map((area, index) => {
+            // Define gradient classes based on color
+            const gradientClasses = {
+              blue: 'bg-gradient-to-br from-blue-500 to-blue-600',
+              green: 'bg-gradient-to-br from-green-500 to-green-600',
+              purple: 'bg-gradient-to-br from-purple-500 to-purple-600',
+              orange: 'bg-gradient-to-br from-orange-500 to-orange-600',
+              red: 'bg-gradient-to-br from-red-500 to-red-600',
+              teal: 'bg-gradient-to-br from-teal-500 to-teal-600',
+              indigo: 'bg-gradient-to-br from-indigo-500 to-indigo-600',
+              pink: 'bg-gradient-to-br from-pink-500 to-pink-600',
+              cyan: 'bg-gradient-to-br from-cyan-500 to-cyan-600',
+            };
+            
+            return (
+              <Link 
+                key={index}
+                href={area.link}
+                className="group bg-white rounded-2xl shadow-lg hover:shadow-2xl transition-all duration-300 overflow-hidden border-2 border-gray-100 hover:border-blue-300 transform hover:-translate-y-2"
+              >
+                <div className={`${gradientClasses[area.color as keyof typeof gradientClasses]} p-6 text-white`}>
+                  <area.icon className="w-12 h-12 mb-3" />
+                  <h3 className="text-2xl font-bold mb-2">{area.title}</h3>
                 </div>
-              </div>
-            </Link>
-          ))}
+                <div className="p-6">
+                  <p className="text-gray-600 mb-4 leading-relaxed">
+                    {area.description}
+                  </p>
+                  <div className="flex items-center text-blue-600 font-semibold group-hover:gap-3 gap-2 transition-all">
+                    <span>View Details</span>
+                    <span className="group-hover:translate-x-1 transition-transform">→</span>
+                  </div>
+                </div>
+              </Link>
+            );
+          })}
         </div>
-
-        {/* Pricing CTA */}
         <div className="bg-gradient-to-r from-blue-600 to-blue-700 rounded-2xl shadow-xl overflow-hidden">
           <div className="grid md:grid-cols-2 gap-8 items-center">
             <div className="p-8 md:p-12 text-white">

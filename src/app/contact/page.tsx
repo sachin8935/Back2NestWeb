@@ -88,20 +88,6 @@ export default function ContactPage() {
                 </div>
 
                 <div className="flex items-start gap-4">
-                  <div className="bg-blue-100 p-3 rounded-full flex-shrink-0">
-                    <Smartphone className="w-6 h-6 text-blue-600" />
-                  </div>
-                  <div>
-                    <h3 className="font-semibold text-gray-900 mb-1">Contact Person</h3>
-                    <p className="text-gray-900 text-lg font-semibold">Sunil Sharma</p>
-                    <a href="tel:+917070603242" className="text-blue-600 hover:text-blue-700 text-lg">
-                      +91 70706 03242
-                    </a>
-                    <p className="text-sm text-gray-600 mt-1">Call for immediate assistance</p>
-                  </div>
-                </div>
-
-                <div className="flex items-start gap-4">
                   <div className="bg-purple-100 p-3 rounded-full flex-shrink-0">
                     <MapPin className="w-6 h-6 text-purple-600" />
                   </div>

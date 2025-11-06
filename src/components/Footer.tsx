@@ -6,8 +6,8 @@ export default function Footer() {
   return (
     <footer className="bg-gradient-to-br from-gray-900 via-blue-900 to-gray-900 text-white">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
-        {/* Main Footer Content */}
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-8 mb-8">
+        {/* Main Footer Content - Responsive 5 Column Grid */}
+        <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-5 gap-6 lg:gap-8 mb-8">
           {/* Company Info */}
           <div>
             <Link href="/" className="flex items-center space-x-3 mb-4 hover:opacity-80 transition">
@@ -30,6 +30,8 @@ export default function Footer() {
             <p className="text-gray-300 text-sm leading-relaxed">
               Delivering pure, farm-fresh dairy products to your doorstep every morning across Patna.
             </p>
+            
+            {/* Social Media Icons */}
             <div className="flex items-center space-x-3 mt-4">
               <a
                 href="https://www.facebook.com/B2Nback2nest/"
@@ -68,22 +70,22 @@ export default function Footer() {
                 <Shield className="w-4 h-4" />
               </a>
               <a
-                href="https://share.google/hHARPkGS7tlQiAXF1"
+                href="https://search.google.com/local/writereview?placeid=ChIJ3cz7BzVZ7TkRbNBpDqFq3qw"
                 target="_blank"
-                rel="noopener noreferrer"
-                className="bg-red-500 p-2 rounded-full hover:bg-red-600 transition"
-                aria-label="Google Business Profile"
-                title="View our Google Business Profile"
+                rel="noopener noreferrer nofollow"
+                className="bg-yellow-500 p-2 rounded-full hover:bg-yellow-600 transition group"
+                aria-label="Leave a Google review for Back2Nest"
+                title="Leave a Review"
               >
-                <MapPin className="w-4 h-4" />
+                <Star className="w-4 h-4 group-hover:fill-yellow-200" />
               </a>
             </div>
           </div>
 
           {/* Quick Links */}
           <div>
-            <h3 className="text-lg font-bold text-white mb-4">Quick Links</h3>
-            <ul className="space-y-3">
+            <h3 className="text-base font-bold text-white mb-3">Quick Links</h3>
+            <ul className="space-y-2">
               <li>
                 <Link href="/" className="text-gray-300 hover:text-blue-400 transition text-sm">
                   Home
@@ -129,6 +131,18 @@ export default function Footer() {
                 </Link>
               </li>
               <li>
+                <Link href="/resources" className="text-gray-300 hover:text-blue-400 transition text-sm">
+                  Resources
+                </Link>
+              </li>
+            </ul>
+          </div>
+
+          {/* Support */}
+          <div>
+            <h3 className="text-base font-bold text-white mb-3">Support</h3>
+            <ul className="space-y-2">
+              <li>
                 <Link href="/reviews" className="text-gray-300 hover:text-blue-400 transition text-sm">
                   Reviews
                 </Link>
@@ -153,13 +167,8 @@ export default function Footer() {
 
           {/* Service Areas */}
           <div>
-            <h3 className="text-lg font-bold text-white mb-4">Service Areas</h3>
-            <ul className="space-y-3">
-              <li>
-                <Link href="/milk-delivery-patna" className="text-gray-300 hover:text-blue-400 transition text-sm">
-                   Patna
-                </Link>
-              </li>
+            <h3 className="text-base font-bold text-white mb-3">Service Areas</h3>
+            <ul className="space-y-2">
               <li>
                 <Link href="/milk-delivery-patna/boring-road" className="text-gray-300 hover:text-blue-400 transition text-sm">
                   Boring Road
@@ -175,10 +184,19 @@ export default function Footer() {
                   Patliputra
                 </Link>
               </li>
-              
               <li>
-                <Link href="/contact" className="text-gray-300 hover:text-blue-400 transition text-sm">
-                  Contact Us
+                <Link href="/milk-delivery-patna/bailey-road" className="text-gray-300 hover:text-blue-400 transition text-sm">
+                  Bailey Road
+                </Link>
+              </li>
+              <li>
+                <Link href="/milk-delivery-patna/fraser-road" className="text-gray-300 hover:text-blue-400 transition text-sm">
+                  Fraser Road
+                </Link>
+              </li>
+              <li>
+                <Link href="/milk-delivery-patna" className="text-blue-400 hover:text-blue-300 transition text-sm font-semibold inline-flex items-center gap-1">
+                  View All 9 Areas →
                 </Link>
               </li>
             </ul>
@@ -186,8 +204,13 @@ export default function Footer() {
 
           {/* Legal */}
           <div>
-            <h3 className="text-lg font-bold text-white mb-4">Legal</h3>
-            <ul className="space-y-3">
+            <h3 className="text-base font-bold text-white mb-3">Legal</h3>
+            <ul className="space-y-2">
+              <li>
+                <Link href="/contact" className="text-gray-300 hover:text-blue-400 transition text-sm">
+                  Contact Us
+                </Link>
+              </li>
               <li>
                 <Link href="/terms-conditions" className="text-gray-300 hover:text-blue-400 transition text-sm">
                   Terms & Conditions
@@ -202,64 +225,6 @@ export default function Footer() {
                 <Link href="/refund-policy" className="text-gray-300 hover:text-blue-400 transition text-sm">
                   Refund Policy
                 </Link>
-              </li>
-            </ul>
-          </div>
-
-          {/* Contact Info */}
-          <div>
-            <h3 className="text-lg font-bold text-white mb-4">Get The App</h3>
-            <ul className="space-y-4">
-              <li>
-                <a
-                  href="https://play.google.com/store/apps/details?id=com.app.back2nest"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="flex items-start space-x-3 text-gray-300 hover:text-blue-400 transition"
-                >
-                  <Download className="w-5 h-5 flex-shrink-0 mt-0.5" />
-                  <div>
-                    <p className="text-sm font-semibold text-white">Order on App</p>
-                    <p className="text-sm">Download from Play Store</p>
-                  </div>
-                </a>
-              </li>
-              <li>
-                <a
-                  href="https://search.google.com/local/writereview?placeid=ChIJ3cz7BzVZ7TkRbNBpDqFq3qw"
-                  target="_blank"
-                  rel="noopener noreferrer nofollow"
-                  className="flex items-start space-x-3 text-gray-300 hover:text-yellow-400 transition group"
-                  aria-label="Write a Google review for Back2Nest"
-                >
-                  <Star className="w-5 h-5 flex-shrink-0 mt-0.5 group-hover:fill-yellow-400 group-hover:text-yellow-400" />
-                  <div>
-                    <p className="text-sm font-semibold text-white">Leave a Review</p>
-                    <p className="text-sm">Share your experience on Google</p>
-                  </div>
-                </a>
-              </li>
-              <li>
-                <a
-                  href="mailto:help@back2nest.in"
-                  className="flex items-start space-x-3 text-gray-300 hover:text-blue-400 transition"
-                >
-                  <Mail className="w-5 h-5 flex-shrink-0 mt-0.5" />
-                  <div>
-                    <p className="text-sm font-semibold text-white">Email Support</p>
-                    <p className="text-sm">help@back2nest.in</p>
-                  </div>
-                </a>
-              </li>
-              <li>
-                <div className="flex items-start space-x-3 text-gray-300">
-                  <MapPin className="w-5 h-5 flex-shrink-0 mt-0.5" />
-                  <div>
-                    <p className="text-sm font-semibold text-white">Address</p>
-                    <p className="text-sm">Jagat Narayan Road, Kadam Kuan</p>
-                    <p className="text-sm">Patna 800003, Bihar</p>
-                  </div>
-                </div>
               </li>
             </ul>
           </div>

@@ -232,7 +232,7 @@ export default function MilkStorageTipsPatna() {
           </p>
 
           <p>
-            Visit <a href="https://back2nest.in">Back2Nest</a> today to
+            Visit <a href="https://back2nest.in">back2nest.in</a> today to
             subscribe and enjoy Patna's purest A2 milk — delivered early every
             morning.
           </p>

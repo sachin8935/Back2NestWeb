@@ -3,10 +3,22 @@ import type { MetadataRoute } from 'next';
 export default function robots(): MetadataRoute.Robots {
   const base = 'https://back2nest.in';
   return {
-    rules: {
-      userAgent: '*',
-      allow: '/',
-    },
+    rules: [
+      {
+        userAgent: '*',
+        allow: '/',
+        disallow: ['/api/', '/admin/', '/_next/', '/private/'],
+      },
+      {
+        userAgent: 'Googlebot',
+        allow: '/',
+        crawlDelay: 0,
+      },
+      {
+        userAgent: 'Googlebot-Image',
+        allow: '/',
+      },
+    ],
     sitemap: `${base}/sitemap.xml`,
     host: base,
   };

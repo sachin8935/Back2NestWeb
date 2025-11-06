@@ -292,7 +292,7 @@ export default function BestTimeToDrinkMilk() {
             of Indian farms, delivered every morning in Patna.
           </p>
           <p>
-            Visit <a href="https://back2nest.in">Back2Nest</a> to start your
+            Visit <a href="https://back2nest.in">back2nest.in</a> to start your
             daily A2 milk subscription and make milk a meaningful part of your
             healthy routine — at any time of the day!
           </p>

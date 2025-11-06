@@ -7,7 +7,7 @@ export function getBlogBySlug(slug: string): BlogMeta | undefined {
 
 export function buildBlogMetadata(slug: string): Metadata {
   const b = getBlogBySlug(slug);
-  const base = 'https://back2nest.in';
+  const base = 'https://www.back2nest.in';
   if (!b) return {};
   return {
     title: b.title,

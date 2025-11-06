@@ -26,6 +26,15 @@ export const metadata: Metadata = {
   creator: SITE_NAME,
   publisher: SITE_NAME,
   keywords: [
+    'milk delivery near me',
+    'best milk delivery near me',
+    'fresh milk delivery near me',
+    'milk home delivery near me',
+    'A2 milk delivery near me',
+    'cow milk delivery near me',
+    'pure milk near me',
+    'organic milk near me',
+    'farm fresh milk near me',
     'milk delivery patna',
     'pure milk patna',
     'fresh milk delivery patna',
@@ -51,7 +60,11 @@ export const metadata: Metadata = {
     'fresh dairy app patna',
     'milk subscription app',
     'Back2Nest Google Play',
-    'dairy delivery app patna'
+    'dairy delivery app patna',
+    'milk delivery kankarbagh',
+    'milk delivery boring road',
+    'milk delivery patliputra',
+    'milk delivery rajendra nagar'
   ],
   robots: {
     index: true,
@@ -101,9 +114,10 @@ export const metadata: Metadata = {
 };
 const localBusinessJsonLd = {
   '@context': 'https://schema.org',
-  '@type': 'LocalBusiness',
+  '@type': ['LocalBusiness', 'FoodEstablishment', 'Store'],
   'name': SITE_NAME,
-  'alternateName': 'B2N',
+  'legalName': 'Back2Nest',
+  'alternateName': ['B2N', 'Back 2 Nest', 'Back2Nest Patna'],
   'image': `${SITE_URL}/logo.png`,
   '@id': `${SITE_URL}/#organization`,
   'url': SITE_URL,
@@ -156,10 +170,50 @@ const localBusinessJsonLd = {
     {
       '@type': 'City',
       'name': 'Patna',
+      'containedInPlace': {
+        '@type': 'State',
+        'name': 'Bihar'
+      }
+    },
+    {
+      '@type': 'Place',
+      'name': 'Kankarbagh, Patna'
+    },
+    {
+      '@type': 'Place',
+      'name': 'Boring Road, Patna'
+    },
+    {
+      '@type': 'Place',
+      'name': 'Patliputra Colony, Patna'
+    },
+    {
+      '@type': 'Place',
+      'name': 'Rajendra Nagar, Patna'
+    },
+    {
+      '@type': 'Place',
+      'name': 'Fraser Road, Patna'
+    },
+    {
+      '@type': 'Place',
+      'name': 'Bailey Road, Patna'
     }
   ],
-  'serviceType': ['Fresh Milk Home Delivery', 'A2 Milk Delivery', 'Dairy Products Delivery'],
-  'description': DEFAULT_DESCRIPTION,
+  'servesCuisine': 'Dairy Products',
+  'paymentAccepted': ['Cash', 'Credit Card', 'Debit Card', 'UPI', 'Net Banking'],
+  'currenciesAccepted': 'INR',
+  'serviceType': ['Fresh Milk Home Delivery', 'A2 Milk Delivery', 'Dairy Products Delivery', 'Daily Milk Subscription'],
+  'description': 'Best milk delivery near you in Patna. Back2Nest delivers 100% pure A2 cow milk by 5 AM daily. Farm-fresh milk home delivery across all Patna areas including Kankarbagh, Boring Road, Patliputra Colony, and more.',
+  'slogan': 'Farm Fresh Milk at Your Doorstep by 5 AM',
+  'hasMap': 'https://maps.app.goo.gl/hHARPkGS7tlQiAXF1',
+  'aggregateRating': {
+    '@type': 'AggregateRating',
+    'ratingValue': '4.8',
+    'reviewCount': '127',
+    'bestRating': '5',
+    'worstRating': '1'
+  },
   'hasOfferCatalog': {
     '@type': 'OfferCatalog',
     'name': 'Dairy Products',
@@ -175,7 +229,8 @@ const localBusinessJsonLd = {
             '@type': 'AggregateOffer',
             'priceCurrency': 'INR',
             'lowPrice': '60',
-            'highPrice': '85'
+            'highPrice': '85',
+            'availability': 'https://schema.org/InStock'
           }
         }
       },
@@ -190,7 +245,8 @@ const localBusinessJsonLd = {
             '@type': 'AggregateOffer',
             'priceCurrency': 'INR',
             'lowPrice': '40',
-            'highPrice': '80'
+            'highPrice': '80',
+            'availability': 'https://schema.org/InStock'
           }
         }
       },
@@ -205,7 +261,8 @@ const localBusinessJsonLd = {
             '@type': 'AggregateOffer',
             'priceCurrency': 'INR',
             'lowPrice': '80',
-            'highPrice': '180'
+            'highPrice': '180',
+            'availability': 'https://schema.org/InStock'
           }
         }
       },
@@ -220,7 +277,8 @@ const localBusinessJsonLd = {
             '@type': 'AggregateOffer',
             'priceCurrency': 'INR',
             'lowPrice': '450',
-            'highPrice': '1800'
+            'highPrice': '1800',
+            'availability': 'https://schema.org/InStock'
           }
         }
       }

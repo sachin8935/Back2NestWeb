@@ -6,11 +6,17 @@
   -moz-osx-font-smoothing: grayscale;
 }
 
-/* Smooth scrolling removed - can cause janky performance on heavy pages */
-/* Using browser's native scroll instead for better performance */
+/* Smooth scroll behavior */
+html {
+  scroll-behavior: smooth;
+}
 
 /* Optional: Reduce motion for accessibility (respects user preferences) */
 @media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+  
   *,
   *::before,
   *::after {
@@ -27,7 +33,7 @@ body {
   font-kerning: normal;
 }
 
-/* GPU acceleration for smoother scrolling */
+/* GPU acceleration for smoother animations */
 body {
   -webkit-overflow-scrolling: touch;
   transform: translateZ(0);
@@ -42,4 +48,28 @@ body {
 [class*="group-hover:translate"] {
   will-change: transform;
   transform: translateZ(0);
+}
+
+/* Custom scrollbar for better UX (optional) */
+::-webkit-scrollbar {
+  width: 10px;
+}
+
+::-webkit-scrollbar-track {
+  background: #f1f1f1;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #3b82f6;
+  border-radius: 5px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #2563eb;
+}
+
+/* Focus visible for accessibility */
+*:focus-visible {
+  outline: 2px solid #3b82f6;
+  outline-offset: 2px;
 }

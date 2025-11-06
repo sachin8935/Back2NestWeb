@@ -132,7 +132,7 @@ export default function BenefitsOfA2Milk() {
             A2 milk isn’t just a trend — it’s a return to purity, tradition, and better health. From improved digestion to enhanced immunity, it’s nature’s way of keeping us strong. By switching to <strong>Back2Nest</strong> A2 milk, you’re choosing freshness, honesty, and wellness — delivered every morning right here in Patna.
           </p>
           <p>
-            Ready to make the switch? Visit <a href="https://back2nest.in">Back2Nest</a> today and start your A2 milk journey.
+            Ready to make the switch? Visit <a href="https://back2nest.in">back2nest.in</a> today and start your A2 milk journey.
           </p>
         </div>
     </BlogPost>
