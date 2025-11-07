@@ -5,7 +5,7 @@ import Footer from '@/components/Footer';
 
 export const metadata: Metadata = {
   title: 'Customer Reviews & Testimonials | Back2Nest Patna',
-  description: 'Read authentic reviews from 1000+ satisfied customers in Patna. Discover why families trust Back2Nest for fresh A2 milk, dahi, paneer, and ghee delivery. Rated 4.9/5 stars.',
+  description: 'Read 1000+ authentic reviews from satisfied customers in Patna. Why families trust Back2Nest for A2 milk, dahi, paneer & ghee. Rated 4.9/5 stars.',
   keywords: 'Back2Nest reviews, customer testimonials Patna, dairy product reviews, milk delivery reviews Patna, A2 milk customer feedback, Back2Nest ratings, verified customer reviews, dairy reviews Bihar',
   openGraph: {
     title: 'Customer Reviews & Testimonials | Back2Nest Patna',

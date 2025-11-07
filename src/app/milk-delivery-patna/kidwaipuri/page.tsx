@@ -5,8 +5,8 @@ import { MapPin, Clock, Star, Truck, Shield, Package, Milk } from 'lucide-react'
 import Footer from '@/components/Footer';
 
 export const metadata: Metadata = {
-  title: 'A2 Milk Delivery in Kidwaipuri, Patna | Fresh by 5 AM Daily',
-  description: 'Get pure A2 milk delivered to your doorstep in Kidwaipuri by 5 AM. Fresh desi cow milk, ghee, paneer & dahi. Order now for same-day delivery in Kidwaipuri, Patna.',
+  title: 'A2 Milk Delivery Kidwaipuri Patna | Fresh by 5 AM',
+  description: 'Pure A2 milk delivered in Kidwaipuri by 5 AM. Fresh desi cow milk, ghee, paneer & dahi. Order now for same-day delivery in Kidwaipuri, Patna.',
   keywords: 'A2 milk Kidwaipuri, milk delivery Kidwaipuri Patna, fresh milk Kidwaipuri, desi cow milk Kidwaipuri, home delivery milk Kidwaipuri, Kidwaipuri milk subscription, Kurji milk delivery',
   alternates: {
     canonical: 'https://back2nest.in/milk-delivery-patna/kidwaipuri',
@@ -175,7 +175,9 @@ export default function KidwaipuriPage() {
   const localBusinessSchema = {
     "@context": "https://schema.org",
     "@type": "LocalBusiness",
+    "@id": "https://back2nest.in/milk-delivery-patna/kidwaipuri",
     "name": "Back2Nest - Kidwaipuri",
+    "image": "https://back2nest.in/logo.png",
     "description": "Fresh A2 milk delivery in Kidwaipuri, Patna",
     "url": "https://back2nest.in/milk-delivery-patna/kidwaipuri",
     "telephone": "+918935904820",

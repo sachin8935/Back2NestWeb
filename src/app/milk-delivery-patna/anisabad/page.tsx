@@ -3,8 +3,8 @@ import Link from "next/link";
 import { Milk, Phone, MapPin, Clock, Award, CheckCircle2, Star, TrendingUp, Shield, Heart, Users, Zap } from "lucide-react";
 
 export const metadata: Metadata = {
-  title: "A2 Milk Delivery in Anisabad, Patna | Pure Desi Cow Milk at Your Doorstep | Back2Nest",
-  description: "Get farm-fresh A2 milk delivered to Anisabad, Patna by 5 AM daily. Pure desi cow milk, ghee, dahi & paneer near Anisabad Bye Pass, Gaighat. Order now for ₹89/litre!",
+  title: "A2 Milk Delivery Anisabad Patna | Pure Desi by 5 AM",
+  description: "Farm-fresh A2 milk delivered in Anisabad by 5 AM daily. Pure desi cow milk, ghee, dahi & paneer near Bye Pass, Gaighat. Order at ₹89/litre!",
   keywords: [
     "A2 milk delivery Anisabad",
     "Anisabad milk delivery",

@@ -3,7 +3,7 @@ import HomePageClient from './HomePageClient';
 
 export const metadata: Metadata = {
   title: 'Back2Nest - Pure A2 Milk Delivery in Patna | Fresh by 5 AM Daily',
-  description: 'Get 100% pure A2 cow milk delivered to your doorstep by 5 AM daily in Patna. Zero adulteration, farm-fresh quality. Serving Kankarbagh, Boring Road, Patliputra & all Patna areas. Download app for ₹50 off. Trusted by 127+ families.',
+  description: 'Get 100% pure A2 cow milk by 5 AM in Patna. Farm-fresh, zero adulteration. Serving Kankarbagh, Boring Road & all areas. Trusted by 127+ families.',
   keywords: 'milk delivery Patna, A2 milk Patna, best milk delivery near me, fresh milk home delivery, cow milk delivery Patna, farm fresh milk, pure milk delivery, milk subscription Patna, desi cow milk, organic milk Patna, Kankarbagh milk delivery, Boring Road milk delivery',
   alternates: {
     canonical: 'https://back2nest.in',

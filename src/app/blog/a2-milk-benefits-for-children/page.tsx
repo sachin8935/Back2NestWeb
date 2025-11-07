@@ -3,8 +3,8 @@ import Link from "next/link";
 import { ArrowLeft, Milk, Heart, Brain, Shield, TrendingUp, Award, Baby, Users, Calendar, CheckCircle2, Star } from "lucide-react";
 
 export const metadata: Metadata = {
-  title: "Top 10 Benefits of A2 Milk for Children's Health in 2025 | Back2Nest",
-  description: "Discover how A2 milk boosts immunity, brain development & growth in children. Expert guide with age-wise benefits, nutrition facts & pediatrician insights. Order pure A2 milk in Patna.",
+  title: "A2 Milk Benefits for Children 2025 | Back2Nest",
+  description: "How A2 milk boosts immunity, brain development & growth in children. Expert guide with age-wise benefits & pediatrician insights. Order in Patna.",
   keywords: [
     "A2 milk benefits for children",
     "A2 milk for kids health",

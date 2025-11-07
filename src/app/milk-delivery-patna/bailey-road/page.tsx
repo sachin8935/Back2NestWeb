@@ -5,8 +5,8 @@ import { MapPin, Clock, Star, Truck, Shield, Package, Milk } from 'lucide-react'
 import Footer from '@/components/Footer';
 
 export const metadata: Metadata = {
-  title: 'A2 Milk Delivery in Bailey Road, Patna | Fresh by 5 AM Daily',
-  description: 'Get pure A2 milk delivered to your doorstep in Bailey Road by 5 AM. Fresh desi cow milk, ghee, paneer & dahi. Order now for same-day delivery in Bailey Road, Patna.',
+  title: 'A2 Milk Delivery Bailey Road Patna | Fresh by 5 AM',
+  description: 'Pure A2 milk delivered in Bailey Road by 5 AM. Fresh desi cow milk, ghee, paneer & dahi. Order now for same-day delivery in Bailey Road, Patna.',
   keywords: 'A2 milk Bailey Road, milk delivery Bailey Road Patna, fresh milk Bailey Road, desi cow milk Bailey Road, home delivery milk Bailey Road, Bailey Road milk subscription',
   openGraph: {
     title: 'Pure A2 Milk Delivery in Bailey Road | Back2Nest',
@@ -553,7 +553,9 @@ export default function BaileyRoadPage() {
           __html: JSON.stringify({
             "@context": "https://schema.org",
             "@type": "LocalBusiness",
+            "@id": "https://back2nest.in/milk-delivery-patna/bailey-road",
             "name": "Back2Nest - Bailey Road",
+            "image": "https://back2nest.in/logo.png",
             "description": "Fresh A2 milk delivery in Bailey Road, Patna",
             "url": "https://back2nest.in/milk-delivery-patna/bailey-road",
             "telephone": "+91-1234567890",
@@ -594,6 +596,28 @@ export default function BaileyRoadPage() {
               "@type": "AggregateRating",
               "ratingValue": "4.8",
               "reviewCount": "156"
+            },
+            "hasOfferCatalog": {
+              "@type": "OfferCatalog",
+              "name": "Dairy Products",
+              "itemListElement": [
+                {
+                  "@type": "Offer",
+                  "itemOffered": {
+                    "@type": "Product",
+                    "name": "A2 Cow Milk",
+                    "description": "Fresh daily A2 milk from desi cows"
+                  }
+                },
+                {
+                  "@type": "Offer",
+                  "itemOffered": {
+                    "@type": "Product",
+                    "name": "Desi Ghee",
+                    "description": "Pure & traditional desi ghee"
+                  }
+                }
+              ]
             }
           })
         }}

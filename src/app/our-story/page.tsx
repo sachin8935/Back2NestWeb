@@ -50,7 +50,7 @@ export default function OurStoryPage() {
     'description': 'The inspiring story of how a CSE graduate discovered the problem of milk adulteration in Patna and founded Back2Nest to bring pure, farm-fresh A2 milk to every home.',
     'image': 'https://back2nest.in/sachin.png',
     'datePublished': '2024-10-15',
-    'dateModified': '2025-10-22',
+    'dateModified': '2024-10-22',
     'author': {
       '@type': 'Person',
       'name': 'Sachin',

@@ -9,7 +9,7 @@ import Footer from '@/components/Footer';
 
 export const metadata: Metadata = {
   title: 'A2 Milk Resources & Nutrition Guides | Back2Nest Patna',
-  description: 'Download free nutrition guides, A2 vs A1 milk comparison charts, scientific research papers, and educational resources about pure dairy products. Expert dairy knowledge hub.',
+  description: 'Free nutrition guides, A2 vs A1 comparison charts, research papers & dairy education resources. Expert knowledge hub from Back2Nest Patna.',
   keywords: [
     'A2 milk nutrition guide',
     'milk nutrition facts',
@@ -140,9 +140,9 @@ const researchLinks = [
   },
   {
     title: "β-casomorphin-7 in bovine milk and dairy products: A critical review",
-    source: "Journal of Dairy Science - ScienceDirect",
+    source: "Journal of Dairy Science - PubMed",
     year: "2016",
-    url: "https://www.sciencedirect.com/science/article/pii/S0022030216305403",
+    url: "https://pubmed.ncbi.nlm.nih.gov/27692710/",
     description: "Comprehensive review of BCM-7 peptide formation from A1 milk and its potential health implications, supporting the benefits of A2 milk consumption.",
     category: "Nutrition Science"
   },

@@ -5,8 +5,8 @@ import { MapPin, Clock, Star, Truck, Shield, Package, Milk } from 'lucide-react'
 import Footer from '@/components/Footer';
 
 export const metadata: Metadata = {
-  title: 'A2 Milk Delivery in Budha Colony, Patna | Fresh by 5 AM Daily',
-  description: 'Get pure A2 milk delivered to your doorstep in Budha Colony by 5 AM. Fresh desi cow milk, ghee, paneer & dahi. Order now for same-day delivery in Budha Colony, Patna.',
+  title: 'A2 Milk Delivery Budha Colony Patna | Fresh by 5 AM',
+  description: 'Pure A2 milk delivered in Budha Colony by 5 AM. Fresh desi cow milk, ghee, paneer & dahi. Same-day delivery in Budha Colony, Dak Bungalow Chowk.',
   keywords: 'A2 milk Budha Colony, milk delivery Budha Colony Patna, fresh milk Budha Colony, desi cow milk Budha Colony, home delivery milk Budha Colony, Budha Colony milk subscription, Dak Bungalow Chowk milk delivery',
   alternates: {
     canonical: 'https://back2nest.in/milk-delivery-patna/budha-colony',
@@ -175,7 +175,9 @@ export default function BudhaColonyPage() {
   const localBusinessSchema = {
     "@context": "https://schema.org",
     "@type": "LocalBusiness",
+    "@id": "https://back2nest.in/milk-delivery-patna/budha-colony",
     "name": "Back2Nest - Budha Colony",
+    "image": "https://back2nest.in/logo.png",
     "description": "Fresh A2 milk delivery in Budha Colony, Patna",
     "url": "https://back2nest.in/milk-delivery-patna/budha-colony",
     "telephone": "+918935904820",

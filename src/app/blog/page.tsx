@@ -6,7 +6,7 @@ import Footer from '@/components/Footer';
 
 export const metadata: Metadata = {
   title: 'Dairy Blog | Milk Tips & Health Benefits - Back2Nest',
-  description: 'Expert articles on A2 milk benefits, dairy nutrition, storage tips, and traditional dairy products. Learn from Back2Nest - Patna\'s trusted milk delivery service.',
+  description: 'Expert articles on A2 milk benefits, dairy nutrition & storage tips. Learn from Back2Nest - Patna\'s trusted milk delivery service.',
   keywords: [
     'dairy blog patna',
     'A2 milk benefits',

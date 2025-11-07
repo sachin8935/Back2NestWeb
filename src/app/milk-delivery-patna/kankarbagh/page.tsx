@@ -5,7 +5,7 @@ import Link from 'next/link';
 import Footer from '@/components/Footer';
 
 export const metadata: Metadata = {
-  title: 'Milk Delivery in Kankarbagh Patna | Pure A2 Milk Home Delivery by 5 AM',
+  title: 'A2 Milk Delivery Kankarbagh Patna | Fresh by 5 AM',
   description: 'Get 100% pure A2 cow milk delivered in Kankarbagh, Patna by 5 AM daily. Farm-fresh quality with no adulteration. Download our app to subscribe.',
   keywords: [
     'milk delivery kankarbagh patna',

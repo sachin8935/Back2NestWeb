@@ -5,7 +5,7 @@ import Link from 'next/link';
 import Footer from '@/components/Footer';
 
 export const metadata: Metadata = {
-  title: 'Milk Delivery in Boring Road Patna | Fresh A2 Milk Home Delivery',
+  title: 'A2 Milk Delivery Boring Road Patna | Fresh by 5 AM',
   description: 'Get pure A2 milk delivered to your home in Boring Road, Patna by 5 AM daily. Farm-fresh, 100% pure cow milk with no adulteration. Download our app to order.',
   keywords: [
     'milk delivery boring road patna',

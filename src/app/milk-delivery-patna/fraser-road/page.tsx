@@ -3,8 +3,8 @@ import Link from 'next/link';
 import { MapPin, Clock, Star, Truck, Shield, Package } from 'lucide-react';
 
 export const metadata: Metadata = {
-  title: 'A2 Milk Delivery in Fraser Road, Patna | Fresh by 5 AM Daily',
-  description: 'Get pure A2 milk delivered to your doorstep in Fraser Road by 5 AM. Fresh desi cow milk, ghee, paneer & dahi. Order now for same-day delivery in Fraser Road, Patna.',
+  title: 'A2 Milk Delivery Fraser Road Patna | Fresh by 5 AM',
+  description: 'Pure A2 milk delivered in Fraser Road by 5 AM. Fresh desi cow milk, ghee, paneer & dahi. Order now for same-day delivery in Fraser Road, Patna.',
   keywords: 'A2 milk Fraser Road, milk delivery Fraser Road Patna, fresh milk Fraser Road, desi cow milk Fraser Road, home delivery milk Fraser Road, Fraser Road milk subscription',
   alternates: {
     canonical: 'https://back2nest.in/milk-delivery-patna/fraser-road',
@@ -517,7 +517,9 @@ export default function FraserRoadPage() {
           __html: JSON.stringify({
             "@context": "https://schema.org",
             "@type": "LocalBusiness",
+            "@id": "https://back2nest.in/milk-delivery-patna/fraser-road",
             "name": "Back2Nest - Fraser Road",
+            "image": "https://back2nest.in/logo.png",
             "description": "Fresh A2 milk delivery in Fraser Road, Patna",
             "url": "https://back2nest.in/milk-delivery-patna/fraser-road",
             "telephone": "+91-1234567890",

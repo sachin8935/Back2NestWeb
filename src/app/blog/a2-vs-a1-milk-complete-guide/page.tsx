@@ -4,8 +4,8 @@ import { Calendar, User, ArrowLeft, Check, X } from 'lucide-react';
 import Footer from '@/components/Footer';
 
 export const metadata: Metadata = {
-  title: 'A2 vs A1 Milk: Complete Guide 2025 | Which is Better for Health?',
-  description: 'Comprehensive guide comparing A2 and A1 milk in 2025. Learn about protein differences, health benefits, scientific research, and which milk is best for your family.',
+  title: 'A2 vs A1 Milk: Complete Guide 2025 | Back2Nest',
+  description: 'Compare A2 and A1 milk: protein differences, health benefits & scientific research. Discover which milk is best for your family in 2025.',
   keywords: 'A2 vs A1 milk, A2 milk benefits, A1 milk protein, difference between A2 and A1 milk, A2 milk health benefits, desi cow milk, A2 milk digestion, A2 milk for children, A2 milk India',
   alternates: {
     canonical: 'https://back2nest.in/blog/a2-vs-a1-milk-complete-guide',

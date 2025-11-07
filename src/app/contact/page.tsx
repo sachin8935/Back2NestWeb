@@ -5,7 +5,7 @@ import Footer from '@/components/Footer';
 
 export const metadata: Metadata = {
   title: 'Contact Back2Nest Patna | Download App or Email Us',
-  description: 'Contact Back2Nest for pure milk delivery in Patna. Download our app from Google Play, email help@back2nest.in or visit us at Jagat Narayan Road, Kadam Kuan, Patna 800003.',
+  description: 'Contact Back2Nest for pure milk delivery in Patna. Download app, email help@back2nest.in or visit Jagat Narayan Road, Kadam Kuan, Patna 800003.',
   keywords: 'contact back2nest, milk delivery patna contact, back2nest app, milk delivery customer care patna, back2nest address patna',
   openGraph: {
     title: 'Contact Back2Nest Patna | Milk Delivery Service',
