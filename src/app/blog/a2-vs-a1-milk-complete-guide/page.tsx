@@ -205,7 +205,7 @@ export default function A2vsA1MilkGuidePage() {
         {/* Featured Image */}
         <div className="mb-10 rounded-2xl overflow-hidden shadow-lg">
           <img
-            src="https://res.cloudinary.com/back2nest/image/upload/v1760552874/offer_banners/em79ofmcsxf5upawy9b7.png"
+            src="https://res.cloudinary.com/back2nest/image/upload/v1761124550/products/rprfyfwgi7pzmud1oojc.jpg"
             alt="A2 vs A1 Milk Comparison - Fresh milk from desi cows"
             className="w-full h-96 object-cover"
           />

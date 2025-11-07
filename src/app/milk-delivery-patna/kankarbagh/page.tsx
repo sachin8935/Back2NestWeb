@@ -24,7 +24,7 @@ export const metadata: Metadata = {
     url: 'https://back2nest.in/milk-delivery-patna/kankarbagh',
     type: 'website',
     images: [{
-      url: 'https://res.cloudinary.com/back2nest/image/upload/v1760552874/offer_banners/em79ofmcsxf5upawy9b7.png',
+      url: 'https://res.cloudinary.com/back2nest/image/upload/v1761124550/products/rprfyfwgi7pzmud1oojc.jpg',
       width: 1200,
       height: 630,
       alt: 'Milk Delivery Kankarbagh Patna - Back2Nest'
@@ -183,7 +183,7 @@ export default function KankarbaghMilkDeliveryPage() {
 
                 <div className="relative">
                   <Image
-                    src="https://res.cloudinary.com/back2nest/image/upload/v1760552874/offer_banners/em79ofmcsxf5upawy9b7.png"
+                    src="https://res.cloudinary.com/back2nest/image/upload/v1761124550/products/rprfyfwgi7pzmud1oojc.jpg"
                     alt="Fresh pure A2 milk delivery in Kankarbagh Patna by Back2Nest - Farm to home service"
                     width={600}
                     height={600}

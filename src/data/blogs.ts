@@ -89,7 +89,7 @@ export const blogs: BlogMeta[] = [
     description:
       "Understand the difference between traditional Bilona ghee and regular ghee. Discover why Back2Nest's A2 Bilona ghee is healthier and more authentic.",
     image:
-      'https://res.cloudinary.com/back2nest/image/upload/v1760552874/offer_banners/em79ofmcsxf5upawy9b7.png',
+      'https://res.cloudinary.com/back2nest/image/upload/v1761124550/products/rprfyfwgi7pzmud1oojc.jpg',
     category: 'Products',
     readTime: '8 min read',
     date: '2025-01-10',

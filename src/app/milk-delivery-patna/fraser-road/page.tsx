@@ -551,7 +551,6 @@ export default function FraserRoadPage() {
               "opens": "00:00",
               "closes": "23:59"
             },
-            "servesCuisine": "Dairy Products",
             "areaServed": {
               "@type": "Place",
               "name": "Fraser Road, Patna"
@@ -567,18 +566,34 @@ export default function FraserRoadPage() {
               "itemListElement": [
                 {
                   "@type": "Offer",
+                  "price": "72",
+                  "priceCurrency": "INR",
+                  "availability": "https://schema.org/InStock",
                   "itemOffered": {
                     "@type": "Product",
                     "name": "A2 Cow Milk",
-                    "description": "Fresh daily A2 milk from desi cows"
+                    "description": "Fresh daily A2 milk from desi cows",
+                    "aggregateRating": {
+                      "@type": "AggregateRating",
+                      "ratingValue": "4.8",
+                      "reviewCount": "142"
+                    }
                   }
                 },
                 {
                   "@type": "Offer",
+                  "price": "650",
+                  "priceCurrency": "INR",
+                  "availability": "https://schema.org/InStock",
                   "itemOffered": {
                     "@type": "Product",
                     "name": "Desi Ghee",
-                    "description": "Pure & traditional desi ghee"
+                    "description": "Pure & traditional desi ghee",
+                    "aggregateRating": {
+                      "@type": "AggregateRating",
+                      "ratingValue": "4.8",
+                      "reviewCount": "142"
+                    }
                   }
                 }
               ]

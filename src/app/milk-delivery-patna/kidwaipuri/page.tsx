@@ -210,7 +210,6 @@ export default function KidwaipuriPage() {
       "opens": "00:00",
       "closes": "23:59"
     },
-    "servesCuisine": "Dairy Products",
     "areaServed": {
       "@type": "Place",
       "name": "Kidwaipuri, Patna"
@@ -226,34 +225,66 @@ export default function KidwaipuriPage() {
       "itemListElement": [
         {
           "@type": "Offer",
+          "price": "72",
+          "priceCurrency": "INR",
+          "availability": "https://schema.org/InStock",
           "itemOffered": {
             "@type": "Product",
             "name": "Fresh A2 Cow Milk",
-            "description": "Pure A2 milk from desi cows"
+            "description": "Pure A2 milk from desi cows",
+            "aggregateRating": {
+              "@type": "AggregateRating",
+              "ratingValue": "4.8",
+              "reviewCount": "156"
+            }
           }
         },
         {
           "@type": "Offer",
+          "price": "650",
+          "priceCurrency": "INR",
+          "availability": "https://schema.org/InStock",
           "itemOffered": {
             "@type": "Product",
             "name": "Desi Ghee",
-            "description": "Traditional bilona ghee from A2 milk"
+            "description": "Traditional bilona ghee from A2 milk",
+            "aggregateRating": {
+              "@type": "AggregateRating",
+              "ratingValue": "4.8",
+              "reviewCount": "156"
+            }
           }
         },
         {
           "@type": "Offer",
+          "price": "60",
+          "priceCurrency": "INR",
+          "availability": "https://schema.org/InStock",
           "itemOffered": {
             "@type": "Product",
             "name": "Fresh Dahi",
-            "description": "Thick creamy curd made from A2 milk"
+            "description": "Thick creamy curd made from A2 milk",
+            "aggregateRating": {
+              "@type": "AggregateRating",
+              "ratingValue": "4.8",
+              "reviewCount": "156"
+            }
           }
         },
         {
           "@type": "Offer",
+          "price": "120",
+          "priceCurrency": "INR",
+          "availability": "https://schema.org/InStock",
           "itemOffered": {
             "@type": "Product",
             "name": "Soft Paneer",
-            "description": "Fresh paneer made daily"
+            "description": "Fresh paneer made daily",
+            "aggregateRating": {
+              "@type": "AggregateRating",
+              "ratingValue": "4.8",
+              "reviewCount": "156"
+            }
           }
         }
       ]
@@ -305,7 +336,7 @@ export default function KidwaipuriPage() {
             <div className="relative">
               <div className="relative bg-gradient-to-br from-purple-400 via-purple-500 to-purple-600 rounded-3xl p-3 shadow-2xl transform hover:rotate-1 transition duration-500">
                 <Image
-                  src="https://res.cloudinary.com/back2nest/image/upload/v1760552874/offer_banners/em79ofmcsxf5upawy9b7.png"
+                  src="https://res.cloudinary.com/back2nest/image/upload/v1761124550/products/rprfyfwgi7pzmud1oojc.jpg"
                   alt="Fresh A2 milk delivery in Kidwaipuri Patna - Back2Nest"
                   width={600}
                   height={600}

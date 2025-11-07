@@ -183,7 +183,7 @@ const HeroSection = () => (
         <div className="relative">
           <div className="relative bg-gradient-to-br from-blue-400 via-blue-500 to-blue-600 rounded-3xl p-3 shadow-2xl transform hover:rotate-1 transition duration-500">
             <Image
-              src="https://res.cloudinary.com/back2nest/image/upload/v1760552874/offer_banners/em79ofmcsxf5upawy9b7.png"
+              src="https://res.cloudinary.com/back2nest/image/upload/v1761124550/products/rprfyfwgi7pzmud1oojc.jpg"
               alt="Fresh pure milk delivery in Patna - Back2Nest farm to home service"
               width={700}
               height={700}
