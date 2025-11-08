@@ -839,6 +839,30 @@ const ContactSection = () => {
 };// Main Component
 export default function HomePageClient() {
   // Structured Data for SEO
+  
+  // WebSite Schema - Critical for brand name display in Google Search
+  const websiteSchema = {
+    "@context": "https://schema.org",
+    "@type": "WebSite",
+    "name": "Back2Nest",
+    "alternateName": "Back2Nest - Pure A2 Milk Delivery Patna",
+    "url": "https://back2nest.in",
+    "description": "Fresh A2 cow milk delivery service in Patna. 100% pure, farm-fresh milk delivered by 5 AM daily.",
+    "potentialAction": {
+      "@type": "SearchAction",
+      "target": {
+        "@type": "EntryPoint",
+        "urlTemplate": "https://back2nest.in/search?q={search_term_string}"
+      },
+      "query-input": "required name=search_term_string"
+    },
+    "publisher": {
+      "@type": "Organization",
+      "name": "Back2Nest",
+      "url": "https://back2nest.in"
+    }
+  };
+
   const organizationSchema = {
     "@context": "https://schema.org",
     "@type": "Organization",
@@ -1019,6 +1043,10 @@ export default function HomePageClient() {
   return (
     <>
       {/* Structured Data for SEO */}
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(websiteSchema) }}
+      />
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(organizationSchema) }}
