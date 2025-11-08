@@ -143,7 +143,7 @@ const HeroSection = () => (
           <div className="bg-blue-50 border-l-4 border-blue-600 p-4 mb-8 rounded-r-lg">
             <p className="text-blue-900 font-semibold">
               <Zap className="w-5 h-5 inline mr-2 text-blue-600" />
-              Limited Time Offer: Get 10% off on your first month subscription!
+              Limited Time Offer: Get 5% cashback on all your orders! ✨
             </p>
           </div>
           

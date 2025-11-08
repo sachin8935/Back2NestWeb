@@ -906,14 +906,54 @@ export default function HomePageClient() {
     "@type": "Product",
     "name": "Fresh A2 Cow Milk",
     "description": "100% pure A2 cow milk from desi breeds, delivered fresh by 5 AM daily in Patna",
+    "image": "https://back2nest.in/milk.jpeg",
     "brand": {
       "@type": "Brand",
       "name": "Back2Nest"
     },
     "offers": {
       "@type": "Offer",
-      "availability": "https://schema.org/InStock",
+      "price": "72",
       "priceCurrency": "INR",
+      "availability": "https://schema.org/InStock",
+      "priceValidUntil": "2025-12-31",
+      "url": "https://back2nest.in/products/milk",
+      "hasMerchantReturnPolicy": {
+        "@type": "MerchantReturnPolicy",
+        "applicableCountry": "IN",
+        "returnPolicyCategory": "https://schema.org/MerchantReturnFiniteReturnWindow",
+        "merchantReturnDays": 0,
+        "returnMethod": "https://schema.org/ReturnByMail",
+        "returnFees": "https://schema.org/FreeReturn"
+      },
+      "shippingDetails": {
+        "@type": "OfferShippingDetails",
+        "shippingRate": {
+          "@type": "MonetaryAmount",
+          "value": "0",
+          "currency": "INR"
+        },
+        "shippingDestination": {
+          "@type": "DefinedRegion",
+          "addressCountry": "IN",
+          "addressRegion": "Bihar"
+        },
+        "deliveryTime": {
+          "@type": "ShippingDeliveryTime",
+          "handlingTime": {
+            "@type": "QuantitativeValue",
+            "minValue": "0",
+            "maxValue": "1",
+            "unitCode": "DAY"
+          },
+          "transitTime": {
+            "@type": "QuantitativeValue",
+            "minValue": "0",
+            "maxValue": "1",
+            "unitCode": "DAY"
+          }
+        }
+      },
       "areaServed": {
         "@type": "City",
         "name": "Patna"

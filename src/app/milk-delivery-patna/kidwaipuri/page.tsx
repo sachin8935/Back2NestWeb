@@ -228,10 +228,53 @@ export default function KidwaipuriPage() {
           "price": "72",
           "priceCurrency": "INR",
           "availability": "https://schema.org/InStock",
+          "priceValidUntil": "2025-12-31",
+          "url": "https://back2nest.in/products/milk",
+          "hasMerchantReturnPolicy": {
+            "@type": "MerchantReturnPolicy",
+            "applicableCountry": "IN",
+            "returnPolicyCategory": "https://schema.org/MerchantReturnFiniteReturnWindow",
+            "merchantReturnDays": 0,
+            "returnMethod": "https://schema.org/ReturnByMail",
+            "returnFees": "https://schema.org/FreeReturn"
+          },
+          "shippingDetails": {
+            "@type": "OfferShippingDetails",
+            "shippingRate": {
+              "@type": "MonetaryAmount",
+              "value": "0",
+              "currency": "INR"
+            },
+            "shippingDestination": {
+              "@type": "DefinedRegion",
+              "addressCountry": "IN",
+              "addressRegion": "Bihar"
+            },
+            "deliveryTime": {
+              "@type": "ShippingDeliveryTime",
+              "handlingTime": {
+                "@type": "QuantitativeValue",
+                "minValue": "0",
+                "maxValue": "1",
+                "unitCode": "DAY"
+              },
+              "transitTime": {
+                "@type": "QuantitativeValue",
+                "minValue": "0",
+                "maxValue": "1",
+                "unitCode": "DAY"
+              }
+            }
+          },
           "itemOffered": {
             "@type": "Product",
             "name": "Fresh A2 Cow Milk",
             "description": "Pure A2 milk from desi cows",
+            "image": "https://back2nest.in/milk.jpeg",
+            "brand": {
+              "@type": "Brand",
+              "name": "Back2Nest"
+            },
             "aggregateRating": {
               "@type": "AggregateRating",
               "ratingValue": "4.8",
@@ -244,10 +287,53 @@ export default function KidwaipuriPage() {
           "price": "650",
           "priceCurrency": "INR",
           "availability": "https://schema.org/InStock",
+          "priceValidUntil": "2025-12-31",
+          "url": "https://back2nest.in/products/ghee",
+          "hasMerchantReturnPolicy": {
+            "@type": "MerchantReturnPolicy",
+            "applicableCountry": "IN",
+            "returnPolicyCategory": "https://schema.org/MerchantReturnFiniteReturnWindow",
+            "merchantReturnDays": 0,
+            "returnMethod": "https://schema.org/ReturnByMail",
+            "returnFees": "https://schema.org/FreeReturn"
+          },
+          "shippingDetails": {
+            "@type": "OfferShippingDetails",
+            "shippingRate": {
+              "@type": "MonetaryAmount",
+              "value": "0",
+              "currency": "INR"
+            },
+            "shippingDestination": {
+              "@type": "DefinedRegion",
+              "addressCountry": "IN",
+              "addressRegion": "Bihar"
+            },
+            "deliveryTime": {
+              "@type": "ShippingDeliveryTime",
+              "handlingTime": {
+                "@type": "QuantitativeValue",
+                "minValue": "0",
+                "maxValue": "1",
+                "unitCode": "DAY"
+              },
+              "transitTime": {
+                "@type": "QuantitativeValue",
+                "minValue": "0",
+                "maxValue": "1",
+                "unitCode": "DAY"
+              }
+            }
+          },
           "itemOffered": {
             "@type": "Product",
             "name": "Desi Ghee",
             "description": "Traditional bilona ghee from A2 milk",
+            "image": "https://back2nest.in/ghee.jpeg",
+            "brand": {
+              "@type": "Brand",
+              "name": "Back2Nest"
+            },
             "aggregateRating": {
               "@type": "AggregateRating",
               "ratingValue": "4.8",
@@ -260,10 +346,53 @@ export default function KidwaipuriPage() {
           "price": "60",
           "priceCurrency": "INR",
           "availability": "https://schema.org/InStock",
+          "priceValidUntil": "2025-12-31",
+          "url": "https://back2nest.in/products/dahi",
+          "hasMerchantReturnPolicy": {
+            "@type": "MerchantReturnPolicy",
+            "applicableCountry": "IN",
+            "returnPolicyCategory": "https://schema.org/MerchantReturnFiniteReturnWindow",
+            "merchantReturnDays": 0,
+            "returnMethod": "https://schema.org/ReturnByMail",
+            "returnFees": "https://schema.org/FreeReturn"
+          },
+          "shippingDetails": {
+            "@type": "OfferShippingDetails",
+            "shippingRate": {
+              "@type": "MonetaryAmount",
+              "value": "0",
+              "currency": "INR"
+            },
+            "shippingDestination": {
+              "@type": "DefinedRegion",
+              "addressCountry": "IN",
+              "addressRegion": "Bihar"
+            },
+            "deliveryTime": {
+              "@type": "ShippingDeliveryTime",
+              "handlingTime": {
+                "@type": "QuantitativeValue",
+                "minValue": "0",
+                "maxValue": "1",
+                "unitCode": "DAY"
+              },
+              "transitTime": {
+                "@type": "QuantitativeValue",
+                "minValue": "0",
+                "maxValue": "1",
+                "unitCode": "DAY"
+              }
+            }
+          },
           "itemOffered": {
             "@type": "Product",
             "name": "Fresh Dahi",
             "description": "Thick creamy curd made from A2 milk",
+            "image": "https://back2nest.in/dahi.jpeg",
+            "brand": {
+              "@type": "Brand",
+              "name": "Back2Nest"
+            },
             "aggregateRating": {
               "@type": "AggregateRating",
               "ratingValue": "4.8",
@@ -276,10 +405,53 @@ export default function KidwaipuriPage() {
           "price": "120",
           "priceCurrency": "INR",
           "availability": "https://schema.org/InStock",
+          "priceValidUntil": "2025-12-31",
+          "url": "https://back2nest.in/products/paneer",
+          "hasMerchantReturnPolicy": {
+            "@type": "MerchantReturnPolicy",
+            "applicableCountry": "IN",
+            "returnPolicyCategory": "https://schema.org/MerchantReturnFiniteReturnWindow",
+            "merchantReturnDays": 0,
+            "returnMethod": "https://schema.org/ReturnByMail",
+            "returnFees": "https://schema.org/FreeReturn"
+          },
+          "shippingDetails": {
+            "@type": "OfferShippingDetails",
+            "shippingRate": {
+              "@type": "MonetaryAmount",
+              "value": "0",
+              "currency": "INR"
+            },
+            "shippingDestination": {
+              "@type": "DefinedRegion",
+              "addressCountry": "IN",
+              "addressRegion": "Bihar"
+            },
+            "deliveryTime": {
+              "@type": "ShippingDeliveryTime",
+              "handlingTime": {
+                "@type": "QuantitativeValue",
+                "minValue": "0",
+                "maxValue": "1",
+                "unitCode": "DAY"
+              },
+              "transitTime": {
+                "@type": "QuantitativeValue",
+                "minValue": "0",
+                "maxValue": "1",
+                "unitCode": "DAY"
+              }
+            }
+          },
           "itemOffered": {
             "@type": "Product",
             "name": "Soft Paneer",
             "description": "Fresh paneer made daily",
+            "image": "https://back2nest.in/paneer.jpeg",
+            "brand": {
+              "@type": "Brand",
+              "name": "Back2Nest"
+            },
             "aggregateRating": {
               "@type": "AggregateRating",
               "ratingValue": "4.8",
@@ -654,10 +826,10 @@ export default function KidwaipuriPage() {
             <div>
               <h3 className="text-2xl font-bold mb-4">Special Offers for Kidwaipuri Residents</h3>
               <p className="text-gray-700 leading-relaxed">
-                New customers in Kidwaipuri get ₹50 off on their first order. Subscribe for daily 
-                delivery and save up to 15% on your monthly milk bill. We also offer special discounts 
-                during festivals and seasonal promotions. Refer a friend in Kidwaipuri and both of you 
-                get ₹50 credit in your account!
+                Get <strong>5% cashback on all your orders</strong> with code <strong>CASHBACK5</strong>. 
+                Subscribe for daily delivery and enjoy our <strong>Buy 5 Get 1 Free</strong> offer - order 5 days 
+                and get the 6th day absolutely free! Recharge your wallet with ₹500 and get <strong>free curd</strong> 
+                on your next order. All offers valid till November 30, 2025.
               </p>
             </div>
 

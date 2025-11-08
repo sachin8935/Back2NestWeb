@@ -84,25 +84,25 @@ const HeroSection = () => (
         </div>
         
         <h1 className="text-5xl md:text-6xl font-bold text-white leading-tight mb-6">
-          Exclusive Wallet Recharge Offers
+          Exclusive Offers & Deals
         </h1>
         
         <p className="text-xl text-blue-100 mb-8 leading-relaxed max-w-3xl mx-auto">
-          Get instant discounts on wallet recharges! Download the Back2Nest app and save more on fresh milk delivery in Patna.
+          Get amazing cashback, free products, and subscription deals! Download the Back2Nest app and save more on fresh milk delivery in Patna.
         </p>
         
         <div className="flex flex-wrap justify-center items-center gap-6 text-sm">
           <div className="flex items-center space-x-2 bg-black bg-opacity-20 backdrop-blur-sm px-4 py-2 rounded-full border border-white border-opacity-30">
             <Sparkles className="w-5 h-5 text-yellow-300" />
-            <span className="font-semibold text-white">Up to ₹100 OFF</span>
+            <span className="font-semibold text-white">5% Cashback</span>
           </div>
           <div className="flex items-center space-x-2 bg-black bg-opacity-20 backdrop-blur-sm px-4 py-2 rounded-full border border-white border-opacity-30">
             <TrendingUp className="w-5 h-5 text-white" />
-            <span className="font-semibold text-white">Instant Savings</span>
+            <span className="font-semibold text-white">Free Products</span>
           </div>
           <div className="flex items-center space-x-2 bg-black bg-opacity-20 backdrop-blur-sm px-4 py-2 rounded-full border border-white border-opacity-30">
             <CheckCircle className="w-5 h-5 text-green-300" />
-            <span className="font-semibold text-white">Easy to Redeem</span>
+            <span className="font-semibold text-white">Buy 5 Get 1</span>
           </div>
         </div>
       </div>
@@ -115,39 +115,45 @@ const OffersSection = () => {
 
   const offers = [
     {
-      code: 'FLAT100',
-      title: 'Flat ₹100 OFF',
-      recharge: '₹1,000',
-      discount: '₹100',
-      finalAmount: '₹900',
+      code: 'CASHBACK5',
+      title: '5% On Every Order',
+      image: 'https://res.cloudinary.com/back2nest/image/upload/v1761587354/offer_banners/wfzhoant0wroqlukuivt.jpg',
+      recharge: 'All Orders',
+      discount: '5%',
+      finalAmount: 'Instant Cashback',
       gradient: 'from-purple-500 to-purple-600',
       icon: Wallet,
-      percentage: '10%',
-      description: 'Best value for money! Recharge ₹1000 and get instant ₹100 discount.',
+      percentage: '5%',
+      description: 'Enjoy instant 5% cashback on all your orders — because loyalty deserves rewards! ✨',
+      validity: 'Valid till Nov 30, 2025',
       popular: true
     },
     {
-      code: 'FLAT50',
-      title: 'Flat ₹50 OFF',
+      code: 'FREECURD',
+      title: 'Free Curd',
+      image: 'https://res.cloudinary.com/back2nest/image/upload/v1761587286/offer_banners/busdhs5ngusgrekmnufa.jpg',
       recharge: '₹500',
-      discount: '₹50',
-      finalAmount: '₹450',
+      discount: 'Free Curd',
+      finalAmount: '+ Free Curd Pack',
       gradient: 'from-blue-500 to-blue-600',
-      icon: Tag,
-      percentage: '10%',
-      description: 'Great savings! Recharge ₹500 and save ₹50 instantly.',
+      icon: Gift,
+      percentage: 'FREE',
+      description: 'Add ₹500 to your Back2Nest wallet and enjoy a complimentary pack of curd with your next delivery.',
+      validity: 'Valid till Nov 30, 2025',
       popular: false
     },
     {
-      code: 'FLAT10',
-      title: 'Flat ₹10 OFF',
-      recharge: '₹100',
-      discount: '₹10',
-      finalAmount: '₹90',
+      code: 'BUY5GET1',
+      title: 'Buy 5 Get 1 Free',
+      image: 'https://res.cloudinary.com/back2nest/image/upload/v1761587178/offer_banners/bxqdrhzzhttryfs9xxuo.jpg',
+      recharge: '5 Days',
+      discount: '6th Day Free',
+      finalAmount: 'Subscribe & Save',
       gradient: 'from-green-500 to-green-600',
-      icon: Gift,
-      percentage: '10%',
-      description: 'Perfect starter! Recharge ₹100 and get ₹10 off.',
+      icon: Tag,
+      percentage: '17%',
+      description: 'Subscribe for 5 days of milk and get your 6th day FREE! Consistent freshness, same great taste — your morning made better.',
+      validity: 'Valid till Nov 30, 2025',
       popular: false
     }
   ];
@@ -191,12 +197,19 @@ const OffersSection = () => {
                 )}
 
                 <div className={`bg-gradient-to-r ${offer.gradient} p-8 text-white relative overflow-hidden`}>
+                  <div className="absolute inset-0 opacity-20">
+                    <img 
+                      src={offer.image} 
+                      alt={offer.title}
+                      className="w-full h-full object-cover"
+                    />
+                  </div>
                   <div className="absolute top-0 right-0 opacity-10">
                     <Tag className="w-32 h-32 transform rotate-12" />
                   </div>
                   <div className="flex items-center justify-between mb-4 relative z-10">
                     <div className="bg-white p-2 rounded-2xl shadow-lg">
-                      <img src="/logo.png" alt="Back2Nest" className="w-12 h-12 object-contain" />
+                      <Icon className="w-8 h-8 text-blue-600" />
                     </div>
                     <div className="text-right">
                       <p className="text-xs opacity-90">Save</p>
@@ -204,23 +217,23 @@ const OffersSection = () => {
                     </div>
                   </div>
                   <h3 className="text-3xl font-bold mb-2 relative z-10">{offer.title}</h3>
-                  <p className="text-sm text-white opacity-90 relative z-10">On wallet recharge of {offer.recharge}</p>
+                  <p className="text-sm text-white opacity-90 relative z-10">{offer.validity}</p>
                 </div>
 
                 <div className="p-8">
                   <div className="mb-6">
                     <div className="flex items-center justify-between mb-2">
-                      <span className="text-gray-600">Recharge Amount:</span>
+                      <span className="text-gray-600">Offer Type:</span>
                       <span className="font-bold text-gray-900 text-lg">{offer.recharge}</span>
                     </div>
                     <div className="flex items-center justify-between mb-2">
-                      <span className="text-gray-600">Discount:</span>
-                      <span className="font-bold text-green-600 text-lg">- {offer.discount}</span>
+                      <span className="text-gray-600">You Get:</span>
+                      <span className="font-bold text-green-600 text-lg">{offer.discount}</span>
                     </div>
                     <div className="border-t-2 border-dashed border-gray-200 my-3"></div>
                     <div className="flex items-center justify-between">
-                      <span className="text-gray-900 font-semibold">You Pay:</span>
-                      <span className="font-bold text-blue-600 text-2xl">{offer.finalAmount}</span>
+                      <span className="text-gray-900 font-semibold">Benefit:</span>
+                      <span className="font-bold text-blue-600 text-xl">{offer.finalAmount}</span>
                     </div>
                   </div>
 

@@ -106,34 +106,238 @@ export default function AnisabadPage() {
       "itemListElement": [
         {
           "@type": "Offer",
+          "price": "72",
+          "priceCurrency": "INR",
+          "availability": "https://schema.org/InStock",
+          "priceValidUntil": "2025-12-31",
+          "url": "https://back2nest.in/products/milk",
+          "hasMerchantReturnPolicy": {
+            "@type": "MerchantReturnPolicy",
+            "applicableCountry": "IN",
+            "returnPolicyCategory": "https://schema.org/MerchantReturnFiniteReturnWindow",
+            "merchantReturnDays": 0,
+            "returnMethod": "https://schema.org/ReturnByMail",
+            "returnFees": "https://schema.org/FreeReturn"
+          },
+          "shippingDetails": {
+            "@type": "OfferShippingDetails",
+            "shippingRate": {
+              "@type": "MonetaryAmount",
+              "value": "0",
+              "currency": "INR"
+            },
+            "shippingDestination": {
+              "@type": "DefinedRegion",
+              "addressCountry": "IN",
+              "addressRegion": "Bihar"
+            },
+            "deliveryTime": {
+              "@type": "ShippingDeliveryTime",
+              "handlingTime": {
+                "@type": "QuantitativeValue",
+                "minValue": "0",
+                "maxValue": "1",
+                "unitCode": "DAY"
+              },
+              "transitTime": {
+                "@type": "QuantitativeValue",
+                "minValue": "0",
+                "maxValue": "1",
+                "unitCode": "DAY"
+              }
+            }
+          },
           "itemOffered": {
             "@type": "Product",
             "name": "A2 Desi Cow Milk",
-            "description": "Pure A2 milk from Gir & Sahiwal cows"
+            "description": "Pure A2 milk from Gir & Sahiwal cows",
+            "image": "https://back2nest.in/milk.jpeg",
+            "brand": {
+              "@type": "Brand",
+              "name": "Back2Nest"
+            },
+            "aggregateRating": {
+              "@type": "AggregateRating",
+              "ratingValue": "4.9",
+              "reviewCount": "198"
+            }
           }
         },
         {
           "@type": "Offer",
+          "price": "650",
+          "priceCurrency": "INR",
+          "availability": "https://schema.org/InStock",
+          "priceValidUntil": "2025-12-31",
+          "url": "https://back2nest.in/products/ghee",
+          "hasMerchantReturnPolicy": {
+            "@type": "MerchantReturnPolicy",
+            "applicableCountry": "IN",
+            "returnPolicyCategory": "https://schema.org/MerchantReturnFiniteReturnWindow",
+            "merchantReturnDays": 0,
+            "returnMethod": "https://schema.org/ReturnByMail",
+            "returnFees": "https://schema.org/FreeReturn"
+          },
+          "shippingDetails": {
+            "@type": "OfferShippingDetails",
+            "shippingRate": {
+              "@type": "MonetaryAmount",
+              "value": "0",
+              "currency": "INR"
+            },
+            "shippingDestination": {
+              "@type": "DefinedRegion",
+              "addressCountry": "IN",
+              "addressRegion": "Bihar"
+            },
+            "deliveryTime": {
+              "@type": "ShippingDeliveryTime",
+              "handlingTime": {
+                "@type": "QuantitativeValue",
+                "minValue": "0",
+                "maxValue": "1",
+                "unitCode": "DAY"
+              },
+              "transitTime": {
+                "@type": "QuantitativeValue",
+                "minValue": "0",
+                "maxValue": "1",
+                "unitCode": "DAY"
+              }
+            }
+          },
           "itemOffered": {
             "@type": "Product",
             "name": "Pure Desi Ghee",
-            "description": "100% pure A2 ghee made from A2 milk"
+            "description": "100% pure A2 ghee made from A2 milk",
+            "image": "https://back2nest.in/ghee.jpeg",
+            "brand": {
+              "@type": "Brand",
+              "name": "Back2Nest"
+            },
+            "aggregateRating": {
+              "@type": "AggregateRating",
+              "ratingValue": "4.9",
+              "reviewCount": "198"
+            }
           }
         },
         {
           "@type": "Offer",
+          "price": "60",
+          "priceCurrency": "INR",
+          "availability": "https://schema.org/InStock",
+          "priceValidUntil": "2025-12-31",
+          "url": "https://back2nest.in/products/dahi",
+          "hasMerchantReturnPolicy": {
+            "@type": "MerchantReturnPolicy",
+            "applicableCountry": "IN",
+            "returnPolicyCategory": "https://schema.org/MerchantReturnFiniteReturnWindow",
+            "merchantReturnDays": 0,
+            "returnMethod": "https://schema.org/ReturnByMail",
+            "returnFees": "https://schema.org/FreeReturn"
+          },
+          "shippingDetails": {
+            "@type": "OfferShippingDetails",
+            "shippingRate": {
+              "@type": "MonetaryAmount",
+              "value": "0",
+              "currency": "INR"
+            },
+            "shippingDestination": {
+              "@type": "DefinedRegion",
+              "addressCountry": "IN",
+              "addressRegion": "Bihar"
+            },
+            "deliveryTime": {
+              "@type": "ShippingDeliveryTime",
+              "handlingTime": {
+                "@type": "QuantitativeValue",
+                "minValue": "0",
+                "maxValue": "1",
+                "unitCode": "DAY"
+              },
+              "transitTime": {
+                "@type": "QuantitativeValue",
+                "minValue": "0",
+                "maxValue": "1",
+                "unitCode": "DAY"
+              }
+            }
+          },
           "itemOffered": {
             "@type": "Product",
             "name": "Fresh Dahi (Curd)",
-            "description": "Thick and creamy A2 dahi"
+            "description": "Thick and creamy A2 dahi",
+            "image": "https://back2nest.in/dahi.jpeg",
+            "brand": {
+              "@type": "Brand",
+              "name": "Back2Nest"
+            },
+            "aggregateRating": {
+              "@type": "AggregateRating",
+              "ratingValue": "4.9",
+              "reviewCount": "198"
+            }
           }
         },
         {
           "@type": "Offer",
+          "price": "120",
+          "priceCurrency": "INR",
+          "availability": "https://schema.org/InStock",
+          "priceValidUntil": "2025-12-31",
+          "url": "https://back2nest.in/products/paneer",
+          "hasMerchantReturnPolicy": {
+            "@type": "MerchantReturnPolicy",
+            "applicableCountry": "IN",
+            "returnPolicyCategory": "https://schema.org/MerchantReturnFiniteReturnWindow",
+            "merchantReturnDays": 0,
+            "returnMethod": "https://schema.org/ReturnByMail",
+            "returnFees": "https://schema.org/FreeReturn"
+          },
+          "shippingDetails": {
+            "@type": "OfferShippingDetails",
+            "shippingRate": {
+              "@type": "MonetaryAmount",
+              "value": "0",
+              "currency": "INR"
+            },
+            "shippingDestination": {
+              "@type": "DefinedRegion",
+              "addressCountry": "IN",
+              "addressRegion": "Bihar"
+            },
+            "deliveryTime": {
+              "@type": "ShippingDeliveryTime",
+              "handlingTime": {
+                "@type": "QuantitativeValue",
+                "minValue": "0",
+                "maxValue": "1",
+                "unitCode": "DAY"
+              },
+              "transitTime": {
+                "@type": "QuantitativeValue",
+                "minValue": "0",
+                "maxValue": "1",
+                "unitCode": "DAY"
+              }
+            }
+          },
           "itemOffered": {
             "@type": "Product",
             "name": "A2 Paneer",
-            "description": "Soft and fresh paneer from A2 milk"
+            "description": "Soft and fresh paneer from A2 milk",
+            "image": "https://back2nest.in/paneer.jpeg",
+            "brand": {
+              "@type": "Brand",
+              "name": "Back2Nest"
+            },
+            "aggregateRating": {
+              "@type": "AggregateRating",
+              "ratingValue": "4.9",
+              "reviewCount": "198"
+            }
           }
         }
       ]
@@ -778,18 +982,18 @@ export default function AnisabadPage() {
             </h2>
             <div className="grid md:grid-cols-2 gap-6 max-w-4xl mx-auto">
               <div className="bg-white rounded-lg p-6 shadow-md">
-                <h3 className="text-xl font-semibold text-green-700 mb-3">New Customer Offer</h3>
+                <h3 className="text-xl font-semibold text-green-700 mb-3">5% Cashback on Every Order</h3>
                 <p className="text-gray-700 mb-4">
-                  Get <strong>10% off</strong> on your first order! Use code: <span className="bg-green-100 px-2 py-1 rounded font-mono">ANISABAD10</span>
+                  Get <strong>5% cashback</strong> on all your orders! Use code: <span className="bg-green-100 px-2 py-1 rounded font-mono">CASHBACK5</span>
                 </p>
-                <p className="text-sm text-gray-600">Valid for first-time customers in Anisabad area</p>
+                <p className="text-sm text-gray-600">Valid till November 30, 2025 for Anisabad area</p>
               </div>
               <div className="bg-white rounded-lg p-6 shadow-md">
-                <h3 className="text-xl font-semibold text-green-700 mb-3">Monthly Subscription Bonus</h3>
+                <h3 className="text-xl font-semibold text-green-700 mb-3">Buy 5 Days, Get 6th Day Free</h3>
                 <p className="text-gray-700 mb-4">
-                  Subscribe monthly and get <strong>500g free ghee</strong> + <strong>₹170 savings</strong>
+                  Subscribe for 5 days and get <strong>6th day delivery absolutely free!</strong> Save up to 17% on your milk subscription.
                 </p>
-                <p className="text-sm text-gray-600">Limited time offer for Anisabad locality</p>
+                <p className="text-sm text-gray-600">Limited time offer. Use code: <span className="bg-green-100 px-2 py-1 rounded font-mono">BUY5GET1</span></p>
               </div>
             </div>
           </section>

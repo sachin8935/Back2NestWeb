@@ -407,10 +407,10 @@ export default function BaileyRoadPage() {
             <div>
               <h3 className="text-2xl font-bold mb-4">Special Offers for Bailey Road Residents</h3>
               <p className="text-gray-700 leading-relaxed">
-                New customers in Bailey Road get ₹50 off on their first order. Subscribe for daily 
-                delivery and save up to 15% on your monthly milk bill. We also offer special discounts 
-                during festivals and seasonal promotions. Refer a friend in Bailey Road and both of you 
-                get ₹50 credit in your account!
+                Get <strong>5% cashback on all your orders</strong> with code <strong>CASHBACK5</strong>. 
+                Subscribe for daily delivery and enjoy our <strong>Buy 5 Get 1 Free</strong> offer - order 5 days 
+                and get the 6th day absolutely free! Recharge your wallet with ₹500 and get <strong>free curd</strong> 
+                on your next order. All offers valid till November 30, 2025.
               </p>
             </div>
 
@@ -605,10 +605,53 @@ export default function BaileyRoadPage() {
                   "price": "72",
                   "priceCurrency": "INR",
                   "availability": "https://schema.org/InStock",
+                  "priceValidUntil": "2025-12-31",
+                  "url": "https://back2nest.in/products/milk",
+                  "hasMerchantReturnPolicy": {
+                    "@type": "MerchantReturnPolicy",
+                    "applicableCountry": "IN",
+                    "returnPolicyCategory": "https://schema.org/MerchantReturnFiniteReturnWindow",
+                    "merchantReturnDays": 0,
+                    "returnMethod": "https://schema.org/ReturnByMail",
+                    "returnFees": "https://schema.org/FreeReturn"
+                  },
+                  "shippingDetails": {
+                    "@type": "OfferShippingDetails",
+                    "shippingRate": {
+                      "@type": "MonetaryAmount",
+                      "value": "0",
+                      "currency": "INR"
+                    },
+                    "shippingDestination": {
+                      "@type": "DefinedRegion",
+                      "addressCountry": "IN",
+                      "addressRegion": "Bihar"
+                    },
+                    "deliveryTime": {
+                      "@type": "ShippingDeliveryTime",
+                      "handlingTime": {
+                        "@type": "QuantitativeValue",
+                        "minValue": "0",
+                        "maxValue": "1",
+                        "unitCode": "DAY"
+                      },
+                      "transitTime": {
+                        "@type": "QuantitativeValue",
+                        "minValue": "0",
+                        "maxValue": "1",
+                        "unitCode": "DAY"
+                      }
+                    }
+                  },
                   "itemOffered": {
                     "@type": "Product",
                     "name": "A2 Cow Milk",
                     "description": "Fresh daily A2 milk from desi cows",
+                    "image": "https://back2nest.in/milk.jpeg",
+                    "brand": {
+                      "@type": "Brand",
+                      "name": "Back2Nest"
+                    },
                     "aggregateRating": {
                       "@type": "AggregateRating",
                       "ratingValue": "4.8",
@@ -621,10 +664,53 @@ export default function BaileyRoadPage() {
                   "price": "650",
                   "priceCurrency": "INR",
                   "availability": "https://schema.org/InStock",
+                  "priceValidUntil": "2025-12-31",
+                  "url": "https://back2nest.in/products/ghee",
+                  "hasMerchantReturnPolicy": {
+                    "@type": "MerchantReturnPolicy",
+                    "applicableCountry": "IN",
+                    "returnPolicyCategory": "https://schema.org/MerchantReturnFiniteReturnWindow",
+                    "merchantReturnDays": 0,
+                    "returnMethod": "https://schema.org/ReturnByMail",
+                    "returnFees": "https://schema.org/FreeReturn"
+                  },
+                  "shippingDetails": {
+                    "@type": "OfferShippingDetails",
+                    "shippingRate": {
+                      "@type": "MonetaryAmount",
+                      "value": "0",
+                      "currency": "INR"
+                    },
+                    "shippingDestination": {
+                      "@type": "DefinedRegion",
+                      "addressCountry": "IN",
+                      "addressRegion": "Bihar"
+                    },
+                    "deliveryTime": {
+                      "@type": "ShippingDeliveryTime",
+                      "handlingTime": {
+                        "@type": "QuantitativeValue",
+                        "minValue": "0",
+                        "maxValue": "1",
+                        "unitCode": "DAY"
+                      },
+                      "transitTime": {
+                        "@type": "QuantitativeValue",
+                        "minValue": "0",
+                        "maxValue": "1",
+                        "unitCode": "DAY"
+                      }
+                    }
+                  },
                   "itemOffered": {
                     "@type": "Product",
                     "name": "Desi Ghee",
                     "description": "Pure & traditional desi ghee",
+                    "image": "https://back2nest.in/ghee.jpeg",
+                    "brand": {
+                      "@type": "Brand",
+                      "name": "Back2Nest"
+                    },
                     "aggregateRating": {
                       "@type": "AggregateRating",
                       "ratingValue": "4.8",

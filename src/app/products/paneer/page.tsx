@@ -71,11 +71,48 @@ export default function PaneerProcess() {
             "highPrice": "180",
             "offerCount": "3",
             "availability": "https://schema.org/InStock",
+            "priceValidUntil": "2025-12-31",
+            "url": "https://back2nest.in/products/paneer",
+            "hasMerchantReturnPolicy": {
+              "@type": "MerchantReturnPolicy",
+              "applicableCountry": "IN",
+              "returnPolicyCategory": "https://schema.org/MerchantReturnFiniteReturnWindow",
+              "merchantReturnDays": 0,
+              "returnMethod": "https://schema.org/ReturnByMail",
+              "returnFees": "https://schema.org/FreeReturn"
+            },
+            "shippingDetails": {
+              "@type": "OfferShippingDetails",
+              "shippingRate": {
+                "@type": "MonetaryAmount",
+                "value": "0",
+                "currency": "INR"
+              },
+              "shippingDestination": {
+                "@type": "DefinedRegion",
+                "addressCountry": "IN",
+                "addressRegion": "Bihar"
+              },
+              "deliveryTime": {
+                "@type": "ShippingDeliveryTime",
+                "handlingTime": {
+                  "@type": "QuantitativeValue",
+                  "minValue": "0",
+                  "maxValue": "1",
+                  "unitCode": "DAY"
+                },
+                "transitTime": {
+                  "@type": "QuantitativeValue",
+                  "minValue": "0",
+                  "maxValue": "1",
+                  "unitCode": "DAY"
+                }
+              }
+            },
             "seller": {
               "@type": "Organization",
               "name": "Back2Nest"
-            },
-            "url": "https://back2nest.in/products/paneer"
+            }
           },
           "aggregateRating": {
             "@type": "AggregateRating",
