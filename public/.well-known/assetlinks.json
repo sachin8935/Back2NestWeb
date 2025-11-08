@@ -1,10 +1,16 @@
 [
   {
-    "relation": ["delegate_permission/common.handle_all_urls"],
+    "relation": [
+      "delegate_permission/common.handle_all_urls",
+      "delegate_permission/common.get_login_creds"
+    ],
     "target": {
       "namespace": "android_app",
       "package_name": "com.app.back2nest",
-      "sha256_cert_fingerprints": ["DD:48:3C:20:0A:C0:1E:BA:CE:95:21:1F:B6:01:B8:3D:1A:B7:BC:DA:26:54:24:82:11:C7:C9:8C:A3:AB:F3:61"]
+      "sha256_cert_fingerprints": [
+        "DD:48:3C:20:0A:C0:1E:BA:CE:95:21:1F:B6:01:B8:3D:1A:B7:BC:DA:26:54:24:82:11:C7:C9:8C:A3:AB:F3:61",
+        "64:F5:7A:40:EF:22:04:3F:B4:99:82:D1:C5:EB:C1:1A:61:3E:A4:74:67:D1:42:14:4E:1F:C1:2A:F3:DD:2E:D4"
+      ]
     }
   }
 ]
