@@ -156,6 +156,13 @@ export default function AnisabadPage() {
               "@type": "Brand",
               "name": "Back2Nest"
             },
+            "offers": {
+              "@type": "Offer",
+              "price": "72",
+              "priceCurrency": "INR",
+              "availability": "https://schema.org/InStock",
+              "priceValidUntil": "2025-12-31"
+            },
             "aggregateRating": {
               "@type": "AggregateRating",
               "ratingValue": "4.9",
@@ -214,6 +221,13 @@ export default function AnisabadPage() {
             "brand": {
               "@type": "Brand",
               "name": "Back2Nest"
+            },
+            "offers": {
+              "@type": "Offer",
+              "price": "650",
+              "priceCurrency": "INR",
+              "availability": "https://schema.org/InStock",
+              "priceValidUntil": "2025-12-31"
             },
             "aggregateRating": {
               "@type": "AggregateRating",
@@ -274,6 +288,13 @@ export default function AnisabadPage() {
               "@type": "Brand",
               "name": "Back2Nest"
             },
+            "offers": {
+              "@type": "Offer",
+              "price": "60",
+              "priceCurrency": "INR",
+              "availability": "https://schema.org/InStock",
+              "priceValidUntil": "2025-12-31"
+            },
             "aggregateRating": {
               "@type": "AggregateRating",
               "ratingValue": "4.9",
@@ -332,6 +353,13 @@ export default function AnisabadPage() {
             "brand": {
               "@type": "Brand",
               "name": "Back2Nest"
+            },
+            "offers": {
+              "@type": "Offer",
+              "price": "120",
+              "priceCurrency": "INR",
+              "availability": "https://schema.org/InStock",
+              "priceValidUntil": "2025-12-31"
             },
             "aggregateRating": {
               "@type": "AggregateRating",

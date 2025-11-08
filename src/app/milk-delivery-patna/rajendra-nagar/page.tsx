@@ -616,6 +616,13 @@ export default function RajendraNagarPage() {
                       "@type": "Brand",
                       "name": "Back2Nest"
                     },
+                    "offers": {
+                      "@type": "Offer",
+                      "price": "72",
+                      "priceCurrency": "INR",
+                      "availability": "https://schema.org/InStock",
+                      "priceValidUntil": "2025-12-31"
+                    },
                     "aggregateRating": {
                       "@type": "AggregateRating",
                       "ratingValue": "4.8",
@@ -674,6 +681,13 @@ export default function RajendraNagarPage() {
                     "brand": {
                       "@type": "Brand",
                       "name": "Back2Nest"
+                    },
+                    "offers": {
+                      "@type": "Offer",
+                      "price": "650",
+                      "priceCurrency": "INR",
+                      "availability": "https://schema.org/InStock",
+                      "priceValidUntil": "2025-12-31"
                     },
                     "aggregateRating": {
                       "@type": "AggregateRating",
