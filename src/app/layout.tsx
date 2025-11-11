@@ -220,6 +220,12 @@ const localBusinessJsonLd = {
     'itemListElement': [
       {
         '@type': 'Offer',
+        'price': '72',
+        'priceCurrency': 'INR',
+        'availability': 'https://schema.org/InStock',
+        'priceValidUntil': '2025-12-31',
+        'url': 'https://back2nest.in/products/milk',
+        'image': 'https://back2nest.in/milk.jpeg',
         'itemOffered': {
           '@type': 'Product',
           'name': 'Fresh A2 Cow Milk - Farm to Doorstep',
@@ -280,6 +286,12 @@ const localBusinessJsonLd = {
       },
       {
         '@type': 'Offer',
+        'price': '60',
+        'priceCurrency': 'INR',
+        'availability': 'https://schema.org/InStock',
+        'priceValidUntil': '2025-12-31',
+        'url': 'https://back2nest.in/products/dahi',
+        'image': 'https://back2nest.in/dahi.jpeg',
         'itemOffered': {
           '@type': 'Product',
           'name': 'Fresh Homemade Dahi (Curd) - Traditional Process',
@@ -340,6 +352,12 @@ const localBusinessJsonLd = {
       },
       {
         '@type': 'Offer',
+        'price': '120',
+        'priceCurrency': 'INR',
+        'availability': 'https://schema.org/InStock',
+        'priceValidUntil': '2025-12-31',
+        'url': 'https://back2nest.in/products/paneer',
+        'image': 'https://back2nest.in/paneer.jpeg',
         'itemOffered': {
           '@type': 'Product',
           'name': 'Fresh Taaza Paneer - Natural Lemon Curdling',
@@ -400,6 +418,12 @@ const localBusinessJsonLd = {
       },
       {
         '@type': 'Offer',
+        'price': '650',
+        'priceCurrency': 'INR',
+        'availability': 'https://schema.org/InStock',
+        'priceValidUntil': '2025-12-31',
+        'url': 'https://back2nest.in/products/ghee',
+        'image': 'https://back2nest.in/ghee.jpeg',
         'itemOffered': {
           '@type': 'Product',
           'name': 'Pure Danedar Ghee - Traditional Bilona Method',
